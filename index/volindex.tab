@@ -1,0 +1,166 @@
+             data/asi/      C01.TAB           ASI.PDS.F.C.01    GP-J-ASI-3-ENTRY-V1.0 1997-11-01    9    51 
+             data/asi/      C02.TAB           ASI.PDS.F.C.02    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   31    18 
+             data/asi/      C03.TAB           ASI.PDS.F.C.03    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   24    48 
+             data/asi/      D01.TAB                  D01.TAB    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   46   877 
+             data/asi/      D02.TAB           ASI.PDS.F.D.02    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   26  1960 
+             data/asi/      D03.TAB           ASI.PDS.F.D.03    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   18  4096 
+             data/asi/    D04P1.TAB        ASI.PDS.F.D.04.P1    GP-J-ASI-3-ENTRY-V1.0 1999-07-16   26     8 
+             data/asi/    D04P2.TAB        ASI.PDS.F.D.04.P2    GP-J-ASI-3-ENTRY-V1.0 1999-07-16   54   227 
+             data/asi/    D04P3.TAB        ASI.PDS.F.D.04.P3    GP-J-ASI-3-ENTRY-V1.0 1999-07-16   50  1462 
+             data/asi/    D05T1.TAB        ASI.PDS.F.D.05.T1    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   15   821 
+             data/asi/    D05T2.TAB        ASI.PDS.F.D.05.T2    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   17   821 
+             data/asi/    D06AN.TAB        ASI.PDS.F.D.06.An    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   42   218 
+             data/asi/    D06Z1.TAB        ASI.PDS.F.D.06.Z1    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   25   218 
+             data/asi/    D06Z2.TAB        ASI.PDS.F.D.06.Z2    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   25   219 
+             data/asi/      D07.TAB           ASI.PDS.F.D.07    GP-J-ASI-3-ENTRY-V1.0 1997-11-01  129    36 
+             data/asi/  DESCENT.TAB          AD_DESC_FOR_PDS    GP-J-ASI-3-ENTRY-V1.0 1998-09-15   80   307 
+             data/asi/      E01.TAB           ASI.PDS.F.E.01    GP-J-ASI-3-ENTRY-V1.0 1997-11-01  105    60 
+             data/asi/      E02.TAB           ASI.PDS.F.E.02    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   19  1043 
+             data/asi/    E03AN.TAB        ASI.PDS.F.E.03.An    GP-J-ASI-3-ENTRY-V1.0 1999-09-01   32   240 
+             data/asi/    E03Z1.TAB        ASI.PDS.F.E.03.Z1    GP-J-ASI-3-ENTRY-V1.0 1999-09-01   32   389 
+             data/asi/    E03Z2.TAB        ASI.PDS.F.E.03.Z2    GP-J-ASI-3-ENTRY-V1.0 1999-09-01   32   384 
+             data/asi/    HK01A.TAB        ASI.PDS.F.HK.01.A    GP-J-ASI-3-ENTRY-V1.0 1997-11-01  121    62 
+             data/asi/   HK01AD.TAB       ASI.PDS.F.HK.01.AD    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   77    15 
+             data/asi/    HK01P.TAB        ASI.PDS.F.HK.01.P    GP-J-ASI-3-ENTRY-V1.0 1997-11-01  151    40 
+             data/asi/   HK01TE.TAB       ASI.PDS.F.HK.01.TE    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   91    61 
+             data/asi/     HK02.TAB          ASI.PDS.F.HK.02    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   72    55 
+             data/asi/ LOWERATM.TAB          AD_DESC_FOR_PDS    GP-J-ASI-3-ENTRY-V1.0 1998-09-15   68   307 
+             data/asi/      T01.TAB           ASI.PDS.F.T.01    GP-J-ASI-3-ENTRY-V1.0 1997-11-01   17     6 
+             data/asi/ UPPERATM.TAB UP_ATM_FILE_FOR_RES._INV    GP-J-ASI-3-ENTRY-V1.0 1999-06-01  119   386 
+             data/dwe/  ASI2REF.TAB                             GP-J-DWE-3-ENTRY-V1.0 1999-04-26   74    74 
+             data/dwe/  ASI4ATM.TAB                             GP-J-DWE-3-ENTRY-V1.0 1999-04-26   53   300 
+             data/dwe/     FRED.TAB                             GP-J-DWE-3-ENTRY-V1.0 1999-04-26   43  5043 
+             data/dwe/ ORBTRTRJ.TAB                             GP-J-DWE-3-ENTRY-V1.0 1996-08-30   82 12632 
+             data/dwe/ PROBETRJ.TAB                             GP-J-DWE-3-ENTRY-V1.0 1996-11-08   60  5399 
+             data/dwe/    RADIO.TAB                             GP-J-DWE-3-ENTRY-V1.0 1996-11-08   29  5015 
+             data/dwe/    RESID.TAB                             GP-J-DWE-3-ENTRY-V1.0 1999-04-26   69  5043 
+             data/dwe/ RSF0117A.ADJ                             GP-J-DWE-3-ENTRY-V1.0 1996-11-08   60  2590 
+             data/dwe/ SDR0530A.TAB                             GP-J-DWE-3-ENTRY-V1.0 1996-11-08   36  4865 
+             data/dwe/     WIND.TAB                             GP-J-DWE-3-ENTRY-V1.0 1999-04-26   69  5043 
+             data/epi/ CNTRATEO.TAB          COUNTRATE TABLE    GP-J-EPI-3-ENTRY-V1.0 1998-08-18  118    52 
+             data/epi/ CNTRATES.TAB          COUNTRATE TABLE    GP-J-EPI-3-ENTRY-V1.0 1998-08-18  118    94 
+             data/epi/ COUNTERO.TAB            COUNTER TABLE    GP-J-EPI-3-ENTRY-V1.0 1998-08-17   84    52 
+             data/epi/ COUNTERS.TAB            COUNTER TABLE    GP-J-EPI-3-ENTRY-V1.0 1998-08-17   84    94 
+             data/epi/ HOUSKEEP.TAB       HOUSEKEEPING TABLE    GP-J-EPI-3-ENTRY-V1.0 1998-08-18   30    17 
+             data/had/      HAD.TAB                  HAD.TAB    GP-J-HAD-3-ENTRY-V1.0 1998-08-06   80    91 
+             data/nep/ BASEOFFS.TAB             BASEOFFS.TAB    GP-J-NEP-3-ENTRY-V1.0 1998-12-03   55    82 
+             data/nep/   CONTAM.TAB          File  7 - 1.1.6    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   23   437 
+             data/nep/ ELECOFFS.TAB          File  3 - 1.1.2    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67    88 
+             data/nep/  FITTEMP.TAB            File  9 - 2.1    GP-J-NEP-3-ENTRY-V1.0 1998-03-12   56   463 
+             data/nep/     GAIN.TAB          File  6 - 1.1.5    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   56   437 
+             data/nep/      PTZ.TAB          File  2 - 1.1.1    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   56   486 
+             data/nep/      RAW.TAB            File  1 - 1.0    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   56   880 
+             data/nep/  SCATTER.TAB          File  8 - 1.1.7    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   438 
+             data/nep/ SENTEMP1.TAB             SENTEMP1.TAB    GP-J-NEP-3-ENTRY-V1.0 1998-12-03   60   546 
+             data/nep/ SENTEMP2.TAB             SENTEMP2.TAB    GP-J-NEP-3-ENTRY-V1.0 1998-12-03   60   546 
+             data/nep/ SRCALIGN.TAB          File  4 - 1.1.3    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67    88 
+             data/nep/ TEMPVOLT.TAB          File  5 - 1.1.4    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   56    44 
+             data/nep/   XSEC11.TAB        File 10 - 2.2.1.1    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC12.TAB        File 11 - 2.2.1.2    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   409 
+             data/nep/   XSEC21.TAB        File 12 - 2.2.2.1    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC22.TAB        File 13 - 2.2.2.2    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC31.TAB        File 14 - 2.2.3.1    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC32.TAB        File 15 - 2.2.3.2    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC41.TAB        File 16 - 2.2.4.1    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC42.TAB        File 17 - 2.2.4.2    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC51.TAB        File 18 - 2.2.5.1    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   409 
+             data/nep/   XSEC52.TAB        File 19 - 2.2.5.2    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC61.TAB        File 20 - 2.2.6.1    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+             data/nep/   XSEC62.TAB        File 21 - 2.2.6.2    GP-J-NEP-3-ENTRY-V1.0 1995-12-07   67   410 
+       data/nfr/calib/  NFRFOVA.DAT              NFRFOVA.DAT    GP-J-NFR-3-ENTRY-V1.0 1998-08-14 1020    81 
+       data/nfr/calib/  NFRFOVB.DAT              NFRFOVB.DAT    GP-J-NFR-3-ENTRY-V1.0 1998-08-14 1020    81 
+       data/nfr/calib/  NFRFOVC.DAT              NFRFOVC.DAT    GP-J-NFR-3-ENTRY-V1.0 1998-08-14 1020    81 
+       data/nfr/calib/  NFRFOVD.DAT              NFRFOVD.DAT    GP-J-NFR-3-ENTRY-V1.0 1998-08-14 1020    81 
+       data/nfr/calib/  NFRFOVE.DAT              NFRFOVE.DAT    GP-J-NFR-3-ENTRY-V1.0 1998-08-14 1020    81 
+       data/nfr/calib/ TDEPRESP.TAB             TDEPRESP.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-14   80   313 
+       data/nfr/calib/    TDSRA.TAB                TDSRA.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-14   80  5792 
+       data/nfr/calib/    TDSRB.TAB                TDSRB.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-14   80  5792 
+       data/nfr/calib/    TDSRC.TAB                TDSRC.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-14   80  5800 
+       data/nfr/calib/    TDSRD.TAB                TDSRD.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-14   80  5803 
+       data/nfr/calib/  TDSRDNL.TAB              TDSRDNL.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-14   80  5801 
+       data/nfr/calib/    TDSRE.TAB                TDSRE.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-14   80  5793 
+         data/nfr/edr/ NFR0528X.SDM             NFR0528X.SDM    GP-J-NFR-3-ENTRY-V1.0 1996-05-28  100   878 
+    data/nfr/engnring/    NFRA1.TAB                NFRA1.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   262 
+    data/nfr/engnring/  NFRA1VV.TAB              NFRA1VV.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   263 
+    data/nfr/engnring/    NFRA2.TAB                NFRA2.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   321 
+    data/nfr/engnring/  NFRA2VV.TAB              NFRA2VV.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   322 
+    data/nfr/engnring/    NFRBI.TAB                NFRBI.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   168 
+    data/nfr/engnring/    NFRDT.TAB                NFRDT.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   204 
+    data/nfr/engnring/    NFRET.TAB                NFRET.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   116 
+    data/nfr/engnring/    NFRHB.TAB                NFRHB.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   233 
+    data/nfr/engnring/  NFRHBVV.TAB              NFRHBVV.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   234 
+    data/nfr/engnring/    NFRV1.TAB                NFRV1.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   116 
+    data/nfr/engnring/    NFRV2.TAB                NFRV2.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   117 
+    data/nfr/engnring/    NFRWI.TAB                NFRWI.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   167 
+    data/nfr/engnring/    NFRWT.TAB                NFRWT.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   349 
+    data/nfr/engnring/  NFRWTVV.TAB              NFRWTVV.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   80   350 
+      data/nfr/fluxes/   MCTCNF.TAB               MCTCNF.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   594 
+      data/nfr/fluxes/ MCTCNFDN.TAB             MCTCNFDN.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   575 
+      data/nfr/fluxes/   MCTCUF.TAB               MCTCUF.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   130 
+      data/nfr/fluxes/    RAWNF.TAB                RAWNF.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   593 
+      data/nfr/fluxes/  RAWNFDN.TAB              RAWNFDN.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   573 
+      data/nfr/fluxes/    RAWUF.TAB                RAWUF.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   127 
+      data/nfr/fluxes/     TCNF.TAB                 TCNF.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   593 
+      data/nfr/fluxes/   TCNFDN.TAB               TCNFDN.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   574 
+      data/nfr/fluxes/     TCUF.TAB                 TCUF.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18   90   127 
+data/nfr/fluxes/calib/    BBAMB.TAB                BBAMB.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18  110   326 
+data/nfr/fluxes/calib/    BBHOT.TAB                BBHOT.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18  120   305 
+data/nfr/fluxes/calib/   BCFLUX.TAB               BCFLUX.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-18  120   295 
+         data/nfr/raw/    NFRAZ.TAB                NFRAZ.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   90   128 
+         data/nfr/raw/    NFRBC.TAB                NFRBC.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   90   127 
+         data/nfr/raw/   NFRERR.TAB               NFRERR.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   80   641 
+         data/nfr/raw/   NFRGSA.TAB               NFRGSA.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   80   233 
+         data/nfr/raw/    NFRNF.TAB                NFRNF.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   90   534 
+         data/nfr/raw/   NFRRA1.TAB               NFRRA1.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   80   262 
+         data/nfr/raw/   NFRRA2.TAB               NFRRA2.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   80   321 
+         data/nfr/raw/   NFRRDT.TAB               NFRRDT.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   80   204 
+         data/nfr/raw/   NFRRET.TAB               NFRRET.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   80   116 
+         data/nfr/raw/   NFRRHB.TAB               NFRRHB.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   80   233 
+         data/nfr/raw/   NFRRWT.TAB               NFRRWT.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   80   349 
+         data/nfr/raw/    NFRSC.TAB                NFRSC.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   90   157 
+         data/nfr/raw/    NFRUF.TAB                NFRUF.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   90   127 
+data/nfr/raw/denoised/  NFRNFDN.TAB              NFRNFDN.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   90   526 
+data/nfr/raw/denoised/  NFRSCDN.TAB              NFRSCDN.TAB    GP-J-NFR-3-ENTRY-V1.0 1998-08-25   90   163 
+             data/nms/  A85JL02.TAB              A85JL02.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  1135 
+             data/nms/  A88JL19.TAB              A88JL19.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  7997 
+             data/nms/  A89JL19.TAB              A89JL19.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  4113 
+             data/nms/  A89MY15.TAB              A89MY15.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  9112 
+             data/nms/  A89OC26.TAB              A89OC26.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  4064 
+             data/nms/  A89OC27.TAB              A89OC27.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  3328 
+             data/nms/  A89SE14.TAB              A89SE14.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  3944 
+             data/nms/ A89SE14A.TAB             A89SE14A.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  3296 
+             data/nms/  A90DE04.TAB              A90DE04.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  3248 
+             data/nms/ A90DE04A.TAB             A90DE04A.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  4128 
+             data/nms/  A92NO20.TAB              A92NO20.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  9304 
+             data/nms/  A92NO21.TAB              A92NO21.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  8136 
+             data/nms/  A95DE07.TAB              A95DE07.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  7032 
+             data/nms/  B89JL19.TAB              B89JL19.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32   504 
+             data/nms/  B89MY15.TAB              B89MY15.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  7744 
+             data/nms/  B89OC26.TAB              B89OC26.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32   464 
+             data/nms/  B89SE14.TAB              B89SE14.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32   504 
+             data/nms/ B90DE04A.TAB             B90DE04A.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32   504 
+             data/nms/  B92NO20.TAB              B92NO20.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  7968 
+             data/nms/  B92NO21.TAB              B92NO21.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  7968 
+             data/nms/  B95DE07.TAB              B95DE07.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32  5672 
+             data/nms/   I1_H2S.TAB          H2 + 161ppm H2S    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   75   100 
+             data/nms/   I1_HCN.TAB         He + 145 ppm HCN    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   72   100 
+             data/nms/  I1_HYDR.TAB H2 + 9.90% He + 180ppm A    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   75   160 
+             data/nms/   I1_PH3.TAB          H2 + 105ppm PH3    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   76    80 
+             data/nms/    I1_RG.TAB H2 + 10% He + 147ppm Ne     GP-J-NMS-3-ENTRY-V1.0 1998-04-17   47   300 
+             data/nms/   I1_RGP.TAB H2 + 10%He + 147ppm NE +    GP-J-NMS-3-ENTRY-V1.0 1998-04-17  104   300 
+             data/nms/ I2_ALKAN.TAB H2 + 9.973%He + 142ppm C    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   84   100 
+             data/nms/  I2_CHMX.TAB H2 + (He + Hydrocarbons)    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   83   200 
+             data/nms/ I2_H2NH3.TAB    H2 +(He + 317ppm NH3)    GP-J-NMS-3-ENTRY-V1.0 1998-04-17  135   100 
+             data/nms/   I2_H2O.TAB         He + ~140ppm H2O    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   74   100 
+             data/nms/   I2_H2S.TAB         H2 + ~161ppm H2S    GP-J-NMS-3-ENTRY-V1.0 1998-04-17  100   100 
+             data/nms/   I2_HCN.TAB         He + ~145ppm HCN    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   90   100 
+             data/nms/  I2_HYDR.TAB H2 + 9.9% He + 180ppm As    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   95   160 
+             data/nms/   I2_NH3.TAB          He + 317ppm NH3    GP-J-NMS-3-ENTRY-V1.0 1998-04-17  120   100 
+             data/nms/   I2_PH3.TAB         H2 + ~105ppm PH3    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   75    80 
+             data/nms/    I2_RG.TAB 90% H2 + 10% He + ~150 p    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   32   300 
+             data/nms/ I2_UNSAT.TAB He + 144 ppm C2H2 + 156     GP-J-NMS-3-ENTRY-V1.0 1998-04-17  106   100 
+             data/nms/ NMSCOEFF.TAB             NMSCOEFF.TAB    GP-J-NMS-3-ENTRY-V1.0             108    32 
+             data/nms/  NMSDATA.TAB                 RAW DATA    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   60  7025 
+             data/nms/ NMSSTEPS.TAB             NMSSTEPS.TAB    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   33  8192 
+             data/nms/   PFUSIM.TAB H2 + 10% He mix: Simulat    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   33   398 
+             data/nms/   RATIOS.TAB Measured Mixing Ratios o    GP-J-NMS-3-ENTRY-V1.0 1998-04-17   70    20 

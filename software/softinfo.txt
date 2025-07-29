@@ -1,0 +1,23 @@
+PDS_VERSION_ID                   = PDS3                                       
+                                                                              
+OBJECT                = TEXT                                                  
+  PUBLICATION_DATE    = 2001-12-20                                            
+  NOTE                = "Description of contents in SOFTWARE subdirectory."   
+END_OBJECT            = TEXT                                                  
+END                                                                           
+                                                                              
+                                                                              
+                                                                              
+           Content Description of the SOFTWARE Subdirectory                   
+                                                                              
+                                                                              
+This directory contains software pertaining to instruments and data reduction 
+associated with the Galileo Probe.                                            
+                                                                              
+Files in this directory include:                                              
+    NFREDR*.*    -  C program to read NFR EDR file and output ASCII files.    
+    NFRRDFIL.PRO -  IDL procedure to read NFR files with attached PDS labels. 
+    NFRRDFLX.PRO -  sample IDL procedure to read NFR flux file and NFR        
+                    ancillary file and make a simple plot.                    
+    NMSSEQ.EXE   -  PC executable file to generate a cartoon display of the   
+                    NMS sequence.                                             

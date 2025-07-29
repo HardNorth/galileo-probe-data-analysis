@@ -1,0 +1,146 @@
+PDS_VERSION_ID        = PDS3                                                  
+LABEL_REVISION_NOTE   = "Mark Vincent, May 2000"                              
+                                                                              
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  INTERCHANGE_FORMAT    = ASCII                                               
+  PUBLICATION_DATE      = 1999-07-16                                          
+  NOTE                  = "ASCII description of ASI files"                    
+END_OBJECT            = TEXT                                                  
+                                                                              
+END                                                                           
+Description of Atmosphere Structure Instrument files in the data bank:        
+                                                                              
+This file describes the data obtained by the Galileo Probe Atmosphere         
+Structure Instrument during the entry and descent into the Jupiter atmosphere 
+on December 7, 1995. The total time of data acquisition was less than two     
+hours before the destruction of the probe in the Jupiter atmosphere.          
+                                                                              
+See errata.txt for a description of ASI related files that are not            
+listed below.                                                                 
+                                                                              
+                                                                              
+File asi_cal.txt                                                              
+===================                                                           
+This file provides an instrument overview and describes the calibration       
+of the individual sensors.                                                    
+                                                                              
+                                                                              
+File upperatm.dat                                                             
+===================                                                           
+This file contains reduced data for the Galileo Probe Atmospheric Structure   
+Instrument, including time from minor frame 0, altitude, pressure,            
+temperature, atmospheric density, mean molecular weight, ratio of specific    
+heats, gas constant, probe velocity, flight path angle, latitude and          
+longitude for the entry phase.                                                
+                                                                              
+File descent.dat                                                              
+===================                                                           
+This file contains reduced data for the Galileo Probe Atmospheric Structure   
+Instrument, including time from minor frame 0, altitude, pressure,            
+temperature, atmospheric density, gravitational acceleration, descent         
+velocity, and temperature gradient for the descend phase. These profiles are  
+not a list of measured points, but is derived using the dry adiabat which     
+fits the data, as shown and described in SEIFFETAL1998.                       
+                                                                              
+                                                                              
+Data in the following files d04p1.dat, d04p2.dat and d04p3.dat, contain       
+data for all of the Descent sequence pressure sensor measurements. The data   
+in file d04p1 contains all data from the 0 to 500 mb range sensor. The data   
+in file d04p2 contains all data from the 0 to 4 b range sensor. The data      
+in file d04p3 contains all data from the 0 to 28 b range sensor.              
+                                                                              
+A correction (reduction in pressure) needs to be made for the ram effect      
+of the probe moving through the atmosphere for each set of pressure sensor    
+data.  The magnitude of this correction depends upon the velocity profile     
+developed by modeling the descent. For one modeling approach the correction   
+is about -5mb for the bulk of descent, with some modest variations during     
+the first 100 seconds which reach a peak of about -7.8 mb at 80 sec.          
+                                                                              
+Descriptions of the instrumentation can be found in [SEIFFETAL1996]           
+Space Sciences Review, Volume 60, May 1992,  pages 203 - 232.                 
+                                                                              
+File  d04p1.dat                                                               
+===================                                                           
+This file comprises three columns: column 1 contains sensor sampling          
+time in seconds after the start of the Descent mode, column 2 contains        
+the measured pressure data in millibars, and column 3 contains the            
+sensor temperature in degrees Celsius.                                        
+                                                                              
+There are no corrections required to this sensor data for rate of             
+change of temperature effects.                                                
+                                                                              
+File d04p2.dat                                                                
+===================                                                           
+This file comprises five columns: column 1 contains sensor sampling           
+time in seconds after the start of the Descent mode, column 2 contains        
+the pressure derived from the steady state sensor calibrations in             
+millibars, column 3 contains the correction for the rate of change of         
+temperature effect on the sensor in millibars, column 4 contains the          
+computed final pressure data in millibars, and column 5 contains the          
+sensor temperature in degrees Celsius.                                        
+                                                                              
+File d04p3.dat                                                                
+===================                                                           
+This file comprises five columns: column 1 contains sensor sampling           
+time in seconds after the start of the Descent mode, column 2 contains        
+the pressure derived from the steady state sensor calibrations in             
+millibars, column 3 contains the correction for the rate of change of         
+temperature effect on the sensor in millibars, column 4 contains the          
+computed final pressure data in millibars, and column 5 contains the          
+sensor temperature in degrees Celsius. Spikes in pressure data after          
+~2600 sec are instrument anomalies [SEIFFETAL1998].                           
+                                                                              
+File uncert.txt                                                               
+===================                                                           
+Order of uncertainties in pressure data from table 4 in SEIFFETAL1998.        
+                                                                              
+                                                                              
+File d05t1.dat                                                                
+===================                                                           
+This file contains all data from the primary temperature sensor for the       
+Descent sequence.                                                             
+                                                                              
+File d05t2.dat                                                                
+===================                                                           
+This file contains all data from the secondary temperature sensor for the     
+Descent sequence.                                                             
+                                                                              
+                                                                              
+File accel.txt                                                                
+===================                                                           
+This file provides a description of the acceleration measurements and         
+their limitations.                                                            
+                                                                              
+File e03an.dat                                                                
+==================                                                            
+Lateral acceleration measurements for the Entry sequence.                     
+                                                                              
+File e03z1.dat                                                                
+===================                                                           
+Primary, or Z1, axial acceleration measurements for the Entry sequence.       
+                                                                              
+File e03z2.dat                                                                
+===================                                                           
+Secondary, or Z2, axial acceleration measurements for the Entry sequence.     
+                                                                              
+File d06an.dat                                                                
+===================                                                           
+Lateral acceleration measurements for the Descent sequence.                   
+                                                                              
+File d06z1.dat                                                                
+===================                                                           
+Primary, or Z1, axial acceleration measurements for the Descent sequence.     
+                                                                              
+File d06z2.dat                                                                
+===================                                                           
+Secondary, or Z2, axial acceleration measurements for the Descent sequence.   
+                                                                              
+                                                                              
+File hk02.dat                                                                 
+===================                                                           
+Instrument temperatures taken as part of housekeeping.                        
+                                                                              
+                                                                              
+
+

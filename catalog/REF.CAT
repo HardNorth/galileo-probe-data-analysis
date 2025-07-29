@@ -1,0 +1,358 @@
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "CHAPMAN1991"                                
+REFERENCE_DESC                 = "Chapman, C.R., Galileo Encounter With the   
+Planet Earth: Imaging Results, AGU-MSA 1991 Spring Meeting, EOS               
+Transactions, American Geophysical Union, April 23, 1991."                    
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "CLARKE1988"                                 
+REFERENCE_DESC                 = "Clarke, T.C., Earth and Moon Encounters by  
+the Galileo Jupiter Orbiter,Proceedings of IGARSS '88 Symposium,              
+Edinburgh, Scotland, September 13-16, 1988, ESA SP-284, August 1988."         
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "CLARKE1989"                                 
+REFERENCE_DESC                 = "Clarke, T.C., and F.P. Fanale, Galileo: The 
+Earth Encounters, The Planetary Report, Volume 9, Number 5, The               
+Planetary Society, September 1989."                                           
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "FANALE1990"                                 
+REFERENCE_DESC                 = "Fanale, F.P., Galileo's Earth-Moon Encounter
+Set for December 8, EOS Transactions, Volume 71, Number 47, American          
+Geophysical Union, November 20, 1990."                                        
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "FRANK1991"                                  
+REFERENCE_DESC                 = "Frank, L.A., K.L. Ackerson, and W.R.        
+Patterson, Plasma Measurements at Earth With the Galileo Spacecraft,          
+AGU Spring Meeting, Baltimore, Maryland, May 1991."                           
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "WOLF1992"                                   
+REFERENCE_DESC                 = "Wolf, A.A., Jet Propulsion Laboratory       
+Interoffice Memorandum GLL-NAV-92-90, Satellite Tour 92-14A Data              
+Package, May 12, 1992."                                                       
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "ONEIL1991"                                  
+REFERENCE_DESC                 = "O'Neil, W.J., Project Galileo Mission       
+Status, 42nd Congress of the International Astronautical Federation,          
+IAF-91-468, Oct 5-11, 1991."                                                  
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "GLLPP1985"                                  
+REFERENCE_DESC                 = "Casani, J.R., Galileo Project Plan, PD 625-1
+Revision C, JPL D-1284, January 1985."                                        
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "CLARKE&CLAYNE1989"                          
+REFERENCE_DESC                 = "Clarke, Theodore C., and C.M. Clayne,       
+Galileo Science Requirements Document 625-50, Rev. C, Jet Propulsion          
+Laboratory, Pasadena, California, January 18, 1989."                          
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "DAMARIOETAL1992"                            
+REFERENCE_DESC                 = "D'Amario, L.A., L.E. Bright, and            
+A.A. Wolf, Space Science Reviews, Volume 60 Numbers 1-4, 1992, The            
+Galileo Mission, Kluwer Academic Publishers, 1992."                           
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "HEADETAL1991"                               
+REFERENCE_DESC                 = "Head, J.W., D.B. Campbell, C. Elachi, J.E.  
+Guest, D.P. McKenzie, R.S. Saunders, G.G. Schaber, and G. Schubert,           
+Galileo Solid State Imaging Experiment Results for the Moon, AGU-MSA          
+1991 Spring Meeting, EOS Transactions, American Geophysical Union,            
+April 23, 1991."                                                              
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "INGERSOLL1991"                              
+REFERENCE_DESC                 = "Ingersoll, A., and R. Thompson, A Global    
+View of Earth From Galileo, AGU-MSA 1991 Spring Meeting, EOS                  
+Transactions, American Geophysical Union, April 23, 1991."                    
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SSR1992"                                    
+REFERENCE_DESC                 = "Space Science Reviews, Volume 60, Numbers   
+1-4, 1992, The Galileo Mission, Kluwer Academic Publishers, 1992."            
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "YOUNGETAL1996"                              
+REFERENCE_DESC                 = "Young, R. E., M. A. Smith and C. K. Sobeck, 
+Galileo Probe: In Situ Observations of Jupiter's Atmosphere. Science 272, pp. 
+837-838, 1996."                                                               
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "JOHNSONETAL1992"                            
+REFERENCE_DESC                 = "Johnson, T. V., C. M. Yeates and R. Young,  
+Space Science Reviews Volume on Galileo Mission Overview, Space Sci. Rev. 60, 
+pp. 3-21, 1992."                                                              
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "NIEMANNETAL1992"                            
+REFERENCE_DESC                 = "Niemann, H. B., D. N. Harpold, S. K. Atreya,
+G. R. Carignan, D. M. Hunten, and T. C. Owen, Galileo Probe Mass Spectrometer 
+Experiment, Space Sci. Rev., 60, 111-142,1992."                               
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "NIEMANNETAL1996"                            
+REFERENCE_DESC                 = "Niemann, H. B., S. K. Atreya, G. R.         
+Carignan, T. M. Donahue, J. A. Haberman, D. N. Harpold, R. E. Hartle, D. M.   
+Hunten, T. C. Owen, N. W. Spencer, and S. H. Way, The Galileo Probe Mass      
+Spectrometer: Composition of Jupiter's Atmosphere, Science, 272, 846-849,     
+1996."                                                                        
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "NIEMANNETAL1998"                            
+REFERENCE_DESC                 = "Niemann, H. B., S. K. Atreya, G. R.         
+Carignan, T. M. Donahue, J. A. Haberman, D. N. Harpold, R. E. Hartle, D. M.   
+Hunten, W. T. Kasprzak, P. R. Mahaffy, T. C. Owen, and S. H. Way, The         
+composition of the Jovian atmosphere as determined by the Galileo probe mass  
+spectrometer, J. Geophys. Res. 103, 22831-22845, 1998."                       
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SROMOVSKYETAL1998"                          
+REFERENCE_DESC                 = "Sromovsky, L.A., A.D. Collard, P.M. Fry,    
+G.S. Orton, M.T. Lemmon, M.G. Tomasko, and R.S. Freedman, Galileo Probe       
+measurements of thermal and solar radiation fluxes in the                     
+Jovian atmosphere, J. Geophys. Res. 103, 22929-22977, 1998."                  
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SROMOVSKYETAL1996"                          
+REFERENCE_DESC                 = "Sromovsky, L.A., F.A. Best, A.D. Collard,   
+P.M. Fry, H.E. Revercomb, R.S. Freedman, G.S. Orton, J.L. Hayden, M.G.        
+Tomasko, and M.T. Lemmon, Solar and Thermal Radiation in Jupiter's Atmosphere:
+Initial Results of the Galileo Probe Net Flux Radiometer. Science 272,        
+pp. 851-854, 1996."                                                           
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SROMOVSKY&FRY1994"                          
+REFERENCE_DESC                 = "Sromovsky, L.A. and P.M. Fry, Calibration   
+of the Galileo Net Flux Radiometer. Proceedings of the Fourth SDL/USU Infrared
+Sensor Calibration Symposium. Utah State University, 1994."                   
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SROMOVSKYETAL1992"                          
+REFERENCE_DESC                 = "Sromovsky, L.A., F.A. Best, H.E. Revercomb, 
+and J.L. Hayden, Galileo Net Flux Radiometer Experiment. Space Sci. Rev. 60,  
+pp. 233-262, 1992."                                                           
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "VONZAHN&HUNTEN1992"                         
+REFERENCE_DESC                 = "Von Zahn, U. and D. M. Hunten, The Jupiter  
+Helium Interferometer Experiment on the Galileo Entry Probe. Space Sci. Rev.  
+60, pp. 263-281, 1992."                                                       
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "VONZAHN&HUNTEN1996"                         
+REFERENCE_DESC                 = "Von Zahn, U. and D. M. Hunten, The Helium   
+Mass Fraction in Jupiter's Atmosphere. Science 272, pp. 849-851, 1996."       
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "VONZAHNETAL1998"                            
+REFERENCE_DESC                 = "Von Zahn, U., D. M. Hunten and G. Lehmacher,
+Helium in Jupiter's atmosphere: Results from the Galileo probe Helium         
+Interferometer Experiment. J. Geophys. Res. 103, pp. 22815-22828, 1998."      
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "FISCHERETAL1996"                            
+REFERENCE_DESC                 = "Fischer, H. M., E. Pehlke, G. Wibberenz,    
+L. J. Lanzerotti and J. D. Mihalov, High-Energy Charged Particles in the      
+Innermost Jovian Magnetosphere. Science 272, pp. 856-858, 1996."              
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "FISCHERETAL1992"                            
+REFERENCE_DESC                 = "Fischer, H. M., J. D. Mihalov, L. J.        
+Lanzerotti, G. Wibberenz, K. Rinnert, F. O. Gliem and J. Bach, Energetic      
+Particles Investigation (EPI), Space Sci. Rev. 60, pp. 79-90, 1992."          
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "FISCHERETAL1980"                            
+REFERENCE_DESC                 = "Fischer, H. M., V. Jentsch, H. Westphalen   
+and G. Wibberenz, Galileo Probe, Energetic Particles Investigation, EPI       
+Instrument Description and Anticipated New Results, Institut fuer Reine und   
+Angewandte Kernphysik internal report."                                       
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "ATKINSONETAL1996"                           
+REFERENCE_DESC                 = "Atkinson, D. H., J. B. Pollack and A. Seiff,
+Galileo Doppler Measurements of the Deep Zonal Winds at Jupiter. Science 272, 
+pp. 842-843, 1996."                                                           
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "ATKINSONETAL1997"                           
+REFERENCE_DESC                 = "Atkinson, D. H., A.P. Ingersoll and A.      
+Seiff, Deep Winds on Jupiter As Measured by the Galileo Probe, Nature 388,    
+649-650, 1997."                                                               
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "ATKINSONETAL1998"                           
+REFERENCE_DESC                 = "Atkinson, D. H., J. B. Pollack and A. Seiff,
+The Galileo Probe Doppler Wind Experiment: Measurement of the deep zonal      
+winds on Jupiter. J. Geophys. Res. 103, pp. 22911-22928, 1998."               
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "DAVIESETAL1983"                             
+REFERENCE_DESC                 = "Davies, M.E., M. Abalakin, J.H. Lieske, P.K.
+Seidelman, A.T. Sinclair, A.M. Sinzi, B.A. Smith, and Y.S. Tjuflin,           
+Report of the IAU Working Group on Cartographic Coordinates and               
+Rotational Elements of the Planets and Satellites, Celestial                  
+Mechanics and Dynamical Astronomy 29, 309-321, 1983."                         
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "RIDDLE&WARWICK1976"                         
+REFERENCE_DESC                 = "Riddle, A.C. and J.W. Warwick,              
+Redefinition of System III Longitude, Icarus 27, 457-459, 1976."              
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "FOLKNERETAL1997"                            
+REFERENCE_DESC                 = "Folkner, W.M., R.A. Preston, J.S. Border,   
+J. Navarro, W.E. Wilson and M. Oestreich, Earth-Based Radio Tracking of the   
+Galileo Probe for Jupiter Wind Estimation, Science 275, 644-646, 1997."       
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "FOLKNERETAL1998"                            
+REFERENCE_DESC                 = "Folkner, W.M., R. Woo and S. Nandi,         
+Ammonia Abundance in Jupiter's Atmosphere Derived from the Attenuation of the 
+Galileo Probe's Radio Signal, J. Geophys. Res. 103, 22847-22855, 1998."       
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "POLLACKETAL1992"                            
+REFERENCE_DESC                 = "Pollack, J. B., D. H. Atkinson, A. Seiff and
+J. D. Anderson, Retrieval of a Wind Profile from the Galileo Probe Telemetry  
+Signal, Space Sci. Rev. 60, pp. 143-178, 1992."                               
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "RINNERTETAL1998"                            
+REFERENCE_DESC                 = "Rinnert, K., L. J. Lanzerotti, M. A. Uman,  
+G. Dehmel, F. O. Gliem, E. P. Krider and J. Bach, Measurement of radio        
+frequency signals from lightning in Jupiter's atmosphere, J. Geophys. Res.    
+103, 22979-22992, 1998."                                                      
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "RINNERT&LANZEROT1998"                       
+REFERENCE_DESC                 = "Rinnert, K. and L. J. Lanzerotti, Radio     
+wave propagation below the Jovian ionosphere. J. Geophys. Res.                
+103, 22993-22999, 1998."                                                      
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "LANZEROTTIETAL1996"                         
+REFERENCE_DESC                 = "Lanzerotti, L. J., K. Rinnert, G. Dehmel,   
+F. O. Gliem, E. P. Krider, M. A. Uman and J. Bach, Radio Frequency Signals in 
+Jupiter's Atmosphere, Science 272, pp. 858-860, 1996."                        
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "LANZEROTTIETAL1998"                         
+REFERENCE_DESC                 = "Lanzerotti, L. J., K. Rinnert and G. Dehmel,
+Spin Rate of Galileo During Descent in to the Atmosphere of Jupiter, J.       
+Spacecraft and Rockets 35, pp. 100-102, 1998."                                
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "LANZEROTTIETAL1992"                         
+REFERENCE_DESC                 = "Lanzerotti, L. J., K. Rinnert, G. Dehmel,   
+F. O. Gliem, E. P. Krider, M. A. Uman, G. Umlauft and J. Bach, The Lightning  
+and Radio Emission Detector Instrument, Space Sci. Rev. 60, pp. 91-109, 1992."
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SEIFFETAL1996"                              
+REFERENCE_DESC                 = "Seiff, A., D. B. Kirk, T. C. D. Knight,     
+J. D. Mihalov, R. C. Blanchard, R. E. Young, G. Schubert, U. von Zahn, G.     
+Lehmacher, F. S. Milos and J. Wang, Structure of the Atmosphere of Jupiter:   
+Galileo Probe Measurements, Science 272, pp. 844-845, 1996."                  
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SEIFFETAL1999"                              
+REFERENCE_DESC                 = "Seiff, A., D. B. Kirk, J. D. Mihalov,       
+T. C. D. Knight, Further evaluation of waves and turbulence encountered by    
+the Galileo Probe during descent in Jupiter's atmosphere, Geophys. Res. Lett.,
+26, p. 1199, 1999."                                                           
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SEIFFETAL1998"                              
+REFERENCE_DESC                 = "Seiff, A., D. B. Kirk, T. C. D. Knight,     
+R. E. Young, J. D. Mihalov, L. A. Young, F. S. Milos, G. Schubert,            
+R. C. Blanchard and D. Atkinson, Thermal structure of Jupiter's atmosphere    
+near the edge of a 5-um hot spot in the north equatorial belt.                
+J. Geophys. Res. 103, pp. 22857-22889, 1998."                                 
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "SEIFF&KNIGHT1992"                           
+REFERENCE_DESC                 = "Seiff, A. and T. C. D. Knight, The Galileo  
+Atmosphere Structure Instrument, Space Sci. Rev. 60, pp. 203-232, 1992."      
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "MILOSETAL1999"                              
+REFERENCE_DESC                 = "Milos, F. S., Y.-K. Chen, T. H. Squire and  
+R. A. Brewer, Analysis of Galileo Probe Heatshield Ablation and Temperature   
+Data, J. of Spacecraft and Rockets 36, pp. 298-306, 1999."                    
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "RAGENTETAL1996"                             
+REFERENCE_DESC                 = "Ragent, B., D. S. Colburn, P. Avrin and     
+K. A. Rages, Results of the Galileo Probe Nephelometer Experiment. Science    
+272, pp. 854-856, 1996."                                                      
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "RAGENTETAL1998"                             
+REFERENCE_DESC                 = "Ragent, B., D. S. Colburn, K. A. Rages,     
+T. C. D. Knight, P. Avrin, G. S. Orton, P. A. Yanamandra-Fisher and           
+G. W. Grams, The clouds of Jupiter: Results of the Galileo Jupiter            
+Mission Probe Nephelometer Experiment, J. Geophys Res., 103, 22891-22909,     
+1998."                                                                        
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+OBJECT                         = REFERENCE                                    
+REFERENCE_KEY_ID               = "RAGENTETAL1992"                             
+REFERENCE_DESC                 = "Ragent, B., C. A. Privette, P. Avrin, J. G. 
+Waring, C. E. Carlston, T. C. D. Knight and J. P. Martin, Galileo Probe       
+Nephelometer Experiment. Space Sci. Rev. 60, pp. 179-201, 1992."              
+END_OBJECT                     = REFERENCE                                    
+                                                                              
+END                                                                           

@@ -1,0 +1,124 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 67                                            
+FILE_RECORDS                  = 88                                            
+^A_TABLE                      = ("ELECOFFS.TAB",1)                            
+^B_TABLE                      = ("ELECOFFS.TAB",45)                           
+DATA_SET_ID                   = "GP-J-NEP-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE NEPHELOMETER"                  
+TARGET_NAME                   = "JUPITER"                                     
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "File  3 - 1.1.2"                             
+PRODUCT_ID                    = "ELECOFFS.TAB"                                
+PRODUCT_CREATION_TIME         =  1995-12-07                                   
+                                                                              
+OBJECT                        = A_TABLE                                       
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 44                                          
+  COLUMNS                       = 6                                           
+  ROW_BYTES                     = 67                                          
+  DESCRIPTION                   = "Electronic Offsets, Counts. An offset      
+                                   measurement made periodically"             
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ATMOSPHERIC PRESSURE"                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "BARS"                                         
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 2                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Atmospheric pressure in bars"                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "5.8 DEGREES"                                  
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "5.8 degrees (counts)"                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "16 DEGREES"                                   
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 23                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "16 degrees (counts)"                          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "40 DEGREES"                                   
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 34                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "40 degrees (counts)"                          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "70 DEGREES"                                   
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 45                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "70 degrees (counts)"                          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "178 DEGREES"                                  
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 56                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "178 degrees (counts)"                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = A_TABLE                                       
+                                                                              
+OBJECT                        = B_TABLE                                       
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 44                                          
+  COLUMNS                       = 2                                           
+  ROW_BYTES                     = 21                                          
+  ROW_SUFFIX_BYTES              = 46                                          
+  DESCRIPTION                   = "Electronic Offsets, Counts. (Continued)"   
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ATMOSPHERIC PRESSURE"                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "BARS"                                         
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 2                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Atmospheric pressure in bars"                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "CONTAMINATION OFFSET"                         
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = B_TABLE                                       
+END                                                                           

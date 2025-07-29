@@ -1,0 +1,18 @@
+PDS_VERSION_ID                    = PDS3
+RECORD_TYPE                       = STREAM
+
+^ASCII_DOCUMENT                   = { "NFREDR4.H", "NFREDR41.C" }
+
+OBJECT                            = ASCII_DOCUMENT
+  DOCUMENT_NAME                   = "Galileo Probe NFR EDR Extraction Routine"
+  PUBLICATION_DATE                = 1998-01-16
+  DOCUMENT_TOPIC_TYPE             = "SOFTWARE DESCRIPTION"
+  INTERCHANGE_FORMAT              = ASCII
+  DOCUMENT_FORMAT                 = TEXT
+  DESCRIPTION                     = "Program to read SDM tape files and 
+     extract NFR instrument data. Writes several (read MANY) files of data
+     components. Writes raw counts for temp transducers, and more HK data.
+     Now writes data files more compatible with PDS archive requirements.
+     Uses counts+0.5 for housekeeping value conversions."
+END_OBJECT                        = ASCII_DOCUMENT
+END

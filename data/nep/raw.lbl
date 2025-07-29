@@ -1,0 +1,225 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 56                                            
+FILE_RECORDS                  = 880                                           
+^TABLE                        = "RAW.TAB"                                     
+DATA_SET_ID                   = "GP-J-NEP-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE NEPHELOMETER"                  
+TARGET_NAME                   = "JUPITER"                                     
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "File  1 - 1.0"                               
+PRODUCT_ID                    = "RAW.TAB"                                     
+PRODUCT_CREATION_TIME         =  1995-12-07                                   
+NOTE                          = "                                             
+This file contains all of the Nephelometer data transmitted back              
+during the encounter, in hexadecimal form.  They were taken directly from     
+the file NEP0701A.SDM, sent from the project office in July 1996."            
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 880                                         
+  COLUMNS                       = 15                                          
+  ROW_BYTES                     = 56                                          
+  DESCRIPTION                   = "Raw data. This is the hexadecimal          
+                                   information from the probe."               
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "LINE NUMBER"                                  
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 3                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Each nephelometer frame is identified by a    
+                                block of 20 lines beginning with the sync     
+                                word EB 90 followed by the nephelometer frame 
+                                number in hexadecimal format. Since a         
+                                nephelometer frame is composed of data from   
+                                20 consecutive spacecraft frames, frame       
+                                number zero contains data from lines 1        
+                                through 20, and the frame number for later    
+                                data is obtained by the integer division of   
+                                (line number - 1) by 20."                     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MINOR FRAME NUMBER"                           
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 8                                              
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "In decimal notation, the probe minor frame    
+                                number transmitted by the probe, cycling      
+                                from 0 through 63."                           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "STRING DATA"                                  
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 14                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "I1"                                           
+    DESCRIPTION              = "The number 5 is for A string data and 6 is    
+                                for B string data.  The file NEP0701A.SDM     
+                                contains both, and where they overlap, the    
+                                data is identical, except for a few lines     
+                                where it is obvious which choice should be    
+                                made. This data set contains only A string    
+                                data, because it is a complete set and where  
+                                B string data exists there is no reason for   
+                                preferring it over the A string data."        
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "UNK"                                          
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 16                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Column 4 data in hexadecimal format"          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DATE"                                         
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 22                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "I1"                                           
+    DESCRIPTION              = "Date assigned to each minor frame. Columns    
+                                5 and 6 represent December 7, 1995. Column    
+                                5 is in integer format and column 6 is in     
+                                hexadecimal format."                          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DATE"                                         
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 24                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Date assigned to each minor frame. Columns    
+                                5 and 6 represent December 7, 1995. Column    
+                                5 is in integer format and column 6 is in     
+                                hexadecimal format."                          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MINUTE"                                       
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 28                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "A1"                                           
+    DESCRIPTION              = "Columns 7 and 8 give the minute and hour,     
+                                in that order, so that for example the        
+                                numbers 7, 16 represent 2207 U.T. Both        
+                                columns are in hexadecimal format."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "HOUR"                                         
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 30                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Columns 7 and 8 give the minute and hour,     
+                                in that order, so that for example the        
+                                numbers 7, 16 represent 2207 U.T. Both        
+                                columns are in hexadecimal format."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SECONDS"                                      
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 33                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Seconds in hexadecimal format"                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MILLISECONDS"                                 
+    COLUMN_NUMBER            = 10                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 36                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Milliseconds in hexadecimal format"           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DATA"                                         
+    COLUMN_NUMBER            = 11                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 41                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Nephelometer data in hexadecimal format"      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DATA"                                         
+    COLUMN_NUMBER            = 12                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 44                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Nephelometer data in hexadecimal format"      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DATA"                                         
+    COLUMN_NUMBER            = 13                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 47                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Nephelometer data in hexadecimal format"      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DATA"                                         
+    COLUMN_NUMBER            = 14                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 50                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Nephelometer data in hexadecimal format"      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DATA"                                         
+    COLUMN_NUMBER            = 15                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 53                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Nephelometer data in hexadecimal format"      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

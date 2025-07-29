@@ -1,0 +1,27 @@
+PDS_VERSION_ID = PDS3                                                         
+LABEL_REVISION_NOTE = "Lyle Huber, August 2000"                               
+RECORD_TYPE  = STREAM                                                         
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE   = 2000-08-15                                             
+  INTERCHANGE_FORMAT = ASCII                                                  
+  NOTE               = "ASCII description of errata for LRD data set."        
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+                               LRDINFO.TXT                                    
+                                                                              
+                           As of 08/15/2000                                   
+                                                                              
+The LRD data have not yet been submitted by the instrument team due to the    
+recent death of one of the Co-Investigators. We are hoping to be able to      
+generate a supplementary data set in the future, but we are not optimistic.   
+                                                                              
+The following references relate to the LRD instrument and results:            
+[LANZEROTTIETAL1992], [LANZEROTTIETAL1996], [RINNERTETAL1998],                
+[RINNERT&LANZEROT1998], [LANZEROTTIETAL1998]                                  
+(See the REF.CAT file in the CATALOG directory.)                              
+These references will have the best information that the investigators had    
+available. Under the circumstances, we wish we could have done more.          
+                                                                              

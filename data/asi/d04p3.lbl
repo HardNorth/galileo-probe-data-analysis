@@ -1,0 +1,87 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 50                                            
+FILE_RECORDS                  = 1462                                          
+^TABLE                        = "D04P3.TAB"                                   
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    =  1995-12-07T22:09:06.349                      
+STOP_TIME                     =  1995-12-07T23:06:54.349                      
+PRODUCT_CREATION_TIME         =  1999-07-16                                   
+PRODUCT_NAME                  = "ASI.PDS.F.D.04.P3"                           
+PRODUCT_ID                    = "D04P3.TAB"                                   
+DESCRIPTION                   = "This file comprises five columns:            
+column 1 contains sensor sampling time in seconds after the start of the      
+Descent mode (minor frame 0), column 2 contains the pressure derived from     
+the steady state sensor calibrations in millibars, column 3 contains the      
+correction for the rate of change of temperature effect on the sensor in      
+millibars, column 4 contains the computed final pressure data in              
+millibars, and column 5 contains the sensor temperature in degrees Celsius.   
+Spikes in pressure data after ~2600 sec are instrument anomalies              
+[SEIFFETAL1998]."                                                             
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 1462                                        
+  COLUMNS                       = 5                                           
+  ROW_BYTES                     = 50                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = "Time from minor frame 0"                      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MEASURED PRESSURE"                            
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "MILLIBARS"                                    
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 12                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "I5"                                           
+    DESCRIPTION              = "Measured pressure"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "PRESSURE CORRECTION"                          
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "MILLIBARS"                                    
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 22                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = "Pressure correction"                          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "FINAL PRESSURE"                               
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "MILLIBARS"                                    
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 31                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "I5"                                           
+    DESCRIPTION              = "Computed final pressure"                      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SENSOR TEMPERATURE"                           
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 41                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "F5.1"                                         
+    DESCRIPTION              = "Sensor Temperature"                           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

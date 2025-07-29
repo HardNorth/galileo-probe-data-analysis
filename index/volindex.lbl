@@ -1,0 +1,93 @@
+PDS_VERSION_ID = PDS3                                                         
+                                                                              
+RECORD_TYPE   = FIXED_LENGTH                                                  
+RECORD_BYTES  = 110                                                           
+FILE_RECORDS  = 166                                                           
+^INDEX_TABLE  = "VOLINDEX.TAB"                                                
+PRODUCT_ID    = "GP-VOLINDEX"                                                 
+PRODUCT_NAME  = "Data File Index for Volume GP_0001"                          
+PRODUCT_CREATION_TIME = 2002-01-07                                            
+                                                                              
+DESCRIPTION  = "This table contains the PDS-required index for all data files 
+                on GP_0001.  It includes file location, size, and PDS         
+                identification information."                                  
+                                                                              
+OBJECT     = INDEX_TABLE                                                      
+  NAME               = "Volume Index"                                         
+  INTERCHANGE_FORMAT = ASCII                                                  
+  ROWS               = 166                                                    
+  COLUMNS            =    7                                                   
+  ROW_BYTES          =  110                                                   
+  INDEX_TYPE         = SINGLE                                                 
+                                                                              
+  OBJECT     = COLUMN                                                         
+    NAME        = PATH_NAME                                                   
+    DATA_TYPE   = CHARACTER                                                   
+    START_BYTE  = 1                                                           
+    BYTES       = 22                                                          
+    FORMAT      = "A22"                                                       
+    DESCRIPTION = "Path to the given file, in UNIX format (i.e., slashes      
+                   separate directory names)"                                 
+  END_OBJECT                                                                  
+                                                                              
+  OBJECT     = COLUMN                                                         
+    NAME        = FILE_NAME                                                   
+    DATA_TYPE   = CHARACTER                                                   
+    START_BYTE  = 24                                                          
+    BYTES       = 12                                                          
+    FORMAT      = "A12"                                                       
+    DESCRIPTION = "Name of the data file, in upper-case, with extension"      
+  END_OBJECT                                                                  
+                                                                              
+  OBJECT     = COLUMN                                                         
+    NAME        = PRODUCT_NAME                                                
+    DATA_TYPE   = CHARACTER                                                   
+    START_BYTE  = 37                                                          
+    BYTES       = 24                                                          
+    FORMAT      = "A24"                                                       
+    DESCRIPTION = "Original file name if known"                               
+  END_OBJECT                                                                  
+                                                                              
+  OBJECT     = COLUMN                                                         
+    NAME        = DATA_SET_ID                                                 
+    DATA_TYPE   = CHARACTER                                                   
+    START_BYTE  = 62                                                          
+    BYTES       = 24                                                          
+    FORMAT      = "A24"                                                       
+    DESCRIPTION = "PDS catalog number which identifies files considered       
+                   part of a single data set"                                 
+  END_OBJECT                                                                  
+                                                                              
+  OBJECT     = COLUMN                                                         
+    NAME        = PRODUCT_CREATION_TIME                                       
+    DATA_TYPE   = CHARACTER                                                   
+    START_BYTE  = 87                                                          
+    BYTES       = 10                                                          
+    FORMAT      = "A10"                                                       
+    DESCRIPTION = "Time data file was created and/or delivered."              
+  END_OBJECT                                                                  
+                                                                              
+  OBJECT     = COLUMN                                                         
+    NAME        = RECORD_BYTES                                                
+    DATA_TYPE   = ASCII_INTEGER                                               
+    START_BYTE  = 98                                                          
+    BYTES       = 4                                                           
+    FORMAT      = "I4"                                                        
+    DESCRIPTION = "Number of bytes in a single data record"                   
+  END_OBJECT                                                                  
+                                                                              
+  OBJECT     = COLUMN                                                         
+    NAME        = FILE_RECORDS                                                
+    DATA_TYPE   = ASCII_INTEGER                                               
+    START_BYTE  = 103                                                         
+    BYTES       =   5                                                         
+    FORMAT      = "I5"                                                        
+    DESCRIPTION = "Number of records in the file"                             
+  END_OBJECT                                                                  
+                                                                              
+END_OBJECT = INDEX_TABLE                                                      
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+                                                                              

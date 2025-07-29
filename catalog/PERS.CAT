@@ -1,0 +1,222 @@
+PDS_VERSION_ID                    = PDS3                                      
+                                                                              
+RECORD_TYPE                       = FIXED_LENGTH                              
+RECORD_BYTES                      = 80                                        
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = LHUBER                                    
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "LYLE F. HUBER"                           
+  LAST_NAME                       = HUBER                                     
+  TELEPHONE_NUMBER                = "5056461862"                              
+  ALTERNATE_TELEPHONE_NUMBER      = "5056464438"                              
+  FAX_NUMBER                      = "5056461602"                              
+  INSTITUTION_NAME                = "NEW MEXICO STATE UNIVERSITY"             
+  NODE_ID                         = "ATMOS"                                   
+  PDS_AFFILIATION                 = "NODE"                                    
+  PDS_ADDRESS_BOOK_FLAG           = "Y"                                       
+  REGISTRATION_DATE               = 1996-09-26                                
+  ADDRESS_TEXT                    = "NEW MEXICO STATE UNIVERSITY              
+                                     DEPARTMENT OF ASTRONOMY, MSC 4500        
+                                     P. O. BOX 30001                          
+                                     LAS CRUCES, NM 88003-8001"               
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "lhuber@nmsu.edu"                         
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+OBJECT                           = PERSONNEL                                  
+  PDS_USER_ID                    = HBNIEMANN                                  
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+    FULL_NAME                    = "HASSO B. NIEMANN"                         
+    LAST_NAME                    = "NIEMANN"                                  
+    TELEPHONE_NUMBER             = "3012868706"                               
+    ALTERNATE_TELEPHONE_NUMBER   = "3012865210"                               
+    FAX_NUMBER                   = "3012861756"                               
+    INSTITUTION_NAME             = "NASA/GODDARD SPACE FLIGHT CENTER"         
+    NODE_ID                      = "ATMOS"                                    
+    PDS_AFFILIATION              = "DATA SUPPLIER"                            
+    PDS_ADDRESS_BOOK_FLAG        = "N"                                        
+    REGISTRATION_DATE            = "UNK"                                      
+    ADDRESS_TEXT                 = "Goddard Space Flight Center               
+                                    Code 915                                  
+                                    Greenbelt, MD 20771"                      
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+    ELECTRONIC_MAIL_ID           = "Hasso.B.Niemann@gsfc.nasa.gov"            
+    ELECTRONIC_MAIL_TYPE         = "INTERNET"                                 
+    PREFERENCE_ID                = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = TKNIGHT                                   
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "TONY C. D. KNIGHT"                       
+  LAST_NAME                       = KNIGHT                                    
+  TELEPHONE_NUMBER                = "UNK"                                     
+  ALTERNATE_TELEPHONE_NUMBER      = "UNK"                                     
+  FAX_NUMBER                      = "UNK"                                     
+  INSTITUTION_NAME                = "N/A"                                     
+  NODE_ID                         = "ATMOS"                                   
+  PDS_AFFILIATION                 = "DATA SUPPLIER"                           
+  PDS_ADDRESS_BOOK_FLAG           = "N"                                       
+  REGISTRATION_DATE               = "UNK"                                     
+  ADDRESS_TEXT                    = "2370 S. BRENTWOOD ST.                    
+                                     DENVER, CO 80227"                        
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "tcdk@compuserve.com"                     
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = DATKINSON                                 
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "DAVID H. ATKINSON"                       
+  LAST_NAME                       = ATKINSON                                  
+  TELEPHONE_NUMBER                = "2088856870"                              
+  ALTERNATE_TELEPHONE_NUMBER      = "UNK"                                     
+  FAX_NUMBER                      = "2088857579"                              
+  INSTITUTION_NAME                = "UNIVERSITY OF IDAHO"                     
+  NODE_ID                         = "ATMOS"                                   
+  PDS_AFFILIATION                 = "DATA SUPPLIER"                           
+  PDS_ADDRESS_BOOK_FLAG           = "N"                                       
+  REGISTRATION_DATE               = "UNK"                                     
+  ADDRESS_TEXT                    = "UNIVERSITY OF IDAHO                      
+                                     DEPARTMENT OF ELECTRICAL ENGINEERING     
+                                     MOSCOW, ID 83843"                        
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "atkinson@maxwell.ee.uidaho.edu"          
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = EPEHLKE                                   
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "ECKHARD PEHLKE"                          
+  LAST_NAME                       = PEHLKE                                    
+  TELEPHONE_NUMBER                = "UNK"                                     
+  ALTERNATE_TELEPHONE_NUMBER      = "UNK"                                     
+  FAX_NUMBER                      = "UNK"                                     
+  INSTITUTION_NAME                = "UNIVERSITY OF KIEL"                      
+  NODE_ID                         = "ATMOS"                                   
+  PDS_AFFILIATION                 = "DATA SUPPLIER"                           
+  PDS_ADDRESS_BOOK_FLAG           = "N"                                       
+  REGISTRATION_DATE               = "UNK"                                     
+  ADDRESS_TEXT                    = "CHRISTIAN-ALBRECHTS-UNIVERSITAET KIEL    
+                            INSTITUT FUER EXPERIMENTELLE UND ABGEWANDTE PHYSIK
+                                     OLSHAUSENSTRASSE 40                      
+                                     D-24098 KIEL, GERMANY"                   
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "kareck@t-online.de"                      
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = LLANZEROTTI                               
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "LOUIS J. LANZEROTTI"                     
+  LAST_NAME                       = LANZEROTTI                                
+  TELEPHONE_NUMBER                = "9085822279"                              
+  ALTERNATE_TELEPHONE_NUMBER      = "UNK"                                     
+  FAX_NUMBER                      = "UNK"                                     
+  INSTITUTION_NAME                = "LUCENT TECHNOLOGIES"                     
+  NODE_ID                         = "ATMOS"                                   
+  PDS_AFFILIATION                 = "DATA SUPPLIER"                           
+  PDS_ADDRESS_BOOK_FLAG           = "N"                                       
+  REGISTRATION_DATE               = "UNK"                                     
+  ADDRESS_TEXT                    = "P. O. BOX 326                            
+                                     NEW VERNON, NJ 07976"                    
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "ljl@physics.bell-lab.com"                
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = DCOLBURN                                  
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "DAVID S. COLBURN"                        
+  LAST_NAME                       = COLBURN                                   
+  TELEPHONE_NUMBER                = "6506046210"                              
+  ALTERNATE_TELEPHONE_NUMBER      = "4153277183"                              
+  FAX_NUMBER                      = "UNK"                                     
+  INSTITUTION_NAME                = "NASA/AMES RESEARCH CENTER"               
+  NODE_ID                         = "ATMOS"                                   
+  PDS_AFFILIATION                 = "DATA SUPPLIER"                           
+  PDS_ADDRESS_BOOK_FLAG           = "N"                                       
+  REGISTRATION_DATE               = "UNK"                                     
+  ADDRESS_TEXT                    = "1944 WAVERLEY STREET                     
+                                     PALO ALTO, CA 94301"                     
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "colburn@galileo.arc.nasa.gov"            
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = PFRY                                      
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "PAT M. FRY"                              
+  LAST_NAME                       = FRY                                       
+  TELEPHONE_NUMBER                = "6082639694"                              
+  ALTERNATE_TELEPHONE_NUMBER      = "UNK"                                     
+  FAX_NUMBER                      = "6082625974"                              
+  INSTITUTION_NAME                = "UNIVERSITY OF WISCONSIN"                 
+  NODE_ID                         = "ATMOS"                                   
+  PDS_AFFILIATION                 = "DATA SUPPLIER"                           
+  PDS_ADDRESS_BOOK_FLAG           = "N"                                       
+  REGISTRATION_DATE               = "UNK"                                     
+  ADDRESS_TEXT                    = "UNIVERSITY OF WISCONSIN                  
+                                     SPACE SCIENCE & ENGINEERING CENTER       
+                                     1225 W. DAYTON ST.                       
+                                     MADISON, WI 53706"                       
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "pat.fry@ssec.wisc.edu"                   
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+END                                                                           

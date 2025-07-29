@@ -1,0 +1,44 @@
+PDS_VERSION_ID = PDS3                                                         
+RECORD_TYPE  = STREAM                                                         
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE   = 2000-05-15                                             
+  INTERCHANGE_FORMAT = ASCII                                                  
+  NOTE               = "ASCII description of errata for ASI data set."        
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+                           ERRATA_ASI.TXT                                     
+                                                                              
+                           As of 05/15/00                                     
+                                                                              
+The following files contain the raw data stream from the Galileo Probe        
+Atmosphere Structure Instrument.                                              
+                                                                              
+The data are either for sensor, calibration or housekeeping purposes. The     
+PDS archive may not have the files necessary for data reduction. However      
+these data are potentially of some interest to the ASI and are reported       
+informally as a part of this PDS data record. If any of these data are        
+used for some formal purpose, reference should be made to the official        
+probe data results report to assure accuracy of the data.                     
+                                                                              
+c01.dat, c02.dat, c03.dat                                                     
+==================================                                            
+ASI calibration data.                                                         
+                                                                              
+d01.dat, d02.dat, d03.dat, d07.dat                                            
+==================================                                            
+ASI Descent sequence data.                                                    
+                                                                              
+e01.dat, e02.dat                                                              
+==================================                                            
+ASI Entry sequence data.                                                      
+                                                                              
+hk01a.dat, hk01ad.dat, hk01p.dat, hk01te.dat                                  
+============================================                                  
+ASI housekeeping data.                                                        
+                                                                              
+t01.dat                                                                       
+==================================                                            
+Data taken around the time of maximum deceleration.                           

@@ -1,0 +1,75 @@
+PDS_VERSION_ID                   = PDS3                                       
+LABEL_REVISION_NOTE              = "Lyle Huber, September 1998"               
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "GP-J-ASI-3-ENTRY-V1.0"                    
+                                                                              
+  OBJECT                         = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "GALILEO PROBE ASI RAW DATA SET"           
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = TABLE                                      
+  START_TIME                     = 1995-12-07T19:04:00Z                       
+  STOP_TIME                      = 1995-12-07T22:04:00Z                       
+  DATA_SET_RELEASE_DATE          = 1996-12-08                                 
+  PRODUCER_FULL_NAME             = "TONY KNIGHT"                              
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+Data Set Overview                                                             
+=================                                                             
+                                                                              
+From [SEIFFETAL1996]:                                                         
+                                                                              
+The Galileo Probe Atmospheric Structure Instrument (ASI) measured state       
+properties of Jupiter's atmosphere from nanobar pressure levels to a final    
+pressure of ~24 bars. The depth reached in the probe's parachute descent,     
+calculated from measured temperatures and pressures assuming hydrostatic      
+equilibrium, was ~160 km or 0.22% of the radius of Jupiter. Velocities during 
+descent decreased from ~400 m/s at parachute deployment to 156 m/s in the     
+first 100 s, to ~48 m/s at the 3-bar level, and to ~30 m/s at loss of signal. 
+                                                                              
+Temperatures measured in parachute descent had an accuracy of ~1 K and a      
+dispersion on the order of the digital resolution (0.12 K). Comparison with   
+the Orton model indicates that the atmosphere is close to a dry adiabat over  
+this pressure range. Water condensation, expected above the 5-bar level if the
+oxygen mole fraction is solar (0.0017) and above the 4-bar level for the low  
+water abundance detected by the neutral mass spectrometer (~0.2 of the solar  
+abundance value), has major effects on the temperature variation. Temperatures
+following the dry adiabat at these levels confirm the low water abundance and 
+are consistent with the absence of a detectable water cloud. Deviations from  
+the adiabat between 1 and 3 bars, which were initially interpreted as a stable
+layer in the tenuous cloud above 1.6 bars and an unstable layer below the     
+cloud, now are believed to reflect departures from preflight pressure sensor  
+calibrations resulting from unanticipated variations in the probe's internal  
+temperature.                                                                  
+                                                                              
+"                                                                             
+                                                                              
+CONFIDENCE_LEVEL_NOTE = "                                                     
+                                                                              
+Confidence Level Overview                                                     
+=========================                                                     
+                                                                              
+Details can be found in [SEIFFETAL1996].                                      
+                                                                              
+"                                                                             
+                                                                              
+ END_OBJECT                      = DATA_SET_INFORMATION                       
+                                                                              
+                                                                              
+ OBJECT                          = DATA_SET_TARGET                            
+  TARGET_NAME                    = JUPITER                                    
+ END_OBJECT                      = DATA_SET_TARGET                            
+                                                                              
+ OBJECT                          = DATA_SET_HOST                              
+  INSTRUMENT_HOST_ID             = GP                                         
+  INSTRUMENT_ID                  = ASI                                        
+ END_OBJECT                      = DATA_SET_HOST                              
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+  REFERENCE_KEY_ID               = "SEIFFETAL1996"                            
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+END_OBJECT                       = DATA_SET                                   
+                                                                              
+END                                                                           

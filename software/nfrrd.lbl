@@ -1,0 +1,15 @@
+PDS_VERSION_ID                    = PDS3
+RECORD_TYPE                       = STREAM
+
+^ASCII_DOCUMENT                   = { "NFRRDFIL.PRO", "NFRRDFLX.PRO" }
+
+OBJECT                            = ASCII_DOCUMENT
+  DOCUMENT_NAME                   = "Galileo Probe NFR RDR Sample Routines"
+  PUBLICATION_DATE                = 1998-01-16
+  DOCUMENT_TOPIC_TYPE             = "SOFTWARE DESCRIPTION"
+  INTERCHANGE_FORMAT              = ASCII
+  DOCUMENT_FORMAT                 = TEXT
+  DESCRIPTION                     = "Simple IDL programs to read data from
+                                     NFR files."
+END_OBJECT                        = ASCII_DOCUMENT
+END

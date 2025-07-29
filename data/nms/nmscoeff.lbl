@@ -1,0 +1,128 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 108                                           
+FILE_RECORDS                  = 32                                            
+^TABLE                        = "NMSCOEFF.TAB"                                
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "NMSCOEFF.TAB"                                
+PRODUCT_ID                    = "NMSCOEFF.TAB"                                
+DESCRIPTION                   = "GPMS Housekeeping Conversion Coefficients    
+                                                                              
+  The raw housekeeping (HK) is converted to real world                        
+  engineering units (EU) using the relationship:                              
+                                                                              
+  EU = A + B*HK + C*HK*HK +D*HK*HK*HK +E*HK*HK*HK*HK                          
+                                                                              
+Note:  The following substitutions occur for the indicated                    
+       housekeeping parameters when the raw PGM STEP value                    
+       is 0 or 1:                                                             
+                                                                              
+       HK Parameter   HK = 0 or 1   Other HK values                           
+       ------------   -----------   ---------------                           
+       Cell 2 Temp    CMD A         Cell 2 Temp                               
+       Leak 2 Temp    CMD B         Leak 2 Temp                               
+       Inlet2 Temp    CMD C         Inlet2 Temp                               
+       Fil 1 I        RF MSB        Fil 1 I                                   
+       Fil 2 I        RF LSB        Fil 2 I"                                  
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 32                                          
+  COLUMNS                       = 8                                           
+  ROW_BYTES                     = 108                                         
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER"                                      
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 1                                              
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Minor Frame Counter (1 - 32)"                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "A COEFFICIENT"                                
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 6                                              
+    BYTES                    = 12                                             
+    FORMAT                   = "12E5"                                         
+    DESCRIPTION              = "A Coefficient"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "B COEFFICIENT"                                
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 21                                             
+    BYTES                    = 12                                             
+    FORMAT                   = "12E5"                                         
+    DESCRIPTION              = "B Coefficient"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "C COEFFICIENT"                                
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 36                                             
+    BYTES                    = 12                                             
+    FORMAT                   = "12E5"                                         
+    DESCRIPTION              = "C Coefficient"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "D COEFFICIENT"                                
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 51                                             
+    BYTES                    = 12                                             
+    FORMAT                   = "12E5"                                         
+    DESCRIPTION              = "D Coefficient"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "E COEFFICIENT"                                
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 66                                             
+    BYTES                    = 12                                             
+    FORMAT                   = "12E5"                                         
+    DESCRIPTION              = "E Coefficient"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "LABEL"                                        
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 81                                             
+    BYTES                    = 11                                             
+    FORMAT                   = "A11"                                          
+    DESCRIPTION              = "Label"                                        
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ENGINEERING UNITS"                            
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 95                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "A9"                                           
+    DESCRIPTION              = "Engineering units"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

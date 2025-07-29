@@ -1,0 +1,47 @@
+PDS_VERSION_ID = PDS3                                                         
+RECORD_TYPE = FIXED_LENGTH                                                    
+RECORD_BYTES = 1020                                                           
+FILE_RECORDS = 81                                                             
+^ARRAY = "NFRFOVD.DAT"                                                        
+DATA_SET_ID = "GP-J-NFR-3-ENTRY-V1.0"                                         
+SPACECRAFT_NAME = "GALILEO PROBE"                                             
+INSTRUMENT_NAME = "NET FLUX RADIOMETER"                                       
+TARGET_NAME = JUPITER                                                         
+START_TIME = "UNK"                                                            
+STOP_TIME = "UNK"                                                             
+PRODUCT_NAME = "NFRFOVD.DAT"                                                  
+PRODUCT_ID = "NFRFOVD.DAT"                                                    
+PRODUCT_CREATION_TIME =  1998-08-14                                           
+DESCRIPTION = "                                                               
+# Galileo Net Flux Radiometer SN01R2 Channel D Angular Response.              
+# --------------------------------------------------------------              
+# Data regridded 27 Jan 95 by Andrew Collard, UW SSEC                         
+# Produced from nfrfovd.txt (Pat Fry, UW SSEC, 18 Jan 95).                    
+# The responses are normalized to 1.0 at maximum                              
+#                                                                             
+# NOTE ON COORDINATE CONVENTION:                                              
+# The azimuth angle is measured from the x axis and                           
+# the elevation angle is measured above the x-y plane where                   
+# the x axis lies in the plane of the NFR optic axis and                      
+# the z axis points aft along the probe spin axis.                            
+#                                                                             
+# The data are arranged in eighty-one columns corresponding to the            
+# elevation angles with each row containing 101 elements corresponding        
+# to the azimuth angles.                                                      
+# Both azimuth and elevation are incremented in steps of 1 degree.            
+# Azimuth runs from -50 to +50 degrees                                        
+# Elevation runs from 0 to 80 degrees                                         
+#                                                                             
+"                                                                             
+                                                                              
+OBJECT = ARRAY                                                                
+NAME = "NFR D FOV"                                                            
+INTERCHANGE_FORMAT = ASCII                                                    
+AXES = 2                                                                      
+AXIS_ITEMS = (81, 101)                                                        
+AXIS_NAME = "(ELEVATION, AZIMUTH)"                                            
+AXIS_UNIT = "(DEGREE, DEGREE)"                                                
+AXIS_INTERVAL = (1.0, 1.0)                                                    
+AXIS_START = (0.0, -50.0)                                                     
+END_OBJECT = ARRAY                                                            
+END                                                                           

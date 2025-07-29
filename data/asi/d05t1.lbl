@@ -1,0 +1,60 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 15                                            
+FILE_RECORDS                  = 821                                           
+^TABLE                        = "D05T1.TAB"                                   
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.D.05.T1"                           
+PRODUCT_ID                    = "D05T1.TAB"                                   
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.D.05                                                  
+                                                                              
+Data in these files ( ASI.PDS.F.D.05.T1  :  ASI.PDS.F.D.05.T2 ) contain data  
+for all of the Descent sequence atmospheric temperature sensor measurements.  
+File ASI.PDS.F.D.05.T1 contains all data from the primary sensor.             
+File ASI.PDS.F.D.05.T2 contains all data from the secondary sensor.           
+                                                                              
+Descriptions of the instrumentation can be found in Space Sciences Review,    
+Volume 60, May 1992,  pages 203 - 232.                                        
+                                                                              
+The first column in the file identifies the measurement sample time, and the  
+second column in the file contains the temperature in Kelvin."                
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 821                                         
+  COLUMNS                       = 2                                           
+  ROW_BYTES                     = 15                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SAMPLE TIME"                                  
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = "Measurement sample time."                     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TEMPERATURE"                                  
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "KELVIN"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 8                                              
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.2"                                         
+    DESCRIPTION              = "Descent sequence atmospheric temperature      
+                                sensor measurements from the primary sensor." 
+                                                                              
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

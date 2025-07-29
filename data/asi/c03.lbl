@@ -1,0 +1,57 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 24                                            
+FILE_RECORDS                  = 48                                            
+^TABLE                        = "C03.TAB"                                     
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.C.03"                              
+PRODUCT_ID                    = "C03.TAB"                                     
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.C.03                                                  
+                                                                              
+This file ( ASI.PDS.F.C.03 ) contains data for all of the Pre-Entry           
+Calibration sequence measurements.     The data were extracted from files     
+ASI.PDS.F.C.01  and  ASI.PDS.F.C.02. Data from file  ASI.PDS.F.C.02  have been
+truncated from the 16-bit words to 12-bit words to be consistent with the data
+from file ASI.PDS.F.C.01.                                                     
+                                                                              
+The first column in the file identifies the measurement, and the second column
+in the file contains the 12 bit words."                                       
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 48                                          
+  COLUMNS                       = 2                                           
+  ROW_BYTES                     = 24                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "PARAMETER"                                    
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 1                                              
+    BYTES                    = 17                                             
+    FORMAT                   = "A17"                                          
+    DESCRIPTION              = "Measurement type of the Pre-Entry Calibration 
+                                sequence"                                     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DN"                                           
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 19                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = "12 bit word DN measurements"                  
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

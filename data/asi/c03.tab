@@ -1,0 +1,48 @@
+A/D#1 Offset        48
+A/D#2 Offset        48
+P1  3.75 V Cal    3257
+P2  3.75 V Cal    3088
+Z1  Range 2  I2   4008
+Z2  Range 3  I1   4025
+T1 Reference      3016
+P3  1.25 V Cal    1098
+Z2  Range 4  I1     60
+T2 Reference      3671
+P3  3.75 V Cal    3149
+Z1  Range 3  I1   4036
+Z2  Range 2  I2   4009
+T Offset           124
+Z1  Range 4  I1     60
+P1  Temp          1497
+X  Range 2  I2    3046
+P2  Temp          1498
+Y  Range 2  I2    3059
+P3  Temp          1499
+X  Range 3  I1    3043
+Z1  Temp          2960
+Y  Range 3  I1    3055
+Z2  Temp          2974
+X  Temp           2987
+Y  Temp           2990
+Elect  Temp       2509
+P1  1.25 V Cal    1202
+P2  1.25 V Cal    1024
+A/D#1 2.5 V Cal   2050
+A/D#2 2.5 V Cal   2049
+Z1 Range 1 Offset  772
+Z1 Range 2 Offset   21
+Z1 Range 3 Offset 2048
+Z1 Range 4 Offset    0
+Z2 Range 1 Offset  347
+Z2 Range 2 Offset    9
+Z2 Range 3 Offset 2046
+Z2 Range 4 Offset    0
+X Range 1 Offset  1913
+X Range 2 Offset  2044
+X Range 3 Offset  2047
+Y Range 1 Offset  2225
+Y Range 2 Offset  2049
+Y Range 3 Offset  2046
+P1  Offset         173
+P2  Offset           0
+P3  Offset          79

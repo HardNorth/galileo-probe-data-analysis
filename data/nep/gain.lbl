@@ -1,0 +1,79 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 56                                            
+FILE_RECORDS                  = 437                                           
+^TABLE                        = "GAIN.TAB"                                    
+DATA_SET_ID                   = "GP-J-NEP-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE NEPHELOMETER"                  
+TARGET_NAME                   = "JUPITER"                                     
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "File  6 - 1.1.5"                             
+PRODUCT_ID                    = "GAIN.TAB"                                    
+PRODUCT_CREATION_TIME         =  1995-12-07                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 437                                         
+  COLUMNS                       = 5                                           
+  ROW_BYTES                     = 56                                          
+  DESCRIPTION                   = "Gain of 16 degree channel electronics."    
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ATMOSPHERIC PRESSURE"                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "BARS"                                         
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 2                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Atmospheric pressure in bars"                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "GAIN 1"                                       
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 13                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Gain number 1"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "GAIN 2"                                       
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 24                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Gain number 2"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "GAIN 3"                                       
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 35                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Gain number 3"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "GAIN 4"                                       
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 46                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Gain number 4"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

@@ -1,0 +1,46 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 23                                            
+FILE_RECORDS                  = 437                                           
+^TABLE                        = "CONTAM.TAB"                                  
+DATA_SET_ID                   = "GP-J-NEP-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE NEPHELOMETER"                  
+TARGET_NAME                   = "JUPITER"                                     
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "File  7 - 1.1.6"                             
+PRODUCT_ID                    = "CONTAM.TAB"                                  
+PRODUCT_CREATION_TIME         =  1995-12-07                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 437                                         
+  COLUMNS                       = 2                                           
+  ROW_BYTES                     = 23                                          
+  DESCRIPTION                   = "Contamination channel readings, counts."   
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ATMOSPHERIC PRESSURE"                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "BARS"                                         
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 2                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Atmospheric pressure in bars"                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "CONTAMINATION CHANNEL"                        
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

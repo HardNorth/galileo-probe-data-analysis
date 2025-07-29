@@ -1,0 +1,90 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 25                                            
+FILE_RECORDS                  = 218                                           
+^TABLE                        = "D06Z1.TAB"                                   
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.D.06.Z1"                           
+PRODUCT_ID                    = "ASI.PDS.F.D.06.Z1"                           
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.D.06                                                  
+                                                                              
+These files ( ASI.PDS.F.D.06.Z1  :  ASI.PDS.F.D.06.Z2  :  ASI.PDS.F.D.06.An ) 
+contain data for all of the Descent sequence acceleration measurements.       
+File ASI.PDS.F.D.06.Z1 contains all data from the primary axial sensor.       
+File ASI.PDS.F.D.06.Z2 contains all data from the secondary axial sensor.     
+File ASI.PDS.F.D.06.An contains all data from the lateral sensors.            
+                                                                              
+Descriptions of the instrumentation can be found in Space Sciences Review,    
+Volume 60, May 1992,  pages 203 - 232.                                        
+                                                                              
+For files ASI.PDS.F.D.06.Z1 and ASI.PDS.F.D.06.Z2 the first column in each    
+file identifies the measurement sample start time, the second column  in each 
+file identifies the measurement sample stop time, and the third column        
+provides the average measured acceleration in m/s/s during the sample period. 
+For accelerations greater than 26 m/s/s the LSB resolution is about           
+0.96 m/s/s.                                                                   
+For accelerations less than 26 m/s/s the LSB resolution is about 0.03 m/s/s.  
+                                                                              
+For file ASI.PDS.F.D.06.An  the first column in each file identifies the      
+measurement sample start time, the second column  in each file identifies the 
+measurement sample stop time, the third column provides the minimum value for 
+the resultant of the lateral acceleration during the sample period, the fourth
+column provides the maximum value for the resultant of the lateral            
+acceleration during the sample period, and the fifth column provides the      
+average value for the resultant of the lateral acceleration during the sample 
+period.   The LSB resolution is about 0.043 m/s/s.                            
+                                                                              
+It should be noted that the Lateral Acceleration resultant is most likely in  
+error between times of  400 and 1600 seconds.  During ground testing it was   
+found that one of the lateral sensors did not respond properly below a certain
+temperature,  and the temperature of sensor was below this value during the   
+aforementioned time period."                                                  
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 218                                         
+  COLUMNS                       = 3                                           
+  ROW_BYTES                     = 25                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "START TIME"                                   
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.2"                                         
+    DESCRIPTION              = "Measurement sample start time."               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "STOP TIME"                                    
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 9                                              
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.2"                                         
+    DESCRIPTION              = "Measurement sample stop time."                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AVERAGE ACCELERATION"                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "METERS/SECONDS^2"                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 17                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.4"                                         
+    DESCRIPTION              = "Average measured acceleration."               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

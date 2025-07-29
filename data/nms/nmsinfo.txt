@@ -1,0 +1,205 @@
+PDS_VERSION_ID        = PDS3                                                  
+LABEL_REVISION_NOTE   = "Mark Vincent June 1999"                              
+                                                                              
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  INTERCHANGE_FORMAT    = ASCII                                               
+  PUBLICATION_DATE      = 1998-09-10                                          
+  NOTE                  = "ASCII description of NMS files"                    
+END_OBJECT            = TEXT                                                  
+                                                                              
+END                                                                           
+                                                                              
+This file will contain more information about the structure                   
+of the GPMS pre-launch characterization data files (March                     
+and April, 1985) and about the post-entry lab simulation                      
+work with the similar laboratory "engineering" unit.                          
+                                                                              
+************************************************************                  
+Cautionary notes!   Cautionary notes!   Cautionary notes!                     
+                                                                              
+The pre-launch data files currently available should be                       
+used ONLY for qualitative identification (fragmentation                       
+patterns) --- NOT for quantitative evaluations.                               
+                                                                              
+The review processes to insure the validity and integrity of                  
+these data (files) has not yet been completed.                                
+                                                                              
+Initial information has been included in these data files                     
+but has not yet been fully explained.  This is being corrected.               
+                                                                              
+Work is continuing to fully define and finalize the available data.           
+                                                                              
+John Haberman                                                                 
+NASA/GSFC, Code 915                                                           
+voice:  (301) 286-4344                                                        
+fax:  (301) 286-1756                                                          
+email:  john.a.haberman@gsfc.nasa.gov                                         
+                                                                              
+                                                                              
+ April 16, 1998, Updated June 23, 1999                                        
+File Name       File Size                                                     
+data/nms/aareadme.txt       This file                                         
+data/nms/ratios.dat         Latest results from Jovian data analysis          
+document/nmssys.gif         Drawing of calibration gas control system         
+document/nmsinst.gif        Drawing of NMS instrument                         
+document/nmsinlet.gif       Drawing of NMS inlet gas control system           
+document/nmsastr.gif        Data return timeline for NMS 'A' string data      
+document/nmsbstr.gif        Data return timeline for NMS 'B' string data      
+data/nms/nmsdata.dat        DATA from NMS Entry into Jupiter's atmosphere     
+software/nmsseq.exe         NMS Sequence cartoon display                      
+data/nms/i1_h2s.dat         Inlet 1, H2S                                      
+data/nms/i1_hcn.dat         Inlet 1, HCN                                      
+data/nms/i1_hydr.dat        Inlet 1, Hydride mixture                          
+data/nms/i1_ph3.dat         Inlet 1, PH3                                      
+data/nms/i1_rg.dat          Inlet 1, Rare Gas mixture                         
+data/nms/i1_rgp.dat         Inlet 1, Rare Gas mixture at selected pressures   
+data/nms/i2_alkan.dat       Inlet 2, Mixture of alkanes                       
+data/nms/i2_chmx.dat        Inlet 2, mixture of hydrocarbons                  
+data/nms/i2_h2nh3.dat       Inlet 2, H2 + He + NH3                            
+data/nms/i2_h2o.dat         Inlet 2, H2O                                      
+data/nms/i2_h2s.dat         Inlet 2, H2S                                      
+data/nms/i2_hcn.dat         Inlet 2, HCN                                      
+data/nms/i2_hydr.dat        Inlet 2, Hydride mixture                          
+data/nms/i2_nh3.dat         Inlet 2, NH3                                      
+data/nms/i2_ph3.dat         Inlet 2, PH3                                      
+data/nms/i2_rg.dat          Inlet 2, Rare Gas Mixture                         
+data/nms/i2_unsat.dat       Inlet 2, Unsaturated Hydrocarbons mixture         
+data/nms/pfusim.dat        Entry Simulation with pre-launch 'protoflight' unit
+                                                                              
+Notes:   1) Executable programs were created for PC computers.                
+         2) Files named i1_*.* and i2_*.* contain GPMS instrument             
+            characterization data.                                            
+         3) Additional detailed information about the characterization        
+            data files are listed below.                                      
+                                                                              
+                                                                              
+File Name               Description                                           
+data/nms/a89jl19.tab    'A' data stream, July 19, 1989 at KSC                 
+data/nms/a89jl19.lbl    Probe Baseline testing data from last ground          
+                        test before the Galileo spacecraft was placed         
+                        on the shuttle.                                       
+                                                                              
+data/nms/a89my15.tab    'A' data stream, May 15, 1989 at KSC                  
+data/nms/a89my15.lbl    This is the last MST (Mission Sequence Test)          
+                        data obtained from the GPMS instrument prior to       
+                        launch. This data was taken before the Galileo        
+                        spacecraft was placed on the shuttle.                 
+                                                                              
+data/nms/a89my15a.tab   'A' data stream, Replay of May 15, 1989 test at KSC   
+data/nms/a89my15a.lbl   This is the last MST (Mission Sequence Test)          
+                        data obtained from the GPMS instrument prior to       
+                        launch.  This data was taken before the Galileo       
+                        spacecraft was placed on the shuttle.                 
+                                                                              
+data/nms/a89oc26.tab    'A' data stream, October 26, 1989 testing in SPACE    
+data/nms/a89oc26.lbl    This is the first data obtained from SPACE from       
+                        the GPMS instrument.                                  
+                                                                              
+data/nms/a89oc27.tab    'A' data stream, Replay of October 26, 1989 test      
+data/nms/a89oc27.lbl    This is the first data obtained from SPACE from       
+                        the GPMS instrument.                                  
+                                                                              
+data/nms/a89se14.tab    'A' data stream, September 14, 1989 test              
+data/nms/a89se14.lbl    onboard the shuttle Atlantis. This is a               
+                        baseline test.                                        
+                                                                              
+data/nms/a89se14a.tab   'A' data stream, Replay of September 14, 1989 test    
+data/nms/a89se14a.lbl   onboard the shuttle Atlantis. This is a               
+                        baseline test.                                        
+                                                                              
+data/nms/a90de04.tab    'A' data stream, Replay of the December 4, 1990       
+data/nms/a90de04.lbl    testing. SFT (System Functional Test) data            
+                        from SPACE for the GPMS instrument.                   
+                                                                              
+data/nms/a90de04a.tab   'A' data stream, Replay of the December 4, 1990       
+data/nms/a90de04a.lbl   testing. SFT (System Functional Test) data from       
+                        SPACE for the GPMS instrument.                        
+                                                                              
+data/nms/a92no20.tab    'A' data stream, November 20, 1992 test               
+data/nms/a92no20.lbl    MST (Mission Sequence Test) while cruising in         
+                        SPACE This test simulates the expected entry          
+                        sequence.                                             
+                                                                              
+data/nms/a92no21.tab    'A' data stream, Replay of the November 20, 1992      
+data/nms/a92no21.lbl    test MST (Mission Sequence Test) while cruising in    
+                        SPACE This test simulates the expected entry          
+                        sequence.                                             
+                                                                              
+data/nms/a95de07.tab    'A' data stream, December 7, 1995                     
+data/nms/a95de07.lbl    ENTRY into Jovian Atmosphere                          
+                                                                              
+data/nms/b89jl19.tab    'B' data stream, July 19, 1989 at KSC                 
+data/nms/b89jl19.lbl    Probe Baseline testing data from last ground          
+                        test before the Galileo spacecraft was placed         
+                        on the shuttle.                                       
+                                                                              
+data/nms/b89my15.tab    'B' data stream, May 15, 1989 at KSC                  
+data/nms/b89my15.lbl    This is the last MST (Mission Sequence Test)          
+                        data obtained from the GPMS instrument prior to       
+                        launch. This data was taken before the Galileo        
+                        spacecraft was placed on the shuttle.                 
+                                                                              
+data/nms/b89my15a.tab   'B' data stream, Replay of May 15, 1989 test at KSC   
+data/nms/b89my15a.lbl   This is the last MST (Mission Sequence Test)          
+                        data obtained from the GPMS instrument prior to       
+                        launch. This data was taken before the Galileo        
+                        spacecraft was placed on the shuttle.                 
+                                                                              
+data/nms/b89oc26.tab    'B' data stream, October 26, 1989 testing in SPACE    
+data/nms/b89oc26.lbl    This is the first data obtained from SPACE from       
+                        the GPMS instrument.                                  
+                                                                              
+data/nms/b89oc27.tab    'B' data stream, Replay of October 26, 1989 test      
+data/nms/b89oc27.lbl    This is the first data obtained from SPACE from       
+                        the GPMS instrument.                                  
+                                                                              
+data/nms/b89se14.tab    'B' data stream, September 14, 1989 test onboard      
+data/nms/b89se14.lbl    the shuttle Atlantis. This is a baseline test.        
+                                                                              
+data/nms/b89se14a.tab   'B' data stream, Replay of September 14, 1989 test    
+data/nms/b89se14a.lbl   onboard the shuttle Atlantis. This is a               
+                        baseline test.                                        
+                                                                              
+data/nms/b90de04.tab    'B' data stream, December 4, 1990 testing.            
+data/nms/b90de04.lbl    SFT (System Functional Test) data from SPACE          
+                        for the GPMS instrument.                              
+                                                                              
+data/nms/b90de04a.tab   'B' data stream, Replay of the December 4, 1990       
+data/nms/b90de04a.lbl   testing. SFT (System Functional Test) data from       
+                        SPACE for the GPMS instrument.                        
+                                                                              
+data/nms/b92no20.tab    'B' data stream, November 20, 1992 test               
+data/nms/b92no20.lbl    MST (Mission Sequence Test) while cruising in SPACE   
+                        This test simulates the expected entry sequence.      
+                                                                              
+data/nms/b92no21.tab    'B' data stream, Replay of the November 20, 1992      
+data/nms/b92no21.lbl    test MST (Mission Sequence Test) while cruising       
+                        in SPACE This test simulates the expected entry       
+                        sequence.                                             
+                                                                              
+data/nms/b95de07.tab    'B' data stream, December 7, 1995                     
+data/nms/b95de07.lbl    ENTRY into Jovian Atmosphere                          
+                                                                              
+data/nms/nms85183.tab   This data is the first data obtained from the GPMS    
+data/nms/nms85183.lbl   device after high-vacuum processing and final         
+                        pinch-off from the supporting vacuum system.          
+                                                                              
+data/nms/nms88201.tab   MST test performed at the Goddard Space Flight        
+data/nms/nms88201.lbl   Center before the final delivery of the GPMS          
+                        instrument for testing and installation on the        
+                        Galileo Probe in preparation for launch.              
+                        During this test the heaters used on the GPMS         
+                        Enrichment Cells were allowed to operate. (For        
+                        instrument and spacecraft safety reasons, the         
+                        heater operations are usually disabled.)              
+                                                                              
+document/nmscoeff.tab   GPMS Housekeeping Conversion Coefficients             
+document/nmscoeff.lbl                                                         
+                                                                              
+document/nmssteps.tab   Exact details for each step of the GPMS               
+document/nmssteps.lbl   sampling sequence as it was programmed in the         
+                        instrument's proms.                                   
+                                                                              
+John Haberman, NASA/GSFC, Code 915  (301) 286-4344                            
+john.a.haberman@gsfc.nasa.gov                                                 

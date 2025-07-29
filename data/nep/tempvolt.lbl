@@ -1,0 +1,81 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 56                                            
+FILE_RECORDS                  = 44                                            
+^TABLE                        = "TEMPVOLT.TAB"                                
+DATA_SET_ID                   = "GP-J-NEP-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE NEPHELOMETER"                  
+TARGET_NAME                   = "JUPITER"                                     
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "File  5 - 1.1.4"                             
+PRODUCT_ID                    = "TEMPVOLT.TAB"                                
+PRODUCT_CREATION_TIME         =  1995-12-07                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 44                                          
+  COLUMNS                       = 5                                           
+  ROW_BYTES                     = 56                                          
+  DESCRIPTION                   = "Forward, backward and electronics          
+                                   temperature sensor readings, in degrees    
+                                   C, and voltage monitor, in counts."        
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ATMOSPHERIC PRESSURE"                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "BARS"                                         
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 2                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Atmospheric pressure in bars"                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "FORWARD CHANNEL"                              
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "Forward temperature sensor readings"          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "BACKWARD CHANNEL"                             
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 23                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "Backward temperature sensor readings"         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ELECTRONICS"                                  
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 34                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "Electronics temperature sensor readings"      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "VOLTAGE MONITOR"                              
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 46                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Voltage monitor (counts)"                     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

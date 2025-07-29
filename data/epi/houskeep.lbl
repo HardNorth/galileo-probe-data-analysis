@@ -1,0 +1,67 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 30                                            
+FILE_RECORDS                  = 17                                            
+^TABLE                        = "HOUSKEEP.TAB"                                
+DATA_SET_ID                   = "GP-J-EPI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ENERGETIC PARTICLES INSTRUMENT"              
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "HOUSEKEEPING TABLE"                          
+PRODUCT_ID                    = "HOUSKEEP.TAB"                                
+PRODUCT_CREATION_TIME         =  1998-08-18                                   
+NOTE                          = "                                             
+Columns contain: distance from Jupiter in Rj, leakage current of detector A,  
+leakage current of detector B and sensor temperature. Currents in             
+microamp, temperature in degree celsius."                                     
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 17                                          
+  COLUMNS                       = 4                                           
+  ROW_BYTES                     = 30                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DISTANCE"                                     
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "JUPITER RADII"                                
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 5                                              
+    FORMAT                   = "F5.3"                                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "LEAKAGE CURRENT - A"                          
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "MICROAMPERES"                                 
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 11                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "F4.2"                                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "LEAKAGE CURRENT - B"                          
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "MICROAMPERES"                                 
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 18                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "F4.2"                                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SENSOR TEMPERATURE"                           
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 24                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "F5.2"                                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

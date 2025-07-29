@@ -1,0 +1,74 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 70                                            
+FILE_RECORDS                  = 20                                            
+^TABLE                        = "RATIOS.TAB"                                  
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "Measured Mixing Ratios or Isotope Ratios"    
+PRODUCT_ID                    = "Table1.txt"                                  
+PRODUCT_CREATION_TIME         =  1998-04-17                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 21                                          
+  COLUMNS                       = 4                                           
+  ROW_BYTES                     = 70                                          
+  DESCRIPTION                   = "Measured Mixing Ratios or Isotope Ratios   
+from Table 1 published in JGR, September 1998 by H. B. Niemann, et al.        
+Errors in the original table have been corrected.                             
+                                                                              
+H, D, 3He, 4He, 12C, 13C, 20Ne, 36Ar, 38Ar, 84Kr, 132Xe indicate specific     
+isotopes of these elements.  Pressures indicate the ambient atmospheric       
+pressures at which specific measurements were made."                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SPECIES OR RATIO"                             
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 1                                              
+    BYTES                    = 16                                             
+    FORMAT                   = "A16"                                          
+    DESCRIPTION              = "Species or Ratio"                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MIXING RATIO OR ISOTOPE RATIO"                
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 18                                             
+    BYTES                    = 18                                             
+    FORMAT                   = "A18"                                          
+    DESCRIPTION              = "Mixing Ratio or Isotope Ratio"                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MOLE FRACTION"                                
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 37                                             
+    BYTES                    = 18                                             
+    FORMAT                   = "A18"                                          
+    DESCRIPTION              = "Mole Fraction. N/A for ratios."               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "RATIO TO SOLAR"                               
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 56                                             
+    BYTES                    = 11                                             
+    FORMAT                   = "A11"                                          
+    DESCRIPTION              = "Ratio to Solar. N/A for ratios."              
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

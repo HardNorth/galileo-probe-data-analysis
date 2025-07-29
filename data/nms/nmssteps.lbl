@@ -1,0 +1,176 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 33                                            
+FILE_RECORDS                  = 8192                                          
+^TABLE                        = "NMSSTEPS.TAB"                                
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "NMSSTEPS.TAB"                                
+PRODUCT_ID                    = "NMSSTEPS.TAB"                                
+PRODUCT_CREATION_TIME         =  1998-04-17                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 8192                                        
+  COLUMNS                       = 7                                           
+  ROW_BYTES                     = 33                                          
+                                                                              
+  DESCRIPTION                   = "Exact details for each step                
+     of the GPMS sampling sequence as it was programmed in the                
+     instrument's proms.  The sequence code is composed of                    
+     8192 (16-bit) values coded as follows:                                   
+                                                                              
+    |Inl| 0 |t29|mul|eV | eV|des|tun| (mass/inlet code) |                     
+where:                                                                        
+    Inl = Inlet System Operation Indicator                                    
+     0  = unused                                                              
+    t29 = forced on flag                                                      
+    mul = multana marker                                                      
+     eV = electron energy (1, 2, 3)                                           
+    des = forced low sensitivity                                              
+    tun = high-resolution sampling (0.125 amu stepping)                       
+    (mass/inlet) = 8-bit codes"                                               
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "STEP"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 1                                              
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = "Step (0 - 8191)                               
+           Steps 7936 - 8191 contain a quiescent (test) mode                  
+           sequence created to quickly evaluate the instrument's              
+           operation.  The GPMS instrument sequencer is forced                
+           to operate in this mode when power is first applied.               
+           Only the occurrence of a SEQUENCE START (INITIATE)                 
+           command will 'unlatch' the sequencer and allow the                 
+           sampling sequence to start with step number 0.  The                
+           instrument will first finish the minor frame in which              
+           it is operating before it begins the 'real' sequence."             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MASS"                                         
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "Atomic Mass Unit"                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 6                                              
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.3"                                         
+    DESCRIPTION              = "Mass  (Amu)                                   
+           Integer masses 0 - 150, 152                                        
+           152 forces the MS into a 'High-Pass' mode                          
+           Fractional Masses in 0.125 amu steps"                              
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SENSITIVITY"                                  
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 14                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Detection Sensitivity (Hi or Lo)              
+           Some measurements were done where the instrument                   
+           was forced to operate in the LOW sensitivity mode."                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ELECTRON ENERGY"                              
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "eV"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 17                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Electron Energy (Ionization Energy)           
+           75, 25, or 15 electron Volts (eV)."                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MULTANA INDICATOR"                            
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 20                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "A1"                                           
+    DESCRIPTION              = "Multana indicator                             
+           Within each GPMS instrument minor frame (8 steps)                  
+           one sample is programmed to yield a 'Multana' reading              
+           that is included in the subsequent minor frame.  This              
+           multana represents the Multiplier Analog Current.                  
+           This bit was programmed to choose a step where the                 
+           sampled mass is expected to yield the largest signal.              
+           In other words, this bit was programmed to choose steps            
+           with masses according to the following order:                      
+           2, 4, TBD, TBD, TBD                                                
+           If none of these masses occur in the minor frame, the              
+           last step of the minor frame determines the mass for               
+           which the Multana is monitored."                                   
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "'T29' FLAG"                                   
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 22                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "A1"                                           
+    DESCRIPTION              = "'T29' Flag                                    
+           Instrument 'nothing to lose' bit.  This bit forces the             
+           GPMS instrument to turn on.  Its purpose is to override            
+           the instrument's built-in safety features.  For example,           
+           the GPMS instrument's (resistively heated) ionizer                 
+           filaments are turned off if the pressure becomes too               
+           high to prevent them from burning out.  This bit forces            
+           the instrument to turn on and try to collect data                  
+           when the safety circuitry has been activated because               
+           by this time in the mission, there's nothing to lose."             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "HOUSEKEEPING"                                 
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 24                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "I5"                                           
+    DESCRIPTION              = "Inlet System Operation                        
+           Valve and Heater operation codes are substituted for               
+           mass codes when this flag is set in the sequence.  The             
+           mass cannot be changed (*) during a step where an                  
+           instrumental Inlet, Outlet, Valve or Heater operation              
+           is being performed.                                                
+           (*) The mass can be incremented by 0.125 amu during                
+               these steps when the instrument is operating in                
+               the 'high resolution' mode.                                    
+                                                                              
+           Valves are indicated as V1, V2, ... (refer to the                  
+             graphic file nmsinst.gif or nmsinlet.gif).                       
+             O or C are appended to the valve identifier to                   
+             indicate an OPEN or a CLOSE operation.                           
+           Inlets and Outlets are indicated as I1, I2, O1 and O2.             
+             These are actuated by explosive devices (pyros) and              
+             can only OPEN.                                                   
+           Heaters are indicated as H2, H3, H4, H5, H6 and H8                 
+             ON and OFF are appended to the identifier to indicate            
+             the turn ON and OFF operations.  Note:  The heaters              
+             identifies as H2, H4, H5 and H8 are latching relays              
+             and are ALL switched off simultaneously by the HROFF             
+             operation.  The H3 and H6 heaters are cycled to                  
+             establish and maintain the temperatures of the                   
+             sample enrichment cells."                                        
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

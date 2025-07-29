@@ -1,0 +1,148 @@
+PDS_VERSION_ID                   = PDS3                                       
+LABEL_REVISION_NOTE              = "Eckhard Pehlke, August 1998;              
+                                    Lyle Huber, November 2000"                
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "GP-J-EPI-3-ENTRY-V1.0"                    
+                                                                              
+  OBJECT                         = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "GALILEO PROBE EPI RAW DATA SET"           
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = TABLE                                      
+  START_TIME                     = 1995-12-07T19:06:48Z                       
+  STOP_TIME                      = 1995-12-07T21:54:18Z                       
+  DATA_SET_RELEASE_DATE          = 1996-12-08                                 
+  PRODUCER_FULL_NAME             = "HARALD FISCHER"                           
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+Data Set Overview                                                             
+=================                                                             
+                                                                              
+The Galileo Probe Energetic Particles Investigation (EPI) Raw Data Set        
+contains two tables of the EPI raw data values sorted by sampling time.       
+The counter table contains the raw counter values as measured and             
+the countrate table contains the countrates as derived from counter values,   
+but without any correction. The tables are split into omnidirectional         
+and sectorized data. The distance to Jupiter is given in Jupiter              
+radii, Rj, and was derived from the Probe trajectory data. The time of        
+probe entry is taken to be 1995-12-07T22:04:44Z when the probe reached        
+an altitude of 450 km above the 1 bar pressure level.                         
+                                                                              
+                                                                              
+Parameters                                                                    
+==========                                                                    
+                                                                              
+The counter values are numbers without unit, while the countrates are         
+given in counts per second. The sampling time for the omnidirectional         
+channels E12, E22, E32, P12, P31, P32 was 17.145 s, for the                   
+omnidirectional HE2 channel it was 46.72 s, for the omnidirectional           
+channel HVY in sample 1 - 4 it was 128 s and for the omnidirectional          
+channels HVY1-HVY4 in sample 5-15 it was 64 s. For the sectorized channels    
+E11S, E21S, E31S, P11S, P21S, P22S the sampling time was 2.143 s and          
+for the sectorized HE1S channel it was 11.43 s.                               
+                                                                              
+1 Rj = 71372 km.                                                              
+                                                                              
+This value for Rj was selected to be consistent with the value used by        
+the Pioneer 10 and 11 investigations. The Pioneers were the only other        
+spacecraft to fly to low jovian altitudes. Users should be cautioned          
+when comparing data sets organized by distance when the units provided        
+are jovian radii. Many different values have been selected by the Pioneer,    
+Voyager, Ulysses, and Galileo teams. In particular, the value used here       
+is inconsistent with the value widely adopted by orbiter scientists who       
+use the value 71492 km.                                                       
+                                                                              
+Data                                                                          
+====                                                                          
+                                                                              
+The EPI RAW DATA SET comprises five tables:                                   
+                                                                              
+    (1) Counter Table - Omnidirectional                                       
+    (2) Counter Table - Sector                                                
+    (3) Countrate Table - Omnidirectional                                     
+    (4) Countrate Table - Sector                                              
+    (5) Housekeeping Table                                                    
+                                                                              
+(1-2) Counter Tables                                                          
+                                                                              
+These tables contain the raw counter values as measured. The data are         
+sorted by their distance to Jupiter given in Jupiter radii, Rj.               
+                                                                              
+                                                                              
+(3-4) Countrate Tables                                                        
+                                                                              
+These tables contain the raw countrates derived from the counter              
+values. The data are sorted by their distance to Jupiter given in             
+Jupiter radii, Rj.                                                            
+                                                                              
+                                                                              
+(5) Housekeeping Table                                                        
+                                                                              
+This table contains the detector leakage currents and the temperature         
+of the EPI sensor.  The data are sorted by their distance to Jupiter          
+given in Jupiter radii, Rj.                                                   
+                                                                              
+                                                                              
+Ancillary Data                                                                
+==============                                                                
+                                                                              
+Trajectory and timing information were obtained from the Galileo              
+Project.                                                                      
+                                                                              
+                                                                              
+Coordinate System                                                             
+=================                                                             
+                                                                              
+The data are presented according to the radial distance of the probe          
+to Jupiter as given by the project office.                                    
+                                                                              
+                                                                              
+"                                                                             
+  CONFIDENCE_LEVEL_NOTE          = "                                          
+                                                                              
+Confidence Level Overview                                                     
+=========================                                                     
+                                                                              
+The EPI data are transmitted completely without gaps from the orbiter to      
+Earth and the sample overwriting for the last samples was done correctly.     
+                                                                              
+                                                                              
+Data Coverage and Quality                                                     
+=========================                                                     
+                                                                              
+For the samples 5 and 6 there are no housekeeping data. The                   
+housekeeping data in these samples belong to the samples 16 and 17.           
+This is a consequence of the sample overwriting procedure, which              
+was introduced to cover in any case the region of particle population         
+down to the innermost edge of the magnetosphere independently of an           
+early or late arrival of the probe.                                           
+                                                                              
+                                                                              
+Limitations                                                                   
+===========                                                                   
+                                                                              
+These data are raw data. For a correct interpretation of the data the         
+knowledge of the response functions of the instrument as well as a            
+dead-time and stray-coincidence correction are necessary.                     
+                                                                              
+"                                                                             
+ END_OBJECT                      = DATA_SET_INFORMATION                       
+                                                                              
+                                                                              
+ OBJECT                          = DATA_SET_TARGET                            
+  TARGET_NAME                    = JUPITER                                    
+ END_OBJECT                      = DATA_SET_TARGET                            
+                                                                              
+ OBJECT                          = DATA_SET_HOST                              
+  INSTRUMENT_HOST_ID             = GP                                         
+  INSTRUMENT_ID                  = EPI                                        
+ END_OBJECT                      = DATA_SET_HOST                              
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+  REFERENCE_KEY_ID               = "FISCHERETAL1996"                          
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+END_OBJECT                       = DATA_SET                                   
+                                                                              
+END                                                                           

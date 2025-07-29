@@ -1,0 +1,116 @@
+PDS_VERSION_ID = PDS3                                                         
+RECORD_TYPE = FIXED_LENGTH                                                    
+RECORD_BYTES = 80                                                             
+FILE_RECORDS = 116                                                            
+LABEL_RECORDS = 58                                                            
+^TABLE = 59                                                                   
+DATA_SET_ID = "GP-J-NFR-3-ENTRY-V1.0"                                         
+SPACECRAFT_NAME = "GALILEO PROBE"                                             
+INSTRUMENT_NAME = "NET FLUX RADIOMETER"                                       
+TARGET_NAME = JUPITER                                                         
+MISSION_PHASE_NAME = "PROBE DESCENT"                                          
+START_TIME = "UNK"                                                            
+STOP_TIME = "UNK"                                                             
+PRODUCT_NAME = "NFRRET.TAB"                                                   
+PRODUCT_ID = "NFRRET.TAB"                                                     
+PRODUCT_CREATION_TIME =  1998-08-25                                           
+NOTE = "This table contains Electronics Temperature (ET) sensor raw counts."  
+                                                                              
+OBJECT = TABLE                                                                
+INTERCHANGE_FORMAT = ASCII                                                    
+ROWS = 58                                                                     
+COLUMNS = 4                                                                   
+ROW_BYTES = 80                                                                
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = DATA_CYCLE                                                             
+DESCRIPTION = "Two-minute Data Cycle"                                         
+DATA_TYPE = INTEGER                                                           
+START_BYTE = 1                                                                
+BYTES = 6                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = INSTRUMENT_CYCLE                                                       
+DESCRIPTION = "Six-second Instrument Cycle, 0-19"                             
+DATA_TYPE = INTEGER                                                           
+START_BYTE = 8                                                                
+BYTES = 6                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = TIME                                                                   
+DESCRIPTION = "Time after minor frame zero, seconds"                          
+DATA_TYPE = REAL                                                              
+START_BYTE = 15                                                               
+BYTES = 10                                                                    
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = ET_COUNTS                                                              
+DESCRIPTION = "ET Sensor Raw Counts"                                          
+DATA_TYPE = INTEGER                                                           
+START_BYTE = 26                                                               
+BYTES = 8                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+END_OBJECT = TABLE                                                            
+END                                                                           
+     0,     4,     33.75,      65                                             
+     0,    14,     93.75,      64                                             
+     1,     4,    153.75,      59                                             
+     1,    14,    213.75,      52                                             
+     2,     4,    273.75,      43                                             
+     2,    14,    333.75,      32                                             
+     3,     4,    393.75,      21                                             
+     3,    14,    453.75,      10                                             
+     4,     4,    513.75,       0                                             
+     4,    14,    573.75,     246                                             
+     5,     4,    633.75,     238                                             
+     5,    14,    693.75,     232                                             
+     6,     4,    753.75,     227                                             
+     6,    14,    813.75,     224                                             
+     7,     4,    873.75,     223                                             
+     7,    14,    933.75,     223                                             
+     8,     4,    993.75,     225                                             
+     8,    14,   1053.75,     228                                             
+     9,     4,   1113.75,     232                                             
+     9,    14,   1173.75,     238                                             
+    10,     4,   1233.75,     244                                             
+    10,    14,   1293.75,     252                                             
+    11,     4,   1353.75,       4                                             
+    11,    14,   1413.75,      13                                             
+    12,     4,   1473.75,      23                                             
+    12,    14,   1533.75,      33                                             
+    13,     4,   1593.75,      43                                             
+    13,    14,   1653.75,      53                                             
+    14,     4,   1713.75,      64                                             
+    14,    14,   1773.75,      74                                             
+    15,     4,   1833.75,      85                                             
+    15,    14,   1893.75,      96                                             
+    16,     4,   1953.75,     107                                             
+    16,    14,   2013.75,     118                                             
+    17,     4,   2073.75,     128                                             
+    17,    14,   2133.75,     139                                             
+    18,     4,   2193.75,     151                                             
+    18,    14,   2253.75,     162                                             
+    19,     4,   2313.75,     173                                             
+    19,    14,   2373.75,     184                                             
+    20,     4,   2433.75,     196                                             
+    20,    14,   2493.75,     207                                             
+    21,     4,   2553.75,     218                                             
+    21,    14,   2613.75,     229                                             
+    22,     4,   2673.75,     240                                             
+    22,    14,   2733.75,     251                                             
+    23,     4,   2793.75,       6                                             
+    23,    14,   2853.75,      17                                             
+    24,     4,   2913.75,      28                                             
+    24,    14,   2973.75,      39                                             
+    25,     4,   3033.75,      50                                             
+    25,    14,   3093.75,      60                                             
+    26,     4,   3153.75,      71                                             
+    26,    14,   3213.75,      81                                             
+    27,     4,   3273.75,      92                                             
+    27,    14,   3333.75,      93                                             
+    28,     4,   3393.75,      93                                             
+    28,    14,   3453.75,      94                                             

@@ -1,0 +1,57 @@
+PDS_VERSION_ID                   = PDS3                                       
+LABEL_REVISION_NOTE              = "Lyle Huber, July 2000"                    
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "GP-J-LRD-3-ENTRY-V1.0"                    
+                                                                              
+  OBJECT                         = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "GALILEO PROBE LRD RAW DATA SET"           
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = TABLE                                      
+  START_TIME                     = 1995-12-07T19:04:00Z                       
+  STOP_TIME                      = 1995-12-07T22:04:00Z                       
+  DATA_SET_RELEASE_DATE          = 1996-12-08                                 
+  PRODUCER_FULL_NAME             = "LOUIS LANZEROTTI"                         
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+Data Set Overview                                                             
+=================                                                             
+                                                                              
+Data from this instrument appear to have been lost due to the death           
+of Co-Investigator Klaus Rinnert. Please refer to the publications below      
+for results from this instrument."                                            
+                                                                              
+CONFIDENCE_LEVEL_NOTE            = "None"                                     
+                                                                              
+ END_OBJECT                      = DATA_SET_INFORMATION                       
+                                                                              
+                                                                              
+ OBJECT                          = DATA_SET_TARGET                            
+  TARGET_NAME                    = JUPITER                                    
+ END_OBJECT                      = DATA_SET_TARGET                            
+                                                                              
+ OBJECT                          = DATA_SET_HOST                              
+  INSTRUMENT_HOST_ID             = GP                                         
+  INSTRUMENT_ID                  = LRD                                        
+ END_OBJECT                      = DATA_SET_HOST                              
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+  REFERENCE_KEY_ID               = "LANZEROTTIETAL1996"                       
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+  REFERENCE_KEY_ID               = "RINNERTETAL1998"                          
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+  REFERENCE_KEY_ID               = "RINNERT&LANZEROT1998"                     
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+  REFERENCE_KEY_ID               = "LANZEROTTIETAL1998"                       
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+END_OBJECT                       = DATA_SET                                   
+                                                                              
+END                                                                           

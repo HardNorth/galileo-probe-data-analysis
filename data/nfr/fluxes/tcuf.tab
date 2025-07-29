@@ -1,0 +1,127 @@
+PDS_VERSION_ID = PDS3                                                                   
+RECORD_TYPE = FIXED_LENGTH                                                              
+RECORD_BYTES = 90                                                                       
+FILE_RECORDS = 127                                                                      
+LABEL_RECORDS = 98                                                                      
+^TABLE = 99                                                                             
+DATA_SET_ID = "GP-J-NFR-3-ENTRY-V1.0"                                                   
+SPACECRAFT_NAME = "GALILEO PROBE"                                                       
+INSTRUMENT_NAME = "NET FLUX RADIOMETER"                                                 
+TARGET_NAME = JUPITER                                                                   
+MISSION_PHASE_NAME = "PROBE DESCENT"                                                    
+START_TIME = "UNK"                                                                      
+STOP_TIME = "UNK"                                                                       
+PRODUCT_NAME = "TCUF.TAB"                                                               
+PRODUCT_ID = "TCUF.TAB"                                                                 
+PRODUCT_CREATION_TIME =  1998-08-18                                                     
+NOTE = "This table contains temperature-corrected up flux mode fluxes."                 
+                                                                                        
+OBJECT = TABLE                                                                          
+INTERCHANGE_FORMAT = ASCII                                                              
+ROWS = 29                                                                               
+COLUMNS = 9                                                                             
+ROW_BYTES = 90                                                                          
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = DATA_CYCLE                                                                       
+DESCRIPTION = "Two-minute Data Cycle"                                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 1                                                                          
+BYTES = 4                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = INSTRUMENT_CYCLE                                                                 
+DESCRIPTION = "Six-second Instrument Cycle, 0-19"                                       
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 6                                                                          
+BYTES = 5                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = TIME                                                                             
+DESCRIPTION = "Time after minor frame zero, seconds"                                    
+DATA_TYPE = REAL                                                                        
+START_BYTE = 12                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = A_TCUF                                                                           
+DESCRIPTION = "Channel A Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 21                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = B_TCUF                                                                           
+DESCRIPTION = "Channel B Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 31                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = C_TCUF                                                                           
+DESCRIPTION = "Channel C Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 41                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = D_TCUF                                                                           
+DESCRIPTION = "Channel D Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 51                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = E_TCUF                                                                           
+DESCRIPTION = "Channel E Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 61                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = F_TCUF                                                                           
+DESCRIPTION = "Channel F Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 71                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+END_OBJECT = TABLE                                                                      
+END                                                                                     
+   0,    9,   60.75,   -1.824,    2.639,   -0.107,   -2.176,    1.021,   -0.395         
+   1,    9,  180.75,   -0.137,    1.141,   -1.391,   -1.386,   -0.207,   -1.030         
+   2,    9,  300.75,    1.408,    0.953,    0.002,   -0.157,   -0.118,   -0.354         
+   3,    9,  420.75,    1.571,    0.612,    0.263,    0.222,   -0.156,   -0.263         
+   4,    9,  540.75,    1.872,    0.659,    0.596,    0.612,    0.103,   -0.380         
+   5,    9,  660.75,    2.326,    0.655,    1.094,    1.032,    0.325,   -0.134         
+   6,    9,  780.75,    2.785,    0.621,    1.672,    1.375,    0.470,    0.079         
+   7,    9,  900.75,    2.914,    0.521,    1.899,    1.446,    0.488,    0.069         
+   8,    9, 1020.75,    3.585,    0.694,    2.507,    1.778,    0.705,    0.388         
+   9,    9, 1140.75,    3.829,    0.577,    2.724,    1.974,    0.738,    0.495         
+  10,    9, 1260.75,    3.969,    0.324,    2.828,    1.785,    0.590,    0.409         
+  11,    9, 1380.75,    4.367,    0.336,    3.055,    1.977,    0.667,    0.480         
+  12,    9, 1500.75,    4.630,    0.440,    3.484,    2.072,    0.754,    0.550         
+  13,    9, 1620.75,    4.916,    0.476,    3.667,    2.148,    0.941,    0.725         
+  14,    9, 1740.75,    5.078,    0.386,    3.850,    2.295,    0.895,    2.382         
+  15,    9, 1860.75,    5.648,    0.666,    4.435,    2.681,    0.294,    1.048         
+  16,    9, 1980.75,    5.866,    0.729,    4.703,    2.936,    1.352,    1.218         
+  17,    9, 2100.75,    5.865,    0.731,    4.585,    2.977,    1.085,    1.275         
+  18,    9, 2220.75,    5.888,    0.620,    4.435,    3.086,    1.393,    1.290         
+  19,    9, 2340.75,    5.927,    0.542,    4.435,    3.191,    1.380,    1.206         
+  20,    9, 2460.75,    6.575,    0.918,    5.491,    3.917,    1.876,    1.796         
+  21,    9, 2580.75,    4.826,    0.000,    5.940,    3.426,    1.609,    0.964         
+  22,    9, 2700.75,    3.474,    0.816,    8.407,    4.497,    1.677,   -0.236         
+  23,    9, 2820.75,    3.868,    0.601,   12.447,    4.384,    1.593,   -1.974         
+  24,    9, 2940.75,    6.212,   -3.172,   12.259,    3.367,    0.408,   -4.134         
+  25,    9, 3060.75,    6.133,  -10.671,   10.835,    0.575,   -2.599,   -4.289         
+  26,    9, 3180.75,   12.474,  -23.088,    3.811,    0.471,   -6.501,   -4.917         
+  27,    9, 3300.75,   20.811,  -44.724,    1.051,    0.501,  -12.892,   -5.102         
+  28,    9, 3420.75,   34.411,  -76.857,   -1.390,   -1.000,  -22.374,   -6.119         

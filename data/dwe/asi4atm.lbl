@@ -1,0 +1,79 @@
+PDS_VERSION_ID               = PDS3                                           
+RECORD_TYPE                  = FIXED_LENGTH                                   
+RECORD_BYTES                 = 53                                             
+FILE_RECORDS                 = 300                                            
+^TABLE                       = "ASI4ATM.TAB"                                  
+DATA_SET_ID                  = "GP-J-DWE-3-ENTRY-V1.0"                        
+INSTRUMENT_HOST_NAME         = "GALILEO PROBE"                                
+INSTRUMENT_NAME              = "DOPPLER WIND EXPERIMENT"                      
+TARGET_NAME                  = "JUPITER"                                      
+OBSERVATION_TYPE             = "DOPPLER WIND"                                 
+ORIGINAL_PRODUCT_ID          = "SEIFF4.ATM"                                   
+PRODUCT_ID                   = "ASI4ATM.TAB"                                  
+DESCRIPTION                  = "This file contains support data for the       
+ Galileo Probe Doppler Wind Experiment from the Atmospheric Structure         
+ Instrument. This file includes atmospheric structure information from ASI."  
+START_TIME                   = 1995-12-07T22:08:31                            
+STOP_TIME                    = 1995-12-07T23:04:32                            
+PRODUCT_CREATION_TIME        = 1999-04-26                                     
+PRODUCER_FULL_NAME           = "DR. DAVID H. ATKINSON"                        
+PRODUCER_INSTITUTION_NAME    = "NASA HEADQUARTERS"                            
+PRODUCT_VERSION_TYPE         = "FINAL"                                        
+PRODUCER_ID                  = "UNK"                                          
+SOFTWARE_NAME                = "UNK"                                          
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 300                                         
+  COLUMNS                       = 4                                           
+  ROW_BYTES                     = 53                                          
+  DESCRIPTION                   = "For this table, the mean molecular weight  
+    of the atmosphere is 2.4, the table is referenced to altitude relative    
+    to 1 bar at latitude of entry."                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ALTITUDE"                                     
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "KM"                                           
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.4"                                         
+    DESCRIPTION              = "Altitude above 1 bar level."                  
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "PRESSURE"                                     
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "BARS"                                         
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 17                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.4"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TEMPERATURE"                                  
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "KELVINS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 30                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.4"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DENSITY"                                      
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "KG/M^3"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 46                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.4"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

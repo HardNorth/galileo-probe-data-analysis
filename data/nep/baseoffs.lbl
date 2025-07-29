@@ -1,0 +1,125 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 55                                            
+FILE_RECORDS                  = 82                                            
+^A_TABLE                      = ("BASEOFFS.TAB",1)                            
+^B_TABLE                      = ("BASEOFFS.TAB",49)                           
+DATA_SET_ID                   = "GP-J-NEP-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE NEPHELOMETER"                  
+TARGET_NAME                   = "JUPITER"                                     
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "BASEOFFS.TAB"                                
+PRODUCT_ID                    = "BASEOFFS.TAB"                                
+PRODUCT_CREATION_TIME         =  1998-12-03                                   
+                                                                              
+OBJECT                        = A_TABLE                                       
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 47                                          
+  COLUMNS                       = 5                                           
+  ROW_BYTES                     = 55                                          
+  DESCRIPTION                   = "Baseline Offsets Versus Temperature        
+                                   (Extrapolated).                            
+ These baseline offsets versus temperature were measured for the              
+ flight unit in the laboratory at temperatures from about -20 to 50 C         
+ and are extrapolated to the values listed here. Since baseline offsets       
+ are principally believed to be due to induced ground currents, the           
+ value of offset may have been strongly affected by the final                 
+ configuration of the instrument in the vehicle. Therefore the values         
+ in this table must be judiciously employed for the actual flight case        
+ data, for which the instrument was mounted on the probe and deployed         
+ during encounter. Although the data below are included for                   
+ completeness, for alternative procedures the user is referred to             
+ RAGENTETAL1998."                                                             
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "INSTRUMENT TEMPERATURE, FORWARD"              
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.2"                                         
+    DESCRIPTION              = "Temperature T1, C"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "5.8 DEGREES"                                  
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = "5.8 degrees (offsets in counts)"              
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "16 DEGREES"                                   
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 23                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.2"                                         
+    DESCRIPTION              = "16 degrees (offsets in counts)"               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "40 DEGREES"                                   
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 34                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = "40 degrees (offsets in counts)"               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "70 DEGREES"                                   
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 45                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = "70 degrees (offsets in counts)"               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = A_TABLE                                       
+                                                                              
+OBJECT                        = B_TABLE                                       
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 34                                          
+  COLUMNS                       = 2                                           
+  ROW_BYTES                     = 17                                          
+  ROW_SUFFIX_BYTES              = 38                                          
+  DESCRIPTION                   = "Baseline Offsets Versus Temperature        
+                                   (Extrapolated) (Continued)."               
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "INSTRUMENT TEMPERATURE, BACKWARD"             
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.2"                                         
+    DESCRIPTION              = "Temperature T2, C"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "178 DEGREES"                                  
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = "178 degrees (offsets in counts)"              
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = B_TABLE                                       
+END                                                                           

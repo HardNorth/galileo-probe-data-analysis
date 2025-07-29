@@ -1,0 +1,163 @@
+PDS_VERSION_ID = PDS3                                                                   
+RECORD_TYPE = FIXED_LENGTH                                                              
+RECORD_BYTES = 90                                                                       
+FILE_RECORDS = 163                                                                      
+LABEL_RECORDS = 107                                                                     
+^TABLE = 108                                                                            
+DATA_SET_ID = "GP-J-NFR-3-ENTRY-V1.0"                                                   
+SPACECRAFT_NAME = "GALILEO PROBE"                                                       
+INSTRUMENT_NAME = "NET FLUX RADIOMETER"                                                 
+TARGET_NAME = JUPITER                                                                   
+MISSION_PHASE_NAME = "PROBE DESCENT"                                                    
+START_TIME = "UNK"                                                                      
+STOP_TIME = "UNK"                                                                       
+PRODUCT_NAME = "NFRSCDN.TAB"                                                            
+PRODUCT_ID = "NFRSCDN.TAB"                                                              
+PRODUCT_CREATION_TIME =  1998-08-25                                                     
+NOTE = "This table contains raw short cycle net flux counts with                        
+        correlated noise removed."                                                      
+                                                                                        
+OBJECT = TABLE                                                                          
+INTERCHANGE_FORMAT = ASCII                                                              
+ROWS = 56                                                                               
+COLUMNS = 10                                                                            
+ROW_BYTES = 90                                                                          
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = DATA_CYCLE                                                                       
+DESCRIPTION = "Two-minute Data Cycle"                                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 1                                                                          
+BYTES = 5                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = INSTRUMENT_CYCLE                                                                 
+DESCRIPTION = "Six-second Instrument Cycle, 0-19"                                       
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 7                                                                          
+BYTES = 4                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = TIME                                                                             
+DESCRIPTION = "Time after minor frame zero, seconds"                                    
+DATA_TYPE = REAL                                                                        
+START_BYTE = 12                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = A_COUNTS                                                                         
+DESCRIPTION = "Channel A Short Cycle Net Flux Counts"                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 22                                                                         
+BYTES = 7                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = B_COUNTS                                                                         
+DESCRIPTION = "Channel B Short Cycle Net Flux Counts"                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 30                                                                         
+BYTES = 7                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = C_COUNTS                                                                         
+DESCRIPTION = "Channel C Short Cycle Net Flux Counts"                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 38                                                                         
+BYTES = 7                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = D_COUNTS                                                                         
+DESCRIPTION = "Channel D Short Cycle Net Flux Counts"                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 46                                                                         
+BYTES = 7                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = E_COUNTS                                                                         
+DESCRIPTION = "Channel E Short Cycle Net Flux Counts"                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 54                                                                         
+BYTES = 7                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = F_FIT_COUNTS                                                                     
+DESCRIPTION = "Fit to denoised F Short Cycle Net Flux Counts"                           
+DATA_TYPE = REAL                                                                        
+START_BYTE = 62                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = F_COUNTS                                                                         
+DESCRIPTION = "Channel F Short Cycle Net Flux Counts"                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 71                                                                         
+BYTES = 7                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+END_OBJECT = TABLE                                                                      
+END                                                                                     
+    0,   1,    14.25,   3451,  -2135,  -1282,   6630,  -2525,    37.2,   -221           
+    0,  10,    68.25,    617,   -939,   -740,    854,  -1473,   -82.5,    -92           
+    1,   1,   134.25,    444,  -1034,  -1678,     84,  -2019,  -167.0,   -187           
+    1,  10,   188.25,    326,  -1114,  -2196,   -149,  -2022,  -182.4,   -218           
+    2,   1,   254.25,    251,   -935,  -1827,   -205,  -1668,  -160.6,   -164           
+    2,  10,   308.25,    240,   -862,  -1353,    -92,  -1556,  -138.9,   -154           
+    3,   1,   374.25,    186,   -707,   -990,    -51,  -1211,  -113.5,   -105           
+    3,  10,   428.25,    197,   -595,   -684,     47,   -984,   -85.0,    -87           
+    4,   1,   494.25,    195,   -515,   -244,    163,   -751,   -52.5,    -44           
+    4,  10,   548.25,    203,   -429,     83,    266,   -557,   -29.3,    -30           
+    5,   1,   614.25,    221,   -365,    410,    374,   -361,    -2.2,     -2           
+    5,  10,   668.25,    222,   -294,    718,    463,   -216,    16.8,     -4           
+    6,   1,   734.25,    237,   -245,   1061,    563,    -46,    38.0,     37           
+    6,  10,   788.25,    256,   -184,   1329,    607,     64,    52.5,     53           
+    7,   1,   854.25,    282,   -133,   1742,    658,    167,    72.1,     64           
+    7,  10,   908.25,    284,    -78,   2016,    722,    277,    86.8,     76           
+    8,   1,   974.25,    318,    -80,   2291,    777,    349,   101.6,     98           
+    8,  10,  1028.25,    318,    -27,   2501,    835,    412,   114.1,    122           
+    9,   1,  1094.25,    351,     44,   2774,    871,    552,   130.5,    115           
+    9,  10,  1148.25,    378,     33,   3016,    926,    593,   143.6,    137           
+   10,   1,  1214.25,    405,     56,   3230,   1032,    659,   157.7,    156           
+   10,  10,  1268.25,    422,    150,   3401,   1024,    691,   167.5,    170           
+   11,   1,  1334.25,    451,    145,   3793,   1075,    758,   183.2,    182           
+   11,  10,  1388.25,    472,    154,   3928,   1210,    793,   197.5,    203           
+   12,   1,  1454.25,    493,    203,   4240,   1293,    911,   215.9,    213           
+   12,  10,  1508.25,    518,    218,   4339,   1348,    958,   228.0,    241           
+   13,   1,  1574.25,    550,    236,   4660,   1437,   1023,   245.1,    249           
+   13,  10,  1628.25,    576,    271,   4805,   1498,   1075,   264.5,    276           
+   14,   1,  1694.25,    588,    379,   4900,   1571,   1240,   287.2,    267           
+   14,  10,  1748.25,    648,    264,   5392,   1613,   1172,   300.2,    303           
+   15,   1,  1814.25,    625,    453,   5446,   1685,   1322,   317.4,    305           
+   15,  10,  1868.25,    682,    393,   5613,   1801,   1297,   337.1,    340           
+   16,   1,  1934.25,    671,    438,   5749,   1968,   1438,   360.5,    362           
+   16,  10,  1988.25,    721,    394,   5833,   2081,   1467,   374.3,    372           
+   17,   1,  2054.25,    680,    540,   5862,   2063,   1650,   390.9,    396           
+   17,  10,  2108.25,    700,    370,   5923,   2177,   1591,   404.2,    387           
+   18,   1,  2174.25,    692,    554,   5874,   2259,   1726,   420.8,    424           
+   18,  10,  2228.25,    702,    544,   5914,   2390,   1737,   438.4,    439           
+   19,   1,  2294.25,    679,    624,   5910,   2414,   1888,   450.7,    449           
+   19,  10,  2348.25,    625,    756,   5759,   2286,   1947,   449.0,    437           
+   20,   1,  2414.25,    604,    628,   5857,   2377,   1981,   437.8,    443           
+   20,  10,  2468.25,    531,    791,   5538,   1977,   2077,   407.6,    410           
+   21,   1,  2534.25,    369,    852,   5498,   1637,   2196,   322.6,    321           
+   21,  10,  2588.25,    229,    822,   4087,   1412,   2019,   226.4,    210           
+   22,   1,  2654.25,    111,    787,   2842,   1143,   1929,   124.8,    115           
+   22,  10,  2708.25,     60,    578,   2192,    948,   1576,    67.2,     60           
+   23,   1,  2774.25,     39,    385,   1408,    679,   1125,    31.1,     34           
+   23,  10,  2828.25,     14,    315,   1101,    470,    842,    13.1,      9           
+   24,   1,  2894.25,     15,    163,    662,    334,    524,     2.8,      4           
+   24,  10,  2948.25,      8,     36,    526,    246,    320,    -1.7,     -7           
+   25,   1,  3014.25,     11,    -74,    398,    142,    145,    -5.1,     -2           
+   25,  10,  3068.25,     15,   -194,    300,    114,     26,    -7.7,     -8           
+   26,   1,  3134.25,     18,   -380,    241,     98,   -184,    -9.5,     -7           
+   26,  10,  3188.25,     34,   -518,    189,     61,   -291,   -11.0,    -16           
+   27,   1,  3254.25,     41,   -750,    143,     37,   -492,   -12.3,    -11           
+   27,  10,  3308.25,     55,   -991,    102,     33,   -693,   -12.4,    -16           

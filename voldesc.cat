@@ -1,0 +1,52 @@
+PDS_VERSION_ID         = PDS3                                                 
+OBJECT                 = VOLUME                                               
+ VOLUME_SERIES_NAME    = "MISSION TO JUPITER"                                 
+ VOLUME_SET_NAME       = "GALILEO PROBE ARCHIVE"                              
+ VOLUME_SET_ID         = "USA_NASA_PDS_GP_0001"                               
+ VOLUMES               = 2                                                    
+ VOLUME_NAME           = "VOLUME 1"                                           
+ VOLUME_ID             = "GP_0001"                                            
+ VOLUME_FORMAT         = "ISO-9660"                                           
+ VOLUME_VERSION_ID     = "VERSION 3"                                          
+ MEDIUM_TYPE           = "CD-WO"                                              
+ DATA_SET_ID           = {"GP-J-ASI-3-ENTRY-V1.0",                            
+                          "GP-J-DWE-3-ENTRY-V1.0",                            
+                          "GP-J-EPI-3-ENTRY-V1.0",                            
+                          "GP-J-HAD-3-ENTRY-V1.0",                            
+                          "GP-J-LRD-3-ENTRY-V1.0",                            
+                          "GP-J-NEP-3-ENTRY-V1.0",                            
+                          "GP-J-NFR-3-ENTRY-V1.0",                            
+                          "GP-J-NMS-3-ENTRY-V1.0"}                            
+ PUBLICATION_DATE      = 2000                                                 
+ DESCRIPTION           = "                                                    
+    This volume contains atmospheric measurements from all of the instruments 
+    on board the Galileo Entry Probe. The volume also contains documentation  
+    in the form of ancillary files, to support access of the data on this CD. 
+                          "                                                   
+                                                                              
+OBJECT                     = DATA_PRODUCER                                    
+  INSTITUTION_NAME          = "NEW MEXICO STATE UNIVERSITY"                   
+  FACILITY_NAME             = "PDS/ATMOSPHERES NODE"                          
+  FULL_NAME                 = "LYLE HUBER"                                    
+  ADDRESS_TEXT              = "Department of Astronomy\n                      
+                               New Mexico State University\n                  
+                               Box 30001, Dept. 4500\n                        
+                               Las Cruces, NM 88003-0001\n"                   
+  TELEPHONE_NUMBER          = "5056461862"                                    
+ END_OBJECT                 = DATA_PRODUCER                                   
+                                                                              
+OBJECT                     = CATALOG                                          
+  ^INSTRUMENT_HOST_CATALOG  = "GPHOST.CAT"                                    
+  ^MISSION_CATALOG          = "MISSION.CAT"                                   
+  ^INSTRUMENT_CATALOG       = {"ASIINST.CAT","DWEINST.CAT","EPIINST.CAT",     
+                               "HADINST.CAT","LRDINST.CAT",                   
+                               "NEPINST.CAT","NFRINST.CAT","NMSINST.CAT"}     
+  ^DATA_SET_CATALOG         = {"ASIDS.CAT","DWEDS.CAT","EPIDS.CAT",           
+                               "HADDS.CAT","LRDDS.CAT",                       
+                               "NEPDS.CAT","NFRDS.CAT","NMSDS.CAT"}           
+  ^REFERENCE_CATALOG        = "REF.CAT"                                       
+  ^PERSONNEL_CATALOG        = "PERS.CAT"                                      
+ END_OBJECT                 = CATALOG                                         
+                                                                              
+END_OBJECT                 = VOLUME                                           
+END                                                                           

@@ -1,0 +1,130 @@
+PDS_VERSION_ID = PDS3                                                                   
+RECORD_TYPE = FIXED_LENGTH                                                              
+RECORD_BYTES = 90                                                                       
+FILE_RECORDS = 130                                                                      
+LABEL_RECORDS = 101                                                                     
+^TABLE = 102                                                                            
+DATA_SET_ID = "GP-J-NFR-3-ENTRY-V1.0"                                                   
+SPACECRAFT_NAME = "GALILEO PROBE"                                                       
+INSTRUMENT_NAME = "NET FLUX RADIOMETER"                                                 
+TARGET_NAME = JUPITER                                                                   
+MISSION_PHASE_NAME = "PROBE DESCENT"                                                    
+START_TIME = "UNK"                                                                      
+STOP_TIME = "UNK"                                                                       
+PRODUCT_NAME = "MCTCUF.TAB"                                                             
+PRODUCT_ID = "MCTCUF.TAB"                                                               
+PRODUCT_CREATION_TIME =  1998-08-18                                                     
+NOTE = "This table contains m-corrected, temp-corrected up flux mode fluxes.            
+        m-factors used: [0 (N/A), 1.0, 2.8, 0 (N/A), 2.2, 1.00].                        
+        N/A indicates that there are insufficient constraints to derive an              
+        m-factor for channels A or D."                                                  
+                                                                                        
+OBJECT = TABLE                                                                          
+INTERCHANGE_FORMAT = ASCII                                                              
+ROWS = 29                                                                               
+COLUMNS = 9                                                                             
+ROW_BYTES = 90                                                                          
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = DATA_CYCLE                                                                       
+DESCRIPTION = "Two-minute Data Cycle"                                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 1                                                                          
+BYTES = 4                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = INSTRUMENT_CYCLE                                                                 
+DESCRIPTION = "Six-second Instrument Cycle, 0-19"                                       
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 6                                                                          
+BYTES = 5                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = TIME                                                                             
+DESCRIPTION = "Time after minor frame zero, seconds"                                    
+DATA_TYPE = REAL                                                                        
+START_BYTE = 12                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = A_MCTCUF                                                                         
+DESCRIPTION = "Channel A Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 21                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = B_MCTCUF                                                                         
+DESCRIPTION = "Channel B Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 31                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = C_MCTCUF                                                                         
+DESCRIPTION = "Channel C Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 41                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = D_MCTCUF                                                                         
+DESCRIPTION = "Channel D Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 51                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = E_MCTCUF                                                                         
+DESCRIPTION = "Channel E Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 61                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = F_MCTCUF                                                                         
+DESCRIPTION = "Channel F Up Flux, W/m^2"                                                
+DATA_TYPE = REAL                                                                        
+START_BYTE = 71                                                                         
+BYTES = 9                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+END_OBJECT = TABLE                                                                      
+END                                                                                     
+   0,    9,   60.75,   -1.824,    2.764,    0.256,   -2.176,    1.310,    0.000         
+   1,    9,  180.75,   -0.137,    1.448,   -0.506,   -1.386,    0.499,    0.000         
+   2,    9,  300.75,    1.408,    1.226,    0.790,   -0.157,    0.511,    0.000         
+   3,    9,  420.75,    1.571,    0.777,    0.738,    0.222,    0.224,    0.000         
+   4,    9,  540.75,    1.872,    0.715,    0.756,    0.612,    0.231,    0.000         
+   5,    9,  660.75,    2.326,    0.624,    1.005,    1.032,    0.254,    0.000         
+   6,    9,  780.75,    2.785,    0.525,    1.397,    1.375,    0.250,    0.000         
+   7,    9,  900.75,    2.914,    0.373,    1.471,    1.446,    0.146,    0.000         
+   8,    9, 1020.75,    3.585,    0.499,    1.942,    1.778,    0.254,    0.000         
+   9,    9, 1140.75,    3.829,    0.337,    2.030,    1.974,    0.183,    0.000         
+  10,    9, 1260.75,    3.969,    0.038,    2.001,    1.785,   -0.071,    0.000         
+  11,    9, 1380.75,    4.367,    0.003,    2.093,    1.977,   -0.102,    0.000         
+  12,    9, 1500.75,    4.630,    0.061,    2.387,    2.072,   -0.122,    0.000         
+  13,    9, 1620.75,    4.916,    0.048,    2.430,    2.148,   -0.048,    0.000         
+  14,    9, 1740.75,    5.078,   -0.093,    2.466,    2.295,   -0.210,    0.000         
+  15,    9, 1860.75,    5.648,    0.134,    2.896,    2.681,   -0.936,    0.000         
+  16,    9, 1980.75,    5.866,    0.137,    2.992,    2.936,   -0.014,    0.000         
+  17,    9, 2100.75,    5.865,    0.075,    2.689,    2.977,   -0.429,    0.000         
+  18,    9, 2220.75,    5.888,   -0.111,    2.322,    3.086,   -0.294,    0.000         
+  19,    9, 2340.75,    5.927,   -0.279,    2.061,    3.191,   -0.517,    0.000         
+  20,    9, 2460.75,    6.575,   -0.042,    2.716,    3.917,   -0.342,    0.000         
+  21,    9, 2580.75,    4.826,   -1.124,    2.691,    3.426,   -0.986,    0.000         
+  22,    9, 2700.75,    3.474,   -0.023,    5.985,    4.497,   -0.258,    0.000         
+  23,    9, 2820.75,    3.868,    0.202,   11.294,    4.384,    0.672,    0.000         
+  24,    9, 2940.75,    6.212,   -2.939,   12.933,    3.367,    0.947,    0.000         
+  25,    9, 3060.75,    6.133,  -10.243,   12.074,    0.575,   -1.609,    0.000         
+  26,    9, 3180.75,   12.474,  -22.546,    5.378,    0.471,   -5.249,    0.000         
+  27,    9, 3300.75,   20.811,  -44.018,    3.093,    0.501,  -11.262,    0.000         
+  28,    9, 3420.75,   34.411,  -76.604,   -0.660,   -1.000,  -21.791,    0.000         

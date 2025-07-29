@@ -1,0 +1,104 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 26                                            
+FILE_RECORDS                  = 1960                                          
+^TABLE                        = "D02.TAB"                                     
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.D.02"                              
+PRODUCT_ID                    = "D02.TAB"                                     
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.D.02                                                  
+                                                                              
+This file ( ASI.PDS.F.D.02 ) contains time tagged data from the Descent       
+Mode for all measurements that were either integrated or collected over a     
+period of time. These measurements were all accelerometer related             
+measurements. All times are time in seconds from the start of the Probe       
+Descent Mode.                                                                 
+                                                                              
+The first column in the file contains the start time for the integration or   
+accumulation,  the second column in the file contains the stop time for the   
+integration or accumulation,  the third column contains the ASI data words    
+(extracted from the probe 8-bit data stream contained in file ASI.PDS.F.D.01),
+and the fourth column contains a measurement ID to enable identification of   
+each measurement.  The measurement ID codes are as follows:                   
+                                                                              
+1 - Z1 axial accelerometer output averaged over a 16 sec period (12-bit word) 
+2 - Z2 axial accelerometer output averaged over a 16 sec period (12-bit word) 
+3 - Lateral accelerometer min recorded value during 16 sec period (8-bit word)
+4 - Lateral accelerometer max recorded value during 16 sec period (8-bit word)
+5 - Lateral accelerometer output averaged over a 16 second period (8-bit word)
+24 - Range in which Z axial accelerometers are operating (1-bit word)         
+25 - Range in which lateral accelerometers are operating (1-bit word)         
+                                                                              
+61 - Axial Turbulence cnt for level 1 (Last axial avg -152 counts in Range 3).
+62 - Axial Turbulence cnt for level 2 (Last axial avg -76 counts in Range 3). 
+63 - Axial Turbulence cnt for level 3 (Last axial avg -38 counts in Range 3). 
+64 - Axial Turbulence cnt for level 4 (Last axial avg -19 counts in Range 3). 
+65 - Axial Turbulence cnt for level 5 (Last axial avg +19 counts in Range 3). 
+66 - Axial Turbulence cnt for level 6 (Last axial avg +38 counts in Range 3). 
+67 - Axial Turbulence cnt for level 7 (Last axial avg +76 counts in Range 3). 
+68 - Axial Turbulence cnt for level 8 (Last axial avg +152 counts in Range 3).
+                                                                              
+71   -    Lateral Turbulence count for level 1 ( 1 count in Range 2 ).        
+72   -    Lateral Turbulence count for level 2 ( 3 counts in Range 2 ).       
+73   -    Lateral Turbulence count for level 3 ( 6 counts in Range 2 ).       
+74   -    Lateral Turbulence count for level 4 ( 12 counts in Range 2 )."     
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 1960                                        
+  COLUMNS                       = 4                                           
+  ROW_BYTES                     = 26                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "START TIME"                                   
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "STOP TIME"                                    
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 10                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DN MEASUREMENT"                               
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 19                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MEASUREMENT ID CODE"                          
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 23                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

@@ -1,0 +1,146 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 91                                            
+FILE_RECORDS                  = 61                                            
+^TABLE                        = "HK01TE.TAB"                                  
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.HK.01.TE"                          
+PRODUCT_ID                    = "HK01TE.TAB"                                  
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.HK.01                                                 
+                                                                              
+Throughout the mission, starting during instrument pre-entry calibration and  
+lasting until termination of the descent mode, data were taken to evaluate    
+instrument health status and allow data corrections to be made if necessary.  
+All of these housekeeping data can be found in these files ( ASI.PDS.F.HK.01.A
+  :  ASI.PDS.F.HK.01.AD  :  ASI.PDS.F.HK.01.P   :  ASI.PDS.F.HK.01.TE ) .     
+                                                                              
+File ASI.PDS.F.HK.01.A contains all housekeeping data from the accelerometers.
+File ASI.PDS.F.HK.01.AD contains all housekeeping data from the analog to     
+digital converters.                                                           
+File ASI.PDS.F.HK.01.P contains all housekeeping data from the pressure       
+sensors.                                                                      
+File ASI.PDS.F.HK.01.TE contains all housekeeping data from the science       
+temperature sensors and from the main instrument electronics.                 
+                                                                              
+Descriptions of the instrumentation can be found in Space Sciences Review,    
+Volume 60, May 1992,  pages 203 - 232.                                        
+                                                                              
+The header to each column identifies the details of each measurement."        
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 61                                          
+  COLUMNS                       = 9                                           
+  ROW_BYTES                     = 91                                          
+  DESCRIPTION                   = "Housekeeping  data from the science        
+                                   temperature sensors and from the main      
+                                   instrument electronics."                   
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Elec T"                                       
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 16                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Elec T"                                       
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 24                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.2"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 31                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "T2 Ref"                                       
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 46                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 51                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "T1 Ref"                                       
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 66                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 72                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "T Off"                                        
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 87                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

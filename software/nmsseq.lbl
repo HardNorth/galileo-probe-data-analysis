@@ -1,0 +1,15 @@
+PDS_VERSION_ID                    = PDS3
+RECORD_TYPE                       = STREAM
+
+^BINARY_DOCUMENT                  = "NMSSEQ.EXE"
+
+OBJECT                            = BINARY_DOCUMENT
+  DOCUMENT_NAME                   = "Galileo Probe NMS Cartoon Sequence"
+  PUBLICATION_DATE                = 1998-04-16
+  DOCUMENT_TOPIC_TYPE             = "EXECUTABLE"
+  INTERCHANGE_FORMAT              = BINARY
+  DOCUMENT_FORMAT                 = "PC EXECUTABLE"
+  DESCRIPTION                     = "Executable file (for PCs only) which
+    draws a cartoon of the Mass Spectrometer sequence of activities."
+END_OBJECT                        = BINARY_DOCUMENT
+END

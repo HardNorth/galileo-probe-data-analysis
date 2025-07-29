@@ -1,0 +1,215 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 84                                            
+FILE_RECORDS                  = 94                                            
+^SECTOR_TABLE                 = "COUNTERS.TAB"                                
+DATA_SET_ID                   = "GP-J-EPI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ENERGETIC PARTICLES INSTRUMENT"              
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "COUNTER TABLE"                               
+PRODUCT_ID                    = "COUNTERS.TAB"                                
+PRODUCT_CREATION_TIME         =  1998-08-17                                   
+DESCRIPTION                   = "                                             
+This data file contains sectorized data in the form of uncorrected            
+counts. The distance from Jupiter is provided in units of jovian radii where  
+1 Rj = 71372 km. Time is provided as seconds before entry there the           
+entry time is defined to be 1995-12-07T23:22:00:00                            
+                                                                              
+Sector Data                                                                   
+                                                                              
+The columns contain: distance from Jupiter in Rj, ID for channel              
+(11=E1,12=E2,13=E3,21=P1,221=P2 first sample, 222=P2 second sample,31=HE),    
+Values of EPI-sector counter S1, S2, S3, S4, S5, S6, S7, S8.                  
+For HE (ID=31) there are only 4 sectors S1, S2, S3, S4.                       
+Same columns as in the count rate table, but values are counts.               
+                                                                              
+Starting the first data sample at 5 Rj the subsequent samples were            
+positioned at 4.1, 3.2 and 2.3 Rj. At 2.3 Rj the continuous sampling          
+started. In case the phase locked loop circuit of the LRD was not able to     
+detect the magnetic field zero crossing, the data acquisition was based       
+on the nominal probe spin frequency of 10.5 rpm. One Major Frame              
+Period (MFP) was 64 seconds. There were two different acquisition schemes.    
+                                                                              
+Data acquisition scheme for EPI samples at 5, 4.1, 3.2 and 2.3 Rj:            
+                                                                              
+        MFP       1                  2                                        
+        E1       E11S               E12                                       
+        E2       E21S               E22                                       
+        E3       E31S               E32                                       
+        P1       P11S               P12                                       
+        P2       P21S               P22S                                      
+        P3       P31                P32                                       
+        HE       HE1S               HE2                                       
+        HVY      HVY                                                          
+                                                                              
+  E11S, E21S, E31S, P11S, P21S, P22S: Sectorized measurements in 8            
+  sectors accumulated over 3 spin periods in such a way that always the       
+  contents of one sector are added to the equivalent sector of the next       
+  rotation.                                                                   
+                                                                              
+  HE1S: For alpha particles the measurement is elongated over 8               
+  spin periods but only divided into four sectors.                            
+                                                                              
+  E12, E22, E32, P12, P31, P32: Omnidirectional measurements accumulated      
+  over 3 spin periods.                                                        
+                                                                              
+  HE2: Omnidirectional measurement accumulated over 8 spin periods.           
+                                                                              
+  HVY: Because of the uncertainty in finding heavy particles the              
+  investigation period is elongated to two MFP's without sectorization.       
+                                                                              
+Data acquisition scheme for EPI samples between 2.1 Rj and the innermost      
+edge of the Jovian radiation belt:                                            
+                                                                              
+        MFP       1                  2             3             4            
+        E1       E11S                             E13                         
+        E2       E21S               E22           E23           E24           
+        E3       E31S                             E33                         
+        P1       P11S                             P13                         
+        P2       P21S               P22           P23           P24           
+        P3       P31                              P33                         
+        HE       HE1S                             HE3                         
+        HVY      HVY1               HVY2          HVY3          HVY4          
+                                                                              
+                                                                              
+  E11S, E21S, E31S, P11S, P21S: Sectorized measurements in 8                  
+  sectors accumulated over 3 spin periods in such a way that always the       
+  contents of one sector are added to the equivalent sector of the next       
+  rotation.                                                                   
+                                                                              
+  HE1S: For alpha particles the measurement is elongated over 8               
+  spin periods but only divided into four sectors.                            
+                                                                              
+  P31, E22, P22, E13, E23, E33, P13, P23, P33: Omnidirectional                
+  measurements accumulated over 3 spin periods.                               
+                                                                              
+  HE3: Omnidirectional measurement accumulated over 8 spin periods.           
+                                                                              
+  HVY1-HVY4: Omnidirectional measurements accumulated over one MFP."          
+                                                                              
+                                                                              
+OBJECT                        = SECTOR_TABLE                                  
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 94                                          
+  COLUMNS                       = 10                                          
+  ROW_BYTES                     = 84                                          
+  NOTE                          = "For the sectorized channels                
+   E11S, E21S, E31S, P11S, P21S, P22S the sampling time was 2.143 s and       
+   for the sectorized HE1S channel it was 11.43 s."                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "DISTANCE"                                     
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "JUPITER RADII"                                
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 5                                              
+    FORMAT                   = "F5.3"                                         
+    DESCRIPTION              = "Probe distance from the jovian center of      
+        mass in units of Rj."                                                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "CHANNEL ID"                                   
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 7                                              
+    BYTES                    = 4                                              
+    FORMAT                   = "F4.0"                                         
+    DESCRIPTION              = "Instrument channel identifier."               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER S1"                                   
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.0"                                         
+    DESCRIPTION              = "Sector 1 counts for channel named in column 2"
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER S2"                                   
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 21                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.0"                                         
+    DESCRIPTION              = "Sector 2 counts for channel named in column 2"
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER S3"                                   
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 30                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.0"                                         
+    DESCRIPTION              = "Sector 3 counts for channel named in column 2"
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER S4"                                   
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 39                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.0"                                         
+    DESCRIPTION              = "Sector 4 counts for channel named in column 2"
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER S5"                                   
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 48                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.0"                                         
+    DESCRIPTION              = "Sector 5 counts for channel named in column 2"
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER S6"                                   
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 57                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.0"                                         
+    DESCRIPTION              = "Sector 6 counts for channel named in column 2"
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER S7"                                   
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 66                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.0"                                         
+    DESCRIPTION              = "Sector 7 counts for channel named in column 2"
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTER S8"                                   
+    COLUMN_NUMBER            = 10                                             
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 75                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "F8.0"                                         
+    DESCRIPTION              = "Sector 8 counts for channel named in column 2"
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = SECTOR_TABLE                                  
+END                                                                           

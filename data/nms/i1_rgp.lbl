@@ -1,0 +1,226 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 104                                           
+FILE_RECORDS                  = 300                                           
+^TABLE                        = "I1_RGP.TAB"                                  
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "H2 + 10%He + 147ppm NE + 151ppm Ar + 147ppm  
+                                 Kr + 152ppm Xe"                              
+PRODUCT_ID                    = "85_08713.20D"                                
+PRODUCT_CREATION_TIME         =  1998-04-17                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 300                                         
+  COLUMNS                       = 16                                          
+  ROW_BYTES                     = 104                                         
+                                                                              
+  DESCRIPTION                   = "GPMS Flight Unit characterization          
+resulting from the introduction of a H2 + He + Rare Gases                     
+mixture into Inlet 1 of the instrument.  The gas mixture was                  
+circulated through the GPMS inlet at a selected pressures initially           
+using circulation pump #1 (pressures < 2 Bars) then switching to              
+circulation pump #2 for pressures > 2 Bars.                                   
+Refer to diagrams named /DOCUMENT/INLTSYS.GIF and /DOCUMENT/GASMIXR.GIF for   
+details. Masses 1 to 150 were scanned.  Since only Ionizer Filament Number 1  
+was utilized during the mission, only the data for Filament 1                 
+testing is included in the file.  Also NOTE (!) that these values             
+represent RAW data.  They have NOT been corrected for pulse pile-up           
+(overlap) effects!                                                            
+                                                                              
+Gas Mix:  H2 + 10%He + 147ppm Ne + 151ppm Ar + 147ppm Kr + 152ppm Xe          
+Original file:  85_08713.20D       APG1   APG2   DPG4 PG6 PG7 FM1             
+Sampling Sequence 3B               124 mb 116 mb 6    -   -   2               
+                                                                              
+Notes: Count rates shown as -1 represent missing information.                 
+       The counting integration period is 0.48375 seconds.                    
+       At the beginning and end of a run, pressures are not stable.           
+       The pressure was allowed to slowly drift (change) while these          
+          measurements were being obtained.  This file exhibits the           
+          response of the instrument to the inlet system pressure."           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Mass"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "AMU"                                          
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 1                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "BKG1"                                         
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 5                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Instrument background scan number 1           
+                                  at 75 eV ionization energy."                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "BKG2"                                         
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 9                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Background scan 2 at 75 eV"                   
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN1"                                        
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 13                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Changing Pressure"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN2"                                        
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 17                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "I5"                                           
+    DESCRIPTION              = "0.1 Bar"                                      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN3"                                        
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 23                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "I5"                                           
+    DESCRIPTION              = "Changing Pressure"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN4"                                        
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 29                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "I6"                                           
+    DESCRIPTION              = "0.2 Bar"                                      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN5"                                        
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 36                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "I6"                                           
+    DESCRIPTION              = "0.5 Bar"                                      
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN6"                                        
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 43                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "I6"                                           
+    DESCRIPTION              = "Changing Pressure"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN7"                                        
+    COLUMN_NUMBER            = 10                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 50                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "1 Bar"                                        
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN8"                                        
+    COLUMN_NUMBER            = 11                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 58                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "1 Bar & changing pressure."                   
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN9"                                        
+    COLUMN_NUMBER            = 12                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 66                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "2 Bars"                                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN10"                                       
+    COLUMN_NUMBER            = 13                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 74                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "2 Bars + changing circulation pump."          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN11"                                       
+    COLUMN_NUMBER            = 14                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 82                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "2 Bars using circulation pump No. 2"          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN12"                                       
+    COLUMN_NUMBER            = 15                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 90                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "2 Bars using circulation pump #2 "            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SCAN13"                                       
+    COLUMN_NUMBER            = 16                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 98                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "I5"                                           
+    DESCRIPTION              = "3 Bars Kr+ and Xe++ data                      
+                                  using circulation pump #2"                  
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

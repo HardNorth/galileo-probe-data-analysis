@@ -1,0 +1,163 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 72                                            
+FILE_RECORDS                  = 100                                           
+^TABLE                        = "I1_HCN.TAB"                                  
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "He + 145 ppm HCN"                            
+PRODUCT_ID                    = "85_08810.42D"                                
+PRODUCT_CREATION_TIME         =  1998-04-17                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 100                                         
+  COLUMNS                       = 11                                          
+  ROW_BYTES                     = 72                                          
+                                                                              
+  DESCRIPTION                   = "GPMS Flight Unit characterization          
+resulting from the introduction of a helium plus hydrogen cyanide             
+mixture into Inlet 1 of the instrument.  The gas mixture was                  
+circulated through the GPMS inlet at a pressure of 2 bars.                    
+Refer to diagrams named /DOCUMENT/INLTSYS.GIF and /DOCUMENT/GASMIXR.GIF for   
+details. Masses 1 to 50 were scanned.  Since only Ionizer Filament Number 1   
+was utilized during the mission, only the data for Filament 1                 
+testing is included in the file.  Also NOTE (!) that these values             
+represent RAW data.  They have NOT been corrected for pulse pile-up           
+(overlap) effects!                                                            
+                                                                              
+Gas Mix:  He + 145ppm HCN (Cylinder Ref: 11/19/78) at 2.0 Bars                
+Original File:  85_08810.42D    APG1  APG2  DPG4 PG6 PG7 FM1                  
+                                1.993 2.028 10   -   -   45                   
+                                                                              
+Notes: Count rates shown as -1 represent missing information.                 
+       The counting integration period is 0.48375 seconds."                   
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Mass"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "AMU"                                          
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 1                                              
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "B1_75"                                        
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 4                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Instrument background scan number 1           
+                                  at 75 eV ionization energy."                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "B2_75"                                        
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 8                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Background scan 2 at 75 eV"                   
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S1_75"                                        
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 12                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "I8"                                           
+    DESCRIPTION              = "Sample Scan number 1 at 75 eV"                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S2_75"                                        
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 21                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "I8"                                           
+    DESCRIPTION              = "Sample Scan 2 at 75 eV"                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S3_25"                                        
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 30                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "Sample Scan 3 at 25 eV"                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S4_25"                                        
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 38                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "Sample Scan 4 at 25 eV"                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S5_15"                                        
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 46                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Sample Scan 5 at 15 eV"                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S6_15"                                        
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 50                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Sample Scan 6 at 15 eV"                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S7_75"                                        
+    COLUMN_NUMBER            = 10                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 54                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "I8"                                           
+    DESCRIPTION              = "Sample Scan 7 at 75 eV"                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S8_75"                                        
+    COLUMN_NUMBER            = 11                                             
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 63                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "I8"                                           
+    DESCRIPTION              = "Sample Scan 8 at 75 eV"                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

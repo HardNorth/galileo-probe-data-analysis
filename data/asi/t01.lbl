@@ -1,0 +1,74 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 17                                            
+FILE_RECORDS                  = 6                                             
+^TABLE                        = "T01.TAB"                                     
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.T.01"                              
+PRODUCT_ID                    = "T01.TAB"                                     
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.T.01                                                  
+                                                                              
+This file ( ASI.PDS.F.T.01 ) contains time tagged data from the Entry         
+Mode for extra data samples taken around the time of maximum deceleration. All
+times are time in seconds relative to the time of maximum deceleration (which,
+for information was at -108.992 seconds relative to the start of the descent  
+mode). These data samples were stored in the ASI memory and written out at the
+start of the ASI descent mode data stream.                                    
+                                                                              
+The first column in the file contains the sample time relative to the time of 
+maximum deceleration,  the second and third columns contain the ASI data words
+(extracted from the probe 8-bit data stream contained in file ASI.PDS.F.D.01).
+"                                                                             
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 6                                           
+  COLUMNS                       = 3                                           
+  ROW_BYTES                     = 17                                          
+  DESCRIPTION                   = "Time tagged data from the Entry Mode for   
+                                   extra data samples taken around the time   
+                                   of maximum deceleration."                  
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.3"                                         
+    DESCRIPTION              = "sample time relative to the time of maximum   
+                                deceleration."                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Z1"                                           
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 8                                              
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "P1"                                           
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 13                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

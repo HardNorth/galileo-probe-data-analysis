@@ -1,0 +1,63 @@
+PDS_VERSION_ID        = PDS3                                                  
+                                                                              
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  INTERCHANGE_FORMAT    = ASCII                                               
+  PUBLICATION_DATE      = 1999-07-22                                          
+  NOTE                  = "ASCII description of probe aerodynamics"           
+END_OBJECT            = TEXT                                                  
+                                                                              
+END                                                                           
+                                                                              
+     This file provides a list of major references, and the references        
+therein, that will aid in the understanding of the probe aerodynamics         
+and spin behavior during both the entry and descent phases. This is not       
+meant to be a complete list of references on the subject. Some references     
+to company documents are incomplete.                                          
+                                                                              
+                                                                              
+                                                                              
+Entry Phase:                                                                  
+                                                                              
+     Hass, B., F.S. Milos, Simulated rarefied entry of the Galileo probe      
+into the atmosphere of Jupiter, AA(Eloret Corp., Palo Alto, CA), 1993.        
+                                                                              
+     Milos, F. S., Y.-K. Chen, T. H. Squire and R. A. Brewer, Analysis        
+of Galileo Probe Heatshield Ablation and Temperature Data, J. of              
+Spacecraft and Rockets, 36, pp. 298-306, 1999.                                
+                                                                              
+     Seiff, A., E. Venkatapathy, B. Haas, and P.F. Intrieri, Galileo Probe    
+Aerodynamics, Pap. AIAA-96-2451, Am. Inst. of Aeronaut. and Astronaut.,       
+Washington, D. C., 1996.                                                      
+This report covers the hypersonic and supersonic aerodynamics of the entry    
+module, needed for the extraction of atmospheric properties from measured     
+decelerations.                                                                
+                                                                              
+                                                                              
+Descent Phase:                                                                
+                                                                              
+     Lanzerotti, L. J., K. Rinnert and G. Dehmel, Spin Rate of Galileo        
+During Descent into the Atmosphere of Jupiter, J. Spacecraft and              
+Rockets, 35, pp. 100-102, 1998.                                               
+                                                                              
+                                                                              
+Earth-based Parachute Drop Tests:                                             
+                                                                              
+     Rodier, R.W., Parachute Design for the Galileo Jupiter Entry Probe,      
+Am. Inst. of Aeronaut. and Astronaut. Preprint, AIAA-81-1951.                 
+This report was written in advance of the testing, and contains no            
+performance data.                                                             
+                                                                              
+     General Electric Document No. 83SDS2056.                                 
+This reports on the first parachute drop test on July 17, 1982.               
+                                                                              
+     General Electric Document No. 83SDS2148, Oct. 17, 1983.                  
+This reports on the final configuration of the Galileo parachute system       
+and a parachute drop test on July 25, 1983. This test was of a parachute      
+that was not the final configuration.                                         
+                                                                              
+     Talley, R. N., Galileo probe deceleration module final report,           
+84SD2020, Re-entry Systems Operations, General Electric Co., Philadelphia,    
+Pa., Jan. 1994.                                                               
+This report may be listed under a different first author. The document        
+number may be incomplete.                                                     

@@ -1,0 +1,97 @@
+PDS_VERSION_ID        = PDS3                                                  
+LABEL_REVISION_NOTE   = "Alvin Seiff and Tony Knight, September 1999"         
+                                                                              
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  INTERCHANGE_FORMAT    = ASCII                                               
+  PUBLICATION_DATE      = 1999-09-01                                          
+  NOTE                  = "ASCII description of ASI acceleration files"       
+END_OBJECT            = TEXT                                                  
+END                                                                           
+                                                                              
+Data in these files, e03z1.dat, e03z2.dat, e03an.dat, contain data            
+for all of the Entry sequence acceleration measurements. The data in          
+file asi_z1 contains all data from the primary axial sensor. The data         
+in file asi_z2 contains all data from the secondary axial sensor. The         
+data in file asi_an contains all data from the lateral sensors.               
+                                                                              
+Descriptions of the instrumentation can be found in Space Sciences            
+Review, Volume 60, May 1992, pages 203 - 232.                                 
+                                                                              
+For files asi_z1 and asi_z2 the first column in each file identifies the      
+measurement sample time, and the second column provides the measured          
+acceleration in m/sec/sec at the sample time.                                 
+                                                                              
+Each of the axial sensors operated in four measurement ranges:                
+                                                                              
+1)  0 to 0.123 m/sec/sec with a resolution of approximately 3.0x10^(-5)       
+m/sec/sec per count,                                                          
+2)  0 to 3.92 m/sec/sec with a resolution of approximately 0.00096 m/sec/sec  
+per count,                                                                    
+3)  -62.7 to +62.7 m/sec/sec with a resolution of approximately 0.0306        
+m/sec/sec per count,                                                          
+4)  0 to 4016 m/sec/sec with a resolution of approximately 0.98               
+m/sec/sec per count,                                                          
+                                                                              
+Data from the Mission Sequence Test indicates that the Axial sensors do       
+not reach full equilibrium on range 1 between the time of turn-on and         
+the start of the calibration sequence. The following adjustments have         
+been made prior to processing the data:                                       
+                                                                              
+a)  The Z1 Range 1 offset has been changed by 5.7 counts relative to          
+the PEC value.                                                                
+                                                                              
+b)  The Z2 Range 1 offset has been changed by 7.7 counts relative to          
+the PEC value.                                                                
+                                                                              
+c)  The Z1 reference temperature at the start of entry has been set to        
+0.346 deg C                                                                   
+                                                                              
+d)  The Z2 reference temperature at the start of entry has been set to        
+0.205 deg C                                                                   
+                                                                              
+Accelerometer range changes were not tied to sampling times;                  
+consequently it was possible for a range change to occur just before a        
+sampling time. In such cases it is possible that a measurement was            
+taken before settling in the new range had occurred.                          
+                                                                              
+e)  The value for Z1 at time -157.742 is suspect high (at a range change)     
+and should probably not be used.                                              
+                                                                              
+f ) The value for Z2 at time -156.805 is suspect high (at a range change)     
+and should possibly not be used.                                              
+                                                                              
+g)  The value for Z1 at time -140.867 is suspect high (at a range change)     
+and should probably not be used.                                              
+                                                                              
+h)  The value for Z2 at time -140.555 is suspect high (at a range change)     
+and should possibly not be used.                                              
+                                                                              
+i)  The value for Z1 at time -128.992 is suspect high (at a range change)     
+and should possibly not be used.                                              
+                                                                              
+j)  The value for Z2 at time -129.305 is suspect high (at a range change)     
+and should probably not be used.                                              
+                                                                              
+k)  The value for Z1 at time -62.117 is suspect low (at a range change)       
+and should probably not be used.                                              
+                                                                              
+l)  The value for Z2 at time -62.43 is suspect low (at a range change)        
+and should probably not be used.                                              
+                                                                              
+                                                                              
+For file asi_an, the first column identifies the measurement sample time,     
+and the second column provides the magnitude of the resultant of the          
+lateral accelerometers in m/sec/sec at the sample time.                       
+                                                                              
+The lateral accelerometers operated in three ranges. The magnitude of         
+the resultant of the two (X and Y) lateral accelerations was computed         
+for each measurement. The three nominal measurement ranges for the            
+resultant were:                                                               
+                                                                              
+1)  -0.17 to +0.17 m/sec/sec with a resolution of approximately               
+0.00068 m/sec/sec per count,                                                  
+2)  -11.0 to +11.0 m/sec/sec with a resolution of approximately               
+0.0435 m/sec/sec per count,                                                   
+3)  -177 g to +177 m/sec/sec with a resolution of approximately               
+0.696 m/sec/sec per count.                                                    

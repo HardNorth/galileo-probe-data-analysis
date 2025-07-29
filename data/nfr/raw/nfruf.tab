@@ -1,0 +1,127 @@
+PDS_VERSION_ID = PDS3                                                                   
+RECORD_TYPE = FIXED_LENGTH                                                              
+RECORD_BYTES = 90                                                                       
+FILE_RECORDS = 127                                                                      
+LABEL_RECORDS = 98                                                                      
+^TABLE = 99                                                                             
+DATA_SET_ID = "GP-J-NFR-3-ENTRY-V1.0"                                                   
+SPACECRAFT_NAME = "GALILEO PROBE"                                                       
+INSTRUMENT_NAME = "NET FLUX RADIOMETER"                                                 
+TARGET_NAME = JUPITER                                                                   
+MISSION_PHASE_NAME = "PROBE DESCENT"                                                    
+START_TIME = "UNK"                                                                      
+STOP_TIME = "UNK"                                                                       
+PRODUCT_NAME = "NFRUF.TAB"                                                              
+PRODUCT_ID = "NFRUF.TAB"                                                                
+PRODUCT_CREATION_TIME =  1998-08-25                                                     
+NOTE = "This table contains raw up flux counts."                                        
+                                                                                        
+OBJECT = TABLE                                                                          
+INTERCHANGE_FORMAT = ASCII                                                              
+ROWS = 29                                                                               
+COLUMNS = 9                                                                             
+ROW_BYTES = 90                                                                          
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = DATA_CYCLE                                                                       
+DESCRIPTION = "Two-minute Data Cycle"                                                   
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 1                                                                          
+BYTES = 6                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = INSTRUMENT_CYCLE                                                                 
+DESCRIPTION = "Six-second Instrument Cycle, 0-19"                                       
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 8                                                                          
+BYTES = 6                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = TIME                                                                             
+DESCRIPTION = "Time after minor frame zero, seconds"                                    
+DATA_TYPE = REAL                                                                        
+START_BYTE = 15                                                                         
+BYTES = 10                                                                              
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = A_COUNTS                                                                         
+DESCRIPTION = "Channel A Up Flux Counts"                                                
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 26                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = B_COUNTS                                                                         
+DESCRIPTION = "Channel B Up Flux Counts"                                                
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 35                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = C_COUNTS                                                                         
+DESCRIPTION = "Channel C Up Flux Counts"                                                
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 44                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = D_COUNTS                                                                         
+DESCRIPTION = "Channel D Up Flux Counts"                                                
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 53                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = E_COUNTS                                                                         
+DESCRIPTION = "Channel E Up Flux Counts"                                                
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 62                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+OBJECT = COLUMN                                                                         
+NAME = F_COUNTS                                                                         
+DESCRIPTION = "Channel F Up Flux Counts"                                                
+DATA_TYPE = INTEGER                                                                     
+START_BYTE = 71                                                                         
+BYTES = 8                                                                               
+END_OBJECT = COLUMN                                                                     
+                                                                                        
+END_OBJECT = TABLE                                                                      
+END                                                                                     
+     0,     9,     60.75,    -448,    1952,    -143,   -2000,    1336,     -97          
+     1,     9,    180.75,     -32,     800,   -1768,   -1208,    -257,    -240          
+     2,     9,    300.75,     314,     640,       3,    -131,    -140,     -79          
+     3,     9,    420.75,     346,     406,     316,     183,    -183,     -58          
+     4,     9,    540.75,     414,     439,     720,     507,     121,     -84          
+     5,     9,    660.75,     520,     441,    1336,     864,     387,     -30          
+     6,     9,    780.75,     632,     424,    2072,    1168,     568,      18          
+     7,     9,    900.75,     672,     362,    2392,    1248,     600,      16          
+     8,     9,   1020.75,     840,     490,    3208,    1560,     880,      91          
+     9,     9,   1140.75,     912,     414,    3544,    1760,     936,     118          
+    10,     9,   1260.75,     960,     236,    3736,    1616,     760,      99          
+    11,     9,   1380.75,    1072,     248,    4096,    1816,     872,     118          
+    12,     9,   1500.75,    1152,     330,    4736,    1928,    1000,     137          
+    13,     9,   1620.75,    1240,     362,    5056,    2024,    1264,     183          
+    14,     9,   1740.75,    1296,     297,    5376,    2184,    1216,     608          
+    15,     9,   1860.75,    1456,     520,    6272,    2568,     401,     270          
+    16,     9,   1980.75,    1520,     576,    6720,    2808,    1832,     315          
+    17,     9,   2100.75,    1512,     584,    6592,    2800,    1440,     327          
+    18,     9,   2220.75,    1472,     500,    6336,    2760,    1792,     319          
+    19,     9,   2340.75,    1352,     438,    6080,    2528,    1720,     270          
+    20,     9,   2460.75,    1168,     728,    6464,    2352,    2240,     311          
+    21,     9,   2580.75,     454,       0,    4088,    1144,    1696,      90          
+    22,     9,   2700.75,     127,     425,    1936,     680,    1256,      -9          
+    23,     9,   2820.75,      54,     117,     856,     291,     552,     -30          
+    24,     9,   2940.75,      40,    -184,     324,     115,      58,     -30          
+    25,     9,   3060.75,      38,    -584,     273,      19,    -353,     -30          
+    26,     9,   3180.75,      74,   -1184,      91,      15,    -840,     -33          
+    27,     9,   3300.75,     115,   -2064,      23,      15,   -1536,     -32          
+    28,     9,   3420.75,     183,   -3352,     -29,     -29,   -2552,     -37          

@@ -1,0 +1,100 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 32                                            
+FILE_RECORDS                  = 300                                           
+^TABLE                        = "I2_RG.TAB"                                   
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "90% H2 + 10% He + ~150 ppm Rg mix"           
+PRODUCT_ID                    = "85_08715.42D+85_08716.06D+85_08716.28D"      
+PRODUCT_CREATION_TIME         =  1998-04-17                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 300                                         
+  COLUMNS                       = 5                                           
+  ROW_BYTES                     = 32                                          
+                                                                              
+  DESCRIPTION                   = "GPMS Flight Unit characterization          
+resulting from the introduction of a Rare Gases in Hydrogen/Helium            
+mixture into Inlet 2 of the instrument.  The gas mixture was                  
+circulated through the GPMS inlet at a pressure of 7.3 bars.                  
+Refer to diagrams named /DOCUMENT/INLTSYS.GIF and /DOCUMENT/GASMIXR.GIF for   
+details. Masses 1 to 150 were scanned.  Since only Ionizer Filament Number 1  
+was utilized during the mission, only the data for Filament 1                 
+testing is included in the file.  Also NOTE (!) that these values             
+represent RAW data.  They have NOT been corrected for pulse pile-up           
+(overlap) effects!                                                            
+                                                                              
+Gas Mix:  90% H2 + 10% He + 147 ppm Ne + 151 ppm Ar +                         
+          147 ppm Kr + 152 ppm Xe                                             
+Original files:  85_08715.42D + 85_08716.06D + 85_08716.28D                   
+  (Cylinder Ref.: < 03/30/85)        Gas mixing system at 7.3 B               
+                                   APG1   APG2   DPG4 PG6 PG7 FM1             
+                                   7.330  7.094  9-11 ~85 ~85 65              
+                                                                              
+Notes: Count rates shown as -1 represent missing information.                 
+       The counting integration period is 0.48375 seconds."                   
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Mass"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "AMU"                                          
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 1                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "B1_75"                                        
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 5                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Instrument background scan number 1           
+                                  at 75 eV ionization energy."                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S1_75"                                        
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 9                                              
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "Sample Scan number 1 at 75 eV"                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S2_25"                                        
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 17                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "I7"                                           
+    DESCRIPTION              = "Sample Scan number 2 at 25 eV."               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "S3_15"                                        
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 25                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "I6"                                           
+    DESCRIPTION              = "Sample Scan number 3 at 15 eV."               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

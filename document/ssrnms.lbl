@@ -1,0 +1,35 @@
+PDS_VERSION_ID                 = PDS3                                         
+RECORD_TYPE                    = FIXED_LENGTH                                 
+RECORD_BYTES                   = 80                                           
+                                                                              
+^ASCII_DOCUMENT                = "SSRNMS.ASC"                                 
+VOLUME_ID                      = "GP_0001"                                    
+DATA_SET_ID                    = "GP-J-NMS-3-ENTRY-V1.0"                      
+PRODUCT_CREATION_TIME          = 1998-09-02                                   
+PRODUCT_ID                     = "SSRNMS"                                     
+NOTE                           = "                                            
+This document comprises the Space Science Reviews NMS article converted to    
+ASCII text.                                                                   
+"                                                                             
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+OBJECT                         = ASCII_DOCUMENT                               
+DOCUMENT_NAME                  = "SSR NMS ARTICLE"                            
+PUBLICATION_DATE               = 1992-05-01                                   
+DOCUMENT_TOPIC_TYPE            = "INSTRUMENT DESCRIPTION"                     
+INTERCHANGE_FORMAT             = "ASCII"                                      
+DOCUMENT_FORMAT                = "TEXT"                                       
+DESCRIPTION                    = "                                            
+Published with permission of Kluwer Academic Publishers, Dordrecht,           
+Boston, London.                                                               
+------------------------------------------------------------------------------
+Space Science Reviews 60: 111-142, 1992.                                      
+Copyright 1992 Kluwer Academic Publishers. Printed in Belgium.                
+------------------------------------------------------------------------------
+"                                                                             
+END_OBJECT                     = ASCII_DOCUMENT                               
+                                                                              
+                                                                              
+END                                                                           

@@ -1,0 +1,1662 @@
+PDS_VERSION_ID        = PDS3                                                  
+                                                                              
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  INTERCHANGE_FORMAT    = ASCII                                               
+  PUBLICATION_DATE      = 1999-07-25                                          
+  NOTE                  = "ASCII description of ASI calibration"              
+END_OBJECT            = TEXT                                                  
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+CALIBRATION OF THE GALILEO PROBE                                              
+ATMOSPHERE STRUCTURE INSTRUMENT                                               
+                                                                              
+Tony C.D. Knight and Alvin Seiff                                              
+                                                                              
+1.0    Instrument Overview                                                    
+==========================                                                    
+                                                                              
+ The Galileo Probe Atmosphere Structure Instrument was designed to make       
+ in-situ measurements of the thermal structure of the Jovian atmosphere,      
+ i.e., the variation of temperature, pressure and density with altitude.      
+ The end objective was to improve our understanding of the local dynamics     
+ and thermodynamics of the atmosphere at the probe entry site.                
+                                                                              
+ The specific scientific objectives were summarized at the time of the        
+experiment proposal as:                                                       
+                                                                              
+ 1. To accurately define the state properties as a function of altitude       
+below the 100 mb level to an atmospheric pressure of about 20 bars.           
+                                                                              
+ 2. To define the state properties of the upper atmosphere.                   
+                                                                              
+ 3. To measure the stability of the atmosphere, and identify convective       
+layers and stable layers, where they exist.                                   
+                                                                              
+ 4. To detect cloud levels from changes in lapse rate at their boundaries.    
+                                                                              
+ 5. To define state properties within the clouds, and thus provide            
+supplementary information on cloud composition.                               
+                                                                              
+ 6. To search for and characterize wave structures in the atmosphere.         
+                                                                              
+ 7. To search for and measure intensity and scale of turbulence in the        
+atmosphere.                                                                   
+                                                                              
+ 8. To measure vertical flow velocities above a threshold of about 0.3 m/s.   
+                                                                              
+ 9. To establish an altitude scale for use in correlating all probe           
+experiment data.                                                              
+                                                                              
+  10. To define the probe vertical velocity, necessary to the analysis of     
+the Doppler wind experiment.                                                  
+                                                                              
+ These objectives can be responded to by analysis of a sufficiently accurate  
+set of data from sensors directly sampling the atmospheric temperature and    
+pressure, and by accelerometers measuring orthogonal accelerations of the     
+probe center of gravity.                                                      
+                                                                              
+ The Galileo experiment operated in two measurement modes, one to accommodate 
+conditions of high speed entry at low ambient density (entry mode); the other,
+the very different conditions of parachute descent (descent mode).  There was 
+also a calibration mode which provided instrument calibration data whilst     
+still in free-fall prior to entry into the Jovian atmosphere.                 
+                                                                              
+ The entry mode started at a nominal ambient density threshold of about       
+10^(-11) kg/m^3 where the probe deceleration was about 15 micro g.  From      
+measurements of probe deceleration under the action of atmospheric drag,      
+atmospheric densities were derived.  The density profile was integrated above 
+a given altitude to define the pressure at that level, and the temperature    
+profile was then obtained through the equation of state, by use of the        
+variation of atmospheric mean molecular weight with altitude we generated by  
+modeling the upper atmosphere consistent with the experiment data.  At        
+initial entry the Probe velocity was about 48 km/sec.  At high velocities,    
+it was enveloped by a bow shock wave and a thin shock layer of ionized,       
+luminescent gases at extreme temperatures (~15,000K at peak).  Under these    
+conditions, measurements of the ambient atmosphere by means of conventional   
+low-density sensors are not possible.  Measurements of atmospheric density by 
+way of probe decelerations, however, provides a direct means of sensing the   
+atmosphere ([Seiff et al, 1973], [Seiff and Kirk, 1977], [Seiff et al, 1980]).
+This mode of operation continued until the parachute was deployed.            
+                                                                              
+ During the subsequent parachute descent of the probe to the 'end-of-mission',
+the thermal structure of the atmosphere was defined by direct measurements of 
+temperature, pressure, and acceleration.  After the parachute was deployed,   
+the heat shield was jettisoned and temperature and pressure sensors were      
+exposed to the ambient atmosphere.  Acceleration measurements were continued  
+at much less frequent intervals.  In the absence of large vertical winds the  
+accelerometers continued to define atmospheric density; but since other probe 
+instruments defined atmospheric composition and hence molecular weight,       
+density was defined by the pressure and temperature measurements.  This made  
+it possible to use the accelerometer data to define the magnitude of vertical 
+winds above a threshold of a few tenths of a meter/sec.                       
+                                                                              
+ Altitudes relative to the 1 bar level were defined by the temperature and    
+pressure data integrated in the equation of hydrostatic equilibrium.  These   
+data were used to establish the altitudes of measurement for all probe        
+experiments.  They also defined the rate of descent, necessary to the         
+determination of zonal winds in the analysis of Doppler wind experiment.      
+In addition, atmospheric turbulence and Probe angle of attack were sensed or  
+derived.                                                                      
+                                                                              
+ The measurements were implemented by :                                       
+                                                                              
+a) Four accelerometers located as close to the center of gravity of the probe 
+as was practical.  Two accelerometers (z1 and z2) measured the axial          
+accelerations (for redundancy in the critical axial direction) and one sensor 
+measured in each of the lateral directions (x and y).                         
+                                                                              
+Each of the axial sensors operated in four measurement ranges:                
+                                                                              
+1) 0 to 0.123 m/s/s with a resolution of approximately                        
+3.0x10^(-5) m/s/s per count,                                                  
+2) 0 to 3.92 m/s/s with a resolution of approximately                         
+0.00096 m/s/s per count,                                                      
+3) -62.7 to +62.7 m/s/s with a resolution of approximately                    
+0.0306 m/s/s per count,                                                       
+4) 0 to 4016 m/s/s with a resolution of approximately 0.98 m/s/s per count,   
+                                                                              
+ The lateral accelerometers operated in three ranges.  The magnitude of the   
+resultant of the lateral accelerations was computed for each measurement.     
+The three nominal measurement ranges for the resultant were:                  
+                                                                              
+1) -0.17 to +0.17 m/s/s with a resolution of approximately                    
+0.00068 m/s/s per count,                                                      
+2) -11.0 to +11.0 m/s/s with a resolution of approximately                    
+0.0435 m/s/s per count,                                                       
+3) -177 g to +177 m/s/s with a resolution of approximately                    
+0.696 m/s/s per count.                                                        
+                                                                              
+Range changes were controlled by the central electronics                      
+                                                                              
+b) Two temperature sensors for direct sampling of the atmospheric temperature 
+were exposed to the ambient atmosphere when the aeroshell was jettisoned.     
+Both were platinum resistance thermometers.  One (T1) was designed to have a  
+very rapid response.  This resulted in a relatively delicate sensor.  The     
+second sensor (T2) was more rugged and provided redundancy, but had a slower  
+response.  The measurement ranges were:                                       
+                                                                              
+T1: 0 to 520 K with a resolution of approximately 0.12 K per count,           
+T2: 0 to 560 K with a resolution of approximately 0.13 K per count,           
+                                                                              
+c) Three pressure sensors had a common inlet and manifold. The inlet faced    
+into the wind to measure free stream total pressure after it was exposed to   
+the ambient atmosphere by jettisoning of the aeroshell.                       
+                                                                              
+The pressure sensors ranges were:                                             
+                                                                              
+p1, 0 to 0.5 bars with a resolution of approximately 0.0005 bar per count,    
+p2, 0 to 4 bars with a resolution of approximately 0.004 bar per count,       
+p3, 0 to 28 bars with a resolution of approximately 0.028 bar per count,      
+                                                                              
+A summary of all the measurements taken during the operational portion of the 
+mission is shown in Table 1.                                                  
+                                                                              
+                                                                              
+                                                                              
+Table 1      Measurements Summary                                             
+=================================                                             
+                                                                              
+Axial Accelerometer Range 1:                                                  
+    Nominal Measurement Range: 0 to 0.12255 m/s/s                             
+    Word Length (bits):        12                                             
+    Nominal LSB Resolution:    0.000030 m/s/s                                 
+                                                                              
+Axial Accelerometer Range 2:                                                  
+    Nominal Measurement Range: 0 to 3.92155 m/s/s                             
+    Word Length (bits):        12                                             
+    Nominal LSB Resolution:    0.000958 m/s/s                                 
+                                                                              
+Axial Accelerometer Range 3:                                                  
+    Nominal Measurement Range: - 62.745 m/s/s to 62.745 m/s/s                 
+    Word Length (bits):        12                                             
+    Nominal LSB Resolution:    0.030652 m/s/s                                 
+                                                                              
+Axial Accelerometer Range 4:                                                  
+    Nominal Measurement Range: 0 to 4015.67 m/s/s                             
+    Word Length (bits):        12                                             
+    Nominal LSB Resolution:    0.98063 m/s/s                                  
+                                                                              
+Axial Accelerometer Temperatures:                                             
+    Nominal Measurement Range: -75 C to 75 C (also accurate above 75 C)       
+    Word Length (bits):        8                                              
+    Nominal LSB Resolution:    0.6 C                                          
+                                                                              
+                                                                              
+                                                                              
+Lateral Accelerometer Range 1:                                                
+    Nominal Measurement Range: - 0.17331 m/s/s to 0.17331 m/s/s               
+    Word Length (bits):        8                                              
+    Nominal LSB Resolution:    0.000680 m/s/s                                 
+                                                                              
+Lateral Accelerometer Range 2:                                                
+    Nominal Measurement Range: - 11.0918 m/s/s to 11.0918 m/s/s               
+    Word Length (bits):        8                                              
+    Nominal LSB Resolution:    0.043497 m/s/s                                 
+                                                                              
+Lateral Accelerometer Range 3:                                                
+    Nominal Measurement Range: - 177.469 m/s/s to 177.469 m/s/s               
+    Word Length (bits):        8                                              
+    Nominal LSB Resolution:    0.69596 m/s/s                                  
+                                                                              
+Lateral Accelerometer Temperatures:                                           
+    Nominal Measurement Range: -75 C to 75 C (also accurate above 75 C)       
+    Word Length (bits):        8                                              
+    Nominal LSB Resolution:    0.6 C                                          
+                                                                              
+                                                                              
+                                                                              
+Science Temperature Sensor 1:                                                 
+    Nominal Measurement Range: 0 to 520 K                                     
+    Word Length (bits):        12                                             
+    Nominal LSB Resolution:    0.12 K                                         
+                                                                              
+    In-Flight Calibration:                                                    
+          Recorded Measurement                                                
+          Word Length (bits):        12                                       
+          Nominal LSB Resolution:    0.00122 V                                
+                                                                              
+                                                                              
+                                                                              
+Science Temperature Sensor 2:                                                 
+    Nominal Measurement Range: 0 to 560 K                                     
+    Word Length (bits):        12                                             
+    Nominal LSB Resolution:    0.13 K                                         
+                                                                              
+    In-Flight Calibration:                                                    
+          Recorded Measurement                                                
+          Word Length (bits):        12                                       
+          Nominal LSB Resolution:    0.00122 V                                
+                                                                              
+                                                                              
+                                                                              
+Science Temperature Offset:                                                   
+     Recorded Measurement                                                     
+     Word Length (bits):        12                                            
+     Nominal LSB Resolution:    0.00122 V                                     
+                                                                              
+                                                                              
+                                                                              
+Pressure Sensor 1:                                                            
+    Nominal Measurement Range: 0 to 0.5 bars                                  
+    Word Length (bits):        10                                             
+    Nominal LSB Resolution:    0.000489 bars                                  
+                                                                              
+    Sensor Temperature:                                                       
+        Nominal Measurement Range: -75 C to 75 C (also accurate above 75 C)   
+        Word Length (bits):        8                                          
+        Nominal LSB Resolution:    0.6 C                                      
+                                                                              
+                                                                              
+                                                                              
+Pressure Sensor 2:                                                            
+    Nominal Measurement Range: 0 to 4 bars                                    
+    Word Length (bits):        10                                             
+    Nominal LSB Resolution:    0.00391 bars                                   
+                                                                              
+    Sensor Temperature:                                                       
+        Nominal Measurement Range: -75 C to 75 C (also accurate above 75 C)   
+        Word Length (bits):        8                                          
+        Nominal LSB Resolution:    0.6 C                                      
+                                                                              
+                                                                              
+                                                                              
+Pressure Sensor 3:                                                            
+    Nominal Measurement Range: 0 to 28 bars                                   
+    Word Length (bits):        10                                             
+    Nominal LSB Resolution:    0.02737 bars                                   
+                                                                              
+    Sensor Temperature:                                                       
+        Nominal Measurement Range: -75 C to 75 C (also accurate above 75 C)   
+        Word Length (bits):        8                                          
+        Nominal LSB Resolution:    0.6 C                                      
+                                                                              
+                                                                              
+                                                                              
+Pressure Sensor In-Flight Calibration:                                        
+     1.25 Volt Stimulus:                                                      
+           Recorded Measurement                                               
+           Word Length (bits):        10                                      
+           Nominal LSB Resolution:    0.00488 V                               
+     3.75 Volt Stimulus:                                                      
+           Recorded Measurement                                               
+           Word Length (bits):        10                                      
+           Nominal LSB Resolution:    0.00488 V                               
+                                                                              
+                                                                              
+                                                                              
+Central Electronics Temperature:                                              
+    Nominal Measurement Range: -95 C to 110 C (also accurate above 110 C)     
+    Word Length (bits):        8                                              
+    Nominal LSB Resolution:    0.8 C                                          
+                                                                              
+                                                                              
+                                                                              
+A/D Converter 1:                                                              
+      Offset:                                                                 
+          Recorded Measurement                                                
+          Word Length (bits):        12                                       
+          Nominal LSB Resolution:    0.00122 V                                
+                                                                              
+      2.5 Volt Stimulus:                                                      
+          Recorded Measurement                                                
+          Word Length (bits):        12                                       
+          Nominal LSB Resolution:    0.00122 V                                
+                                                                              
+                                                                              
+                                                                              
+A/D Converter 2:                                                              
+      Offset:                                                                 
+          Recorded Measurement                                                
+          Word Length (bits):        12                                       
+          Nominal LSB Resolution:    0.00122 V                                
+                                                                              
+      2.5 Volt Stimulus:                                                      
+          Recorded Measurement                                                
+          Word Length (bits):        12                                       
+          Nominal LSB Resolution:    0.00122 V                                
+                                                                              
+********************     End of Table 1     ********************              
+                                                                              
+                                                                              
+ The instrument electronics received and executed commands from the Probe     
+systems and thereby set the experiment mode to Calibrate, Entry, or Descent.  
+They controlled the measurement sequences, selected sensor ranges, collected  
+data from the three sensor sets, amplified signals, performed A/D conversions,
+did some on-board data processing, and conditioned instrument power.  There   
+were two A/D converters in the electronics.  The assignment of the various    
+sensors to the A/D converters are shown in Table 2.                           
+                                                                              
+                                                                              
+                                                                              
+Table 2  A/D converter channel measurement allocations                        
+======================================================                        
+                                                                              
+A/D Converter #1                                                              
+                                                                              
+ z1  Accelerometer                                                            
+ x   Accelerometer                                                            
+ T1  (Free Wire Sensor) Temperature                                           
+ T1 Reference                                                                 
+ T2 Reference (during calibration)                                            
+ p1 (0-500mb) pressure Sensor                                                 
+                                                                              
+A/D Converter #2                                                              
+                                                                              
+ z2  Accelerometer                                                            
+ y   Accelerometer                                                            
+ T2  (Bonded Sensor) Temperature                                              
+ T2 Reference (except during calibration)                                     
+ T  Offset                                                                    
+ p2 (0-4b) pressure Sensor                                                    
+ p3 (0-28b) pressure Sensor                                                   
+ Engineering Temperatures                                                     
+                                                                              
+********************     End of Table 2     ********************              
+                                                                              
+                                                                              
+2.0    Calibration                                                            
+==================                                                            
+                                                                              
+2.1    Mission Environmental Considerations                                   
+===========================================                                   
+                                                                              
+ At the time of instrument design, the thermal environment within the probe   
+during the mission at Jupiter, as specified by the Probe Project Office and   
+implemented by the probe contractor, was to fall between -20 C and +50 C.     
+The pressure sensors were qualified for -30 C to +60 C, and together with the 
+accelerometers, were calibrated for -20 to +50 C.  Since it was recognized    
+that the pressure sensors were sensitive to high rates of change of           
+temperature, a science requirement on maximum temperature rate (1 C/min) was  
+written, and the effects on offset of rates of change of temperature were     
+measured for the p2 and p3 sensors at rates between -1 and +3.5 C/min.  For   
+the accelerometers, limited measurements of effects of temperature rate were  
+obtained during transition between static calibration temperatures at rates   
+of about 1 C/min.                                                             
+                                                                              
+ During descent on Jupiter, temperatures within the probe greatly exceeded    
+the predictions.  Temperatures within the various ASI sensors ranged from a   
+low of about -50 C to a high of over 117 C, with rates of change of           
+temperature as high as  -7.3 C/min.  As a consequence, for a considerable part
+of the mission the sensors were outside the temperature range of calibration  
+and were operated at high rates of temperature change as well, so that they   
+were not at thermal equilibrium.  Flight spare and engineering unit sensors   
+were tested after encounter at temperature conditions experienced in Jupiter  
+descent, but the response of all sensors to these extreme conditions is not   
+identical.  Procedures used to apply the test and calibration data to flight  
+data were described in Seiff et al, 1998, Appendix B.                         
+                                                                              
+2.1.1    Analog to Digital converters.                                        
+=====================================                                         
+                                                                              
+ The A/D converters were calibrated by applying precise test voltages at      
+0.02 v intervals to their input terminals and recording output in counts.     
+Internal housekeeping/calibration data shows that the converters remained     
+within calibration temperatures throughout the mission.  No corrections are   
+required.                                                                     
+                                                                              
+2.1.2    Temperature Sensors                                                  
+============================                                                  
+                                                                              
+ When the temperature of the sensor amplifier became relatively high towards  
+the end of the mission, the offsets of the amplifiers appeared to show some   
+temperature sensitivity.  The internal calibrations associated with the       
+temperature sensor measurements allowed appropriate corrections to be made.   
+                                                                              
+2.1.3    Pressure Sensors.                                                    
+=========================                                                     
+                                                                              
+ For reasons explained above, it was necessary to extrapolate the calibration 
+data for offset and scale factor for sensor temperatures >50 C and <-20 C.    
+Several methods were explored and compared.   Use was  made of the Acceptance 
+Test calibrations at temperatures from -30 C to +60 C, as well as data taken  
+from -50 C to +70 C on the Flight Spare and Engineering sensors, to           
+characterize generic behavior.   In addition, the sensor manufacturer was     
+consulted.  He was able to combine the predicted variation of the temperature 
+compensation network with the empirical observation of the effect of          
+temperature on the sensing head to obtain a partly analytical prediction of   
+the extended calibration.  The first and most obvious method of extrapolation 
+was to assume that the calibration equations which fit the calibration data   
+at 5 temperatures within the expected range apply outside this range as well. 
+                                                                              
+Since the equations for offset are cubics in temperature, they tend to        
+significant variation outside the calibration temperature range (see Figs. A2 
+and A3 by Seiff et al., 1998.  A second, more conservative approach was to    
+use linear extension of the calibrations at the terminal slopes at high and   
+low ends of the calibration range.  The equations finally used reflect        
+engineering judgment to choose among these alternatives.  Uncertainty in      
+offset extrapolation is the dominant uncertainty in the pressure data         
+(Table 4, Seiff et al., 1998).  The uncertainties quoted by Seiff et al.      
+(1998) are based on the differences among the extrapolation options.          
+                                                                              
+ The sensor temperature rate corrections on offsets of the p2 and p3 sensors  
+were based on pre-launch data taken with the flight sensors.  These data were 
+shown in Fig. A4 of Seiff et al., 1998.  They were extremely valuable although
+limited in range compared to that experienced in flight.  It was assumed that 
+the correction was linear with temperature rate beyond the range of the tests.
+                                                                              
+Corrections for hysteresis in the temperature rate effect were based on tests 
+of the Engineering Unit and Flight Spare sensors which extended to the full   
+range of dT/dt experienced in flight.  The spare sensor data also confirmed   
+the assumption of linearity in the effect with temperature rate.              
+                                                                              
+ Sensor temperatures were measured only for the most sensitive sensor         
+on-scale, with the assumption that the other sensor active at the same time   
+would be at the same temperature.  In the environment encountered  this       
+assumption was seen to be not accurate--there is clear discontinuity in       
+sensor temperature rate at the transition from p2 prime to p3  prime.  The    
+estimated temperature of the p3 sensor while p2 was prime has been included   
+in this document.                                                             
+                                                                              
+ Toward the end of the mission, every 64 seconds, the p3 sensor data jump     
+high for 4 samples, and then return back to the generally increasing curve.   
+These jumps are small at the beginning and grow in size with rising instrument
+temperature.  They occur at the sampling time of one of the engineering       
+temperature sensors, during which a current is passed through a platinum      
+sensor.  It is thought that the reading offsets result from leakage within a  
+multiplexer chip caused by the elevated temperatures, allowing a voltage to   
+appear on the p3 calibration line.  These high data spikes should be ignored  
+in analyzing data.                                                            
+                                                                              
+ The calibration data for the pressure sensors in this document include both  
+the equations derived from the calibration data and also the equations used   
+for final decommutation of the data as our best estimates.  If you go back to 
+use these data make sure you know which set you are using!                    
+                                                                              
+2.1.4    Accelerometer sensors.                                               
+==============================                                                
+                                                                              
+ The rates of change of temperature were sufficiently high to show some       
+effect on the accelerometers.  Without a correction, it can be clearly seen   
+that the differences between the readings of the two z-axis sensors (although 
+small) correlate with the rate of change of temperature.  Fortunately, some   
+data were recorded during temperature transients between calibration          
+temperature levels, but only at rates of change of temperature of the order of
+1 C/min.  These limited data have been used to estimate small corrections.    
+                                                                              
+ During calibration testing, the x sensor was found not to work reliably at   
+temperatures lower than about -14 C.  At the time it was thought that the     
+sensor would not reach this temperature during the mission (or if so, for only
+a very short time), and since there was no alternate sensor available, this   
+performance was accepted.  The actual mission environment put the sensor below
+this temperature for an extended period of time during which the lateral      
+acceleration output from the instrument is unreliable.  There is no evidence  
+that any of the other sensors experienced a similar problem, with onset at    
+minimum temperatures lower than -30 C, during the mission.                    
+                                                                              
+ The calibration equations were used to extrapolate sensor scale factor and   
+offset outside the -20 to +50 C range.   The temperature sensitivity of the   
+sensors was such that this was judged to be reasonably accurate.              
+                                                                              
+2.2 Analog to digital converters                                              
+================================                                              
+                                                                              
+2.2.1 Configuration.                                                          
+===================                                                           
+                                                                              
+ Calibrations were performed on the flight instrument analog-to-digital (A/D) 
+converters in 1982 prior to delivery of the instrument.  The instrument was   
+installed in a temperature controlled oven in a laboratory environment, and   
+calibrations were performed at three oven temperatures: nominally -20 C, at   
++24 C,  and at +50 C.  Decommutation of the internal electronics temperature  
+sensor showed stabilized internal temperatures to be approximately -21 C,     
++25.5 C,  and +51 C.                                                          
+                                                                              
+ Calibration voltage inputs to the electronics were made through the          
+accelerometer connector and the calibration voltage was applied in parallel to
+all of the accelerometer inputs (i.e. to the z1, z2, x, and y inputs).  The   
+applied voltage was conditioned within the instrument electronics prior to    
+application to the converters.  The z1 and z2 sensors signals in ranges 1,2,  
+and 4 pass through a nominal times 2 amplifier.  The z1 and z2 sensors in     
+range 3 and all x and y sensor inputs are passed through a nominal 2.5V offset
+stage with unity gain.  This input scheme requires some interpretation of the 
+results, as discussed later.                                                  
+                                                                              
+ A stable high precision calibration voltage source (with precision voltmeter)
+was used and the input voltage was stepped to provide calibration data through
+the nominal range and up to a 28% over-range condition (for conservatism,     
+since it was possible that some outputs could go over-range towards the end   
+of descent).  The response to the stimulus was measured by operating the      
+instrument in the calibration mode and consequently at each voltage setting   
+twelve output measurements were made.                                         
+                                                                              
+ During calibration each sensor signal is sampled 16 times over a one-half    
+second period and the 16 sample sum is truncated to a 12-bit output.  The     
+appropriate A/D converter offset, measured at the start of the calibration    
+cycle, is subtracted from the sensor measurements within the ASI electronics  
+prior to placement of the sensor outputs in the data stream.                  
+                                                                              
+                                                                              
+2.2.2 Results.                                                                
+=============                                                                 
+                                                                              
+ The calibrations performed allow several possible analysis paths.  The       
+following sections investigate and compare different approaches for the       
+analysis.  Recommendations are made in section 2.2.3.  The overall result is  
+that the A/D converters were accurate and linear to within about 1 count, but 
+were corrected for these small deviations from linearity and scale factor.    
+                                                                              
+2.2.2.1 A/D converter internal calibration voltage.                           
+==================================================                            
+                                                                              
+ Each A/D converter provides an internal calibration measurement derived from 
+a precision 2.5 volt source.  This source is derived from the A/D converter   
+reference voltage (as were all calibration stimuli within the ASI) and        
+consequently should track any changes in the reference voltage.               
+                                                                              
+ Using this internal calibration data alone the following calibration         
+constants are indicated:                                                      
+                                                                              
+ A/D converter #1: 1.2201 mV/bit                                              
+                                                                              
+ A/D converter #2: 1.2207 mV/bit                                              
+                                                                              
+ Nominal performance = 5000 mV/4096 bits = 1.2207 mV/bit                      
+                                                                              
+ The small difference in sensitivity between the two converters is  supported 
+by other measurements and appears to be real even though it falls within      
+worst case measurement errors for the data.  For example the T2 reference     
+measurement made using A/D #1 during Calibration was a count of 3671 and a    
+count of 3669 when using A/D converter #2 during Descent.                     
+                                                                              
+2.2.2.2 A/D converter applied voltage calibration.                            
+=================================================                             
+                                                                              
+ The A/D converter calibrations as measured are potentially impacted by       
+instrument electronics which lie between the applied voltage and the A/D      
+converters.  Four items are of interest:                                      
+                                                                              
+ 1) The value of the nominal 2.5 V offset associated with the gain of x 1     
+amplifier                                                                     
+ 2) The gain of the nominal x 1 amplifier                                     
+ 3) The gain of the nominal x 2 amplifier                                     
+ 4) Amplifier offsets.                                                        
+                                                                              
+ Any offset of the gain of x 2 amplifier will contribute to the A/D converter 
+offset error and any offset of the gain of x 1 amplifier will contribute to   
+the 2.5 V offset error.  Gain errors will result in A/D converter slope       
+errors.                                                                       
+                                                                              
+ In the hardware, as configured, there were two independent accelerometer     
+signal processing channels.  The z1 and x accelerometers have their own       
+amplification chain and are converted to digital in A/D #1.  The z2 and y     
+accelerometers have their chain and are converted to digital in A/D #2.  The  
+accelerometer signal voltage comes into the instrument central electronics    
+through a multiplexer into a high input impedance amplifier with unity  gain  
+and then into internal conditioning electronics described above.  The gains   
+are controlled by appropriate resistor networks.  All resistors for a channel 
+are high stability Vishay resistors contained within a single package and so  
+should provide reasonable gain stability.   The 2.5 Volt offset is derived    
+from the A/D converter reference voltage and so should also be very stable in 
+it's tracking of the reference voltage.  It would appear that the major       
+potential source of error is a temperature sensitivity in the operational     
+amplifier offset voltages in all stages including the offset voltage.         
+                                                                              
+ Analyses have been run in which the above parameters have been held constant 
+at the nominal values and also allowed to float while obtaining the best      
+least squares fit to the data.  These computations were performed for voltage 
+inputs to the A/D converters in the range 0 to 4.8 Volts.  The analysis       
+technique for each of the cases was as follows:                               
+                                                                              
+Case 1: All parameters were held at the nominal values;                       
+                                                                              
+Case 2: The gains were held at the nominal values and the 2.5 V offset        
+allowed to float;                                                             
+                                                                              
+Case 3: The x 2 gain was held at the nominal value and the other parameters   
+allowed to float;                                                             
+                                                                              
+Case 4: The x 1 gain was held at the nominal value and the other parameters   
+allowed to float;                                                             
+                                                                              
+Case 5: All parameters were allowed to float                                  
+                                                                              
+ Examination of the various fit results shows an obvious temperature          
+sensitivity associated with the 2.5 V offset.  Improvements in fit are        
+obtained when all parameters are allowed to float.  Although the improvement  
+is not fundamentally significant when the potential data measurement errors   
+are considered it does indicate that we should consider tailoring calibration 
+constants for each measurement type.  To be specific, the accelerometer       
+measurements may need a slightly different calibration constants set from all 
+the other measurements.                                                       
+                                                                              
+ The difference between the input data and the best fits show that the A/D    
+converter linearity begins to roll-off at about the 4.6 Volt input level      
+(about 3750 DN).  It must be pointed out however that we can not              
+differentiate between an amplifier characteristic and an A/D converter        
+characteristic as being the cause for this roll-off.  The results of these    
+fits, which used data in the 0 to 4.8 V range, can be used with reasonable    
+accuracy to at least the nominal A/D converter full scale.  Beyond full scale 
+(a measurement condition not encountered in the mission) additional           
+correction would be advisable.  (Note: The p3 data did exceed the 4.8V level  
+when the 1.25V calibration input voltage was applied late in the descent.)    
+                                                                              
+ The Case 5 data provides the following values for the A/D converter slopes:  
+                                                                              
+ A/D converter #1: 1.2200 mV/bit                                              
+                                                                              
+ A/D converter #2: 1.2205 mV/bit                                              
+                                                                              
+The data also indicate a slight temperature sensitivity with the slope        
+increasing by a total of 0.4 microV/bit over the full 70 C temperature range. 
+This is about +0.0057 microV/bit/degree C.                                    
+                                                                              
+ The fits generated by the Case 2 analyses are appropriate for the            
+accelerometer measurements.  Temperature sensitivities of the gains are       
+relatively small when compared with the offset variation and very little      
+additional error is generated by rolling all of the temperature effects into  
+the offset variation (it results in an increase in the fit standard deviation 
+of only 6 microV which is insignificant when compared with other error        
+sources, and the assumption certainly simplifies data processing).            
+                                                                              
+Case 2 data provides the following values for the A/D converter slopes:       
+                                                                              
+ A/D converter #1: 1.2198 mV/bit                                              
+                                                                              
+ A/D converter #2: 1.2204 mV/bit                                              
+                                                                              
+The linear fit equations for the variation in offset with temperature are:    
+                                                                              
+ Channel 1: Offset = 2.4988 + Temp x 1.0699 x 10^(-5)                         
+                                                                              
+ Channel 2: Offset = 2.4978 + Temp x 3.5787 x 10^(-5)                         
+                                                                              
+where the offset is in volts and the temperature in degrees C.  The variation 
+with temperature is consistent with case 5.                                   
+                                                                              
+It is important to note that the actual value for the Offset is not really    
+important unless there are significant temperature changes during the mission 
+after the calibration sequence.  Actual values, as measured during            
+calibration, were used for internal processing by the instrument.             
+                                                                              
+2.2.3 Discussion and Recommendations.                                         
+====================================                                          
+                                                                              
+ The applied voltage calibrations show agreement with the internal            
+calibrations and lie well within the bit error spread.  In fact it could be   
+argued that there is little difference of significance between any of the     
+results.                                                                      
+                                                                              
+ The following values for the various calibration constants appear to         
+represent the best data available from the A/D converter calibrations and     
+should be used.                                                               
+                                                                              
+2.2.3.1 Accelerometer Data Measurements.                                      
+=======================================                                       
+                                                                              
+ Use the following (zero degree C data):                                      
+                                                                              
+  A/D converter #1: 1.2198 mV/bit                                             
+  A/D converter #2: 1.2204 mV/bit                                             
+                                                                              
+  Slope sensitivity to temperature = +0.0057 microV/bit/degree C.             
+                                                                              
+  Channel 1: Offset = 2.4988 + Temperature(C) x 1.0699 x.10^(-5)              
+  Channel 2: Offset = 2.4978 + Temperature(C) x 3.5787 x.10^(-5)              
+                                                                              
+2.2.3.2 All other Data Measurements.                                          
+===================================                                           
+                                                                              
+ Use the following (zero degree C data):                                      
+                                                                              
+  A/D converter #1: 1.2200 mV/bit                                             
+  A/D converter #2: 1.2205 mV/bit                                             
+                                                                              
+  Slope sensitivity to temperature = +0.0057 microV/bit/degree C.             
+                                                                              
+                                                                              
+                                                                              
+2.3    Temperature Sensors                                                    
+==========================                                                    
+                                                                              
+ The flight temperature sensor, SN 153, was the first flight unit             
+manufactured.  Its first and probably most accurate calibration was performed 
+on Nov. 25, 1981 at Rosemount, prior to shipment.  It was enclosed in a       
+plastic bag, totally immersed in a sequence of 5 baths of known temperature,  
+and, at temperature equilibrium, element resistances were recorded to the     
+nearest tenth milliohm (the last figure and possibly the preceding one are of 
+doubtful repeatability and significance).  The baths were ice-water, boiling  
+water, liquid nitrogen, liquid oxygen, and an undescribed bath at a           
+temperature of 477.6 K.                                                       
+                                                                              
+ Subsequently, the sensor was calibrated at Ames:  at the ice point 5 times   
+over the period from Jan., 1983 to Jan., 1988; in liquid nitrogen 6 times from
+Jan., 83 to May, 85; in a dry-ice/acetone bath in May, 85; and at the boiling 
+point of water 3 times from Jan., 83 to May, 84.  The Ames calibration        
+technique evolved over time, but had one essential difference from that at    
+Rosemount:  The sensor mounting pad was not immersed in the baths.  Thus,     
+there was some conduction of heat down the stem, as there was on the probe    
+at Jupiter.  In 1995, an Ames test dedicated to evaluating the effect of      
+temperature difference between the mounting pad and sensor head or stem       
+conduction on measured temperature under conditions simulating those expected 
+in flight indicated that, at the test conditions, the effect was about        
+0.001 C/degree of temperature difference from mounting pad to atmosphere.     
+Extrapolated to the heat transfer conditions of flight, it was even smaller   
+by orders of magnitude.   The associated calibration error in a stirred bath  
+at 0 C was evaluated to be about 10^(-2) C.                                   
+                                                                              
+A second difference between Ames and Rosemount calibrations was that, in      
+early Ames calibrations, the sensor was directly immersed in liquid nitrogen, 
+in an ice bath, and in boiling water without bag enclosure.  This practice    
+was later abandoned, being found to degrade the insulation resistance as a    
+result of moisture seeping into the insulation inside the sensor frame        
+through pin hole leaks in the brazed joints of the tubing.  Insulation        
+resistance returned to normal values when the sensor was kept at vacuum       
+overnight in an oven at 90 C or higher.                                       
+                                                                              
+ To avoid moisture in the insulation, Ames calibrations after 1983 were       
+typically performed with the sensor immersed in intermediate baths of methyl  
+or ethyl alcohol, which do not lower the insulation resistance and which      
+evaporate quickly.  To somewhat simulate the flight situation, the sensor was 
+immersed in calibration baths only to the rings on the sensor stem, where the 
+flexible closure to the probe aerofairing was made.                           
+                                                                              
+Values of Ro, the ice point resistance of T1 and T2, for SN 153 were constant 
+to within 0.01 ohm (0.2 K) over periods of 4 to 5 years.  In 1983, repair of  
+an insulation resistance short at the lead-to-sensor junction of T2 caused    
+an increase in (R2)o of 0.11 ohm.   In June and July, 1992, from a critical   
+evaluation of the collected data, selected values of the sensor resistances   
+at 0 C, Ro, were 14.007 ohms (T1) and 10.486 ohms (T2).  Final values,        
+derived just prior to encounter, and used for mission analyses were           
+14.017 ohms for T1 and 10.504 ohms for T2.  The original Rosemount Ro for     
+T1 was 13.9994 ohms.  The difference, 0.0176 ohms, corresponds to 0.32 K.     
+                                                                              
+ In November, 1983, the sensor was coated with parylene to prevent shorting   
+of the sensor by conductive cloud droplets.  This coating was overlaid with   
+1000 Angstroms of gold to maintain the sensor exterior surface at the         
+electric potential of the probe.  Calibrations made before and after this     
+date on SN 153 and other sensors indicated that the calibration was not       
+significantly affected by these thin coatings.                                
+                                                                              
+ Liquid nitrogen calibrations using the above Ro's showed very small          
+uncertainty and excellent repeatability.  The T1, T2 differences were         
+extremely small, of order of 0.03 K.                                          
+                                                                              
+ To test the sensors over the higher temperature range to 500K, a closed      
+circuit flow channel was built, in which gas (air or helium) was circulated   
+at atmospheric pressure at a velocity of 4.2 m/sec. Electrical heaters        
+warmed the gas to match the rate expected in descent on Jupiter.  T1 and T2   
+readings were compared with one another, and with readings from calibrated    
+thermocouples.                                                                
+                                                                              
+ There were temporal and spatial variations in temperature of the order of    
++0.4 K in the flow through this channel.  When the environment was cooling    
+from 500K back to room temperature, flow temperatures were more uniform.      
+Under these conditions, T1 and T2 agreed within about 0.3K from 330 to 420 K. 
+With corrections for non-simultaneous sampling and for the response lag of    
+T2, which was 12 to 50 X larger in the channel than on Jupiter, disagreement  
+of the two elements was about 0.15 K at 420 K.   The quantitative accuracy    
+of these results was limited to a few tenths K by the spatial and temporal    
+fluctuations, non-simultaneous sampling and response lag of T2.               
+                                                                              
+ Tests made at the sensor level and end-to-end with the electronics showed    
+that the end-to-end data were consistent with analog sensor level             
+calibrations within 1 count.  Tests with and without the electrostatic        
+discharge shield (Seiff and Knight, 1992) showed that it did not              
+significantly affect the readings.                                            
+                                                                              
+Overall, the data suggest a maximum absolute calibration uncertainty for both 
+T1 and T2 sensors of about 0.3K at 500K, where absolute error should be       
+maximum.  The  uncertainty at 273 K was about 0.1 K, and at 100 K, about      
+0.1 K.  Relative accuracy over short time spans should be limited only by the 
+resolution, 0.013 K.   Expected response times are 16 msec at deployment to   
+5 msec at 16 bars for the primary sensor, and from 300 msec to 80 msec for    
+the secondary.                                                                
+                                                                              
+2.3.1    Calibration Equations:                                               
+==============================                                                
+                                                                              
+2.3.1.1    T > 273.15 K                                                       
+=======================                                                       
+                                                                              
+ From the Callendar-Van Dusen equation and constants defined by resistance    
+measurements at three temperatures at Rosemount,                              
+                                                                              
+ T1 = 3409.37 - [3409.37^(2) - 1.71256 x 10^(6) x (R1/(R1)o - 1)]^(1/2)       
+                                                                              
+From the collected ice-point calibrations,                                    
+                                                                              
+(R1)o = 14.017 ohms (element resistance at 0 C).                              
+                                                                              
+R1 = count x 0.00663456 ohms                                                  
+                                                                              
+Similarly, for the secondary sensor,                                          
+                                                                              
+T2 = 3638.575 - [3638.575^(2)- 1.83254 x 10^(6) x (R2/(R2)o - 1)]^(1/2)       
+                                                                              
+(R2)o = 10.504 ohms (element resistance at 0 C).                              
+                                                                              
+R2 = count x 0.00545423 ohms                                                  
+                                                                              
+                                                                              
+2.3.1.2    T < 273.15 K                                                       
+=======================                                                       
+                                                                              
+ Below the freezing point of water, the International Practical Temperature   
+Scale (IPTS) defined by Table 3 gives the "reference function" w(T) = R/Ro(T) 
+for pure platinum wire, where Ro is the wire resistance at 273.15 K.  The     
+table extends from 75 K to 273.15 K, where w = 1.0 by definition, at          
+intervals of 1 K.  Accuracy is said to be within 0.001K.  Values of           
+temperature at an observed ratio of R/Ro can be interpolated from this table. 
+                                                                              
+                                                                              
+Table 3      International Practical Temperature Scale (IPTS)                 
+=============================================================                 
+                                                                              
+Temp(K)   w(T)    Temp(K)   w(T)     Temp(K)   w(T)     Temp(K)   w(T)        
+                                                                              
+ 75   0.1779612    125   0.3933832    175   0.6023647    225      0.8066035   
+ 76   0.1822761    126   0.3976259    176   0.6064893    226      0.8106505   
+ 77   0.1865963    127   0.4018657    177   0.6106121    227      0.8146963   
+ 78   0.1909211    128   0.4061025    178   0.6147331    228      0.8187406   
+ 79   0.1952499    129   0.4103363    179   0.6188523    229      0.8227836   
+ 80   0.1995821    130   0.4145671    180   0.6229697    230      0.8268253   
+ 81   0.2039171    131   0.4187951    181   0.6270854    231      0.8308656   
+ 82   0.2082544    132   0.4230201    182   0.6311994    232      0.8349046   
+ 83   0.2125935    133   0.4272423    183   0.6353116    233      0.8389422   
+ 84   0.2169339    134   0.4314617    184   0.6394221    234      0.8429785   
+ 85   0.2212752    135   0.4356783    185   0.6435309    235      0.8470135   
+ 86   0.2256171    136   0.4398921    186   0.6476381    236      0.8510472   
+ 87   0.2299591    137   0.4441032    187   0.6517435    237      0.8550796   
+ 88   0.2343010    138   0.4483116    188   0.6558473    238      0.8591107   
+ 89   0.2386425    139   0.4525173    189   0.6599495    239      0.8631405   
+ 90   0.2429831    140   0.4567203    190   0.6640500    240      0.8671689   
+ 91   0.2473229    141   0.4609207    191   0.6681488    241      0.8711961   
+ 92   0.2516613    142   0.4651186    192   0.6722461    242      0.8752220   
+ 93   0.2559983    143   0.4693138    193   0.6763417    243      0.8792466   
+ 94   0.2603337    144   0.4735066    194   0.6804358    244      0.8832699   
+ 95   0.2646672    145   0.4776968    195   0.6845282    245      0.8872920   
+ 96   0.2689987    146   0.4818846    196   0.6886191    246      0.8913127   
+ 97   0.2733281    147   0.4860699    197   0.6927084    247      0.8953322   
+ 98   0.2776552    148   0.4902527    198   0.6967961    248      0.8993504   
+ 99   0.2819799    149   0.4944332    199   0.7008823    249      0.9033674   
+100   0.2863020    150   0.4986114    200   0.7049670    250      0.9073831   
+101   0.2906216    151   0.5027871    201   0.7090501    251      0.9113976   
+102   0.2949384    152   0.5069606    202   0.7131317    252      0.9154108   
+103   0.2992524    153   0.5111318    203   0.7172117    253      0.9194227   
+104   0.3035636    154   0.5153007    204   0.7212903    254      0.9234334   
+105   0.3078718    155   0.5194673    205   0.7253673    255      0.9274428   
+106   0.3121771    156   0.5236318    206   0.7294429    256      0.9314510   
+107   0.3164793    157   0.5277941    207   0.7335169    257      0.9354580   
+108   0.3207786    158   0.5319542    208   0.7375895    258      0.9394637   
+109   0.3250747    159   0.5361121    209   0.7416606    259      0.9434682   
+110   0.3293677    160   0.5402679    210   0.7457303    260      0.9474715   
+111   0.3336575    161   0.5444217    211   0.7497984    261      0.9514735   
+112   0.3379442    162   0.5485733    212   0.7538652    262      0.9554743   
+113   0.3422277    163   0.5527229    213   0.7579305    263      0.9594739   
+114   0.3465080    164   0.5568705    214   0.7619943    264      0.9634722   
+115   0.3507852    165   0.5610160    215   0.7660567    265      0.9674693   
+116   0.3550592    166   0.5651596    216   0.7701177    266      0.9714652   
+117   0.3593300    167   0.5693012    217   0.7741773    267      0.9754598   
+118   0.3635976    168   0.5734408    218   0.7782354    268      0.9794532   
+119   0.3678620    169   0.5775784    219   0.7822922    269      0.9834454   
+120   0.3721233    170   0.5817142    220   0.7863475    270      0.9874364   
+121   0.3763815    171   0.5858430    221   0.7904015    271      0.9914262   
+122   0.3806366    172   0.5899800    222   0.7944541    272      0.9954147   
+123   0.3848885    173   0.5941101    223   0.7985052    273      0.9994020   
+124   0.3891374    174   0.5982383    224   0.8025550    273.15   1.0000000   
+                                                                              
+********************     End of Table 3     ********************              
+                                                                              
+                                                                              
+                                                                              
+ A small further correction given by the Rosemount calibration compensates    
+for deviations of individual sensor calibrations from the International       
+Practical Temperature Scale, IPTS, of Table 3.  These corrections, of order   
+0.15 K maximum, are defined by the respective equations for T1 and T2,        
+                                                                              
+Delta(w1) = -4.560x10^(-4)+0.136883x10^(-4)xT-4.40009x10^(-8)xT^(2)           
+Delta(w2) = 22.448x10^(-4)-0.27888x10^(-4)xT+7.201109x10^(-8)xT^(2)           
+                                                                              
+These corrections are to be subtracted from measured values of w before       
+converting to temperature.  The corrections are not very well defined for     
+temperatures between 110 and 250 K, since the defining data were located only 
+near the end points.  Perhaps the greatest contribution of the dry-ice in     
+acetone bath calibration was to provide a confirming point at 188.7 K, where  
+the agreement of the ASI sensors with the Lab Standard thermometer was, in 4  
+cases out of 8, within 0.1 K.  It was improved by the Delta(w) corrections in 
+one comparison, was essentially the same in another, and was worsened in two  
+comparisons.  The T1, T2 agreement was improved by the corrections in both of 
+the two tests analyzed.                                                       
+                                                                              
+                                                                              
+                                                                              
+2.4    Pressure Sensors                                                       
+=======================                                                       
+                                                                              
+2.4.1    Decalibration Overview.                                              
+===============================                                               
+                                                                              
+ The response of the Tavis pressure sensors to applied pressure is nearly     
+linear, but the small departures from linearity should not be neglected.      
+The decalibration procedure first defines the pressure for a linear sensor,   
+then applies a small non-linear correction.  The primary calibration          
+constants are sensor scale factors, in mb/mV or b/v; the offsets, or readings 
+at zero pressure, in mV; and the characterization of non-linearity.  All are  
+slightly sensitive to sensor internal temperatures, which are measured once   
+per major frame.                                                              
+                                                                              
+  The initial step in the decalibration is to obtain an equation representing 
+sensor temperatures as functions of time.  This variation is used to          
+calculate the calibration constants appropriate to each measurement time.     
+Note:  Sensor temperatures derived from the mission data are shown as a       
+function of time in Table 4.  Sensor temperatures should be derived from      
+this table by interpolation.                                                  
+                                                                              
+ Sensor offsets, in mV, do not repeat identically from turn-on to turn-on.    
+Nominal variation is about 10 mV (2 counts).  The initial offsets at          
+encounter were taken from pre-entry calibration data (PEC). (The offset has   
+been shown to remain stable through full range pressure cycles after turn-on. 
+In the encounter, the sensors were turned on prior to entry and remained on   
+through end of mission.)                                                      
+                                                                              
+ Test data have shown that offset varies not only with sensor temperature,    
+but also with temperature rate as a result of temperature nonuniformity       
+within the sensor.  The corrections for temperature rate have been derived    
+post mission by a series of tests and analytical considerations and the best  
+estimates are shown in Table 5.  Values used should be derived from this      
+table by interpolation.                                                       
+                                                                              
+ The decalibration can thus be represented by the following equation:         
+                         plin = [Reading - Offset(T, dT/dt)] . SF(T).         
+                         p = plin + Delta(pnl),                               
+                                                                              
+Reading and Offset in mV.                                                     
+                                                                              
+The notation "Offset(T,dT/dt)" indicates offset is a function of T and dT/dt, 
+while "SF(T)" indicates SF is a function of only T.  Equations describing     
+these variations and the non-linear corrections Delta(pnl) are given below.   
+                                                                              
+Note also that a final value for atmospheric pressure to be derived from the  
+sensor pressures is a further correction for the ram effect associated with   
+the probe falling through the atmosphere.  This dynamic pressure correction   
+is computed from 0.5 rho V^2.  It had a nominal value of -5 mb.  When         
+computed point-by-point from velocities derived from dp/dt, the rate of       
+pressure increase, it was found to be somewhat noisy, giving values from -4   
+to -9 mb.  The noise was introduced by the digital resolution of the pressure 
+data, and should not be considered to be real variation in the dynamic        
+pressure.  It is recommended that a constant value of - 5 mb be used except   
+possibly in the first few pressure samples before equilibrium descent is      
+achieved.                                                                     
+                                                                              
+                                                                              
+2.4.2    Scale Factors.                                                       
+======================                                                        
+                                                                              
+ For Readings and offsets in mV, the linear scale factors are defined as a    
+function of temperature by:                                                   
+                                                                              
+Range 1:  SF = 0.099723 + 7.6456x10^(-6)xT mb/mV, T in degrees C,             
+                                                                              
+Range 2:  SF = 0.80554 mb/mV, no temp dependence.                             
+                                                                              
+Range 3:  SF = 5.58727 + 3.99134x10^(-4)xT + 1.84459x10^(-5)xT^(2) -          
+2.76134x10^(-7)xT^(3).                                                        
+                                                                              
+ The behavior of the p3 sensor outside of the calibration range was not so    
+predictable as within the calibration range.  It was found necessary to go to 
+a higher order polynomial to match the behavior over the much wider mission   
+temperature range.  The modified (for the mission temperature environment)    
+expression for range 3 that should be used for analyses is:                   
+                                                                              
+SF=5.5891+3.7684x10^(-4)xT+8.74925x10^(-6)xT^(2)-3.31945x10^(-8)xT^(3)-       
+1.214898x10^(-9)xT^(4) +7.33478x10^(-12)xT^(5).                               
+                                                                              
+                                                                              
+                                                                              
+2.4.3    Offsets:                                                             
+================                                                              
+                                                                              
+ The offset or bias at turn-on a few minutes before Jupiter entry, was        
+measured in Calibrate Mode at temperature T, from which the value at          
+zero degrees C, B0C, is calculated.                                           
+                                      B0C = (B- Delta(B)pec)                  
+                                                                              
+DeltaB(T) is given for each range by equations fitted to the calibration      
+data. The values of B at temperatures experienced in Descent are then         
+calculated from                                                               
+                                      B(T) = B0C + Delta(B(T))                
+                                                                              
+2.4.3.1    Range 1:                                                           
+===================                                                           
+                                                                              
+Tp = -1.23 C in PEC                                                           
+                                                                              
+Delta(B) = 0 plus or minus 5 mV (1 count).                                    
+                                                                              
+There was no offset temperature dependence within the narrow temperature      
+range over which this sensor was on-line.                                     
+                                                                              
+2.4.3.2    Range 2:                                                           
+===================                                                           
+                                                                              
+Tp = -1.15 C in PEC                                                           
+ The equation derived from the data of Feb. and July, 88 is,                  
+                                                                              
+Delta(B) = 0.98757xT + 0.048228xT^(2) - 0.00124071xT^(3) mV, T in deg C.      
+                                                                              
+2.4.3.3    Range 3:                                                           
+===================                                                           
+                                                                              
+Tp = -1.50 C in PEC.                                                          
+                                                                              
+The following equation derives from  4 data sets, taken between April, 84     
+and July, 88,                                                                 
+                                                                              
+DeltaB = 1.27221xT - 0.0173129xT^(2) + 5.72365xT^(3) mV.                      
+                                                                              
+                                                                              
+2.4.4    Nonlinearities:                                                      
+=======================                                                       
+                                                                              
+2.4.4.1    Range 1:                                                           
+===================                                                           
+                                                                              
+The correction is small, and unsymmetrical, and ranges from +0.5 mb at 100 mb 
+to -0.7 mb at 350 mb.                                                         
+                                                                              
+Delta(pnl) = 0.905-0.00184xp-2.635x10^(-5)xp^(2)+5.294x10^(-8)x p^(3).        
+                                                                              
+This equation represents data taken at temperatures from -15 degrees C to     
++50 degrees C within the scatter.   The correction equation is not applicable 
+at p < 100 mb.  It gives the erroneous result Delta(pnl) = 0.905 mb at p = 0, 
+where Delta(pnl) is zero by definition.                                       
+                                                                              
+ Through the series of calibrations, corrections repeat only within a few     
+tenths of a mb.  In 1983, a peak deviation from linearity of ~-1.2 mb         
+occurred at 300 mb and 50 degrees C (a condition not expected to occur in     
+flight), and at 100 mb, the +0.5 mb correction of the equation was, instead,  
+-0.2 mb. The change is attributed to sensor aging or diaphragm relaxation,    
+and the small diaphragm deflection force available at these pressures. It     
+implies possible errors of 0.5 mb or 0.1% of full scale.                      
+                                                                              
+2.4.4.2    Range 2:                                                           
+===================                                                           
+                                                                              
+The behavior on Range 2 was orderly, and is represented by a parabola with    
+its maximum at mid-range and a temperature dependent amplitude.  The          
+correction at pressure p is:                                                  
+                                                                              
+Delta(pnl) = A[1 - (1 - p/2)^(2)],                                            
+                                                                              
+where 2 bars is the mid-range pressure.  The temperature variation of the     
+amplitude is represented by                                                   
+                                                                              
+A = -9 - 0.1776xT-0.003436xT^(2)+0.0001158xT^(3) mb, T in degrees C.          
+                                                                              
+Note that A is negative.  It peaks at -14.5 mb (3.6 counts) at 35 K.          
+Accuracy is probably no better than 1 mb , or 1/4 count on Range 2.           
+The form of A(T) is similar to that of Delta(B(T)).                           
+                                                                              
+                                                                              
+2.4.4.3    Range 3:                                                           
+===================                                                           
+                                                                              
+The nonlinear corrections are well defined and were stable over a period of   
+years to within a few mb.  They were not symmetrical about mid range, but     
+peaked at around 8.5 to 9 bars.                                               
+                                                                              
+ No simple, single equation fits the data well. To permit analytical          
+representation, the data were fitted on each side of the peak independently   
+at two temperatures, 20 degrees C and 50 degrees C.  Corrections were         
+derived from the 4 equations which follow with linear temperature             
+interpolation. E.g., at sensor temperature = 35 degrees C, the correction     
+was the mean of those at 20 and 50 C.                                         
+                                                                              
+Within 0 to 9 bars range at 20C:                                              
+                                                                              
+Delta(pnl) = 0.16 + 23.216xp + 1.130xp^(2) - 0.187xp^(3)                      
+                                                                              
+                                                                              
+Within 9 to 28 bars range at 20C:                                             
+                                                                              
+Delta(pnl) = 153.7 + 8.362xp - 0.9569xp^(2) + 0.01656xp^(3)                   
+                                                                              
+                                                                              
+Within 0 to 10 bars range at 50C:                                             
+                                                                              
+Delta(pnl) = 0.78 + 19.36xp + 2.351xp^(2) - 0.2537xp^(3)                      
+                                                                              
+                                                                              
+Within 10 to 28 bars range at 50C:                                            
+                                                                              
+Delta(pnl) = 218.9 + 1.372xp - 0.7060xp^(2) + 0.01354xp^(3)                   
+                                                                              
+                                                                              
+                                                                              
+2.4.5    Pressure sensor temperatures derived from Mission data               
+===============================================================               
+                                                                              
+                                                                              
+Table 4  Pressure Sensors Temperatures                                        
+===============================================                               
+                                                                              
+Time    p3 Temp     Time    P3 Temp          Time    p1 Temp                  
+(sec)     (C)       (sec)     (C)            (sec)     (C)                    
+                                                                              
+   0      0.0       1648     -4.0              0      0.0                     
+  50     -0.8       1712      0.7             48     -0.6                     
+ 100     -3.7       1776      5.4                                             
+ 150     -8.1       1840     10.0                                             
+ 200    -13.5       1904     15.1                                             
+ 250    -19.0       1968     19.6                                             
+ 300    -24.0       2032     24.1                                             
+ 350    -28.3       2096     29.0                                             
+ 400    -32.0       2160     33.9                                             
+ 450    -35.2       2224     38.2                                             
+ 500    -37.7       2288     42.9                                             
+ 550    -39.7       2352     47.6             Time    p2 Temp                 
+ 600    -41.1       2416     52.2             (sec)     (C)                   
+ 650    -42.0       2480     56.7                                             
+ 700    -42.6       2544     61.2               0        0.0                  
+ 750    -43.0       2608     65.1              48       -0.6                  
+ 800    -42.9       2672     69.4             112       -5.3                  
+ 850    -42.5       2736     73.7             176      -11.9                  
+ 900    -41.7       2800     77.9             240      -19.8                  
+ 950    -40.8       2864     82.1             304      -27.2                  
+1008    -39.3       2928     85.7             368      -34.2                  
+1072    -37.3       2992     89.7             432      -39.3                  
+1136    -34.8       3056     93.2             496      -43.8                  
+1200    -31.6       3120     97.1             560      -46.4                  
+1264    -28.5       3184    100.4             624      -48.4                  
+1328    -24.7       3248    104.2             688      -49.0                  
+1392    -21.0       3312    107.5             752      -49.0                  
+1456    -16.7       3376    110.7             816      -47.7                  
+1520    -12.4       3440    114.2             880      -45.7                  
+1584     -8.2       3504    117.6             944      -43.1                  
+                                                                              
+********************     End of Table 4     ********************              
+                                                                              
+                                                                              
+                                                                              
+2.4.6    Temperature Rate Correction to P2 and P3 Offsets                     
+=========================================================                     
+                                                                              
+Corrections for temperature rate were derived from tests of the flight        
+sensors before launch, and from tests of the engineering model and flight     
+spare sensors after encounter.  These corrections and their derivation were   
+discussed in Appendix B, Seiff et al., 1998.  The corrections are tabulated   
+below at each sample interval, first for range 2, the 0 to 4 bar sensor, and  
+then for range 3, the 0 to 28 bar sensor.  The corrections are given to the   
+nearest millibar, which is 1/4 count on range 2 and 1/28 count on range 3,    
+but are uncertain to ~20% of the values given (Seiff et al., 1998).  Cubic    
+spline interpolation of the following table is recommended for determining    
+correction values at intermediate times.                                      
+                                                                              
+The corrections are to be added to the values of pressure derived by the      
+procedures outlined above.                                                    
+                                                                              
+                                                                              
+Table 5a    Temperature Rate Corrections for P2 Sensor                        
+======================================================                        
+                                                                              
+  Time   Delta P2       Time   Delta P2      Time   Delta P2                  
+  secs    bars          secs    bars         secs    bars                     
+                                                                              
+  2.23   -0.001        356.23   -0.102      708.23   -0.016                   
+ 36.23   -0.010        388.23   -0.097      740.23   -0.011                   
+ 68.23   -0.018        420.23   -0.089      772.23   -0.005                   
+100.23   -0.025        452.23   -0.079      804.23   -0.001                   
+132.23   -0.033        484.23   -0.069      836.23    0.003                   
+164.23   -0.042        516.23   -0.060      868.23    0.005                   
+196.23   -0.056        548.23   -0.051      900.23    0.008                   
+228.23   -0.080        580.23   -0.042      932.23    0.011                   
+260.23   -0.099        612.23   -0.035      956.23    0.013                   
+292.23   -0.106        644.23   -0.029                                        
+324.23   -0.106        676.23   -0.022                                        
+                                                                              
+********************     End of Table 5a     ********************             
+                                                                              
+                                                                              
+Table 5b    Temperature Rate Corrections for P3 Sensor                        
+======================================================                        
+                                                                              
+ Time    P3 Delta     Time   P3 Delta     Time     P3 Delta                   
+ secs     bars        secs    bars        secs       bars                     
+                                                                              
+  34.2   -0.003      1214.2   -0.123      2430.2    0.304                     
+  62.2   -0.047      1278.2   -0.094      2494.2    0.308                     
+ 126.2   -0.114      1342.2   -0.072      2558.2    0.302                     
+ 190.2   -0.168      1406.2   -0.053      2622.2    0.279                     
+ 254.2   -0.269      1470.2   -0.027      2686.2    0.242                     
+ 318.2   -0.331      1534.2    0.004      2750.2    0.201                     
+ 382.2   -0.359      1598.2    0.035      2814.2    0.168                     
+ 446.2   -0.398      1662.2    0.063      2878.2    0.149                     
+ 510.2   -0.421      1726.2    0.087      2942.2    0.141                     
+ 574.2   -0.395      1790.2    0.111      3006.2    0.139                     
+ 638.2   -0.360      1854.2    0.135      3070.2    0.139                     
+ 702.2   -0.334      1918.2    0.161      3134.2    0.139                     
+ 766.2   -0.305      1982.2    0.186      3198.2    0.140                     
+ 830.2   -0.273      2046.2    0.209      3262.2    0.140                     
+ 894.2   -0.243      2110.2    0.231      3326.2    0.141                     
+ 958.2   -0.226      2174.2    0.250      3390.2    0.142                     
+1022.2   -0.207      2238.2    0.267      3454.2    0.145                     
+1086.2   -0.177      2302.2    0.282      3502.2    0.148                     
+1150.2   -0.149      2366.2    0.295                                          
+                                                                              
+********************     End of Table 5b     ********************             
+                                                                              
+                                                                              
+                                                                              
+2.5    Accelerometers                                                         
+=====================                                                         
+                                                                              
+2.5.1    Decalibration Overview.                                              
+================================                                              
+                                                                              
+ The basic accelerometer calibrations were done before and after              
+qualification testing at Bell Aerospace in Dec., 1983 and Feb., 1984, at      
+four temperatures from -20 to +50 degrees C. In 1985, a resistor in the       
+temperature compensation network of the z1 sensor failed and had to be        
+replaced by Bell.  After repair, on July 2, 1985, the z1, z2, and y sensors   
+were calibrated a third time.  The x-axis sensor was not recalibrated at      
+this time because the x axis was used as the horizontal axis of rotation.     
+                                                                              
+ It is also important to be aware that the x-axis sensor is limited to        
+temperatures above -14.7 degrees C by the available travel of its internal    
+bellows, the function of which is to allow expansion and contraction of the   
+fill fluid.  The x-axis calibration became erratic below  ~15 degrees C.      
+The other 3 sensors operate properly down to at least -20 degrees C.          
+                                                                              
+ Scale factors and offsets were measured by rotating the sensors in the       
+Earth's gravity field, used as a calibration standard.  In Bell's calibration 
+lab, 1 g = 9.803880 m/s/s. At bench level in the high bay of Ames building    
+244, it is 9.799284 m/s/s.  The  difference is 0.047%.  On the higher ranges, 
+the sensors were rotated through 360 degrees.  For ranges <1g, rotation was   
+stopped at the full scale reading, and bias and scale factor were determined  
+from accurate leveling and accurate angle measure.  The zero level            
+orientation was transferred from a range which permits 360 degree rotation.   
+                                                                              
+ On Range 4, it was considered undesirable to rely on calibration below 1 g   
+to define the full 410 g range.  The above procedure was therefore            
+supplemented by stimulus current calibrations to full scale g levels with the 
+sensor at room temperature, both at Bell and at Ames. The stimulus current    
+calibrations were found to agree with the 0 to 1 g calibrations within 0.18%  
+in z1 and 0.15% in z2, which indicates  two things:  1) that Bell had         
+measured the signal at 1g accurate within a few micro volts, and 2) that      
+sensor response to acceleration is highly linear.  The variations of scale    
+factor with temperature on Range 4 were thus taken from the 0 to 1 g          
+calibrations, and the absolute levels were corrected by use of the more       
+accurate stimulus currents.                                                   
+                                                                              
+ At Ames, room temperature calibration checks  were performed on all ranges   
+at each complete instrument test from 1984 through 1988 in the Ames 1 g       
+field.  An accurate dividing head was used to set sensor rotation angles and  
+the ASI electronics were use to take readings.  There was no significant      
+disagreement with the Bell results.                                           
+                                                                              
+ The three Bell scale factor calibrations repeated typically to 3 significant 
+figures or better.  However, bias shifts from turn-on to turn-on, varied by   
+as much as a few hundred micro-g's.  The calibration equations were derived   
+from the Bell data by fitting polynomials to the calibration data points.     
+The calibration of July, 1985, was used as the calibration of record, except  
+for x, for which the final calibration after qualification testing in Feb.,   
+1983 was used.  The disagreements among Bell calibrations in both scale       
+factor and bias were small uniform shifts of values at all temperatures,      
+indicating that the shifts were systematic.  Temperature dependence was well  
+duplicated among them.                                                        
+                                                                              
+ The conversion of direct acceleration readings from counts to m/s/s is       
+similar to that of the pressure data.  First, offset is subtracted from a     
+reading to obtain the net reading, a, in counts.                              
+                                                                              
+                               a  = Reading - Offset (counts)                 
+                                                                              
+Offset or bias, B, is the reading at zero input, and is a function of sensor  
+temperature, Ta , which is monitored by internal resistance thermometers in   
+each sensor.                                                                  
+                                                                              
+                               B = Bo + DeltaB(Ta)                            
+                                                                              
+                                                                              
+Bo, the bias at 0 degrees C, is obtained from the sensor output during        
+pre-entry calibration (pec), when acceleration is zero.                       
+                                                                              
+                               Bo = Bpec - DeltaB(Tpec)                       
+                                                                              
+where DeltaB(Ta) is defined by the bias temperature dependence equation,      
+                                                                              
+                               DeltaB(Ta)  = a1T + a2T^(2) + a3T^(3).         
+                                                                              
+The coefficients a1, a2, and a3 are given in the equation for B(T) for each   
+sensor. Since Bo is not constant over long periods of time, values of Bo      
+given in the figures, obtained during calibration, are discarded in favor of  
+those determined from pre-entry calibration.                                  
+                                                                              
+For the z sensors in range 3 and for the x and y sensors in all ranges an     
+additional offset correction needs to be made for the temperature sensitivity 
+of the 2.5 V offset in the A/D converters, using the temperature of the       
+electronics (Te) as the variable (not the temperatures of the accelerometer   
+sensors).  The relevant equation then becomes:                                
+                                                                              
+                               B = Bo + DeltaB(Ta) + bias(2.5V)               
+                                                                              
+ With Bo, B, and bias(2.5V)  determined, the net reading, a, in counts is     
+obtained and converted to Earth g's (Bell g's) and to m/s/s by multiplying by 
+the sensor scale factor in g/count and by 9.80388 m/s/s/g.                    
+                                                                              
+                               a=a(counts)xSF(Ta)x9.80388    m/s/s.           
+                                                                              
+2.5.2    Lateral (x and y) Outputs.                                           
+===================================                                           
+                                                                              
+ Measurements from the two lateral accelerometers were output directly as     
+12-bit words only in the pre-entry calibration sequence.  During both entry   
+and descent, because of the Probe memory limitation, the measurements were    
+processed within the instrument to provide the absolute magnitude of the      
+resultant lateral accelerations as 8-bit words.  The processing comprises     
+the following steps:                                                          
+                                                                              
+1)  The x and y measurements were each converted to absolute magnitude and    
+rounded to 8-bit words                                                        
+                                                                              
+2)  The 8-bit words were squared and summed. The sum was multiplied by 2      
+                                                                              
+3)  The square root of the resulting 18 bit word was computed.                
+                                                                              
+4)  The resulting 9-bit word was rounded to 8-bits.  This 8-bit word was      
+written into the data stream.                                                 
+                                                                              
+ Converting the lateral accelerometer outputs to m/s/s involves an assumption 
+and some uncertainty since the relative contributions of the x and y sensors  
+are not known.  The truncation of the measured data to 8-bit resolution (made 
+necessary by the available data rate and the memory allocation), simplifies   
+the data conversion in that temperature variation of the 2.5V offset and the  
+effects of temperature rate can be neglected compared with the resolution.    
+The assumption we have made in our processing is that the x and y sensors     
+contribute equally to the resultant.  This approach is equivalent to          
+averaging the calibration characteristics of the x and y sensors and is       
+accurate within the 8-bit resolution.  (The two sensor calibrations did not   
+differ significantly.)                                                        
+                                                                              
+2.5.3    Scale Factors and Offsets.                                           
+===================================                                           
+                                                                              
+ All temperatures, T are in degrees C and the temperatures of the relevant    
+sensor should be used.  Bo is calculated from the given equations and the     
+data for Bpec at (Ta)pec.                                                     
+                                                                              
+2.5.3.1.1    z1, Range 1                                                      
+========================                                                      
+                                                                              
+SF = 3.031112+0.00102733xT                               micro g/count        
+                                                                              
+B(T) = Bo-6.13502xT+0.110072xT^(2)+0.00038325xT^(3)      counts               
+                                                                              
+                                                                              
+2.5.3.1.2    z1, Range 2                                                      
+========================                                                      
+                                                                              
+SF = 97.78687-0.00122819xT+6.75857x10^(-5)xT^(2)-1.097081x10^(-7)xT^(3)       
+micro g/count                                                                 
+                                                                              
+B(T) = Bo-0.165609xT+0.00310003xT^(2)+1.54201x10^(-5)xT^(3)       counts      
+                                                                              
+                                                                              
+2.5.3.1.3    z1, Range 3                                                      
+========================                                                      
+                                                                              
+SF = 3.124251-8.48344x10^(-5)xT+2.329472x10^(-6)xT^(2)-1.81481x10^(-10)xT^(3) 
+milli g/count                                                                 
+                                                                              
+B(T)=Bo+0.0027318xT+1.77116x10^(-5)xT^(2)+9.54626x10^(-7)xT^(3) counts        
+                                                                              
+bias(2.5V) = 2.4988+1.0699x10^(-5)xTe                           counts        
+                                                                              
+                                                                              
+2.5.3.1.4    z1, Range 4                                                      
+========================                                                      
+                                                                              
+SF =0.09992546 -7.37316x10^(-6)xT+1.310541x10^(-7)xT^(2)-                     
+9.35486x10^(-10)xT^(3),         g/count                                       
+                                                                              
+B(T) =  Bo+0.017111xT-0.00017812xT^(2)+1.18678x10^(-6)xT^(3)  counts          
+                                                                              
+                                                                              
+2.5.3.2.1    z2, Range 1                                                      
+========================                                                      
+                                                                              
+SF = 3.0245+0.0010298xT                                  micro g/count        
+                                                                              
+B(T) = Bo+5.80895xT-0.142623xT^(2)-0.00042957xT^(3)      counts               
+                                                                              
+                                                                              
+2.5.3.2.2    z2, Range 2                                                      
+========================                                                      
+                                                                              
+SF =  97.13908-0.0012158xT+5.910831x10^(-5)xT^(2)-2.586876x10^(-8)xT^(3)      
+micro g/count                                                                 
+                                                                              
+B(T) = Bo+0.20203xT-0.0045407xT^(2)- 1.33422x10^(-5)xT^(3) counts             
+                                                                              
+                                                                              
+2.5.3.2.3    z2, Range 3                                                      
+========================                                                      
+                                                                              
+SF =  3.129187-8.60259x10^(-5)xT+2.119753x10^(-6)xT^(2)+                      
+4.724526x10^(-10)xT^(3)   milli g/count                                       
+                                                                              
+B(T)=Bo+0.012702xT-0.00020403xT^(2)- 1.13519x10^(-7)xT^(3) counts             
+                                                                              
+bias(2.5V) =  2.4978+3.5787x10^(-5)xTe                     counts             
+                                                                              
+                                                                              
+2.5.3.2.4    z2, Range 4                                                      
+========================                                                      
+                                                                              
+SF = 0.099980015-6.991454x10^(-6)xT+6.879173x10^(-8)xT^(2)-                   
+1.417768x10^(-10)xT^(3)    g/count                                            
+                                                                              
+B(T)=Bo+0.013802xT-0.00014402xT^(2)+9.7716x10^(-7)xT^(3)   counts             
+                                                                              
+                                                                              
+2.5.3.3.1    X Range 1                                                        
+======================                                                        
+                                                                              
+SF = 6.048933+0.001980201xT                          micro g/count            
+                                                                              
+B(T)=Bo+3.072xT-0.13209xT^(2)+1.20379x10^(-5)xT^(3)  counts                   
+                                                                              
+bias(2.5V) = 2.4988+1.0699x10^(-5)xTe                counts                   
+                                                                              
+2.5.3.3.2    X Range 2                                                        
+======================                                                        
+                                                                              
+SF = 389.82933-0.00497574xT+0.000234946xT^(2)+2.91009x10^(-7)xT^(3)           
+micro g/count                                                                 
+                                                                              
+B(T)= Bo+0.055236xT-0.0021714xT^(2)+8.6857x10^(-7)xT^(3)  counts              
+                                                                              
+bias(2.5V) = 2.4988+1.0699x10^(-5)xTe                     counts              
+                                                                              
+2.5.3.3.3    X Range 3                                                        
+======================                                                        
+                                                                              
+SF = 6.2529-1.6809x10^(-4)xT+4.8858x10^(-6)xT^(2)-4.566505x10^(-9)xT^(3)      
+milli g/count                                                                 
+                                                                              
+B(T) = Bo+0.010707xT-0.00021814xT^(2)+6.5343x10^(-7)xT^(3)  counts            
+                                                                              
+bias(2.5V) = 2.4988+1.0699x10^(-5)xTe                       counts            
+                                                                              
+2.5.3.4.1    Y Range 1                                                        
+======================                                                        
+                                                                              
+SF = 6.054208+0.00209466xT                           micro g/count            
+                                                                              
+B(T)=Bo+1.2272xT-0.0935953xT^(2)+0.00067191xT^(3)    counts                   
+                                                                              
+bias(2.5V) = 2.4978+3.5787x10^(-5)xTe                counts                   
+                                                                              
+2.5.3.4.2    Y Range 2                                                        
+======================                                                        
+                                                                              
+SF = 391.47085-0.00460025xT+0.000235361xT^(2)-4.37728x10^(-8)xT^(3)           
+micro g/count                                                                 
+                                                                              
+B(T)=Bo+0.026104xT -0.0015002xT^(2)+1.02217x10^(-5)xT^(3) counts              
+                                                                              
+bias(2.5V) = 2.4978+3.5787x10^(-5)xTe                     counts              
+                                                                              
+2.5.3.4.3    Y Range 3                                                        
+======================                                                        
+                                                                              
+SF = 6.249576-0.000156474xT+4.34629x10^(-6)xT^(2)-4.65324x10^(-9)xT^(3)       
+milli g/count                                                                 
+                                                                              
+B(T)=Bo+0.0076413xT-0.00014503xT^(2)+7.9213x10^(-7)xT^(3)  counts             
+                                                                              
+bias(2.5V) = 2.4978+3.5787x10^(-5)xTe                      counts             
+                                                                              
+                                                                              
+2.5.4    Temperature Rate Correction to z1 and z2 Offsets                     
+=========================================================                     
+                                                                              
+ The data that forms the basis for temperature rate corrections were gathered 
+during the periods of changing temperature during the sensor calibration      
+tests.  Data were gathered in transients from 28 degrees C to -20 degrees C,  
+-20 degrees C to 0 degrees C, 0 degrees C to 28 degrees C, and 28 degrees C   
+to 50 degrees C.  In each data set the rate would start at zero, increase to  
+some maximum value (a negative maximum for the first transient) and then      
+reduce again to zero.  The rates of change of temperature experienced during  
+these tests were bracketed between about -1.2 C/minute and +0.6 C/minute.     
+                                                                              
+ These data showed an effect on offset of changing temperatures which was not 
+closed and which resulted in offsets from the true steady state conditions as 
+well as offsets during the temperature transients.  The rates of change of    
+temperature during these temperature transients did not approach the rates    
+attained during the mission ( which were bracketed between about              
+-4.9 C/minute and +4.3 C/minute.) and consequently analyses have been kept    
+relatively simple.                                                            
+                                                                              
+ The approach followed has been to compute offsets as a function of           
+temperature rate and compute the best straight line fit for the initial       
+transient to maximum rate of change for each of the temperature transients    
+and then a second fit from the maximum rate of change back to zero.  (For     
+example, for z1 for the 28 degrees C to -20 degrees C transient the slope of  
+the fit to the data while the rate was increasing is -8.1373.10^(-5) V/degrees
+C/min and the slope while the rate was decreasing is -9.237.10^(-5) V/degrees 
+C/min).  These slopes are then used for all rates attained during the mission.
+                                                                              
+ Based on the above, corrections have been made for data during descent.      
+Temperature transients were observed for the z1 and z2 sensors during the     
+entry phase.  However this transient resulted from self-heating as a result   
+of the high energy dissipation within the sensor during the large g portion   
+of deceleration.  It is not clear that the results for self-heating should    
+be the same as for external heating, as occurred during testing and descent.  
+                                                                              
+Slopes derived from the test data are:                                        
+                                                                              
+z1  Temperature decreasing, rate of change of temperature going more negative:
+Slope (m1) =-8.1373x10^(-5) V/degrees C/min                                   
+                                                                              
+z1  Temperature decreasing, rate of change of temperature going less negative:
+Slope (m2) =-9.237x10^(-5) V/degrees C/min                                    
+                                                                              
+z1  Temperature increasing, rate of change of temperature going more positive:
+Slope (m3) =-7.7796x10^(-5) V/degrees C/min                                   
+                                                                              
+z1  Temperature increasing, rate of change of temperature going less positive:
+Slope (m4) =-1.0884x10^(-4) V/degrees C/min                                   
+                                                                              
+z2  Temperature decreasing, rate of change of temperature going more negative:
+Slope (m1) =+1.3265x10^(-4) V/degrees C/min                                   
+                                                                              
+z2  Temperature decreasing, rate of change of temperature going less negative:
+Slope (m2) =+8.861x10^(-5) V/degrees C/min                                    
+                                                                              
+z2  Temperature increasing, rate of change of temperature going more positive:
+Slope (m3) =+5.0779x10^(-4) V/degrees C/min                                   
+                                                                              
+z2  Temperature increasing, rate of change of temperature going less positive:
+Slope (m4) =-4.0007x10^(-5) V/degrees C/min                                   
+                                                                              
+The computational techniques used separately for the z1 and z2 channels were: 
+                                                                              
+1)  For each measurement sample, starting at the beginning of descent,        
+compute the rate of change of sensor temperature.                             
+                                                                              
+2)  Compute the offset using the slope appropriate for the particular phase   
+of the mission.                                                               
+                                                                              
+3)  When the rate reaches a transition between slopes use the last computed   
+offset as the starting point for the application of the new slope.            
+                                                                              
+4)  Convert the offset in volts to counts using the appropriate A/D converter 
+sensitivity to yield the value for bias(Trate).                               
+                                                                              
+The relevant bias equation then becomes:                                      
+                                                                              
+                       Bo+DeltaB(Ta)+bias(2.5V)-bias(Trate)                   
+                                                                              
+                                                                              
+The magnitude of these corrections ranges between -0.3 and +0.3 counts for z1 
+and between -1.6 to +0.5 counts for z2.                                       
+                                                                              
+2.5.5  Sensor Temperature Calibrations                                        
+======================================                                        
+                                                                              
+ The equations of sensor temperature as a function of internal sensor         
+resistance are given below.  This includes data from all three Bell           
+calibrations.                                                                 
+                                                                              
+ Two different equations must be used to convert readings from counts to ohms 
+for the 12 bit data of the PEC, and the 8 bit data of Entry and Descent.      
+                                                                              
+ During Pre-entry Calibration, the equation is                                
+                                                                              
+                  R (ohms)  = 0.4016 (ohms/count)xReading (counts)            
+                                                                              
+with resolution of 0.4 ohm or about 0.11 degrees C.                           
+                                                                              
+ During Entry and Descent, the 8 bit resolution was improved by discarding    
+the MSB, giving effectively 9 bit resolution.                                 
+                                                                              
+              R (ohms) = [Reading (counts)+256]x3.2124 (ohms/cnt) , with      
+resolution of about 0.9 degrees C.                                            
+                                                                              
+ To distinguish the 4 sensor temperatures, the notation Tx, Ty, Tz1, and Tz2  
+is used.  The resistance notation is, e.g., Rz1T is the resistance in ohms    
+of the z1 internal temperature sensor.                                        
+                                                                              
+Tz1 = -275.48+0.2741xRz1T-3.675x10^(-5)xRz1T^(2)                              
+                                                                              
+Tz2 = -285.67+0.2843xRz2T-3.902x10^(-5)xRz2T^(2)                              
+                                                                              
+Tx = -276.04+0.27205xRxT-3.609x10^(-5)xRxT^(2)                                
+                                                                              
+Ty = -279.53+0.2775xRyT-3.8363x10^(-5)xRyT^(2)                                
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+3.0  References                                                               
+=================                                                             
+Seiff, A., Reese, D.E., Sommer, S.C., Kirk, D.B., Whiting, E.E.,              
+       and Niemann, H.B.: 1973,                                               
+      "PAET, An entry probe experiment in the Earth's atmosphere"             
+       Icarus, 18, 525.                                                       
+                                                                              
+Seiff, A., and Kirk, D.B.: 1977,                                              
+      "Structure of the atmo-sphere of Mars in summer at mid-latitudes",      
+       J.Geophys. Res., 82, 4364.                                             
+                                                                              
+Seiff, A., Kirk, D.B., Young, R.E., Blanchard, R.C., Findlay, J.T.,           
+       Kelly, G.M., and Sommer, S.C.: 1980,                                   
+      "Measurements of thermal structure and thermal contrasts in the         
+       atmosphere of Venus and related dynamical observations:  results       
+       from the four Pioneer Venus Probes",                                   
+       J. Geophys. Res., 85, 7903.                                            
+                                                                              
+Seiff, A.and Knight, T.C.D.: 1992,                                            
+      "The Galileo probe atmosphere structure instrument",                    
+       Space Science Reviews, 60, 203.                                        
+                                                                              
+Seiff, A., Kirk, D.B., Knight, T.C.D., Young, R.E.,.Milhalov, J.D.,           
+       Young, L.A., Milos, F.S., Schubert, G., Blanchard, R.C.,               
+       and Atkinson, D.: 1998,                                                
+      "Thermal Structure of Jupiter's atmosphere near the edge of             
+       a 5 micro-metre hot spot in the north equatorial belt",                
+       J. Geophys. Res., 103, 22,857.                                         

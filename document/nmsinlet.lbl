@@ -1,0 +1,17 @@
+PDS_VERSION_ID              = PDS3
+
+RECORD_TYPE                 = "VARIABLE LENGTH"
+
+^GIF_DOCUMENT               = "NMSINLET.GIF"
+
+OBJECT                      = GIF_DOCUMENT
+  DOCUMENT_NAME             = "GALILEO PROBE MASS SPECTROMETER
+                               INLET GAS CONTROL SYSTEM DRAWING"
+  INTERCHANGE_FORMAT        = BINARY
+  DOCUMENT_FORMAT           = GIF
+  DOCUMENT_TOPIC_TYPE       = "FIGURE"
+  PUBLICATION_DATE          = "UNK"
+
+END_OBJECT                  = GIF_DOCUMENT
+
+END

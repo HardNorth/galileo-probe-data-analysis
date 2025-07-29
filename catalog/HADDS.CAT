@@ -1,0 +1,123 @@
+PDS_VERSION_ID                   = PDS3                                       
+LABEL_REVISION_NOTE              = "Lyle Huber, July 1998"                    
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "GP-J-HAD-3-ENTRY-V1.0"                    
+  OBJECT                         = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "GALILEO PROBE HELIUM ABUNDANCE DETECTOR   
+                                    DATA V1.0"                                
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = TABLE                                      
+  START_TIME                     = 1995-12-07T21:05:44Z                       
+  STOP_TIME                      = 1995-12-07T23:35:44Z                       
+  DATA_SET_RELEASE_DATE          = 1996-12-08                                 
+  PRODUCER_FULL_NAME             = "ULF VON ZAHN"                             
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+Data Set Overview                                                             
+=================                                                             
+                                                                              
+From [VONZAHN&HUNTEN1996]:                                                    
+                                                                              
+More than 99.5 mole percent of the jovian atmosphere consists of H2 and He.   
+Hence, to a first approximation, this atmosphere can be considered to be a    
+binary gas mixture, for which the mole fraction q(He) can be derived from the 
+ratio of refractive indices q(He) = (n(H2) - n(s)) / (n(H2) - n(He)) where    
+n(He) is the refractive index of He, n(H2) is the refractive index of H, and  
+n(s) is the refractive index of the sample gas (jovian gas). The word 'sample'
+is used because the refractive index of this jovian gas is measured inside the
+HAD instrument and at sample gas pressures and temperatures that differ from  
+conditions in the ambient jovian atmosphere.                                  
+                                                                              
+Parameters                                                                    
+==========                                                                    
+                                                                              
+From [VONZAHN&HUNTEN1992]:                                                    
+                                                                              
+                                                                              
+                        Definitions for abundance measures                    
+------------------------------------------------------------------------------
+                                                                              
+'Mass fraction'                                        N_Hm_H + 2N_H2m_H      
+Hydrogen mass fraction      X is equivalent to    --------------------------- 
+                                                  SUM of (N_jm_j) for all j's 
+                                                                              
+                                                                              
+                                                            N_Hem_He          
+Helium mass fraction        Y is equivalent to    --------------------------- 
+                                                  SUM of (N_jm_j) for all j's 
+                                                                              
+                                                                              
+                                                                              
+Mass fraction of all other elements   Z is equivalent to 1 - X - Y            
+                                                                              
+with N_i the number density of particles of type i;                           
+m_i mass of a particle of type i                                              
+                                                                              
+                                                                              
+'Mole fraction'                                              N_i              
+(mixing ratio)             q_i is equivalent to   ------------------------    
+                                                  SUM of (N_j) for all j's    
+                                                                              
+                                                                              
+with    SUM of (q_j) for all j's = 1                                          
+                                                                              
+                                                                              
+                                                            N_He              
+In particular at Jupiter  q_He is approximately   ------------------------    
+                                                        N_H2 + N_He           
+                                                                              
+                                                                              
+'Abundance ratio' of                                        N_He              
+ helium/hydrogen          R_He is equivalent to   ------------------------    
+                                                            N_H2              
+                                                                              
+------------------------------------------------------------------------------
+                                                                              
+Processing                                                                    
+==========                                                                    
+                                                                              
+Details can be found in [VONZAHN&HUNTEN1996].                                 
+                                                                              
+Data                                                                          
+====                                                                          
+                                                                              
+The data included here were provided to the PDS by Ulf Von Zahn as a one      
+page FAX. No attempt was made by the instrument team to provide any other     
+data or information such as the interference fringe count.                    
+                                                                              
+"                                                                             
+                                                                              
+CONFIDENCE_LEVEL_NOTE = "                                                     
+                                                                              
+Confidence Level Overview                                                     
+=========================                                                     
+                                                                              
+The error bars are included as reported to the PDS by Von Zahn.               
+                                                                              
+"                                                                             
+                                                                              
+                                                                              
+ END_OBJECT                      = DATA_SET_INFORMATION                       
+                                                                              
+ OBJECT                          = DATA_SET_TARGET                            
+  TARGET_NAME                    = JUPITER                                    
+ END_OBJECT                      = DATA_SET_TARGET                            
+                                                                              
+ OBJECT                          = DATA_SET_HOST                              
+  INSTRUMENT_HOST_ID             = GP                                         
+  INSTRUMENT_ID                  = HAD                                        
+ END_OBJECT                      = DATA_SET_HOST                              
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+  REFERENCE_KEY_ID               = "VONZAHN&HUNTEN1992"                       
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+  REFERENCE_KEY_ID               = "VONZAHN&HUNTEN1996"                       
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+END_OBJECT                       = DATA_SET                                   
+                                                                              
+END                                                                           

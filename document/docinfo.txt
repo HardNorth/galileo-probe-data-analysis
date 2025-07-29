@@ -1,0 +1,25 @@
+PDS_VERSION_ID                   = PDS3                                       
+                                                                              
+OBJECT                = TEXT                                                  
+  PUBLICATION_DATE    = 1998-09-02                                            
+  NOTE                = "Description of contents in DOCUMENT subdirectory."   
+END_OBJECT            = TEXT                                                  
+END                                                                           
+                                                                              
+                                                                              
+                                                                              
+           Content Description of the DOCUMENT Subdirectory                   
+                                                                              
+                                                                              
+This directory contains documents pertaining to instrumentation               
+associated with the Galileo Probe.                                            
+                                                                              
+Files in this directory include:                                              
+    NMSASTR.GIF  -  Data return timeline for NMS 'A' string data.             
+    NMSBSTR.GIF  -  Data return timeline for NMS 'B' string data.             
+    NMSINLET.GIF -  Drawing of NMS calibration gas control system.            
+    NMSINST.GIF  -  Drawing of NMS instrument.                                
+    NMSSYS.GIF   -  Drawing of NMS inlet gas control system.                  
+    PROBEDYN.TXT -  Information about probe aerodynamics and parachute.       
+    SSR*.ASC     -  ASCII versions of Space Science Reviews articles.         
+    TIMES.TXT    -  Information on the probe timeline and time conversions.   

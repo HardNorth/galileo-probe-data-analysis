@@ -1,0 +1,98 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 67                                            
+FILE_RECORDS                  = 410                                           
+^TABLE                        = "XSEC31.TAB"                                  
+DATA_SET_ID                   = "GP-J-NEP-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE NEPHELOMETER"                  
+TARGET_NAME                   = "JUPITER"                                     
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "File 14 - 2.2.3.1"                           
+PRODUCT_ID                    = "XSEC31.TAB"                                  
+PRODUCT_CREATION_TIME         =  1995-12-07                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 410                                         
+  COLUMNS                       = 6                                           
+  ROW_BYTES                     = 67                                          
+  DESCRIPTION                   = "Cross sections with adjustment of baseline 
+                                   to zero at measurement number 24           
+                                   (p = 0.627 bars) and using pre-launch      
+                                   calibration data extrapolated to cover     
+                                   out-of-range temperatures experienced      
+                                   during probe descent.                      
+                                                                              
+                                   Values of -9.999e+00 are fillers for data  
+                                   that is missing in its place."             
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ATMOSPHERIC PRESSURE"                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "BARS"                                         
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 2                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "E9.3[E3]"                                     
+    DESCRIPTION              = "Atmospheric pressure in bars"                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "5.8 CROSS SECTION"                            
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "(METER**-1 STERADIAN**-1)"                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "5.8 Cross Section Norm N=24 (m-1sr-1)"        
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "16 CROSS SECTION"                             
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "(METER**-1 STERADIAN**-1)"                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 23                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "16 Cross Section Norm N=24 (m-1sr-1)"         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "40 CROSS SECTION"                             
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "(METER**-1 STERADIAN**-1)"                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 34                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "40 Cross Section Norm N=24 (m-1sr-1)"         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "70 CROSS SECTION"                             
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "(METER**-1 STERADIAN**-1)"                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 45                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "70 Cross Section Norm N=24 (m-1sr-1)"         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "180 CROSS SECTION"                            
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "(METER**-1 STERADIAN**-1)"                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 56                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "E10.3[E3]"                                    
+    DESCRIPTION              = "180 Cross Section Norm N=24 (m-1sr-1)"        
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

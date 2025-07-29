@@ -1,0 +1,92 @@
+PDS_VERSION_ID = PDS3                                                         
+RECORD_TYPE = FIXED_LENGTH                                                    
+RECORD_BYTES = 80                                                             
+LABEL_RECORDS = 91                                                            
+FILE_RECORDS = 92                                                             
+^TABLE = 92                                                                   
+                                                                              
+SPACECRAFT_NAME = "GALILEO PROBE"                                             
+INSTRUMENT_NAME = "HELIUM ABUNDANCE DETECTOR"                                 
+TARGET_NAME = "JUPITER"                                                       
+DATA_SET_ID = "GP-J-HAD-3-ENTRY-V1.0"                                         
+PRODUCT_ID  = "HAD.TAB"                                                       
+START_TIME                   = "UNK"                                          
+STOP_TIME                    = "UNK"                                          
+PRODUCT_CREATION_TIME        = 1998-08-06                                     
+                                                                              
+OBJECT = TABLE                                                                
+INTERCHANGE_FORMAT = ASCII                                                    
+ROWS = 1                                                                      
+COLUMNS = 8                                                                   
+ROW_BYTES = 80                                                                
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = "ABUNDANCE RATIO"                                                      
+DESCRIPTION = "Ratio of He atom number density to H2 atom number density"     
+DATA_TYPE = ASCII_REAL                                                        
+START_BYTE = 1                                                                
+BYTES = 5                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = "ABUNDANCE RATIO STD DEV"                                              
+DESCRIPTION = "Standard deviation of Abundance Ratio"                         
+DATA_TYPE = ASCII_REAL                                                        
+START_BYTE = 7                                                                
+BYTES = 5                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = "HELIUM MOLE FRACTION"                                                 
+DESCRIPTION = "Ratio of He atom number density to total atom and              
+                molecule number densities."                                   
+DATA_TYPE = ASCII_REAL                                                        
+START_BYTE = 13                                                               
+BYTES = 5                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = "HELIUM MOLE FRACTION STD DEV"                                         
+DESCRIPTION = "Standard deviation of Helium Mole Fraction"                    
+DATA_TYPE = ASCII_REAL                                                        
+START_BYTE = 19                                                               
+BYTES = 5                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = "HELIUM MASS RATIO"                                                    
+DESCRIPTION = "Ratio of He mass density to the sum of He and H2               
+               mass densities"                                                
+DATA_TYPE = ASCII_REAL                                                        
+START_BYTE = 25                                                               
+BYTES = 5                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = "HELIUM MASS RATIO STD DEV"                                            
+DESCRIPTION = "Standard deviation of Helium Mass Ratio"                       
+DATA_TYPE = ASCII_REAL                                                        
+START_BYTE = 31                                                               
+BYTES = 5                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = "HELIUM MASS FRACTION"                                                 
+DESCRIPTION = "Ratio of He mass density to total mass density assuming        
+               1.9% contribution of heavy elements."                          
+DATA_TYPE = ASCII_REAL                                                        
+START_BYTE = 37                                                               
+BYTES = 5                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = "HELIUM MASS FRACTION STD DEV"                                         
+DESCRIPTION = "Standard deviation of Helium Mass Fraction"                    
+DATA_TYPE = ASCII_REAL                                                        
+START_BYTE = 43                                                               
+BYTES = 5                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+END_OBJECT = TABLE                                                            
+END                                                                           
+0.157 0.004 0.136 0.003 0.238 0.005 0.234 0.006                               

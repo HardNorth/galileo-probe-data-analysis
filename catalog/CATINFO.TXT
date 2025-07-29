@@ -1,0 +1,44 @@
+PDS_VERSION_ID                   = PDS3                                       
+                                                                              
+OBJECT                = TEXT                                                  
+  PUBLICATION_DATE    = 1998-08-26                                            
+  NOTE                = "Description of contents in the CATALOG subdirectory."
+END_OBJECT            = TEXT                                                  
+END                                                                           
+                                                                              
+                                                                              
+                                                                              
+           Content Description of the CATALOG Subdirectory                    
+                                                                              
+                                                                              
+                                                                              
+     The CATALOG subdirectory on this CD-ROM volume contains the completed    
+catalog objects associated with the Galileo Probe data sets.  These objects   
+contain high-level descriptions of the data sets.  Each catalog object is in  
+ASCII, with a maximum of 78 characters per line.  Each line is delimited with 
+a carriage-return (ASCII 13) line-feed (ASCII 10) pair.                       
+                                                                              
+Following is a list of the catalog objects contained in this subdirectory and 
+a description of each:                                                        
+                                                                              
+MISSION.CAT                                                                   
+     A description of the Galileo mission.                                    
+                                                                              
+GPHOST.CAT                                                                    
+     A description of the Galileo Probe spacecraft.                           
+                                                                              
+*INST.CAT                                                                     
+     Descriptions of the various instruments on board the Galileo Probe,      
+     including references discussing the instrument design and operation.     
+                                                                              
+*DS.CAT                                                                       
+     Description of the various data sets contained in this archival          
+     volume.  Included are information on the derivation of the data set,     
+     brief discussions of the data quality, and a list of relevant references.
+                                                                              
+PERS.CAT                                                                      
+     A listing of the people involved in the production of this data set      
+     and CD-ROM.                                                              
+                                                                              
+REF.CAT                                                                       
+     A listing of pertinent references.                                       

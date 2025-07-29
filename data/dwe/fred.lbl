@@ -1,0 +1,66 @@
+PDS_VERSION_ID               = PDS3                                           
+RECORD_TYPE                  = FIXED_LENGTH                                   
+RECORD_BYTES                 = 43                                             
+FILE_RECORDS                 = 5043                                           
+^TABLE                       = "FRED.TAB"                                     
+DATA_SET_ID                  = "GP-J-DWE-3-ENTRY-V1.0"                        
+INSTRUMENT_HOST_NAME         = "GALILEO PROBE"                                
+INSTRUMENT_NAME              = "DOPPLER WIND EXPERIMENT"                      
+TARGET_NAME                  = "JUPITER"                                      
+OBSERVATION_TYPE             = "DOPPLER WIND"                                 
+ORIGINAL_PRODUCT_ID          = "SDR53096"                                     
+PRODUCT_ID                   = "FRED.TAB"                                     
+DESCRIPTION                  = "This file contains data for the Galileo Probe 
+ Doppler Wind Experiment, including time from entry, pressure, and the        
+ frequency residuals before the wind retrieval (Figure 3 ATKINSONETAL1996)."  
+START_TIME                   = 1995-12-07T22:08:31                            
+STOP_TIME                    = 1995-12-07T23:04:32                            
+PRODUCT_CREATION_TIME        = 1999-04-26                                     
+PRODUCER_FULL_NAME           = "DR. DAVID H. ATKINSON"                        
+PRODUCER_INSTITUTION_NAME    = "NASA HEADQUARTERS"                            
+PRODUCT_VERSION_TYPE         = "FINAL"                                        
+PRODUCER_ID                  = "UNK"                                          
+SOFTWARE_NAME                = "UNK"                                          
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 5043                                        
+  COLUMNS                       = 3                                           
+  ROW_BYTES                     = 43                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME FROM ENTRY"                              
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.4"                                         
+    DESCRIPTION              = "Time from entry (seconds)"                    
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "PRESSURE"                                     
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "BAR"                                          
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 15                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.4"                                         
+    DESCRIPTION              = "Pressure at probe location (bar)"             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "FREQUENCY RESIDUALS"                          
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "HZ"                                           
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 27                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.4"                                         
+    DESCRIPTION              = "Frequency Residuals before the                
+                                wind retrieval (Hz)"                          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

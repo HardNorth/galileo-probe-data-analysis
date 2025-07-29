@@ -1,0 +1,325 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 105                                           
+FILE_RECORDS                  = 60                                            
+^TABLE                        = "E01.TAB"                                     
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.E.01"                              
+PRODUCT_ID                    = "ASI.PDS.F.E.01"                              
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+After completion of the Calibration mode the Probe commanded the ASI to       
+operate in the Entry mode. The Probe then accepted ASI data at a rate of 25   
+8-bit words every 4 seconds.  These data words were written into Probe memory.
+However, due to severe limitations of available memory, a memory size of only 
+1500 8-bit words had been allocated to ASI Entry data. As a consequence as new
+data were collected it overwrote the oldest data in memory so that the memory 
+always contained only the most recent 240 seconds of ASI Entry data.  When the
+Entry mode was terminated by the start of the Descent mode, the writing of    
+data into memory was terminated and the location of the oldest data in memory 
+was written to Probe memory. These data (including the oldest data position)  
+were multiplexed by the Probe into the Probe Descent data stream and were     
+transmitted twice during Descent. The data contained in each of these two     
+passes were in agreement.  File ASI.PDS.F.E.01 contains the 8-bit values which
+were stored in Probe memory and which have been placed in the correct time    
+sequence using the oldest data position information."                         
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 60                                          
+  COLUMNS                       = 26                                          
+  ROW_BYTES                     = 105                                         
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MINOR FRAME"                                  
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 1                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Minor Frame of ASI data."                     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 14"                                      
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 5                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 14 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 16"                                      
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 9                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 16 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 18"                                      
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 13                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 18 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 20"                                      
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 17                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 20 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 22"                                      
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 21                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 22 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 24"                                      
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 25                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 24 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 26"                                      
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 29                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 26 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 28"                                      
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 33                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 28 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 30"                                      
+    COLUMN_NUMBER            = 10                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 37                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 30 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 32"                                      
+    COLUMN_NUMBER            = 11                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 41                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 32 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 34"                                      
+    COLUMN_NUMBER            = 12                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 45                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 34 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 36"                                      
+    COLUMN_NUMBER            = 13                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 49                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 36 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 38"                                      
+    COLUMN_NUMBER            = 14                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 53                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 38 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 40"                                      
+    COLUMN_NUMBER            = 15                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 57                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 40 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 42"                                      
+    COLUMN_NUMBER            = 16                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 61                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 42 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 44"                                      
+    COLUMN_NUMBER            = 17                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 65                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 44 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 46"                                      
+    COLUMN_NUMBER            = 18                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 69                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 46 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 48"                                      
+    COLUMN_NUMBER            = 19                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 73                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 48 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 50"                                      
+    COLUMN_NUMBER            = 20                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 77                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 50 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 52"                                      
+    COLUMN_NUMBER            = 21                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 81                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 52 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 54"                                      
+    COLUMN_NUMBER            = 22                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 85                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 54 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 56"                                      
+    COLUMN_NUMBER            = 23                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 89                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 56 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 58"                                      
+    COLUMN_NUMBER            = 24                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 93                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 58 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 60"                                      
+    COLUMN_NUMBER            = 25                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 97                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 60 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WORD 62"                                      
+    COLUMN_NUMBER            = 26                                             
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 101                                            
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Word 62 of ASI data in Entry mode."           
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

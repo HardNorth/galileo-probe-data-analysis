@@ -1,0 +1,76 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 32                                            
+FILE_RECORDS                  = 504                                           
+^TABLE                        = "B89SE14.TAB"                                 
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "B89SE14.TAB"                                 
+PRODUCT_ID                    = "B89SE14.TAB"                                 
+PRODUCT_CREATION_TIME         =  1998-04-17                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 504                                         
+  COLUMNS                       = 4                                           
+  ROW_BYTES                     = 32                                          
+                                                                              
+  DESCRIPTION                   = "GPMS Flight Unit characterization.         
+'B' data stream, Replay of September 14, 1989 test onboard the shuttle        
+Atlantis.  This is a baseline test."                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "STEP"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 3                                              
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = "GPMS Sequence Step Number"                    
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COUNTS"                                       
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "Counts per Integration"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 10                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "I8"                                           
+    DESCRIPTION              = "Count per integration period (0.48375 sec)"   
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SENSITIVITY"                                  
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 21                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Counter sensitivity (Hi or Lo)"               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "HOUSEKEEPING"                                 
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = ""                                             
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 24                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = "GPMS Housekeeping parameter decoded from      
+telemetry stream.                                                             
+Note:  Multana (Multiplier Analog Current) and a selected housekeeping        
+parameter are included in each minor frame (8 steps) of information from      
+the GPMS instrument.  The GPMS instrument's major frame is composed of        
+32 minor frames.  This data occurs every 4th. step."                          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

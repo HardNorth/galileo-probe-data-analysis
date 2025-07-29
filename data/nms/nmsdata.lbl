@@ -1,0 +1,160 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 60                                            
+FILE_RECORDS                  = 7025                                          
+^TABLE                        = "NMSDATA.TAB"                                 
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "RAW DATA"                                    
+PRODUCT_ID                    = "NMSDATA.TAB"                                 
+PRODUCT_CREATION_TIME         =  1998-04-17                                   
+NOTE                          = "The pressure data is provided by Al Seiff    
+                                   et al. and included as a convenience to    
+                                   the users.                                 
+                                  Al data entries of -1 are fillers; i.e.,    
+                                   these data points are not available."      
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 7025                                        
+  COLUMNS                       = 9                                           
+  ROW_BYTES                     = 60                                          
+  OBJECT                   = COLUMN                                           
+    NAME                     = "GPMS_STEP"                                    
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 1                                              
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = "GPMS Instrument Sequence Step"                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "Seconds"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 6                                              
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = "Time after Probe major/minor frames           
+                                  zero/zero"                                  
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "PRESSURE"                                     
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "MILLIBARS"                                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 14                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.1"                                         
+    DESCRIPTION              = "Ambient Atmospheric Pressure.  These data     
+                                  were generously provided by Al Sieff        
+                                  et al. and are included as a convenience    
+                                  to the user."                               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Ion_Energy"                                   
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "eV"                                           
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 23                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Ionizer Energy"                               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MASS"                                         
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "Daltons"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 26                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "UNK"                                          
+    DESCRIPTION              = "Mass to charge ratio, also referred to as     
+                                  AMU.  Entries are integer or 0.125 steps"   
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SENSITIVITY"                                  
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 33                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Detector Sensitivity, High or Low.  Some      
+                                  steps have been deliberately programmed     
+                                  to return data using the Low sensitivity    
+                                  mode.  The counting circuitry was designed  
+                                  to initiate measurements using the High     
+                                  Sensitivity mode.  When the count rate      
+                                  exceeded a defined value, the counting      
+                                  system switches to a Low Sensitivity mode." 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "RAW_DATA"                                     
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "COUNTS PER INTEGRATION"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 36                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "I8"                                           
+    DESCRIPTION              = "Uncorrected data, integration period          
+                                  is 0.48375 seconds"                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "CORRECTED"                                    
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "COUNTS PER INTEGRATION"                       
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 45                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "I8"                                           
+    DESCRIPTION              = "Data corrected for pulse pile-up effects      
+                                 The correction algorithm is:                 
+                                        r = c * exp(-c/a)                     
+                                  where r = raw (measured) count rate         
+                                        c = real (correct) count rate         
+                                        a = 2.933E+7 (a constant determined   
+                                                    empirically for this GPMS 
+                                                    instrument.)              
+                                            This correction is valid only for 
+                                            raw count rates less than 1E+7."  
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "COMMENT"                                      
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 54                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "A5"                                           
+    DESCRIPTION              = "Data in this column indicate those steps      
+                                  where Heaters and Valves are switched.      
+                                 Refer to the instrument diagram, named       
+                                 /DOCUMENT/INLTSYS.GIF, for more detail.      
+                                 Inlet and Outlet (Pyrotechnic) Valves        
+                                  are labeled I1, O1, I2 and O2.              
+                                 Valves (Vn) are labeled using numbers from   
+                                  1 to 12; e.g., V1.  Note that the V10C      
+                                  instruction closes redundant valves.        
+                                 HnON and HnOFF indicate ON and OFF           
+                                  operations with the heaters labeled n.      
+                                 HROFF turns off heaters 2, 4, 5, and 8       
+                                  with one operation"                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

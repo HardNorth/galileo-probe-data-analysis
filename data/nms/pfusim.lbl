@@ -1,0 +1,109 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 33                                            
+FILE_RECORDS                  = 398                                           
+^TABLE                        = "PFUSIM.TAB"                                  
+DATA_SET_ID                   = "GP-J-NMS-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE MASS SPECTROMETER"             
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "H2 + 10% He mix: Simulated GPMS Entry"       
+PRODUCT_ID                    = "85_09308.50D"                                
+PRODUCT_CREATION_TIME         =  1998-04-17                                   
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 398                                         
+  COLUMNS                       = 6                                           
+  ROW_BYTES                     = 33                                          
+  DESCRIPTION                   = "H2 + 10% He mix: Simulated GPMS Entry      
+Only the data for nominal masses 1 to 6 are shown.                            
+                                                                              
+This sequence is NOT identical to that used by the flight unit!               
+The Hydrogen-Helium gas mixture was circulated through the GPMS inlets        
+at the pressures and temperatures corresponding to the data derived           
+from the ORTON III model of Jupiter's atmosphere.  All gas pressures          
+and temperatures plus the operations of the GPMS Instrument's                 
+Heaters and Valves were manually controlled.                                  
+Refer to diagrams named /DOCUMENT/INLTSYS.GIF and /DOCUMENT/GASMIXR.GIF for   
+identification. Since only Ionizer Filament Number 1 was utilized during the  
+mission only the data for Filament 1 testing is included in the file.         
+Also NOTE (!) that these values represent RAW data.  They have NOT            
+been corrected for pulse pile-up (overlap) effects!                           
+                                                                              
+Gas Mix:  10% He & 90% H2     Pressure varied from 0.1 to 21 Bars.            
+Original File:  85_09308.50D                                                  
+                                                                              
+Notes: Count rates shown as -1 represent missing information.                 
+       The counting integration period is 0.48375 seconds."                   
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SEQ_STEP"                                     
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 1                                              
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = "PFU Operating Sequence Step Number."          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Pressure"                                     
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "Bars"                                         
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 6                                              
+    BYTES                    = 5                                              
+    FORMAT                   = "F5.2"                                         
+    DESCRIPTION              = "Pressure in the inlet system."                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MASS"                                         
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "AMU"                                          
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 12                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "F5.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "eV"                                           
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "Electron Volts"                               
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 18                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Ionizer Energy"                               
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Count"                                        
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = INTEGER                                        
+    START_BYTE               = 21                                             
+    BYTES                    = 8                                              
+    FORMAT                   = "I8"                                           
+    DESCRIPTION              = "Counts per Integration"                       
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Sens"                                         
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 30                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "A2"                                           
+    DESCRIPTION              = "Detector Sensitivity"                         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

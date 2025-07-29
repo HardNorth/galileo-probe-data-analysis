@@ -1,0 +1,152 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 72                                            
+FILE_RECORDS                  = 55                                            
+^TABLE                        = "HK02.TAB"                                    
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.HK.02"                             
+PRODUCT_ID                    = "HK02.TAB"                                    
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.HK.02                                                 
+                                                                              
+None of the data in this file were sampled by the Atmosphere Structure        
+Experiment instrumentation.   These data were sampled and processed as a part 
+of the Probe System and are formally reported elsewhere.  However these data  
+are potentially of some interest to the ASI and are reported informally as a  
+part of this PDS data record.  If any of these data are used for some formal  
+purpose, reference should be made to the official probe data results report   
+to assure accuracy of the data.                                               
+                                                                              
+The sensors used for these measurements were over/under range at times during 
+the mission and clamped at constant 'values' during these times.  Conversion  
+from digital number to engineering units has been performed using the         
+calibration equations contained in the 'Galileo Probe Telemetry Calibration   
+Handbook', document SS 32220-021.                                             
+                                                                              
+The column headers identify each measurement.  The measurements were:         
+                                                                              
+1)  From a temperature sensor mounted on the inside of the Descent Module     
+outer skin.  This was to provide some sort of back-up to the ASI atmospheric  
+temperature sensors.                                                          
+                                                                              
+2)  From a temperature sensor mounted on the coupling nut connecting the inlet
+pressure manifold to the high range (P3) pressure sensor.  This sensor is     
+designated 'Shelf T1' by the probe system.                                    
+                                                                              
+3)  From a temperature sensor mounted on the instrument mounting shelf        
+adjacent to the science atmospheric temperature sensor mounting position.     
+This sensor is designated 'Shelf T2' by the probe system."                    
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 55                                          
+  COLUMNS                       = 9                                           
+  ROW_BYTES                     = 72                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Aero T"                                       
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 12                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Aero T"                                       
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 16                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.2"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 25                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Shelf T1"                                     
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 36                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Shelf T1"                                     
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 41                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.2"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 49                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.1"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Shelf T2"                                     
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 60                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "Shelf T2"                                     
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 65                                             
+    BYTES                    = 6                                              
+    FORMAT                   = "F6.2"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

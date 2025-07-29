@@ -1,0 +1,56 @@
+PDS_VERSION_ID        = PDS3                                                  
+LABEL_REVISION_NOTE   = ""                                                    
+                                                                              
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  INTERCHANGE_FORMAT    = ASCII                                               
+  PUBLICATION_DATE      = 1999-04-26                                          
+  NOTE                  = "Various times of interest in Galileo Probe data"   
+END_OBJECT            = TEXT                                                  
+                                                                              
+END                                                                           
+                                                                              
+The following time conversions may be useful. The date of the Galileo Probe   
+entry is December 7, 1995.                                                    
+                                                                              
+Conversion from UT to ET =  61.184 seconds.                                   
+                                                                              
+ Time of Entry in UT:                                                         
+ day0_entry= 341                                                              
+ hour0_entry= 22                                                              
+ min0_entry= 4                                                                
+ sec0_entry= 43.752                                                           
+                                                                              
+ Time of Entry in ET:                                                         
+ day0_entry= 341                                                              
+ hour0_entry= 22                                                              
+ min0_entry= 5                                                                
+ sec0_entry= 44.93600000000001                                                
+                                                                              
+ Time of MF0 in UT:                                                           
+ day0_MF0= 341                                                                
+ hour0_MF0= 22                                                                
+ min0_MF0= 7                                                                  
+ sec0_MF0= 30.965                                                             
+                                                                              
+ Time of MF0 in ET:                                                           
+ day0_MF0= 341                                                                
+ hour0_MF0= 22                                                                
+ min0_MF0= 8                                                                  
+ sec0_MF0= 32.149                                                             
+                                                                              
+ Time of lock in UT:                                                          
+ day0_lock= 341                                                               
+ hour0_lock= 22                                                               
+ min0_lock= 8                                                                 
+ sec0_lock= 30.693                                                            
+                                                                              
+ Time of lock in ET:                                                          
+ day0_lock= 341                                                               
+ hour0_lock= 22                                                               
+ min0_lock= 9                                                                 
+ sec0_lock= 31.877                                                            
+                                                                              
+ Link lockup occurs  226.9409999996424 seconds after entry                    
+ MF0 occurs  167.2129999995232 seconds after entry                            
+ Time between MF0 and link lockup is  59.72800000011921 seconds               

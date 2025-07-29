@@ -1,0 +1,134 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 77                                            
+FILE_RECORDS                  = 15                                            
+^TABLE                        = "HK01AD.TAB"                                  
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.HK.01.AD"                          
+PRODUCT_ID                    = "HK01AD.TAB"                                  
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.HK.01                                                 
+                                                                              
+Throughout the mission, starting during instrument pre-entry calibration and  
+lasting until termination of the descent mode, data were taken to evaluate    
+instrument health status and allow data corrections to be made if necessary.  
+All of these housekeeping data can be found in these files ( ASI.PDS.F.HK.01.A
+  :  ASI.PDS.F.HK.01.AD  :  ASI.PDS.F.HK.01.P   :  ASI.PDS.F.HK.01.TE ) .     
+                                                                              
+File ASI.PDS.F.HK.01.A contains all housekeeping data from the accelerometers.
+File ASI.PDS.F.HK.01.AD contains all housekeeping data from the analog to     
+digital converters.                                                           
+File ASI.PDS.F.HK.01.P contains all housekeeping data from the pressure       
+sensors.                                                                      
+File ASI.PDS.F.HK.01.TE contains all housekeeping data from the science       
+temperature sensors and from the main instrument electronics.                 
+                                                                              
+Descriptions of the instrumentation can be found in Space Sciences Review,    
+Volume 60, May 1992,  pages 203 - 232.                                        
+                                                                              
+The header to each column identifies the details of each measurement."        
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 15                                          
+  COLUMNS                       = 8                                           
+  ROW_BYTES                     = 77                                          
+  DESCRIPTION                   = "Housekeeping data from the analog to       
+                                   digital converters."                       
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AD 1 Cal"                                     
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 15                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 20                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AD1 Off"                                      
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 36                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 39                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AD 2 Off"                                     
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 55                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME"                                         
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 58                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AD 2 Cal"                                     
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "DN"                                           
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 72                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.3"                                         
+    DESCRIPTION              = ""                                             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

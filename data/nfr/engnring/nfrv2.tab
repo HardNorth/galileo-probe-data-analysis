@@ -1,0 +1,117 @@
+PDS_VERSION_ID = PDS3                                                         
+RECORD_TYPE = FIXED_LENGTH                                                    
+RECORD_BYTES = 80                                                             
+FILE_RECORDS = 117                                                            
+LABEL_RECORDS = 58                                                            
+^TABLE = 59                                                                   
+DATA_SET_ID = "GP-J-NFR-3-ENTRY-V1.0"                                         
+SPACECRAFT_NAME = "GALILEO PROBE"                                             
+INSTRUMENT_NAME = "NET FLUX RADIOMETER"                                       
+TARGET_NAME = JUPITER                                                         
+MISSION_PHASE_NAME = "PROBE DESCENT"                                          
+START_TIME = "UNK"                                                            
+STOP_TIME = "UNK"                                                             
+PRODUCT_NAME = "NFRV2.TAB"                                                    
+PRODUCT_ID = "NFRV2.TAB"                                                      
+PRODUCT_CREATION_TIME =  1998-08-18                                           
+NOTE = "This table contains reference voltage V2."                            
+                                                                              
+OBJECT = TABLE                                                                
+INTERCHANGE_FORMAT = ASCII                                                    
+ROWS = 59                                                                     
+COLUMNS = 4                                                                   
+ROW_BYTES = 80                                                                
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = DATA_CYCLE                                                             
+DESCRIPTION = "Two-minute Data Cycle"                                         
+DATA_TYPE = INTEGER                                                           
+START_BYTE = 1                                                                
+BYTES = 6                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = INSTRUMENT_CYCLE                                                       
+DESCRIPTION = "Six-second Instrument Cycle, 0-19"                             
+DATA_TYPE = INTEGER                                                           
+START_BYTE = 8                                                                
+BYTES = 6                                                                     
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = TIME                                                                   
+DESCRIPTION = "Time after minor frame zero, seconds"                          
+DATA_TYPE = REAL                                                              
+START_BYTE = 15                                                               
+BYTES = 10                                                                    
+END_OBJECT = COLUMN                                                           
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = V2_VOLTAGE                                                             
+DESCRIPTION = "Reference Voltage V2, V"                                       
+DATA_TYPE = REAL                                                              
+START_BYTE = 26                                                               
+BYTES = 10                                                                    
+END_OBJECT = COLUMN                                                           
+                                                                              
+END_OBJECT = TABLE                                                            
+END                                                                           
+     0,     2,     21.75,      7.10                                           
+     0,    12,     81.75,      7.10                                           
+     1,     2,    141.75,      7.07                                           
+     1,    12,    201.75,      7.07                                           
+     2,     2,    261.75,      7.07                                           
+     2,    12,    321.75,      7.04                                           
+     3,     2,    381.75,      7.04                                           
+     3,    12,    441.75,      7.04                                           
+     4,     2,    501.75,      7.04                                           
+     4,    12,    561.75,      7.04                                           
+     5,     2,    621.75,      7.04                                           
+     5,    12,    681.75,      7.04                                           
+     6,     2,    741.75,      7.04                                           
+     6,    12,    801.75,      7.04                                           
+     7,     2,    861.75,      7.04                                           
+     7,    12,    921.75,      7.04                                           
+     8,     2,    981.75,      7.04                                           
+     8,    12,   1041.75,      7.04                                           
+     9,     2,   1101.75,      7.07                                           
+     9,    12,   1161.75,      7.07                                           
+    10,     2,   1221.75,      7.07                                           
+    10,    12,   1281.75,      7.07                                           
+    11,     2,   1341.75,      7.07                                           
+    11,    12,   1401.75,      7.07                                           
+    12,     2,   1461.75,      7.10                                           
+    12,    12,   1521.75,      7.10                                           
+    13,     2,   1581.75,      7.10                                           
+    13,    12,   1641.75,      7.10                                           
+    14,     2,   1701.75,      7.10                                           
+    14,    12,   1761.75,      7.13                                           
+    15,     2,   1821.75,      7.13                                           
+    15,    12,   1881.75,      7.13                                           
+    16,     2,   1941.75,      7.13                                           
+    16,    12,   2001.75,      7.13                                           
+    17,     2,   2061.75,      7.16                                           
+    17,    12,   2121.75,      7.16                                           
+    18,     2,   2181.75,      7.16                                           
+    18,    12,   2241.75,      7.16                                           
+    19,     2,   2301.75,      7.16                                           
+    19,    12,   2361.75,      7.16                                           
+    20,     2,   2421.75,      7.19                                           
+    20,    12,   2481.75,      7.26                                           
+    21,     2,   2541.75,      7.19                                           
+    21,    12,   2601.75,      7.26                                           
+    22,     2,   2661.75,      7.19                                           
+    22,    12,   2721.75,      7.29                                           
+    23,     2,   2781.75,      7.29                                           
+    23,    12,   2841.75,      7.29                                           
+    24,     2,   2901.75,      7.29                                           
+    24,    12,   2961.75,      7.29                                           
+    25,     2,   3021.75,      7.29                                           
+    25,    12,   3081.75,      7.32                                           
+    26,     2,   3141.75,      7.32                                           
+    26,    12,   3201.75,      7.32                                           
+    27,     2,   3261.75,      7.32                                           
+    27,    12,   3321.75,      7.32                                           
+    28,     2,   3381.75,      7.32                                           
+    28,    12,   3441.75,      7.32                                           
+    29,     2,   3501.75,      7.35                                           

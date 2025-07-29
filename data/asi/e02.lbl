@@ -1,0 +1,109 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 19                                            
+FILE_RECORDS                  = 1043                                          
+^TABLE                        = "E02.TAB"                                     
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.E.02"                              
+PRODUCT_ID                    = "ASI.PDS.F.E.02"                              
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.E.02                                                  
+                                                                              
+This file ( ASI.PDS.F.E.02 ) contains time tagged data from the Entry         
+Mode for all measurements. All times are time in seconds from the start of the
+Probe Descent Mode (i.e. a negative time is time before the start of the      
+descent mode).                                                                
+                                                                              
+The first column in the file contains the sample time,  the second column     
+contains the ASI data words (extracted almost exclusively from the probe 8-bit
+data stream contained in file     ASI.PDS.F.E.01   ) ,   the third column     
+contains a measurement ID to enable identification of each measurement and the
+fourth column contains the accelerometer operating range data ( note that a   
+zero has been inserted into column 4 for non-acceleration measurements ).  The
+measurement ID codes are as follows:                                          
+                                                                              
+1   -    Z1 axial accelerometer measurement  ( 12-bit word ).                 
+2   -    Z2 axial accelerometer measurement  ( 12-bit word ).                 
+3   -    Lateral accelerometers measurement  ( 8-bit word ).                  
+                                                                              
+4     -    Z1 axial accelerometer temperature ( 8-bit word ).                 
+5     -    Z2 axial accelerometer temperature ( 8-bit word ).                 
+6     -    X Lateral accelerometer temperature ( 8-bit word ).                
+7     -    Y Lateral accelerometer temperature ( 8-bit word ).                
+8   -    ASI central electronics package temperature ( 8-bit word ).          
+                                                                              
+There are also an additional six Z1 accelerometer measurements which have been
+inserted into the data at the correct locations in the region of maximum      
+deceleration.  These measurements were stored in the ASI memory during the    
+Entry mode and output at the start of the ASI descent data stream.  These data
+are from file ASI.PDS.F.D.01 ( and are also stripped-out and summarized in    
+file ASI.PDS.F.T.01).                                                         
+                                                                              
+These samples are those at the following times:                               
+                                                                              
+-109.461                                                                      
+-109.305                                                                      
+-109.148                                                                      
+-108.836                                                                      
+-108.680                                                                      
+-108.523                                                                      
+"                                                                             
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 1043                                        
+  COLUMNS                       = 4                                           
+  ROW_BYTES                     = 19                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "SAMPLE TIME"                                  
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "NANOMETER"                                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 8                                              
+    FORMAT                   = "FF8.3"                                        
+    DESCRIPTION              = "Sample time."                                 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "ASI DATA WORDS"                               
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 10                                             
+    BYTES                    = 4                                              
+    FORMAT                   = "I4"                                           
+    DESCRIPTION              = "ASI data words."                              
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "MEASUREMENT ID"                               
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 15                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "I1"                                           
+    DESCRIPTION              = "Measurement ID."                              
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "OPERATING RANGE"                              
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "N/A"                                          
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 17                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "I1"                                           
+    DESCRIPTION              = "Accelerometer operating range data."          
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

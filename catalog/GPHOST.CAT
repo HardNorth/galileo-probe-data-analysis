@@ -1,0 +1,178 @@
+PDS_VERSION_ID       = PDS3                                                   
+                                                                              
+OBJECT               = INSTRUMENT_HOST                                        
+  INSTRUMENT_HOST_ID = GP                                                     
+                                                                              
+  OBJECT             = INSTRUMENT_HOST_INFORMATION                            
+    INSTRUMENT_HOST_NAME  = "GALILEO PROBE"                                   
+    INSTRUMENT_HOST_TYPE  = "SPACECRAFT"                                      
+    INSTRUMENT_HOST_DESC  = "                                                 
+                                                                              
+Instrument Host Overview                                                      
+========================                                                      
+                                                                              
+[From JOHNSONETAL1992]:                                                       
+                                                                              
+The Probe is composed of two major segments, the deceleration module and the  
+descent module. The deceleration module includes the fore and aft heat        
+shields, the structure that supports the heat shields, and the thermal control
+hardware for mission phases up through entry. The descent module is the       
+package that descends through the Jovian atmosphere by parachute while the    
+prime science data are gathered. It contains the science instruments and the  
+Probe subsystems required to support the instruments and transmit the data    
+back to the overflying Orbiter, which serves as a relay to Earth.             
+                                                                              
+Deceleration Module                                                           
+-------------------                                                           
+The general shape was selected to provide a minimum weight Probe, primarily   
+because this allows more forward placement of the pressure vessel than do more
+blunt vehicle shapes, leading to minimum base diameter and minimum ballast    
+required for aerodynamic stability.                                           
+                                                                              
+Thermal protection during entry is provided by a carbon phenolic forebody heat
+shield and a phenolic nylon afterbody heat shield. Although these materials   
+have been used extensively for Earth re-entry vehicles, on the Galileo Mission
+they will be subjected to environments never before experienced in flight.    
+Entry velocity relative to the atmosphere is 48 km/s, far higher than any     
+atmospheric entry attempted to date. For both the forebody and afterbody,     
+radiative transfer is the primary energy transport mechanism. An additional   
+consideration included in the final heat shield design is mechanical erosion  
+(spallation) of heat shield material. The shield is subjected to a hot        
+atmospheric shock layer (14000 K). The heat transfer at the nose of the       
+vehicle at peak heating exceeds 42 kW cm^-2. The approximate mass of the      
+forebody heat shield is 145 kg, of which about 90 kg is expected to be lost by
+ablation during entry.                                                        
+                                                                              
+The main parachute is used to separate the descent and deceleration modules   
+and to control the rate of descent through the atmosphere. The parachute      
+diameter (projected) is 2.5 m, a value selected to guarantee separation of the
+Probe in worst-case conditions, that is, the aeroshell structure without the  
+forebody heat shield. Nominal conditions at parachute deployment are Mach 0.9 
+and a dynamic pressure of 6000 N m^-2. A swivel is used to decouple Probe and 
+parachute spin. The pilot parachute is injected into the wake by a mortar     
+fired at a velocity of 30 m/s. After the pilot chute is established, the      
+separation nuts are fired to release the aft cover. The aft cover, pulled     
+through the wake by the pilot chute, in turn pulls out and strips the bag from
+the main parachute. The deployment process, from initiation through full      
+opening of the main chute, is designed to take less than 2 s.                 
+                                                                              
+Descent Module                                                                
+--------------                                                                
+Most of the equipment is mounted on a shelf; the aft side of this shelf is    
+used primarily for the science instruments. The Probe radio frequency         
+communication subsystem and the pyrotechnic control unit are located in the   
+aft compartment; the main parachute, the lightning and the radio emissions    
+detector (LRD) antenna, and energetic particles instrument (EPI) sensor are   
+located on top of this compartment. Note that in contrast to the Pioneer Venus
+design, which included a sealed pressure vessel, the weight is minimized by   
+venting the Galileo descent module and by protecting individual units as      
+necessary with hermetically sealed housings. The housings are designed for    
+survival to 20 bars and were tested to 16 bars.                               
+                                                                              
+Electronics                                                                   
+-----------                                                                   
+To eliminate single-point, catastrophic mission failures, the Probe electrical
+and electronic subsystems, including the radio frequency link with the Orbiter
+and the receiver on the Orbiter, are redundant designs. Two parallel and      
+simultaneous data streams go from the instruments to the Orbiter.             
+                                                                              
+Communications Subsystem                                                      
+------------------------                                                      
+The communications subsystem provides two L-band microwave channels, one at   
+1387.0 MHz and one at 1387.1 MHz, each circularly polarized, one with right-  
+hand and the other with left-hand polarization. Each channel consists of an   
+exciter, a power amplifier which puts out 23 W of radio frequency power, and  
+either an ultrastable oscillator or a standard, thermally-controlled          
+oscillator. The channel with the ultrastable oscillator will be used for a    
+Doppler wind measurement.                                                     
+                                                                              
+Power Subsystem                                                               
+---------------                                                               
+The power subsystem consists of two electronics units, a lithium/sulfur       
+dioxide (Li-SO2) battery and a set of thermal batteries. The main power supply
+for the Probe mission is the Li-SO2 battery. This battery is made up of three 
+modules of 13 D-size, high-rate cells. The cells are connected in series with 
+a bypass diode across each cell so that the failure of one cell will not cause
+the loss of an entire module. Total battery capacity at manufacture is        
+expected to be about 21 A/hr (about 730 W/hr). Probe mission requirements are 
+for about 16.3 A/hr, leaving a capacity margin at the end of the mission      
+(defined as 48 min after entry) of 1.7 A/hr. The primary source of energy for 
+pyrotechnic events is a set of four thermal batteries. Pyrotechnic pulses for 
+actuation of these batteries and for neutral mass spectrometer functions later
+in the descent are provided by a tap on the main battery at the eight cell.   
+                                                                              
+Command and Data Handling Subsystem                                           
+-----------------------------------                                           
+The command and data handling subsystem consists of the data and command      
+processor, the pyrotechnic control unit, and four acceleration switches (two  
+redundant parts). The data and command processor is a micro-controller-based  
+unit which provides and controls all system command, telemetry, data storage, 
+and timing functions.                                                         
+                                                                              
+During the period from separation of the Probe and Orbiter to the end of the  
+mission, the data and command processor operates in several different modes.  
+For the coast phase, only the coast timer operates. Its purpose is to 'wake   
+up' the Probe about 6 hours before entry. During the pre-entry period, one    
+string is used to gather and store LRD and EPI data. Both strings operate     
+starting about 20 min before entry through the end of the mission. The entire 
+sequence from separation to the end of the mission, with the exception of the 
+magnitude of the time for the coast phase, is contained in permanent memory.  
+Entry and descent sequence functions are tied directly to the atmosphere by   
+the acceleration switches. The switches provide an adaptive parachute         
+deployment which removes uncertainties in deployment conditions associated    
+with uncertainties in entry angle and in the characteristics of the           
+atmosphere. The acceleration switches also provide backup of the descent      
+sequence in the event of early or late time-out of the coast timer.           
+                                                                              
+Mass                                                                          
+----                                                                          
+The total mass of the Probe is about 331 kg, that of the Probe adapters is 6.8
+kg, and that of the RRH equipment is 23.2 kg. Almost half of the total Probe  
+mass is dedicated to the heat shield, and the electronic units are            
+considerably heavier than one would expect for standard spacecraft hardware   
+because they include hermetically sealed housing designed to withstand 20     
+bars.                                                                         
+                                                                              
+Relay Radio Hardware                                                          
+--------------------                                                          
+The relay radio hardware (RRH) receivers, ultrastable oscillators, and antenna
+are mounted on the despun section of the Orbiter to receive the Probe signal. 
+                                                                              
+The RRH receivers are a key element of the data link between the Probe and the
+Orbiter during the Probe's descent through the Jovian atmosphere. Each        
+receiver is designed to acquire, coherently track, and process the Probe's    
+data along with RRH radio science and engineering data. The receivers also    
+format and buffer the data for transmission to the Orbiter command and data   
+system. The acquisition, tracking, and data-handling functions are performed  
+by the microprocessor-controlled section of the receiver. The main functions  
+in the acquisition and tracking process are coarse frequency acquisition      
+through the implementation of a sequential probability radio test; frequency  
+synchronization, using a frequency-lock loop; symbol synchronization, using a 
+symbol-lock loop; ambiguity resolution; and phase synchronization and signal  
+tracking, using a phase-lock loop. Uncertainties and signal perturbations,    
+including uncertainty in Probe signal frequency and spin rate, and non-steady 
+motion of the Probe caused by wind shear, wind turbulence, and nonsteady      
+aerodynamics, make the design and test of these functions complex and         
+difficult. The unit must acquire the Probe signal within 50 s, with an        
+acquisition probability of 0.995 and a false-lock probability of less than    
+5 x 10^-5. Minimum strength at acquisition is specified as 31 dB/Hz. The unit 
+is required to track a signal strength as low as 26 dB/Hz. In addition to     
+providing Probe data, the receiver measures received Probe signal strength and
+Doppler rates for radio science use.                                          
+                                                                              
+The RRH antenna is a 1.1-m parabolic reflector with a dual feed for receiving 
+the two signals from the Probe. It is mounted on a deployable mechanism for   
+storage at launch abd for pointing during the Probe mission. This mechanism is
+provided by the Orbiter.                                                      
+                                                                              
+                                                                              
+"                                                                             
+END_OBJECT = INSTRUMENT_HOST_INFORMATION                                      
+                                                                              
+OBJECT = INSTRUMENT_HOST_REFERENCE_INFO                                       
+  REFERENCE_KEY_ID = "JOHNSONETAL1992"                                        
+END_OBJECT = INSTRUMENT_HOST_REFERENCE_INFO                                   
+                                                                              
+END_OBJECT = INSTRUMENT_HOST                                                  
+                                                                              
+END                                                                           

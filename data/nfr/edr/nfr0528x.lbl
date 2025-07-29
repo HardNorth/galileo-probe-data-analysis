@@ -1,0 +1,69 @@
+PDS_VERSION_ID = PDS3                                                         
+RECORD_TYPE = FIXED_LENGTH                                                    
+RECORD_BYTES = 100                                                            
+FILE_RECORDS = 878                                                            
+^TIME_SERIES = "NFR0528X.SDM"                                                 
+DATA_SET_ID = "GP-J-NFR-3-ENTRY-V1.0"                                         
+SPACECRAFT_NAME = "GALILEO PROBE"                                             
+INSTRUMENT_NAME = "NET FLUX RADIOMETER"                                       
+TARGET_NAME = JUPITER                                                         
+MISSION_PHASE_NAME = "PROBE DESCENT"                                          
+START_TIME = "UNK"                                                            
+STOP_TIME = "UNK"                                                             
+PRODUCT_NAME = "NFR0528X.SDM"                                                 
+PRODUCT_ID = "NFR0528X.SDM"                                                   
+PRODUCT_CREATION_TIME =  1996-05-28                                           
+                                                                              
+OBJECT = TIME_SERIES                                                          
+NAME = EDR_FILE                                                               
+INTERCHANGE_FORMAT = BINARY                                                   
+ROWS = 878                                                                    
+COLUMNS = 1                                                                   
+ROW_BYTES = 100                                                               
+SAMPLING_PARAMETER_NAME = TIME                                                
+SAMPLING_PARAMETER_UNIT = SECOND                                              
+SAMPLING_PARAMETER_INTERVAL = 4                                               
+                                                                              
+DESCRIPTION = "                                                               
+The file nfr0528x.sdm contains what we believe to be an error-free set        
+of telemetry of Galileo Probe engineering data and Net Flux Radiometer        
+engineering and science data from the descent into Jupiter's atmosphere       
+on December 7, 1995.  The file is a composite of data from two separate       
+data deliveries.  Minor frames 0-477 are from file nfr0521a.sdm (last         
+CDS memory A-string, w/MRO), and minor frames 448-877 are from file           
+nfr0416a.sdm (last tape recorder A-string).  The composite file was           
+created on May 28, 1996, thus the file name.                                  
+                                                                              
+The main reason for including this file is as input for the program           
+nfredr41.c, which can be found in the software directory of this              
+archive.  Documentation on the Galileo Probe EDR (Experimental Data           
+Record) will probably be difficult (at best) to acquire.  The documents       
+which can be used to interpret the EDR files are:                             
+                                                                              
+    NASA/JPL 625-610: SIS 213-01: Galileo Software Interface Specification    
+    for the Radio Science Team Experimental Data Record.                      
+                                                                              
+    Hughes Space & Communications HS373-0020-3811: Memo 4 AUG 95, EDR and     
+    RSF Hard Disk File Formats.                                               
+                                                                              
+    NASA/ARC Spec. JP-661.06: Specific Programming Requirements for the       
+    Ames Research Center/Net Flux Radiometer (ARC/NFR).                       
+                                                                              
+The documents will probably be required if one desires to extract any         
+more probe engineering data from the EDR file than is already extracted       
+by the nfredr41 program.                                                      
+"                                                                             
+                                                                              
+OBJECT = COLUMN                                                               
+NAME = EDR_MINOR_FRAME                                                        
+DATA_TYPE = UNSIGNED_INTEGER                                                  
+START_BYTE = 1                                                                
+BYTES = 100                                                                   
+ITEMS = 100                                                                   
+ITEM_BYTES = 1                                                                
+DESCRIPTION = "Each row contains one minor frame of probe engineering and     
+NFR engineering and science data.  Science data from all other instruments    
+have been set to 0."                                                          
+END_OBJECT = COLUMN                                                           
+END_OBJECT = TIME_SERIES                                                      
+END                                                                           

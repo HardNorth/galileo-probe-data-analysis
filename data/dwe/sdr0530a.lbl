@@ -1,0 +1,55 @@
+PDS_VERSION_ID               = PDS3                                           
+RECORD_TYPE                  = FIXED_LENGTH                                   
+RECORD_BYTES                 = 36                                             
+FILE_RECORDS                 = 4865                                           
+^TABLE                       = "SDR0530A.TAB"                                 
+DATA_SET_ID                  = "GP-J-DWE-3-ENTRY-V1.0"                        
+INSTRUMENT_HOST_NAME         = "GALILEO PROBE"                                
+INSTRUMENT_NAME              = "DOPPLER WIND EXPERIMENT"                      
+TARGET_NAME                  = "JUPITER"                                      
+OBSERVATION_TYPE             = "DOPPLER WIND"                                 
+ORIGINAL_PRODUCT_ID          = "SDR0530A.SDR"                                 
+PRODUCT_ID                   = "SDRDATA.DTA"                                  
+START_TIME                   = 1995-12-07T22:05:44                            
+STOP_TIME                    = 1995-12-07T23:35:44                            
+PRODUCT_CREATION_TIME        = 1996-11-08T13:37:57                            
+                                                                              
+NOTE                         = "                                              
+The NCO frequency can be converted to a link frequency as follows:            
+f_link = 57*f_uso_orb + f_nco + 1024                                          
+where f_uso_orb is the orbiter USO frequency = 242.32555e36.                  
+                                                                              
+Note that this file only has the tape recorder data, and the gaps have not    
+been filled by the 1/2 resolution (Quick Look) data.                          
+"                                                                             
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 4865                                        
+  COLUMNS                       = 2                                           
+  ROW_BYTES                     = 36                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME FROM LOCK"                               
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 6                                              
+    BYTES                    = 10                                             
+    FORMAT                   = "F10.5"                                        
+    DESCRIPTION              = "Time from lock (seconds)."                    
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "NCO FREQUENCY"                                
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "HERTZ"                                        
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 21                                             
+    BYTES                    = 12                                             
+    FORMAT                   = "F12.5"                                        
+    DESCRIPTION              = "NCO frequency"                                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

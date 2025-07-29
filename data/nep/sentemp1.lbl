@@ -1,0 +1,119 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 60                                            
+FILE_RECORDS                  = 546                                           
+^A_TABLE                      = ("SENTEMP1.TAB",1)                            
+^B_TABLE                      = ("SENTEMP1.TAB",269)                          
+DATA_SET_ID                   = "GP-J-NEP-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "GALILEO PROBE NEPHELOMETER"                  
+TARGET_NAME                   = "JUPITER"                                     
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "SENTEMP1.TAB"                                
+PRODUCT_ID                    = "SENTEMP1.TAB"                                
+PRODUCT_CREATION_TIME         =  1998-12-03                                   
+                                                                              
+OBJECT                        = A_TABLE                                       
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 267                                         
+  COLUMNS                       = 5                                           
+  ROW_BYTES                     = 60                                          
+  DESCRIPTION                   = "Sensitivities Versus Temperature.          
+ Sensitivities for each scatter channel, normalized to 1.000 at 15            
+ C, and extrapolated from pre-launch tests on the Flight Unit  (tests         
+ performed from -20 C to + 50 C), versus T1,  the temperature for the         
+ forward scatter channels, or  T2, the temperature for the backscatter        
+ channel. Both the temperatures and the sensitivities have been fitted        
+ by a 9th order polynomial, fit to the measured data."                        
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "INSTRUMENT TEMPERATURE, FORWARD"              
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.3"                                         
+    DESCRIPTION              = "Temperature T1, C"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "5.8 DEGREES"                                  
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 13                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.5"                                         
+    DESCRIPTION              = "5.8 degrees (sensitivity)"                    
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "16 DEGREES"                                   
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 25                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.5"                                         
+    DESCRIPTION              = "16 degrees (sensitivity)"                     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "40 DEGREES"                                   
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 37                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.5"                                         
+    DESCRIPTION              = "40 degrees (sensitivity)"                     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "70 DEGREES"                                   
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 49                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.5"                                         
+    DESCRIPTION              = "70 degrees (sensitivity)"                     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = A_TABLE                                       
+                                                                              
+OBJECT                        = B_TABLE                                       
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 278                                         
+  COLUMNS                       = 2                                           
+  ROW_BYTES                     = 19                                          
+  ROW_SUFFIX_BYTES              = 41                                          
+  DESCRIPTION                   = "Sensitivities Versus Temperature           
+                                   (Continued)."                              
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "INSTRUMENT TEMPERATURE, BACKWARD"             
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "DEGREES CELSIUS"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.3"                                         
+    DESCRIPTION              = "Temperature T2, C"                            
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "178 DEGREES"                                  
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 13                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.5"                                         
+    DESCRIPTION              = "178 degrees (sensitivity)"                    
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = B_TABLE                                       
+END                                                                           

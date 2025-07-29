@@ -1,0 +1,251 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 129                                           
+FILE_RECORDS                  = 36                                            
+^TABLE                        = "D07.TAB"                                     
+DATA_SET_ID                   = "GP-J-ASI-3-ENTRY-V1.0"                       
+INSTRUMENT_HOST_NAME          = "GALILEO PROBE"                               
+INSTRUMENT_NAME               = "ATMOSPHERIC STRUCTURE INSTRUMENT"            
+TARGET_NAME                   = JUPITER                                       
+START_TIME                    = "UNK"                                         
+STOP_TIME                     = "UNK"                                         
+PRODUCT_NAME                  = "ASI.PDS.F.D.07"                              
+PRODUCT_ID                    = "D07.TAB"                                     
+PRODUCT_CREATION_TIME         =  1997-11-01                                   
+NOTE                          = "                                             
+Notes on file ASI.PDS.F.D.07                                                  
+                                                                              
+This file ( ASI.PDS.F.D.07 ) contains data for all of the Descent sequence    
+acceleration turbulence measurements.   All measurements were derived from the
+primary axial accelerometer.  During a 96 second measurement period positive  
+going crossings across various acceleration levels were counted to provide    
+histogram data of probe non-uniform motions.  The reference level for each of 
+the axial accumulations was determined by taking the last value for the       
+average axial acceleration during the previous 16 second axial acceleration   
+integration time.  The axial and lateral threshold levels were as follows:    
+                                                                              
+Axial Turbulence cnt for level 1 (Last axial avg -152 counts in Range 3).     
+Axial Turbulence cnt for level 2 (Last axial avg -76 counts in Range 3).      
+Axial Turbulence cnt for level 3 (Last axial avg -38 counts in Range 3).      
+Axial Turbulence cnt for level 4 (Last axial avg -19 counts in Range 3).      
+Axial Turbulence cnt for level 5 (Last axial avg +19 counts in Range 3).      
+Axial Turbulence cnt for level 6 (Last axial avg +38 counts in Range 3).      
+Axial Turbulence cnt for level 7 (Last axial avg +76 counts in Range 3).      
+Axial Turbulence cnt for level 8 (Last axial avg +152 counts in Range 3).     
+                                                                              
+Lateral Turbulence count for level 1 ( 1 count in Range 2 ).                  
+Lateral Turbulence count for level 2 ( 3 counts in Range 2 ).                 
+Lateral Turbulence count for level 3 ( 6 counts in Range 2 ).                 
+Lateral Turbulence count for level 4 ( 12 counts in Range 2 ).                
+                                                                              
+The approximate threshold levels are:                                         
+                                                                              
+Axial Turbulence for level 1 ( -4.63 m/s/s ).                                 
+Axial Turbulence for level 2 ( -2.32 m/s/s ).                                 
+Axial Turbulence for level 3 ( -1.16 m/s/s ).                                 
+Axial Turbulence for level 4 ( -0.58 m/s/s ).                                 
+Axial Turbulence for level 5 ( 0.58 m/s/s ).                                  
+Axial Turbulence for level 6 ( 1.16 m/s/s ).                                  
+Axial Turbulence for level 7 ( 2.32 m/s/s ).                                  
+Axial Turbulence for level 8 ( 4.63 m/s/s ).                                  
+                                                                              
+Lateral Turbulence for level 1 ( 0.04 m/s/s ).                                
+Lateral Turbulence for level 2 ( 0.12 m/s/s ).                                
+Lateral Turbulence for level 3 ( 0.24 m/s/s ).                                
+Lateral Turbulence for level 4 ( 0.47 m/s/s ).                                
+                                                                              
+The first column in each file identifies the measurement sample period start  
+time, the second column identifies the measurement sample period stop time.   
+The third column identifies the axial reference level in counts (range 3) and 
+the fourth column the approximate reference level in m/s/s.  Columns five     
+through twelve provide the axial crossings counts for axial levels 1 through 8
+respectively.  Columns thirteen through sixteen provide the lateral crossings 
+counts for lateral levels 1 through 4 respectively.                           
+                                                                              
+Descriptions of the instrumentation can be found in Space Sciences Review,    
+Volume 60, May 1992,  pages 203 - 232."                                       
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 36                                          
+  COLUMNS                       = 16                                          
+  ROW_BYTES                     = 129                                         
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "START TIME"                                   
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.2"                                         
+    DESCRIPTION              = "Measurement sample period start time."        
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "STOP TIME"                                    
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 9                                              
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.2"                                         
+    DESCRIPTION              = "Measurement sample period stop time."         
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL REFERENCE COUNTS"                       
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 21                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Axial reference level in counts (range 3)"    
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL REFERENCE ACCELERATION"                 
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "METERS/SECONDS^2"                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 27                                             
+    BYTES                    = 5                                              
+    FORMAT                   = "F5.2"                                         
+    DESCRIPTION              = "Approximate axial reference level in m/s/s."  
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL LEVEL 1"                                
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 39                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "I1"                                           
+    DESCRIPTION              = "Axial crossings counts for axial level 1"     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL LEVEL 2"                                
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 47                                             
+    BYTES                    = 1                                              
+    FORMAT                   = "I1"                                           
+    DESCRIPTION              = "Axial crossings counts for axial level 2"     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL LEVEL 3"                                
+    COLUMN_NUMBER            = 7                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 54                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Axial crossings counts for axial level 3"     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL LEVEL 4"                                
+    COLUMN_NUMBER            = 8                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 61                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Axial crossings counts for axial level 4"     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL LEVEL 5"                                
+    COLUMN_NUMBER            = 9                                              
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 69                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Axial crossings counts for axial level 5"     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL LEVEL 6"                                
+    COLUMN_NUMBER            = 10                                             
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 77                                             
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Axial crossings counts for axial level 6"     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL LEVEL 7"                                
+    COLUMN_NUMBER            = 11                                             
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 86                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Axial crossings counts for axial level 7"     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "AXIAL LEVEL 8"                                
+    COLUMN_NUMBER            = 12                                             
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 94                                             
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Axial crossings counts for axial level 8"     
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "VACUUM WAVELENGTH"                            
+    COLUMN_NUMBER            = 13                                             
+    UNIT                     = "NANOMETER"                                    
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 103                                            
+    BYTES                    = 1                                              
+    FORMAT                   = "I1"                                           
+    DESCRIPTION              = "Lateral crossings counts for lateral level 1" 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "VACUUM WAVELENGTH"                            
+    COLUMN_NUMBER            = 14                                             
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 110                                            
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Lateral crossings counts for lateral level 2" 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "VACUUM WAVELENGTH"                            
+    COLUMN_NUMBER            = 15                                             
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 118                                            
+    BYTES                    = 2                                              
+    FORMAT                   = "I2"                                           
+    DESCRIPTION              = "Lateral crossings counts for lateral level 3" 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "VACUUM WAVELENGTH"                            
+    COLUMN_NUMBER            = 16                                             
+    UNIT                     = "COUNTS"                                       
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 125                                            
+    BYTES                    = 3                                              
+    FORMAT                   = "I3"                                           
+    DESCRIPTION              = "Lateral crossings counts for lateral level 4" 
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

@@ -1,0 +1,87 @@
+PDS_VERSION_ID               = PDS3                                           
+RECORD_TYPE                  = FIXED_LENGTH                                   
+RECORD_BYTES                 = 69                                             
+FILE_RECORDS                 = 5043                                           
+^TABLE                       = "WIND.TAB"                                     
+DATA_SET_ID                  = "GP-J-DWE-3-ENTRY-V1.0"                        
+INSTRUMENT_HOST_NAME         = "GALILEO PROBE"                                
+INSTRUMENT_NAME              = "DOPPLER WIND EXPERIMENT"                      
+TARGET_NAME                  = "JUPITER"                                      
+OBSERVATION_TYPE             = "DOPPLER WIND"                                 
+ORIGINAL_PRODUCT_ID          = "SDR53096"                                     
+PRODUCT_ID                   = "WIND.TAB"                                     
+DESCRIPTION                  = "This file contains data for the Galileo Probe 
+ Doppler Wind Experiment, including time from entry, time from lock,          
+ temperature, pressure, and wind."                                            
+START_TIME                   = 1995-12-07T22:08:31                            
+STOP_TIME                    = 1995-12-07T23:04:32                            
+PRODUCT_CREATION_TIME        = 1999-04-26                                     
+PRODUCER_FULL_NAME           = "DR. DAVID H. ATKINSON"                        
+PRODUCER_INSTITUTION_NAME    = "NASA HEADQUARTERS"                            
+PRODUCT_VERSION_TYPE         = "FINAL"                                        
+PRODUCER_ID                  = "UNK"                                          
+SOFTWARE_NAME                = "UNK"                                          
+                                                                              
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 5043                                        
+  COLUMNS                       = 5                                           
+  ROW_BYTES                     = 69                                          
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME FROM ENTRY"                              
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 1                                              
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.4"                                         
+    DESCRIPTION              = "Time from entry (seconds)"                    
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TIME FROM LINK LOCK"                          
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "SECONDS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 15                                             
+    BYTES                    = 10                                             
+    FORMAT                   = "F10.5"                                        
+    DESCRIPTION              = "Time from link lock (seconds)"                
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "TEMPERATURE"                                  
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "KELVINS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 30                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.4"                                         
+    DESCRIPTION              = "Temperature (K)"                              
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "PRESSURE"                                     
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "BAR"                                          
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 44                                             
+    BYTES                    = 7                                              
+    FORMAT                   = "F7.4"                                         
+    DESCRIPTION              = "Pressure at probe location (bar)"             
+  END_OBJECT               = COLUMN                                           
+                                                                              
+  OBJECT                   = COLUMN                                           
+    NAME                     = "WIND"                                         
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "(METER SECOND**-1)"                           
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 56                                             
+    BYTES                    = 9                                              
+    FORMAT                   = "F9.5"                                         
+    DESCRIPTION              = "Wind (m/s)"                                   
+  END_OBJECT               = COLUMN                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

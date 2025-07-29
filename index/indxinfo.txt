@@ -1,0 +1,37 @@
+PDS_VERSION_ID        = PDS3                                                  
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+ NOTE                 = "LISTING OF INDEX TABLE FORMAT AND CONTENT"           
+ PUBLICATION_DATE     = 1998-08-27                                            
+END_OBJECT            = TEXT                                                  
+END                                                                           
+                                                                              
+*****  FILE INDXINFO.TXT                                                      
+                                                                              
+                                                                              
+                            Index File Information                            
+                                                                              
+                                                                              
+                                                                              
+     This file contains a description of the index table created for the      
+Galileo Probe volume.                                                         
+                                                                              
+     There are two files in this directory:                                   
+                                                                              
+     VOLINDEX.LBL - A PDS label describing the index table which already      
+                contains pointers to the data table, so no further steps are  
+                required to make it accessible to PDS table-processing        
+                software.                                                     
+                                                                              
+                                                                              
+     VOLINDEX.TAB - An ASCII table containing the index information. Each line
+                ends with the characters <CR><LF> (ASCII 13 and 10            
+                respectively). All fields in the tables are fixed width.      
+                The fields are as follows:                                    
+                    Path to the given file, in UNIX format                    
+                    Name of the data file                                     
+                    Original file name if known                               
+                    DATA_SET_ID                                               
+                    Product Creation Time                                     
+                    Number of bytes in a single data record                   
+                    Number of records in the file                             
