@@ -27,7 +27,7 @@ class InteractiveChart {
             this.createChart();
             document.getElementById('loadingMessage').style.display = 'none';
         } catch (error) {
-            this.showError('Failed to load data: ' + error.message);
+            this.showError(`Failed to load data: ${error.message}\n${error.stack}`);
             document.getElementById('loadingMessage').style.display = 'none';
         }
     }
@@ -219,9 +219,10 @@ class InteractiveChart {
         });
 
         if (allValues.length === 0) return;
+        allValues.sort((a, b) => a - b);
 
-        const min = Math.min(...allValues);
-        const max = Math.max(...allValues);
+        const min = allValues[0];
+        const max = allValues[allValues.length - 1];
 
         // If the range spans more than 3 orders of magnitude, show the hint
         if (max / min > 1000) {
@@ -244,10 +245,12 @@ class InteractiveChart {
         });
 
         if (allYValues.length === 0) return;
+        allYValues.sort((a, b) => a - b);
+        allXValues.sort((a, b) => a - b);
 
         // Auto-fit Y-axis
-        const yMin = Math.min(...allYValues);
-        const yMax = Math.max(...allYValues);
+        const yMin = allYValues[0];
+        const yMax = allYValues[allYValues.length - 1];
         const yRange = yMax - yMin;
         const yPadding = yRange * 0.01; // 1% padding
 
@@ -257,8 +260,8 @@ class InteractiveChart {
         // Auto-fit X-axis
         if (allXValues.length === 0) return;
 
-        const xMin = Math.min(...allXValues);
-        const xMax = Math.max(...allXValues);
+        const xMin = allXValues[0];
+        const xMax = allXValues[allXValues.length - 1];
         const xRange = xMax - xMin;
         const xPadding = xRange * 0.01; // 1% padding for X-axis
 
