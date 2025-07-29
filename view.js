@@ -1,15 +1,10 @@
+const CSV_FILE = 'output/data.csv'
+
 class InteractiveChart {
     constructor() {
-        this.csvFile = [
-            'output/asi_descent.csv',
-            'output/dwe_wind.csv',
-            'output/nep_ptz.csv',
-            'output/nep_scatter.csv',
-            'output/nfr_tcnfdn.csv'
-        ];
         this.allData = {};
         this.chart = null;
-        this.enabledFiles = new Set(this.csvFiles);
+        this.enabledFiles = new Set();
         this.enabledSeries = new Set();
         this.colors = [
             '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
@@ -21,12 +16,13 @@ class InteractiveChart {
             '#3F51B5', '#FFC107', '#8E24AA', '#26A69A', '#EF5350'
         ];
         this.seriesColorMap = new Map(); // Map series IDs to colors
-        this.init();
+        this.init().then(_ => console.log("InteractiveChart initialized"));
     }
 
     async init() {
         try {
-            await this.loadAllData();
+            this.allData = await this.loadAllData();
+            Object.keys(this.allData).forEach(key => this.enabledFiles.add(key));
             this.setupControls();
             this.createChart();
             document.getElementById('loadingMessage').style.display = 'none';
@@ -37,54 +33,61 @@ class InteractiveChart {
     }
 
     async loadAllData() {
-        for (const file of this.csvFiles) {
-            try {
-                const response = await fetch(file);
-                if (!response.ok) {
-                    throw new Error(`Failed to load ${file}: ${response.statusText}`);
-                }
-                const csvText = await response.text();
-                this.allData[file] = this.parseCSV(csvText, file);
-            } catch (error) {
-                console.warn(`Could not load ${file}:`, error);
-                // Continue with other files
-            }
+        const file = CSV_FILE;
+        const response = await fetch(file);
+        if (!response.ok) {
+            console.error(`Failed to load ${file}: ${response.statusText}`);
         }
+        const csvText = await response.text();
+        return this.parseCSV(csvText);
     }
 
-    parseCSV(csvText, filename) {
+    parseCSV(csvText) {
         const lines = csvText.trim().split('\n');
-        const headers = lines[0].split(',').map(h => h.trim());
+        const rawHeaders = lines[0].split(',').map(h => h.trim());
+        const prefixes = rawHeaders.reduce((acc, h) => {
+            const prefixColumn = h.split(':');
+            if (prefixColumn.length < 2) {
+                // Common column, skipping
+                return acc;
+            }
+            const prefix = prefixColumn[0].trim();
+            acc.add(prefix);
+            return acc;
+        }, new Set());
         const data = {};
-
-        // Initialize data structure
-        headers.forEach(header => {
-            data[header] = [];
+        prefixes.forEach(prefix => data[prefix] = {
+            headers: rawHeaders.filter(h => h.startsWith(prefix + ':') || !h.includes(':')).map(h => h.includes(':') ? h.split(':')[1].trim() : h.trim()),
+            data: {},
+            filename: prefix
         });
 
         // Parse data rows
         for (let i = 1; i < lines.length; i++) {
             const values = lines[i].split(',');
-            headers.forEach((header, index) => {
-                let value = values[index] ? values[index].trim() : '';
-
-                // Handle missing data
-                if (value === '' || value === 'null' || value === 'NaN') {
-                    value = null;
-                } else {
-                    const numValue = parseFloat(value);
-                    value = isNaN(numValue) ? null : numValue;
-                }
-
-                data[header].push(value);
+            prefixes.forEach(prefix => {
+                const prefixData = data[prefix].data;
+                rawHeaders.forEach((h, index) => {
+                    if (!h.startsWith(prefix + ':') && h.includes(':')) {
+                        return;
+                    }
+                    let value = values[index] ? values[index].trim() : '';
+                    const header = h.includes(':') ? h.split(':')[1].trim() : h;
+                    if (!(header in prefixData)) {
+                        prefixData[header] = [];
+                    }
+                    // Handle missing data
+                    if (value === '' || value === 'null' || value === 'NaN') {
+                        value = null;
+                    } else {
+                        const numValue = parseFloat(value);
+                        value = isNaN(numValue) ? null : numValue;
+                    }
+                    prefixData[header].push(value);
+                });
             });
         }
-
-        return { headers, data, filename: this.getFileBaseName(filename) };
-    }
-
-    getFileBaseName(filepath) {
-        return filepath.split('/').pop().replace('.csv', '');
+        return data;
     }
 
     setupControls() {
@@ -97,10 +100,9 @@ class InteractiveChart {
         const container = document.getElementById('fileControls');
 
         Object.keys(this.allData).forEach(file => {
-            const basename = this.getFileBaseName(file);
             const button = document.createElement('button');
             button.className = 'file-toggle';
-            button.textContent = basename;
+            button.textContent = file;
             button.onclick = () => this.toggleFile(file, button);
             container.appendChild(button);
         });
@@ -167,11 +169,10 @@ class InteractiveChart {
             button.classList.add('disabled');
 
             // Disable all series from this file
-            const basename = this.getFileBaseName(file);
             const fileData = this.allData[file];
             fileData.headers.forEach(header => {
                 if (!header.toUpperCase().includes('TIME')) {
-                    const seriesId = `${basename}_${header}`;
+                    const seriesId = `${file}_${header}`;
                     this.enabledSeries.delete(seriesId);
                     const checkbox = document.getElementById(seriesId);
                     if (checkbox) checkbox.checked = false;
@@ -182,11 +183,10 @@ class InteractiveChart {
             button.classList.remove('disabled');
 
             // Enable all series from this file
-            const basename = this.getFileBaseName(file);
             const fileData = this.allData[file];
             fileData.headers.forEach(header => {
                 if (!header.toUpperCase().includes('TIME')) {
-                    const seriesId = `${basename}_${header}`;
+                    const seriesId = `${file}_${header}`;
                     this.enabledSeries.add(seriesId);
                     const checkbox = document.getElementById(seriesId);
                     if (checkbox) checkbox.checked = true;
@@ -311,7 +311,7 @@ class InteractiveChart {
 
                     // Skip missing data points
                     if (time !== null && value !== null && !isNaN(time) && !isNaN(value)) {
-                        data.push({ x: time, y: value });
+                        data.push({x: time, y: value});
                     }
                 }
 
@@ -361,8 +361,7 @@ class InteractiveChart {
 
 
         if (yMin !== '') {
-            const minVal = parseFloat(yMin);
-            this.chart.options.scales.y.min = minVal;
+            this.chart.options.scales.y.min = parseFloat(yMin);
         } else {
             delete this.chart.options.scales.y.min;
         }
