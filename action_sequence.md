@@ -43,5 +43,5 @@ Do the following actions:
 42. Run command: python scripts/08_round_csv_columns.py output/nfr_tcnfdn.csv output/nfr_tcnfdn_rounded.csv 1 "TIME (SECONDS)"
 43. Remove `output/nfr_tcnfdn.csv` file and rename `output/nfr_tcnfdn_rounded.csv` to `output/nfr_tcnfdn.csv`
 44. Run command: python scripts/09_join_csv_files.py
-45. Run command: scripts/10_fill_missing_values.py
+45. Run command: python scripts/10_fill_missing_values.py
 45. Run command: python scripts/08_round_csv_columns.py output/joined_data_filled.csv output/data.csv 4 "nep_scatter: PRESSURE (BARS)" "asi_descent: ALTITUDE (KM)" "asi_descent: PRESSURE (BARS)" "asi_descent: DENSITY (KG/M^3)" "asi_descent: GRAVITY (M/S^2)" "asi_descent: dz/dt (M/S)" "asi_descent: dT/dz (KELVINS/KILOMETER)" "nfr_tcnfdn: A_TCNFDN (W/m^2)" "nfr_tcnfdn: B_TCNFDN (W/m^2)" "nfr_tcnfdn: C_TCNFDN (W/m^2)" "nfr_tcnfdn: D_TCNFDN (W/m^2)" "nfr_tcnfdn: E_TCNFDN (W/m^2)" "nfr_tcnfdn: F_TCNFDN (W/m^2)" "nep_ptz: PRESSURE (BARS)" "nep_ptz: TEMPERATURE (KELVINS)" "nep_ptz: ALTITUDE (KILOMETERS)" "dwe_wind: TEMPERATURE (KELVINS)" "dwe_wind: PRESSURE (BARS)" "dwe_wind: WIND (METER SECOND^-1)"

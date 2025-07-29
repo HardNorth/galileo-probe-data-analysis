@@ -27,7 +27,8 @@ def fill_missing_values(df):
             continue
 
         # Get indices of first and last valid values
-        valid_indices = df[column].dropna().index
+        no_na = df[column].dropna()
+        valid_indices = no_na.index[no_na != -99999.0]
         if len(valid_indices) == 0:
             continue
 
