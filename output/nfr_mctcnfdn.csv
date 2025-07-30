@@ -1,4 +1,4 @@
-TIME (SECONDS),A (W/m^2),B (W/m^2),C (W/m^2),D (W/m^2),E (W/m^2),F (W/m^2)
+TIME (SECONDS),A (broad infrared) (W/m^2),B (solar radiation) (W/m^2),C (water absorption) (W/m^2),D (water emission) (W/m^2),E (methane absorption) (W/m^2),F (blind) (W/m^2)
 14.2,30.522,-6.474,-2.861,15.378,-4.507,0.0
 18.8,5.488,-3.753,0.039,2.941,-2.539,0.0
 24.8,5.707,-4.884,0.219,3.104,-3.135,0.0
