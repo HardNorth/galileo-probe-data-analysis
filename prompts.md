@@ -32,3 +32,4 @@ E.G.: append `TIME (SECONDS)` column from @nep_ptz.csv file to @nep_scatter.csv 
     4. The result CSV should be sorted by key column, aware of type.
     5. You should preserve column data types.
 17. Implement a script which will take @joined_data.csv file and fill missed (empty) cells. Such cells should be filled with "-99999.0" if missed data is before the first or after the last value in a column. Everything in between two values should be filled with a step calculated by formula: (next value - previous value)/number of missed steps. You should preserve column data types. E.G. don't convert int columns to float. You should find integer columns "on the fly".
+18. Implement a script which will allow to reduce amount of entries in a CSV file by averaging every second row values with previous line values, thus making 1 line instead of 2.

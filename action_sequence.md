@@ -42,6 +42,11 @@ Do the following actions:
 41. Rename column in `output/nfr_mctcnfdn.csv` file `TIME (seconds)` -> `TIME (SECONDS)`
 42. Run command: python scripts/08_round_csv_columns.py output/nfr_mctcnfdn.csv output/nfr_mctcnfdn_rounded.csv 1 "TIME (SECONDS)"
 43. Remove `output/nfr_mctcnfdn.csv` file and rename `output/nfr_mctcnfdn_rounded.csv` to `output/nfr_mctcnfdn.csv`
-44. Run command: python scripts/09_join_csv_files.py
-45. Run command: python scripts/10_fill_missing_values.py
-45. Run command: python scripts/08_round_csv_columns.py output/joined_data_filled.csv output/data.csv 4 "nep_scatter: PRESSURE (BARS)" "asi_descent: ALTITUDE (KM)" "asi_descent: PRESSURE (BARS)" "asi_descent: DENSITY (KG/M^3)" "asi_descent: GRAVITY (M/S^2)" "asi_descent: dz/dt (M/S)" "asi_descent: dT/dz (KELVINS/KILOMETER)" "nfr_mctcnfdn: A_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: B_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: C_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: D_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: E_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: F_MCTCNFDN (W/m^2)" "nep_ptz: PRESSURE (BARS)" "nep_ptz: TEMPERATURE (KELVINS)" "nep_ptz: ALTITUDE (KILOMETERS)" "dwe_wind: TEMPERATURE (KELVINS)" "dwe_wind: PRESSURE (BARS)" "dwe_wind: WIND (METER SECOND^-1)"
+44. Run command: python scripts/11_average_consecutive_rows.py output/dwe_wind.csv
+45. Run command: python scripts/11_average_consecutive_rows.py output/dwe_wind_averaged.csv
+46. Run command: python scripts/11_average_consecutive_rows.py output/dwe_wind_averaged_averaged.csv
+47. Run command: python scripts/08_round_csv_columns.py output/dwe_wind_averaged_averaged_averaged.csv output/dwe_wind_rounded.csv 1 "TIME (SECONDS)"
+48. Remove `output/dwe_wind.csv`, `output/dwe_wind_averaged.csv`, `output/dwe_wind_averaged_averaged.csv`, `output/dwe_wind_averaged_averaged_averaged.csv` and `output/dwe_wind_rounded.csv ` files and rename `output/dwe_wind_rounded2.csv` to `output/dwe_wind.csv`
+49. Run command: python scripts/09_join_csv_files.py
+50. Run command: python scripts/10_fill_missing_values.py
+51. Run command: python scripts/08_round_csv_columns.py output/joined_data_filled.csv output/data.csv 4 "nep_scatter: PRESSURE (BARS)" "asi_descent: ALTITUDE (KM)" "asi_descent: PRESSURE (BARS)" "asi_descent: DENSITY (KG/M^3)" "asi_descent: GRAVITY (M/S^2)" "asi_descent: dz/dt (M/S)" "asi_descent: dT/dz (KELVINS/KILOMETER)" "nfr_mctcnfdn: A_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: B_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: C_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: D_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: E_MCTCNFDN (W/m^2)" "nfr_mctcnfdn: F_MCTCNFDN (W/m^2)" "nep_ptz: PRESSURE (BARS)" "nep_ptz: TEMPERATURE (KELVINS)" "nep_ptz: ALTITUDE (KILOMETERS)" "dwe_wind: TEMPERATURE (KELVINS)" "dwe_wind: PRESSURE (BARS)" "dwe_wind: WIND (METER SECOND^-1)"
