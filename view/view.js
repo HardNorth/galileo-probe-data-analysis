@@ -1,4 +1,5 @@
 const CSV_FILE = 'output/data.csv'
+const COMMON_PREFIX = 'common'
 
 class InteractiveChart {
     constructor() {
@@ -45,21 +46,35 @@ class InteractiveChart {
     parseCSV(csvText) {
         const lines = csvText.trim().split('\n');
         const rawHeaders = lines[0].split(',').map(h => h.trim());
+        const xAxisColumn = rawHeaders[0];
         const prefixes = rawHeaders.reduce((acc, h) => {
             const prefixColumn = h.split(':');
+            let prefix = null;
             if (prefixColumn.length < 2) {
-                // Common column, skipping
-                return acc;
+                if (h === xAxisColumn) {
+                    return acc;
+                }
+                prefix = COMMON_PREFIX;
+            } else {
+                prefix = prefixColumn[0].trim();
             }
-            const prefix = prefixColumn[0].trim();
             acc.add(prefix);
             return acc;
         }, new Set());
         const data = {};
-        prefixes.forEach(prefix => data[prefix] = {
-            headers: rawHeaders.filter(h => h.startsWith(prefix + ':') || !h.includes(':')).map(h => h.includes(':') ? h.split(':')[1].trim() : h.trim()),
-            data: {},
-            filename: prefix
+        prefixes.forEach(prefix => {
+            let headers = [];
+            if (prefix === COMMON_PREFIX) {
+                headers = rawHeaders.filter(h => !h.includes(':') || h === xAxisColumn).map(h => h.trim());
+            } else {
+                headers = rawHeaders.filter(h => h.startsWith(prefix + ':') || h === xAxisColumn).map(h => h === xAxisColumn ? h.trim() : h.split(':')[1].trim());
+            }
+            data[prefix] = {
+                xAxisColumn,
+                headers,
+                data: {},
+                filename: prefix
+            };
         });
 
         // Parse data rows
@@ -117,7 +132,7 @@ class InteractiveChart {
             const basename = fileData.filename;
 
             fileData.headers.forEach(header => {
-                if (header.toUpperCase().includes('TIME')) return; // Skip time columns
+                if (header === fileData.xAxisColumn) return; // Skip time columns
 
                 const seriesId = `${basename}_${header}`;
                 this.enabledSeries.add(seriesId);
@@ -171,7 +186,7 @@ class InteractiveChart {
             // Disable all series from this file
             const fileData = this.allData[file];
             fileData.headers.forEach(header => {
-                if (!header.toUpperCase().includes('TIME')) {
+                if (header !== fileData.xAxisColumn) {
                     const seriesId = `${file}_${header}`;
                     this.enabledSeries.delete(seriesId);
                     const checkbox = document.getElementById(seriesId);
@@ -185,7 +200,7 @@ class InteractiveChart {
             // Enable all series from this file
             const fileData = this.allData[file];
             fileData.headers.forEach(header => {
-                if (!header.toUpperCase().includes('TIME')) {
+                if (header !== fileData.xAxisColumn) {
                     const seriesId = `${file}_${header}`;
                     this.enabledSeries.add(seriesId);
                     const checkbox = document.getElementById(seriesId);
@@ -294,18 +309,15 @@ class InteractiveChart {
 
             const fileData = this.allData[file];
             const basename = fileData.filename;
-            const timeColumn = fileData.headers.find(h => h.toUpperCase().includes('TIME'));
-
-            if (!timeColumn) return;
 
             fileData.headers.forEach(header => {
-                if (header.toUpperCase().includes('TIME')) return;
+                if (header === fileData.xAxisColumn) return;
 
                 const seriesId = `${basename}_${header}`;
                 if (!this.enabledSeries.has(seriesId)) return;
 
                 const data = [];
-                const timeData = fileData.data[timeColumn];
+                const timeData = fileData.data[fileData.xAxisColumn];
                 const valueData = fileData.data[header];
 
                 for (let i = 0; i < timeData.length; i++) {
@@ -314,7 +326,7 @@ class InteractiveChart {
 
                     // Skip missing data points
                     if (time !== null && value !== null && !isNaN(time) && !isNaN(value)) {
-                        data.push({x: time, y: value});
+                        data.push({ x: time, y: value });
                     }
                 }
 
