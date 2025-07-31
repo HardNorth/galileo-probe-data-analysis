@@ -1,4 +1,4 @@
-# Galileo Probe Data Interactive Chart
+# Galileo mission Jupiter atmospheric probe data interactive chart
 
 This interactive chart displays data from all CSV files in the `/output` folder, allowing you to explore the Galileo probe's atmospheric descent data.
 
@@ -53,6 +53,7 @@ This interactive chart displays data from all CSV files in the `/output` folder,
 2. **dwe_wind.csv** - Doppler Wind Experiment wind measurements  
 3. **nep_ptz.csv** - Nephelometer pressure, temperature, altitude data
 4. **nep_scatter.csv** - Nephelometer scattering measurements at various angles
+5. **nfr_mctcnfdn.csv** - Net Flux Radiometer data on different wave lengths m-corrected, temp-corrected, correlated noise removed.
 
 ## Technical Notes
 
