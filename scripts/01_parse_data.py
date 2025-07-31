@@ -52,100 +52,197 @@ def convert_scientific_to_decimal(value_str):
 
 def parse_label_file(lbl_path):
     """
-    Parse the PDS label file to extract column information.
+    Parse the PDS label file to extract table and column information.
 
     Args:
         lbl_path (str): Path to the .lbl file
 
     Returns:
-        list: List of dictionaries containing column information
+        list: List of dictionaries containing table information, each with columns
     """
-    columns = []
+    tables = []
 
     with open(lbl_path, "r") as f:
         content = f.read()
 
-    # Split content into column sections
-    pattern = r"OBJECT\s*=\s*COLUMN.*?END_OBJECT\s*=\s*COLUMN"
-    column_sections = re.findall(pattern, content, re.DOTALL)
+    # First, extract table references to get starting positions
+    table_refs = {}
+    ref_pattern = r'\^([A-Z_]+)\s*=\s*\(\s*"[^"]+"\s*,\s*(\d+)\s*\)'
+    ref_matches = re.findall(ref_pattern, content)
+    for table_name, start_line in ref_matches:
+        table_refs[table_name] = int(start_line)
 
-    for section in column_sections:
-        column_info = {}
+    # Get full table sections with content
+    full_table_pattern = r"OBJECT\s*=\s*([A-Z_]+)(.*?)END_OBJECT\s*=\s*\1"
+    full_table_matches = re.findall(full_table_pattern, content, re.DOTALL)
 
-        # Extract column name
-        name_match = re.search(r'NAME\s*=\s*"([^"]+)"', section)
-        if name_match:
-            column_info["name"] = name_match.group(1)
+    for table_name, table_content in full_table_matches:
+        if table_name == "COLUMN":  # Skip individual column objects
+            continue
 
-        # Extract column number
-        number_match = re.search(r"COLUMN_NUMBER\s*=\s*(\d+)", section)
-        if number_match:
-            column_info["number"] = int(number_match.group(1))
+        table_info = {"name": table_name, "start_line": table_refs.get(table_name, 1), "columns": []}
 
-        # Extract unit
-        unit_match = re.search(r'UNIT\s*=\s*"([^"]+)"', section)
-        if unit_match:
-            column_info["unit"] = unit_match.group(1)
+        # Extract table metadata
+        rows_match = re.search(r"ROWS\s*=\s*(\d+)", table_content)
+        if rows_match:
+            table_info["rows"] = int(rows_match.group(1))
+
+        columns_count_match = re.search(r"COLUMNS\s*=\s*(\d+)", table_content)
+        if columns_count_match:
+            table_info["columns_count"] = int(columns_count_match.group(1))
 
         # Extract description
-        desc_match = re.search(r'DESCRIPTION\s*=\s*"([^"]+)"', section)
+        desc_match = re.search(r'DESCRIPTION\s*=\s*"([^"]+)"', table_content)
         if desc_match:
-            column_info["description"] = desc_match.group(1)
+            table_info["description"] = desc_match.group(1)
 
-        # Extract byte information for parsing
-        start_byte_match = re.search(r"START_BYTE\s*=\s*(\d+)", section)
-        bytes_match = re.search(r"BYTES\s*=\s*(\d+)", section)
-        if start_byte_match and bytes_match:
-            column_info["start_byte"] = int(start_byte_match.group(1))
-            column_info["bytes"] = int(bytes_match.group(1))
+        # Extract columns for this table
+        column_pattern = r"OBJECT\s*=\s*COLUMN.*?END_OBJECT\s*=\s*COLUMN"
+        column_sections = re.findall(column_pattern, table_content, re.DOTALL)
 
-        if column_info:
-            columns.append(column_info)
+        for section in column_sections:
+            column_info = {}
 
-    # Sort columns by column number
-    columns.sort(key=lambda x: x.get("number", 0))
+            # Extract column name
+            name_match = re.search(r'NAME\s*=\s*"([^"]+)"', section)
+            if name_match:
+                column_info["name"] = name_match.group(1)
 
-    return columns
+            # Extract column number
+            number_match = re.search(r"COLUMN_NUMBER\s*=\s*(\d+)", section)
+            if number_match:
+                column_info["number"] = int(number_match.group(1))
+
+            # Extract unit
+            unit_match = re.search(r'UNIT\s*=\s*"([^"]+)"', section)
+            if unit_match:
+                column_info["unit"] = unit_match.group(1)
+
+            # Extract description
+            desc_match = re.search(r'DESCRIPTION\s*=\s*"([^"]+)"', section)
+            if desc_match:
+                column_info["description"] = desc_match.group(1)
+
+            # Extract byte information for parsing
+            start_byte_match = re.search(r"START_BYTE\s*=\s*(\d+)", section)
+            bytes_match = re.search(r"BYTES\s*=\s*(\d+)", section)
+            if start_byte_match and bytes_match:
+                column_info["start_byte"] = int(start_byte_match.group(1))
+                column_info["bytes"] = int(bytes_match.group(1))
+
+            if column_info:
+                table_info["columns"].append(column_info)
+
+        # Sort columns by column number
+        table_info["columns"].sort(key=lambda x: x.get("number", 0))
+
+        if table_info["columns"]:  # Only add tables that have columns
+            tables.append(table_info)
+
+    # If no tables found, try to parse as single table (backward compatibility)
+    if not tables:
+        # Extract all columns without table structure
+        columns = []
+        column_pattern = r"OBJECT\s*=\s*COLUMN.*?END_OBJECT\s*=\s*COLUMN"
+        column_sections = re.findall(column_pattern, content, re.DOTALL)
+
+        for section in column_sections:
+            column_info = {}
+
+            # Extract column name
+            name_match = re.search(r'NAME\s*=\s*"([^"]+)"', section)
+            if name_match:
+                column_info["name"] = name_match.group(1)
+
+            # Extract column number
+            number_match = re.search(r"COLUMN_NUMBER\s*=\s*(\d+)", section)
+            if number_match:
+                column_info["number"] = int(number_match.group(1))
+
+            # Extract unit
+            unit_match = re.search(r'UNIT\s*=\s*"([^"]+)"', section)
+            if unit_match:
+                column_info["unit"] = unit_match.group(1)
+
+            # Extract description
+            desc_match = re.search(r'DESCRIPTION\s*=\s*"([^"]+)"', section)
+            if desc_match:
+                column_info["description"] = desc_match.group(1)
+
+            # Extract byte information for parsing
+            start_byte_match = re.search(r"START_BYTE\s*=\s*(\d+)", section)
+            bytes_match = re.search(r"BYTES\s*=\s*(\d+)", section)
+            if start_byte_match and bytes_match:
+                column_info["start_byte"] = int(start_byte_match.group(1))
+                column_info["bytes"] = int(bytes_match.group(1))
+
+            if column_info:
+                columns.append(column_info)
+
+        # Sort columns by column number
+        columns.sort(key=lambda x: x.get("number", 0))
+
+        # Return as single table for backward compatibility
+        if columns:
+            tables.append({"name": "TABLE", "start_line": 1, "columns": columns})
+
+    return tables
 
 
-def parse_tab_file(tab_path, columns):
+def parse_tab_file(tab_path, table_info):
     """
-    Parse the tab file containing the actual data.
+    Parse the tab file containing the actual data for a specific table.
 
     Args:
         tab_path (str): Path to the .tab file
-        columns (list): Column information from the label file
+        table_info (dict): Table information including columns, start_line, and rows
 
     Returns:
         list: List of dictionaries containing the parsed data
     """
     data = []
+    columns = table_info["columns"]
+    start_line = table_info.get("start_line", 1)
+    max_rows = table_info.get("rows", None)
 
     with open(tab_path, "r") as f:
-        for line_num, line in enumerate(f, 1):
-            line = line.rstrip("\n\r")
-            if not line.strip():
-                continue
+        lines = f.readlines()
 
-            row = {}
+    # Convert to 0-based indexing for array access
+    start_index = start_line - 1
+    rows_processed = 0
 
-            # Parse each column based on byte positions
-            for col in columns:
-                if "start_byte" in col and "bytes" in col:
-                    # Convert to 0-based indexing
-                    start = col["start_byte"] - 1
-                    end = start + col["bytes"]
+    for i in range(start_index, len(lines)):
+        line = lines[i].rstrip("\n\r")
 
-                    if end <= len(line):
-                        value_str = line[start:end].strip()
-                        # Convert scientific notation to standard decimal notation
-                        value = convert_scientific_to_decimal(value_str)
-                        row[col["name"]] = value
-                    else:
-                        row[col["name"]] = None
+        # Skip empty lines
+        if not line.strip():
+            continue
 
-            if row:
-                data.append(row)
+        # Stop if we've processed the expected number of rows
+        if max_rows is not None and rows_processed >= max_rows:
+            break
+
+        row = {}
+
+        # Parse each column based on byte positions
+        for col in columns:
+            if "start_byte" in col and "bytes" in col:
+                # Convert to 0-based indexing
+                start = col["start_byte"] - 1
+                end = start + col["bytes"]
+
+                if end <= len(line):
+                    value_str = line[start:end].strip()
+                    # Convert scientific notation to standard decimal notation
+                    value = convert_scientific_to_decimal(value_str)
+                    row[col["name"]] = value
+                else:
+                    row[col["name"]] = None
+
+        if row:
+            data.append(row)
+            rows_processed += 1
 
     return data
 
@@ -253,24 +350,72 @@ Examples:
 
     try:
         print("Parsing label file: {}".format(lbl_path))
-        columns = parse_label_file(lbl_path)
+        tables = parse_label_file(lbl_path)
 
-        if not columns:
-            print("Error: No column information found in label file")
+        if not tables:
+            print("Error: No table information found in label file")
             sys.exit(1)
 
-        print("Found {} columns:".format(len(columns)))
-        for col in columns:
-            name = col.get("name", "Unknown")
-            unit = col.get("unit", "N/A")
-            desc = col.get("description", "No description")
-            print("  {}: {} ({}) - {}".format(col.get("number", "?"), name, unit, desc))
+        print("Found {} table(s):".format(len(tables)))
+        for table in tables:
+            print(
+                "  Table: {} ({} columns, {} rows)".format(
+                    table["name"], len(table["columns"]), table.get("rows", "unknown")
+                )
+            )
+            if table.get("description"):
+                desc = table["description"]
+                desc_text = desc[:100] + "..." if len(desc) > 100 else desc
+                print("    Description: {}".format(desc_text))
 
-        print("\nParsing data file: {}".format(tab_path))
-        data = parse_tab_file(tab_path, columns)
+        # Process each table
+        for table in tables:
+            print("\nProcessing table: {}".format(table["name"]))
 
-        print("Writing CSV file: {}".format(output_path))
-        write_csv(data, columns, output_path)
+            # Generate output filename with table suffix
+            if len(tables) > 1:
+                # Multiple tables - add suffix based on table name
+                table_suffix = table["name"].replace("_TABLE", "").replace("TABLE", "")
+                if table_suffix and table_suffix != table["name"]:
+                    if args.output_csv:
+                        # If user specified output file, modify it with suffix
+                        output_stem = Path(args.output_csv).stem
+                        output_dir = Path(args.output_csv).parent
+                        table_output_path = output_dir / "{}_{}.csv".format(output_stem, table_suffix)
+                    else:
+                        # Generate default filename with table suffix
+                        table_output_path = Path("{}_{}_{}.csv".format(tab_path.stem, "parsed", table_suffix))
+                else:
+                    # Use table name as suffix
+                    if args.output_csv:
+                        output_stem = Path(args.output_csv).stem
+                        output_dir = Path(args.output_csv).parent
+                        table_output_path = output_dir / "{}_{}.csv".format(output_stem, table["name"])
+                    else:
+                        table_output_path = Path("{}_{}_{}.csv".format(tab_path.stem, "parsed", table["name"]))
+            else:
+                # Single table - use original output path
+                table_output_path = output_path
+
+            # Create output directory if it doesn't exist
+            table_output_path.parent.mkdir(parents=True, exist_ok=True)
+
+            print("  Columns:")
+            for col in table["columns"]:
+                name = col.get("name", "Unknown")
+                unit = col.get("unit", "N/A")
+                desc = col.get("description", "No description")
+                print("    {}: {} ({}) - {}".format(col.get("number", "?"), name, unit, desc))
+
+            print(
+                "  Parsing data from line {} ({} rows expected)".format(
+                    table.get("start_line", 1), table.get("rows", "unknown")
+                )
+            )
+            data = parse_tab_file(tab_path, table)
+
+            print("  Writing CSV file: {}".format(table_output_path))
+            write_csv(data, table["columns"], table_output_path)
 
         print("\nProcessing completed successfully!")
 
