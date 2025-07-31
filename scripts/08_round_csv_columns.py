@@ -49,7 +49,8 @@ def round_csv_columns(input_file, output_file, columns_to_round, decimal_places=
                 print(f"Rounding column '{column}' to {decimal_places} decimal places")
                 # Convert to numeric first (in case there are string values)
                 df[column] = pd.to_numeric(df[column], errors="coerce")
-                df[column].replace(np.nan, -99999, inplace=True)
+                # Replace NaN with -99999
+                df[column] = df[column].replace(np.nan, -99999)
                 # Round to specified decimal places
                 df[column] = df[column].round(decimal_places)
 
