@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+import argparse
 
 
 def infer_dtype(series):
@@ -15,22 +16,22 @@ def infer_dtype(series):
     return series.dtype
 
 
-def join_csv_files(input_dir: str, output_file: str, key_column: str = "TIME (SECONDS)"):
+def join_csv_files(csv_file_paths: list, output_file: str, key_column: str = "TIME (SECONDS)"):
     """
-    Join all CSV files in the input directory based on a key column.
+    Join specified CSV files based on a key column.
     Prefixes column names with the file name (without extension).
     Preserves original column data types.
 
     Args:
-        input_dir (str): Directory containing CSV files
+        csv_file_paths (list): List of CSV file paths to join
         output_file (str): Path to save the joined CSV file
         key_column (str): Column name to join on
     """
-    # Get all CSV files in the input directory
-    csv_files = list(Path(input_dir).glob("*.csv"))
+    # Convert string paths to Path objects
+    csv_files = [Path(path) for path in csv_file_paths]
 
     if not csv_files:
-        raise ValueError(f"No CSV files found in {input_dir}")
+        raise ValueError("No CSV files provided")
 
     # Initialize an empty list to store DataFrames
     dfs = []
@@ -103,9 +104,38 @@ def join_csv_files(input_dir: str, output_file: str, key_column: str = "TIME (SE
 
 
 if __name__ == "__main__":
-    # Define input and output paths relative to the project root
-    input_dir = "output"
-    output_file = "output/joined_data.csv"
+    # Set up command line argument parsing
+    parser = argparse.ArgumentParser(
+        description="Join multiple CSV files based on a common key column.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python 09_join_csv_files.py file1.csv file2.csv file3.csv -o joined.csv
+  python 09_join_csv_files.py output/*.csv -o output/joined_data.csv
+  python 09_join_csv_files.py file1.csv file2.csv -o result.csv -k "TIMESTAMP"
+        """,
+    )
+
+    parser.add_argument("csv_files", nargs="+", help="CSV files to join (at least one file required)")
+
+    parser.add_argument("-o", "--output", required=True, help="Output CSV file path")
+
+    parser.add_argument(
+        "-k", "--key-column", default="TIME (SECONDS)", help="Column name to join on (default: 'TIME (SECONDS)')"
+    )
+
+    # Parse command line arguments
+    args = parser.parse_args()
+
+    # Validate that all input files exist
+    for csv_file in args.csv_files:
+        if not Path(csv_file).exists():
+            print(f"Error: File '{csv_file}' does not exist")
+            exit(1)
 
     # Join the CSV files
-    join_csv_files(input_dir, output_file)
+    try:
+        join_csv_files(args.csv_files, args.output, args.key_column)
+    except Exception as e:
+        print(f"Error: {e}")
+        exit(1)
