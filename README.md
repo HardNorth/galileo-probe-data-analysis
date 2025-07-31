@@ -51,9 +51,8 @@ This interactive chart displays data from all CSV files in the `/output` folder,
 
 1. **asi_descent.csv** - Atmospheric Structure Instrument descent data
 2. **dwe_wind.csv** - Doppler Wind Experiment wind measurements  
-3. **nep_ptz.csv** - Nephelometer pressure, temperature, altitude data
-4. **nep_scatter.csv** - Nephelometer scattering measurements at various angles
-5. **nfr_mctcnfdn.csv** - Net Flux Radiometer data on different wave lengths m-corrected, temp-corrected, correlated noise removed.
+3. **nep_scatter.csv** - Nephelometer scattering measurements at various angles
+4. **nfr_mctcnfdn.csv** - Net Flux Radiometer data on different wave lengths m-corrected, temp-corrected, correlated noise removed.
 
 ## Technical Notes
 
