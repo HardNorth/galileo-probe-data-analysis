@@ -5,32 +5,32 @@ Do the following actions:
 3. Remove `output/nep_ptz.csv` file and rename `output/nep_ptz_columns_removed.csv` to `output/nep_ptz.csv`
 4. Run command: python scripts/08_round_csv_columns.py output/nep_ptz.csv output/nep_ptz_rounded.csv 1 "TIME"
 5. Remove `output/nep_ptz.csv` file and rename `output/nep_ptz_rounded.csv` to `output/nep_ptz.csv`
-6. Rename column in `output/nep_ptz.csv` file `TIME` -> `TIME (SECONDS)`
+6. Rename column in `output/nep_ptz.csv` file with `sed`: `TIME` -> `TIME (SECONDS)`
 7. Run command: python scripts/05_add_column_value.py output/nep_ptz.csv "TIME (SECONDS)" -4.7 -o output/nep_ptz_updated.csv
 8. Remove `output/nep_ptz.csv` file and rename `output/nep_ptz_updated.csv` to `output/nep_ptz.csv`
 9. Run command: python scripts/08_round_csv_columns.py output/nep_ptz.csv output/nep_ptz_rounded.csv 1 "TIME (SECONDS)"
 10. Remove `output/nep_ptz.csv` file and rename `output/nep_ptz_rounded.csv` to `output/nep_ptz.csv`
 11. Run command: python scripts/01_parse_data.py data/dwe/wind.tab data/dwe/wind.lbl output/dwe_wind.csv
-12. Rename column in `output/dwe_wind.csv` file `TIME FROM ENTRY (SECONDS)` -> `TIME (SECONDS)`
+12. Rename column in `output/dwe_wind.csv` file with `sed`: `TIME FROM ENTRY (SECONDS)` -> `TIME (SECONDS)`
 13. Run command: python scripts/03_remove_csv_columns.py output/dwe_wind.csv -c 1
 14. Remove `output/dwe_wind.csv` file and rename `output/dwe_wind_columns_removed.csv` to `output/dwe_wind.csv`
 15. Run command: python scripts/08_round_csv_columns.py output/dwe_wind.csv output/dwe_wind_rounded.csv 1 "TIME (SECONDS)"
 16. Remove `output/dwe_wind.csv` file and rename `output/dwe_wind_rounded.csv` to `output/dwe_wind.csv`
 17. Run command: python scripts/04_convert_celsius_to_kelvin.py output/nep_ptz.csv "ATMOSPHERIC TEMPERATURE"
-18. Rename column in `output/nep_ptz.csv` file `ATMOSPHERIC TEMPERATURE (DEGREES KELVIN)` -> `TEMPERATURE (KELVINS)`
+18. Rename column in `output/nep_ptz.csv` file with `sed`: `ATMOSPHERIC TEMPERATURE (DEGREES KELVIN)` -> `TEMPERATURE (KELVINS)`
 19. Run command: python scripts/05_add_column_value.py output/dwe_wind.csv "TIME (SECONDS)" -166 -o output/dwe_wind_updated.csv
 20. Run command: python scripts/08_round_csv_columns.py output/dwe_wind_updated.csv output/dwe_wind_rounded.csv 1 "TIME (SECONDS)"
 21. Remove `output/dwe_wind_updated.csv` file
 22. Remove `output/dwe_wind.csv` file and rename `output/dwe_wind_rounded.csv` to `output/dwe_wind.csv`
-23. Rename column in `output/nep_ptz.csv` file `ATMOSPHERIC PRESSURE (BARS)` -> `PRESSURE (BARS)`
-24. Rename column in `output/dwe_wind.csv` file `PRESSURE (BAR)` -> `PRESSURE (BARS)`
+23. Rename column in `output/nep_ptz.csv` file with `sed`: `ATMOSPHERIC PRESSURE (BARS)` -> `PRESSURE (BARS)`
+24. Rename column in `output/dwe_wind.csv` file with `sed`: `PRESSURE (BAR)` -> `PRESSURE (BARS)`
 25. Run command: python scripts/01_parse_data.py data/asi/descent.tab data/asi/descent.lbl output/asi_descent.csv
 26. Run command: python scripts/08_round_csv_columns.py output/asi_descent.csv output/asi_descent_rounded.csv 1 "TIME (SECONDS)"
 27. Remove `output/asi_descent.csv` file and rename `output/asi_descent_rounded.csv` to `output/asi_descent.csv`
 28. Replace all `-999.99` occurrences in `output/asi_descent.csv` file with `-99999.0`
 29. Run command: python scripts/01_parse_data.py data/nep/scatter.tab data/nep/scatter.lbl output/nep_scatter.csv
 30. Replace all `-9.999` occurrences in `output/nep_scatter.csv` file with `-99999.0`
-31. Rename column in `output/nep_scatter.csv` file `ATMOSPHERIC PRESSURE (BARS)` -> `PRESSURE (BARS)`
+31. Rename column in `output/nep_scatter.csv` file with `sed`: `ATMOSPHERIC PRESSURE (BARS)` -> `PRESSURE (BARS)`
 32. Run command: python scripts/06_append_column.py output/nep_ptz.csv output/nep_scatter.csv --source-column "TIME (SECONDS)" --match-column "PRESSURE (BARS)" --tolerance 0.1 --output output/nep_scatter_time.csv
 33. Remove `output/nep_scatter.csv` file and rename `output/nep_scatter_time.csv` to `output/nep_scatter.csv`
 34. Run command: python scripts/07_move_column_to_left.py output/nep_scatter.csv "TIME (SECONDS)"
@@ -39,7 +39,7 @@ Do the following actions:
 38. Run command: python scripts/02_parse_nfr_data.py data/nfr/fluxes/mctcnfdn.tab output/nfr_mctcnfdn.csv
 39. Run command: python scripts/03_remove_csv_columns.py output/nfr_mctcnfdn.csv -c 0 1
 40. Remove `output/nfr_mctcnfdn.csv` file and rename `output/nfr_mctcnfdn_columns_removed.csv` to `output/nfr_mctcnfdn.csv`
-41. Rename column in `output/nfr_mctcnfdn.csv` file `TIME (seconds)` -> `TIME (SECONDS)`
+41. Rename column in `output/nfr_mctcnfdn.csv` file with `sed`: `TIME (seconds)` -> `TIME (SECONDS)`
 42. Run command: python scripts/08_round_csv_columns.py output/nfr_mctcnfdn.csv output/nfr_mctcnfdn_rounded.csv 1 "TIME (SECONDS)"
 43. Remove `output/nfr_mctcnfdn.csv` file and rename `output/nfr_mctcnfdn_rounded.csv` to `output/nfr_mctcnfdn.csv`
 44. Rename columns in `output/nfr_mctcnfdn.csv` file with `sed`: `A_MCTCNFDN (W/m^2)` -> `A (broad infrared) (W/m^2)`, `B_MCTCNFDN (W/m^2)` -> `B (solar radiation) (W/m^2)`, `C_MCTCNFDN (W/m^2)` -> `C (water absorption) (W/m^2)`, `D_MCTCNFDN (W/m^2)` -> `D (water emission) (W/m^2)`, `E_MCTCNFDN (W/m^2)` -> `E (methane absorption) (W/m^2)`, `F_MCTCNFDN (W/m^2)` -> `F (blind) (W/m^2)`
@@ -52,7 +52,7 @@ Do the following actions:
 51. Run command: python scripts/10_fill_missing_values.py
 52. Run command: python scripts/08_round_csv_columns.py output/joined_data_filled.csv output/data.csv 4 "nep_scatter: PRESSURE (BARS)" "asi_descent: ALTITUDE (KM)" "asi_descent: PRESSURE (BARS)" "asi_descent: DENSITY (KG/M^3)" "asi_descent: GRAVITY (M/S^2)" "asi_descent: dz/dt (M/S)" "asi_descent: dT/dz (KELVINS/KILOMETER)" "nfr_mctcnfdn: A (broad infrared) (W/m^2)" "nfr_mctcnfdn: B (solar radiation) (W/m^2)" "nfr_mctcnfdn: C (water absorption) (W/m^2)" "nfr_mctcnfdn: D (water emission) (W/m^2)" "nfr_mctcnfdn: E (methane absorption) (W/m^2)" "nfr_mctcnfdn: F (blind) (W/m^2)" "nep_ptz: PRESSURE (BARS)" "nep_ptz: TEMPERATURE (KELVINS)" "nep_ptz: ALTITUDE (KILOMETERS)" "dwe_wind: TEMPERATURE (KELVINS)" "dwe_wind: PRESSURE (BARS)" "dwe_wind: WIND (METER SECOND^-1)"
 53. Run command: python scripts/01_parse_data.py data/nep/tempvolt.tab data/nep/tempvolt.lbl output/nep_tempvolt.csv
-54. Rename column in `output/nep_tempvolt.csv` file with sed `ATMOSPHERIC PRESSURE (BARS)` -> `PRESSURE (BARS)`
+54. Rename column in `output/nep_tempvolt.csv` file with `sed`: `ATMOSPHERIC PRESSURE (BARS)` -> `PRESSURE (BARS)`
 55. Run command: python scripts/06_append_column.py output/nep_tempvolt.csv output/nep_ptz.csv --source-column "FORWARD CHANNEL (DEGREES CELSIUS)" --match-column "PRESSURE (BARS)" --tolerance 0.1 --output output/nep_calibration_forward.csv
 56. Run command: python scripts/06_append_column.py output/nep_tempvolt.csv output/nep_calibration_forward.csv --source-column "BACKWARD CHANNEL (DEGREES CELSIUS)" --match-column "PRESSURE (BARS)" --tolerance 0.1 --output output/nep_calibration_forward_backward.csv
 57. Remove `output/nep_calibration_forward.csv` file and rename `output/nep_calibration_forward_backward.csv` to `output/nep_calibration.csv`
