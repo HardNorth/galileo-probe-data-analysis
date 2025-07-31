@@ -280,8 +280,8 @@ class InteractiveChart {
         const xRange = xMax - xMin;
         const xPadding = xRange * 0.01; // 1% padding for X-axis
 
-        const newXMin = Math.max(0, xMin - xPadding);
-        const newXMax = xMax + xPadding;
+        const newXMin = Math.floor(xMin - xPadding);
+        const newXMax = Math.ceil(xMax + xPadding);
 
         document.getElementById('xAxisMin').value = newXMin.toFixed(1);
         document.getElementById('xAxisMax').value = newXMax.toFixed(1);
