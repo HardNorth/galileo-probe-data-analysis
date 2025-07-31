@@ -37,7 +37,7 @@ Do the following actions:
 35. Run command: python scripts/08_round_csv_columns.py output/nep_scatter.csv output/nep_scatter_rounded.csv 0 "5.8 DEGREES (COUNTS)" "16 DEGREES (COUNTS)" "40 DEGREES (COUNTS)" "70 DEGREES (COUNTS)" "178 DEGREES (COUNTS)"
 36. Remove `output/nep_scatter.csv` file and rename `output/nep_scatter_rounded.csv` to `output/nep_scatter.csv`
 38. Run command: python scripts/02_parse_nfr_data.py data/nfr/fluxes/mctcnfdn.tab output/nfr_mctcnfdn.csv
-39. Run command: python scripts/03_remove_csv_columns.py output/nfr_mctcnfdn.csv -c 0 1
+39. Run command: python scripts/03_remove_csv_columns.py output/nfr_mctcnfdn.csv -c 0 1 8
 40. Remove `output/nfr_mctcnfdn.csv` file and rename `output/nfr_mctcnfdn_columns_removed.csv` to `output/nfr_mctcnfdn.csv`
 41. Rename column in `output/nfr_mctcnfdn.csv` file with `sed`: `TIME (seconds)` -> `TIME (SECONDS)`
 42. Run command: python scripts/08_round_csv_columns.py output/nfr_mctcnfdn.csv output/nfr_mctcnfdn_rounded.csv 1 "TIME (SECONDS)"
@@ -50,7 +50,7 @@ Do the following actions:
 49. Remove `output/dwe_wind.csv`, `output/dwe_wind_averaged.csv`, `output/dwe_wind_averaged_averaged.csv`, `output/dwe_wind_averaged_averaged_averaged.csv` and `output/dwe_wind_rounded.csv ` files and rename `output/dwe_wind_rounded2.csv` to `output/dwe_wind.csv`
 50. Run command: python scripts/09_join_csv_files.py output/asi_descent.csv output/dwe_wind.csv output/nep_scatter.csv output/nfr_mctcnfdn.csv -o output/joined_data.csv -k "TIME (SECONDS)"
 51. Run command: python scripts/10_fill_missing_values.py
-52. Run command: python scripts/08_round_csv_columns.py output/joined_data_filled.csv output/data.csv 4 "nep_scatter: PRESSURE (BARS)" "asi_descent: ALTITUDE (KM)" "asi_descent: PRESSURE (BARS)" "asi_descent: DENSITY (KG/M^3)" "asi_descent: GRAVITY (M/S^2)" "asi_descent: dz/dt (M/S)" "asi_descent: dT/dz (KELVINS/KILOMETER)" "nfr_mctcnfdn: A (broad infrared) (W/m^2)" "nfr_mctcnfdn: B (solar radiation) (W/m^2)" "nfr_mctcnfdn: C (water absorption) (W/m^2)" "nfr_mctcnfdn: D (water emission) (W/m^2)" "nfr_mctcnfdn: E (methane absorption) (W/m^2)" "nfr_mctcnfdn: F (blind) (W/m^2)" "dwe_wind: TEMPERATURE (KELVINS)" "dwe_wind: PRESSURE (BARS)" "dwe_wind: WIND (METER SECOND^-1)"
+52. Run command: python scripts/08_round_csv_columns.py output/joined_data_filled.csv output/data.csv 4 "nep_scatter: PRESSURE (BARS)" "asi_descent: ALTITUDE (KM)" "asi_descent: PRESSURE (BARS)" "asi_descent: DENSITY (KG/M^3)" "asi_descent: GRAVITY (M/S^2)" "asi_descent: dz/dt (M/S)" "asi_descent: dT/dz (KELVINS/KILOMETER)" "nfr_mctcnfdn: A (broad infrared) (W/m^2)" "nfr_mctcnfdn: B (solar radiation) (W/m^2)" "nfr_mctcnfdn: C (water absorption) (W/m^2)" "nfr_mctcnfdn: D (water emission) (W/m^2)" "nfr_mctcnfdn: E (methane absorption) (W/m^2)" "dwe_wind: TEMPERATURE (KELVINS)" "dwe_wind: PRESSURE (BARS)" "dwe_wind: WIND (METER SECOND^-1)"
 53. Run command: python scripts/01_parse_data.py data/nep/tempvolt.tab data/nep/tempvolt.lbl output/nep_tempvolt.csv
 54. Rename column in `output/nep_tempvolt.csv` file with `sed`: `ATMOSPHERIC PRESSURE (BARS)` -> `PRESSURE (BARS)`
 55. Run command: python scripts/06_append_column.py output/nep_tempvolt.csv output/nep_ptz.csv --source-column "FORWARD CHANNEL (DEGREES CELSIUS)" --match-column "PRESSURE (BARS)" --tolerance 0.1 --output output/nep_calibration_forward.csv
