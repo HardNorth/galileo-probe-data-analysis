@@ -35,3 +35,17 @@ E.G.: append `TIME (SECONDS)` column from @nep_ptz.csv file to @nep_scatter.csv 
 18. Implement a script which will allow to reduce amount of entries in a CSV file by averaging every second row values with previous line values, thus making 1 line instead of 2.
 19. Update @01_parse_data.py to support 2 or more tables in LBL and TAB files like in @baseoffs.lbl and @baseoffs.tab. If there are 2 or more tables in 1 file append postfixes to result CSV file equal to table prefixes. E.G.: `OBJECT = B_TABLE` -> `nep_baseoffs_B.csv`
 20. Update @09_join_csv_files.py file to accept list of CSV files in command line arguments instead of a directory, make output file also configurable.
+21. Implement a script which will fill the gaps between data and extrapolation in a CSV file. File example: @nep_baseoffs_A.csv
+
+    Take into account these requirements:
+    0. Use `source ./.venv/bin/activate` command to activate proper venv before everything.
+    1. Index column (X) is the first column in the specified file.
+    2. Use scipy's `curve_fit` method to form polynomial function for each column, which then will be used for data interpolation and extrapolation.
+    3. If a CSV contains empty values for certain columns at the beginning or the end of the table, you should extrapolate them.
+    4. Parameterize specific precise for interpolation: 0 or more decimal numbers. Generate rows for each of such number based on index column. E.G. if index column contains -50 and -49, and precise is 1, then generate rows for -49.9, -49.8, etc.
+    5. Parameterize specific `order` of the result polynomial as int argument, which will then will be passed to `p0` argument of `curve_fit` method as an array of 1, of `order` length.
+    6. Use this function a `f` argument of `curve_fit` method:
+        ```python
+        def polynomial_function(x: float, *params: float) -> float:
+            return sum([p*(x**i) for i, p in enumerate(params)])
+        ```
