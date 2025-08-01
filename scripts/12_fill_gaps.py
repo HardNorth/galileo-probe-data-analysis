@@ -29,7 +29,7 @@ from scipy.optimize import curve_fit
 
 def polynomial_function(x: float, *params: float) -> float:
     """Polynomial function for curve fitting."""
-    return sum([p * (x ** (i + 1)) for i, p in enumerate(params)])
+    return sum([p * (x**i) for i, p in enumerate(params)])
 
 
 def read_csv_data(file_path: str) -> Tuple[List[str], List[List[Union[str, float]]]]:
