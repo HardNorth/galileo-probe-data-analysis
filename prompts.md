@@ -49,3 +49,4 @@ E.G.: append `TIME (SECONDS)` column from @nep_ptz.csv file to @nep_scatter.csv 
         def polynomial_function(x: float, *params: float) -> float:
             return sum([p*(x**i) for i, p in enumerate(params)])
         ```
+22. Instead of just splitting lines by comma at @parseCSV() method implement "parseCells" method which will accept a line and parse it by characters taking into account possible quotation and quote symbol escape.
