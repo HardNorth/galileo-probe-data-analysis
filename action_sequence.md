@@ -56,4 +56,6 @@ Do the following actions:
 55. Run command: python scripts/06_append_column.py output/nep_tempvolt.csv output/nep_ptz.csv --source-column "FORWARD CHANNEL (DEGREES CELSIUS)" --match-column "PRESSURE (BARS)" --tolerance 0.1 --output output/nep_calibration_forward.csv
 56. Run command: python scripts/06_append_column.py output/nep_tempvolt.csv output/nep_calibration_forward.csv --source-column "BACKWARD CHANNEL (DEGREES CELSIUS)" --match-column "PRESSURE (BARS)" --tolerance 0.1 --output output/nep_calibration_forward_backward.csv
 57. Remove `output/nep_calibration_forward.csv` file and rename `output/nep_calibration_forward_backward.csv` to `output/nep_calibration.csv`
-58. 
+58. Run command: python scripts/12_fill_gaps.py output/nep_baseoffs_A.csv output/nep_baseoffs_A_extrapolated.csv --extrapolate-end 120 -p 2 -o 3
+59. Run command: python scripts/12_fill_gaps.py output/nep_baseoffs_B.csv output/nep_baseoffs_B_extrapolated.csv --extrapolate-end 120 -p 2 -o 3
+60.
