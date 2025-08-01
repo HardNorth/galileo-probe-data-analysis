@@ -43,9 +43,52 @@ class InteractiveChart {
         return this.parseCSV(csvText);
     }
 
+    parseCells(line) {
+        const cells = [];
+        let currentCell = '';
+        let inQuotes = false;
+        let i = 0;
+
+        while (i < line.length) {
+            const char = line[i];
+
+            if (char === '"') {
+                if (inQuotes) {
+                    // Check if this is an escaped quote (doubled quote)
+                    if (i + 1 < line.length && line[i + 1] === '"') {
+                        // This is an escaped quote, add one quote to the cell and skip both
+                        currentCell += '"';
+                        i += 2; // Skip both quotes
+                        continue;
+                    } else {
+                        // This is the end of the quoted section
+                        inQuotes = false;
+                    }
+                } else {
+                    // This is the start of a quoted section
+                    inQuotes = true;
+                }
+            } else if (char === ',' && !inQuotes) {
+                // This is a field separator, not part of the data
+                cells.push(currentCell.trim());
+                currentCell = '';
+            } else {
+                // Regular character, add to current cell
+                currentCell += char;
+            }
+
+            i++;
+        }
+
+        // Add the last cell
+        cells.push(currentCell.trim());
+
+        return cells;
+    }
+
     parseCSV(csvText) {
         const lines = csvText.trim().split('\n');
-        const rawHeaders = lines[0].split(',').map(h => h.trim());
+        const rawHeaders = this.parseCells(lines[0]);
         const xAxisColumn = rawHeaders[0];
         const prefixes = rawHeaders.reduce((acc, h) => {
             const prefixColumn = h.split(':');
@@ -63,7 +106,7 @@ class InteractiveChart {
         }, new Set());
         const data = {};
         prefixes.forEach(prefix => {
-            let headers = [];
+            let headers;
             if (prefix === COMMON_PREFIX) {
                 headers = rawHeaders.filter(h => !h.includes(':') || h === xAxisColumn).map(h => h.trim());
             } else {
@@ -79,7 +122,7 @@ class InteractiveChart {
 
         // Parse data rows
         for (let i = 1; i < lines.length; i++) {
-            const values = lines[i].split(',');
+            const values = this.parseCells(lines[i]);
             prefixes.forEach(prefix => {
                 const prefixData = data[prefix].data;
                 rawHeaders.forEach((h, index) => {
