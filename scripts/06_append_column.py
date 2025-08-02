@@ -108,6 +108,10 @@ def append_column_with_matching(
             else:
                 no_matches += 1
 
+        # Convert the new column to the same data type as the source column
+        if no_matches == 0:
+            result_df[source_column] = result_df[source_column].astype(source_df[source_column].dtype)
+
         # Save result
         print(f"Writing output to: {output_file}")
         result_df.to_csv(output_file, index=False)
