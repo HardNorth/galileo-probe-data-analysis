@@ -47,7 +47,7 @@ Do the following actions:
 46. Run command: python scripts/11_average_consecutive_rows.py output/dwe_wind_averaged.csv
 47. Run command: python scripts/11_average_consecutive_rows.py output/dwe_wind_averaged_averaged.csv
 48. Run command: python scripts/08_round_csv_columns.py output/dwe_wind_averaged_averaged_averaged.csv output/dwe_wind_rounded.csv 1 "TIME (SECONDS)"
-49. Remove `output/dwe_wind.csv`, `output/dwe_wind_averaged.csv`, `output/dwe_wind_averaged_averaged.csv`, `output/dwe_wind_averaged_averaged_averaged.csv` and `output/dwe_wind_rounded.csv ` files and rename `output/dwe_wind_rounded2.csv` to `output/dwe_wind.csv`
+49. Remove `output/dwe_wind.csv`, `output/dwe_wind_averaged.csv`, `output/dwe_wind_averaged_averaged.csv`, `output/dwe_wind_averaged_averaged_averaged.csv` and `output/dwe_wind_rounded.csv` files and rename `output/dwe_wind_rounded2.csv` to `output/dwe_wind.csv`
 50. Run command: python scripts/09_join_csv_files.py output/asi_descent.csv output/dwe_wind.csv output/nep_scatter.csv output/nfr_mctcnfdn.csv -o output/joined_data.csv -k "TIME (SECONDS)"
 51. Run command: python scripts/10_fill_missing_values.py
 52. Run command: python scripts/08_round_csv_columns.py output/joined_data_filled.csv output/data.csv 4 "nep_scatter: PRESSURE (BARS)" "asi_descent: ALTITUDE (KM)" "asi_descent: PRESSURE (BARS)" "asi_descent: DENSITY (KG/M^3)" "asi_descent: GRAVITY (M/S^2)" "asi_descent: dz/dt (M/S)" "asi_descent: dT/dz (KELVINS/KILOMETER)" "nfr_mctcnfdn: A (broad infrared) (W/m^2)" "nfr_mctcnfdn: B (solar radiation) (W/m^2)" "nfr_mctcnfdn: C (water absorption) (W/m^2)" "nfr_mctcnfdn: D (water emission) (W/m^2)" "nfr_mctcnfdn: E (methane absorption) (W/m^2)" "dwe_wind: TEMPERATURE (KELVINS)" "dwe_wind: PRESSURE (BARS)" "dwe_wind: WIND (METER SECOND^-1)"
@@ -64,3 +64,6 @@ Do the following actions:
 63. Run command: python scripts/08_round_csv_columns.py output/nep_baseoffs_B_extrapolated.csv output/nep_baseoffs_B_extrapolated_rounded.csv 2 "INSTRUMENT TEMPERATURE, BACKWARD (DEGREES CELSIUS)"
 64. Run command: python scripts/08_round_csv_columns.py output/nep_baseoffs_B_extrapolated_rounded.csv output/nep_baseoffs_B_extrapolated_rounded2.csv 0 "178 DEGREES (COUNTS)"
 65. Remove `output/nep_baseoffs_B_extrapolated.csv` and `output/nep_baseoffs_B_extrapolated_rounded.csv` files and rename `output/nep_baseoffs_B_extrapolated_rounded2.csv` to `output/output/nep_baseoffs_B_extrapolated.csv`
+66. Run command: python scripts/12_fill_gaps.py output/nep_calibration.csv output/nep_calibration_extrapolated.csv "FORWARD CHANNEL (DEGREES CELSIUS)" "BACKWARD CHANNEL (DEGREES CELSIUS)" -p -1 -o 4
+67. Run command: python scripts/08_round_csv_columns.py output/nep_calibration_extrapolated.csv output/nep_calibration_extrapolated_rounded.csv 2 "FORWARD CHANNEL (DEGREES CELSIUS)" "BACKWARD CHANNEL (DEGREES CELSIUS)"
+68. Remove `output/nep_calibration_extrapolated.csv` file and rename `output/nep_calibration_extrapolated_rounded.csv` to `output/nep_calibration_extrapolated.csv`
