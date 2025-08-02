@@ -123,6 +123,7 @@ def generate_index_values(min_val: float, max_val: float, precision: int) -> np.
 def fill_gaps_and_extrapolate(
     file_path: str,
     output_path: str,
+    columns: list[str],
     precision: int,
     order: int,
     extrapolate_start: float = None,
@@ -163,11 +164,24 @@ def fill_gaps_and_extrapolate(
     max_index = extrapolate_end if extrapolate_end is not None else np.max(index_array)
 
     print(f"Generating new index values from {min_index} to {max_index} with precision {precision}...")
-    new_index_values = generate_index_values(min_index, max_index, precision)
+    if precision > -1:
+        new_index_values = generate_index_values(min_index, max_index, precision)
+    else:
+        new_index_values = index_values
 
     # Fit polynomials and interpolate/extrapolate for each data column
+    if columns:
+        columns_to_process = set(columns)
+    else:
+        columns_to_process = set(headers[1:])
+
     fitted_columns = []
     for col_idx, column_data in enumerate(data_columns):
+        column_name = headers[col_idx + 1]
+        if column_name not in columns_to_process:
+            fitted_columns.append(column_data)
+            continue
+
         print(f"Processing column {col_idx + 1}/{len(data_columns)}: {headers[col_idx + 1]}")
 
         # Convert to numpy array, handling None values
@@ -216,8 +230,13 @@ def main():
     )
     parser.add_argument("input_file", help="Input CSV file path")
     parser.add_argument("output_file", help="Output CSV file path")
+    parser.add_argument("columns", nargs="+", type=str, help="Columns to process (optional)")
     parser.add_argument(
-        "--precision", "-p", type=int, default=0, help="Decimal precision for interpolation (default: 0)"
+        "--precision",
+        "-p",
+        type=int,
+        default=0,
+        help="Decimal precision for interpolation (default: 0). If -1, use original index values.",
     )
     parser.add_argument("--order", "-o", type=int, default=3, help="Polynomial order (default: 3)")
     parser.add_argument(
@@ -232,22 +251,24 @@ def main():
         print(f"Error: Input file '{args.input_file}' does not exist.")
         sys.exit(1)
 
-    if args.precision < 0:
-        print("Error: Precision must be 0 or greater.")
+    if args.precision < -1:
+        print("Error: Precision must be -1 or greater.")
         sys.exit(1)
 
     if args.order < 1:
         print("Error: Polynomial order must be 1 or greater.")
         sys.exit(1)
 
-    try:
-        fill_gaps_and_extrapolate(
-            args.input_file, args.output_file, args.precision, args.order, args.extrapolate_start, args.extrapolate_end
-        )
-        print("Processing completed successfully!")
-    except Exception as e:
-        print(f"Error: {e}")
-        sys.exit(1)
+    fill_gaps_and_extrapolate(
+        args.input_file,
+        args.output_file,
+        args.columns,
+        args.precision,
+        args.order,
+        args.extrapolate_start,
+        args.extrapolate_end,
+    )
+    print("Processing completed successfully!")
 
 
 if __name__ == "__main__":
