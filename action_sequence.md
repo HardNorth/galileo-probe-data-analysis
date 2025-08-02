@@ -58,4 +58,9 @@ Do the following actions:
 57. Remove `output/nep_calibration_forward.csv` file and rename `output/nep_calibration_forward_backward.csv` to `output/nep_calibration.csv`
 58. Run command: python scripts/12_fill_gaps.py output/nep_baseoffs_A.csv output/nep_baseoffs_A_extrapolated.csv --extrapolate-end 120 -p 2 -o 3
 59. Run command: python scripts/12_fill_gaps.py output/nep_baseoffs_B.csv output/nep_baseoffs_B_extrapolated.csv --extrapolate-end 120 -p 2 -o 3
-60.
+60. Run command: python scripts/08_round_csv_columns.py output/nep_baseoffs_A_extrapolated.csv output/nep_baseoffs_A_extrapolated_rounded.csv 2 "INSTRUMENT TEMPERATURE, FORWARD (DEGREES CELSIUS)"
+61. Run command: python scripts/08_round_csv_columns.py output/nep_baseoffs_A_extrapolated_rounded.csv output/nep_baseoffs_A_extrapolated_rounded2.csv 0 "5.8 DEGREES (COUNTS)" "16 DEGREES (COUNTS)" "40 DEGREES (COUNTS)" "70 DEGREES (COUNTS)"
+62. Remove `output/nep_baseoffs_A_extrapolated.csv` and `output/nep_baseoffs_A_extrapolated_rounded.csv` files and rename `output/nep_baseoffs_A_extrapolated_rounded2.csv` to `output/nep_baseoffs_A_extrapolated.csv`
+63. Run command: python scripts/08_round_csv_columns.py output/nep_baseoffs_B_extrapolated.csv output/nep_baseoffs_B_extrapolated_rounded.csv 2 "INSTRUMENT TEMPERATURE, BACKWARD (DEGREES CELSIUS)"
+64. Run command: python scripts/08_round_csv_columns.py output/nep_baseoffs_B_extrapolated_rounded.csv output/nep_baseoffs_B_extrapolated_rounded2.csv 0 "178 DEGREES (COUNTS)"
+65. Remove `output/nep_baseoffs_B_extrapolated.csv` and `output/nep_baseoffs_B_extrapolated_rounded.csv` files and rename `output/nep_baseoffs_B_extrapolated_rounded2.csv` to `output/output/nep_baseoffs_B_extrapolated.csv`
