@@ -1,4 +1,4 @@
-# Galileo mission Jupiter atmospheric probe data interactive chart
+# Galileo mission Jovian atmosphere probe data interactive chart
 
 This interactive chart displays data from all CSV files in the `/output` folder, allowing you to explore the Galileo probe's atmospheric descent data.
 
