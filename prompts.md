@@ -50,3 +50,5 @@ E.G.: append `TIME (SECONDS)` column from @nep_ptz.csv file to @nep_scatter.csv 
             return sum([p*(x**i) for i, p in enumerate(params)])
         ```
 22. Instead of just splitting lines by comma at @parseCSV() method implement "parseCells" method which will accept a line and parse it by characters taking into account possible quotation and quote symbol escape.
+23. Implement a script to add or subtract certain column values to in one CSV file to  certain column values in another CSV file by index column which should be common for both files, support negative values. E.G. sibtract all values in @nep_calibration_baseoffs_extrapolated.csv column `5.8 DEGREES (COUNTS)` from all values in @nep_scatter.csv same column where `TIME (SECONDS)` colums are equal for both files. Keep original column data types, if both values are int it should stay int.
+24. Please also add divide and multiply options to the script.
