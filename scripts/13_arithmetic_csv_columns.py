@@ -28,6 +28,8 @@ import sys
 from pathlib import Path
 import numpy as np
 
+NO_VALUE = -99999
+
 
 def load_csv_with_dtypes(file_path):
     """Load CSV file and preserve original data types."""
@@ -75,47 +77,55 @@ def arithmetic_operation(df1, df2, index_column, target_column, operation="subtr
     if target_column not in df2.columns:
         raise ValueError(f"Target column '{target_column}' not found in second file")
 
-    # Merge dataframes on index column to align rows
-    merged = pd.merge(df1, df2, on=index_column, how="left", suffixes=("_file1", "_file2"))
+    # Create a mapping based on the index column to ensure proper alignment
+    # This avoids issues with duplicate TIME values or index mismatches
 
-    # Get the column names after merge
-    target_col_1 = f"{target_column}_file1"
-    target_col_2 = f"{target_column}_file2"
+    # Get the values from both dataframes for the target column
+    df1_values = df1[target_column].copy()
 
-    if target_col_1 not in merged.columns or target_col_2 not in merged.columns:
-        # If no suffix was added, it means the column name was unique or identical
-        target_col_1 = target_column
-        target_col_2 = target_column
-        if target_column in merged.columns:
-            # This shouldn't happen with suffixes, but handle it
-            print(f"Warning: Column '{target_column}' exists without suffix")
+    # For each row in df1, find the corresponding row in df2 and perform the operation
+    for i, row in df1.iterrows():
+        time_value = row[index_column]
+        df1_target_value = row[target_column]
 
-    # Determine which values to use as operands
-    if source_file == "file2":
-        base_values = merged[target_col_1]
-        operand_values = merged[target_col_2]
-    else:  # source_file == 'file1'
-        base_values = merged[target_col_2]
-        operand_values = merged[target_col_1]
+        # Find matching row in df2
+        df2_match = df2[df2[index_column] == time_value]
 
-    # Perform the operation
-    if operation == "subtract":
-        new_values = base_values - operand_values
-    elif operation == "add":
-        new_values = base_values + operand_values
-    elif operation == "multiply":
-        new_values = base_values * operand_values
-    elif operation == "divide":
-        # Handle division by zero
-        with np.errstate(divide="ignore", invalid="ignore"):
-            new_values = base_values / operand_values
-            # Replace inf and -inf with NaN for consistency
-            new_values = new_values.replace([np.inf, -np.inf], np.nan)
-    else:
-        raise ValueError(f"Unknown operation: {operation}. Use 'add', 'subtract', 'multiply', or 'divide'")
+        if not df2_match.empty:
+            df2_target_value = df2_match[target_column].iloc[0]  # Take first match
+
+            # Check for sentinel values
+            if df1_target_value == NO_VALUE or df2_target_value == NO_VALUE:
+                new_value = NO_VALUE
+            else:
+                # Determine operands based on source_file
+                if source_file == "file2":
+                    base_value = df1_target_value
+                    operand_value = df2_target_value
+                else:
+                    base_value = df2_target_value
+                    operand_value = df1_target_value
+
+                # Perform the operation
+                if operation == "subtract":
+                    new_value = base_value - operand_value
+                elif operation == "add":
+                    new_value = base_value + operand_value
+                elif operation == "multiply":
+                    new_value = base_value * operand_value
+                elif operation == "divide":
+                    if operand_value == 0:
+                        new_value = np.nan
+                    else:
+                        new_value = base_value / operand_value
+                else:
+                    raise ValueError(f"Unknown operation: {operation}. Use 'add', 'subtract', 'multiply', or 'divide'")
+
+            df1_values.iloc[i] = new_value
+        # If no match found, keep original value
 
     # Update the result dataframe
-    result_df[target_column] = new_values
+    result_df[target_column] = df1_values
 
     return result_df
 
