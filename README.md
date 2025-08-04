@@ -1,6 +1,6 @@
 # Galileo mission Jovian atmosphere probe data interactive chart
 
-This interactive chart displays data from all CSV files in the `/output` folder, allowing you to explore the Galileo probe's atmospheric descent data.
+This interactive chart displays data from all`data.csv` file in the `/output` folder, allowing you to explore the Galileo probe's atmospheric descent data.
 
 ## Quick Start
 
@@ -32,15 +32,14 @@ This interactive chart displays data from all CSV files in the `/output` folder,
 - **File identification:** Series names are prefixed with filename to distinguish duplicate column names
 
 #### Axis Controls
-- **Manual Y-axis limits:** Set custom min/max values for the Y-axis
+- **Manual XY-axis limits:** Set custom min/max values for the X and Y axises
 - **Auto-scaling:** Leave limits blank for automatic scaling
 
 ## Data Handling
 
 ### Missing Data
-- Empty cells, "null", "NaN", and invalid numbers are automatically filtered out
-- Missing data points don't break the line connections
-- Only valid time-value pairs are plotted
+- Empty cells, "null", "NaN", and invalid numbers are automatically linearly interpolated
+- Missing data points replaced with number "-99999" and don't affect chart alignment
 
 ### Duplicate Column Names
 - Files contain duplicate column names (e.g., PRESSURE, TEMPERATURE)
@@ -51,8 +50,14 @@ This interactive chart displays data from all CSV files in the `/output` folder,
 
 1. **asi_descent.csv** - Atmospheric Structure Instrument descent data
 2. **dwe_wind.csv** - Doppler Wind Experiment wind measurements  
-3. **nep_scatter.csv** - Nephelometer scattering measurements at various angles
-4. **nfr_mctcnfdn.csv** - Net Flux Radiometer data on different wave lengths m-corrected, temp-corrected, correlated noise removed.
+3. **nfr_mctcnfdn.csv** - Net Flux Radiometer data on different wave lengths m-corrected, temp-corrected, correlated noise removed.
+4. **nep_scatter.csv** - Nephelometer scattering measurements at various angles
+5. **nep_scatter_baseline_subtracted.csv** - Nephelometer scattering measurements at various angles baseline offsets subtracted. Left here mostly to indicate that baseline offsets
+   already applied in `nep_scatter.csv` file and another subtraction makes no sense
+6. **nep_scatter_baseline_divided.csv**  - Nephelometer scattering measurements at various angles divided by baseline offsets. The same as for `nep_scatter_baseline_subtracted.csv` file
+7. **nep_xsec62.csv** - Nephelometer cross sections measurements with adjustment of baseline to zero at measurement number 117 (p = 3.603 bars)
+7. **data.csv** - pivot table which contains all data from files above, it is used to draw the chart.
+
 
 ## Technical Notes
 
@@ -64,5 +69,5 @@ This interactive chart displays data from all CSV files in the `/output` folder,
 ## Troubleshooting
 
 - **Port 8000 in use:** Stop other servers or modify the PORT variable in `serve_chart.py`
-- **Files not loading:** Ensure all CSV files are in the `/output` folder
+- **Files not loading:** Ensure `data.csv` file is in the `/output` folder
 - **Browser compatibility:** Modern browsers (Chrome, Firefox, Safari, Edge) are supported 
