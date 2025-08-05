@@ -56,7 +56,8 @@ This interactive chart displays data from all `data.csv` file in the `/output` f
    already applied in `nep_scatter.csv` file and another subtraction makes no sense
 6. **nep_scatter_baseline_divided.csv**  - Nephelometer scattering measurements at various angles divided by baseline offsets. The same as for `nep_scatter_baseline_subtracted.csv` file
 7. **nep_xsec62.csv** - Nephelometer cross sections measurements with adjustment of baseline to zero at measurement number 117 (p = 3.603 bars)
-7. **data.csv** - pivot table which contains all data from files above, it is used to draw the chart.
+7. **data.csv** - pivot table which contains all data from files above, it is used to draw the chart
+8. **nms_ratios.csv** - Data from Neutral Mass Spectrometer. Unfortunately, it doesn't have any certain time or preassure links, so does not put on the chart
 
 
 ## Technical Notes
